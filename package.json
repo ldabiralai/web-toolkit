@@ -4,7 +4,7 @@
   "description": "Eurosport Web Toolkit",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "parcel build ./src/index.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -20,14 +20,28 @@
   },
   "homepage": "https://github.com/EurosportDigital/web-toolkit#readme",
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^4.0.0-alpha.25",
     "@storybook/addon-links": "^4.0.0-alpha.25",
     "@storybook/addons": "^4.0.0-alpha.25",
     "@storybook/react": "^4.0.0-alpha.25",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-to-json": "^3.3.4",
+    "jest": "^23.6.0",
     "parcel": "^1.10.3",
     "react": "^16.5.2",
     "react-dom": "^16.5.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
 }
