@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended"
+  ],
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "**/*.test.js",
+          "src/setupTests.js",
+          "features/**",
+          "mock/**",
+          "scripts/**"
+        ]
+      }
+    ],
+    "import/no-named-as-default": 0,
+    "no-console": ["error", { "allow": ["warn", "error", "info"] }],
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [
+          ".js"
+        ]
+      }
+    ],
+    "react/prop-types": 0
+  }
+}
