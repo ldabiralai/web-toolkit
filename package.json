@@ -1,8 +1,8 @@
 {
-  "name": "web-toolkit",
+  "name": "@eurosport/web-toolkit",
   "version": "0.0.1",
   "description": "Eurosport Web Toolkit",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p",
