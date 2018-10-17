@@ -1,0 +1,19 @@
+{
+  "name": "web-toolkit",
+  "version": "0.0.1",
+  "description": "Eurosport Web Toolkit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EurosportDigital/web-toolkit.git"
+  },
+  "author": "Eurosport Web Team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EurosportDigital/web-toolkit/issues"
+  },
+  "homepage": "https://github.com/EurosportDigital/web-toolkit#readme"
+}
