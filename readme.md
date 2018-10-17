@@ -1,0 +1,2 @@
+- Public github repo
+- Public NPM module that contains all components
