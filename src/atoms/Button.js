@@ -1,3 +1,3 @@
 import React from "react";
 
-export default () => <button />;
+export default ({ children }) => <button>{children}</button>;
