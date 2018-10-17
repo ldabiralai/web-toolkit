@@ -1,0 +1,39 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:10.10.0
+
+aliases:
+  - &restore_cache
+    restore_cache:
+      keys:
+        - v1-dependencies-{{ checksum "package-lock.json" }}
+
+jobs:
+  dependencies:
+    <<: *defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - run: npm ci
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package-lock.json" }}
+  test_unit:
+    <<: *defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - run: npm run test
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - dependencies
+      - test_unit:
+          requires:
+            - dependencies
