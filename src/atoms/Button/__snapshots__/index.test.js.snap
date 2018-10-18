@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders a Button 1`] = `
-<styled.button
+<Styled(button)
   type="button"
 >
   Click me !
-</styled.button>
+</Styled(button)>
 `;
