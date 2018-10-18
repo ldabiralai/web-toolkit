@@ -27,7 +27,7 @@ jobs:
     steps:
       - checkout
       - *restore_cache
-      - run: npm run test
+      - run: npm run test:ci
   lint:
     <<: *defaults
     steps:
