@@ -1,3 +1,9 @@
 import React from 'react';
+import styled from 'styled-components';
 
-export default ({ children }) => <button type="button">{children}</button>;
+const StyledButton = styled.button`
+  background-color: red;
+  color: yellow;
+`;
+
+export default ({ children }) => <StyledButton type="button">{children}</StyledButton>;
