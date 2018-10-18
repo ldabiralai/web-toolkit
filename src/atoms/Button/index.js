@@ -41,4 +41,8 @@ const Button = styled(Link)`
     `};
 `;
 
+Button.defaultProps = {
+  type: 'primary',
+};
+
 export default Button;
