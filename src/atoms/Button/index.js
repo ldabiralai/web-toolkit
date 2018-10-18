@@ -1,9 +1,44 @@
-import React from 'react';
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
+import { lighten, rgba } from 'polished';
+import Link from '../Link';
 
-const StyledButton = styled.button`
-  background-color: red;
-  color: yellow;
+const Button = styled(Link)`
+  background-color: ${({ theme, type }) => theme.button[type].backgroundColor};
+  color: ${({ theme, type }) => theme.button[type].color};
+  cursor: pointer;
+  display: block;
+  padding: 18px 10px;
+  border-radius: 3px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  line-height: 14px;
+
+  &:focus,
+  &:visited,
+  &:hover {
+    color: ${({ theme, type }) => theme.button[type].color};
+  }
+
+  &:after {
+    margin-left: 11px;
+  }
+
+  ${({ theme, type }) =>
+    type === 'primary' &&
+    css`
+      &:hover {
+        background-color: ${lighten(0.2, theme.button.primary.backgroundColor)};
+      }
+    `};
+
+  ${({ theme, type }) =>
+    type === 'secondary' &&
+    css`
+      border: 1px solid ${rgba(theme.button.secondary.color, 0.4)};
+      &:hover {
+        border-color: ${theme.button.secondary.color};
+      }
+    `};
 `;
 
-export default ({ children }) => <StyledButton type="button">{children}</StyledButton>;
+export default Button;

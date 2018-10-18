@@ -8,4 +8,14 @@ storiesOf('Link', module).add('with text', () => (
     <Link href="goo.gl">Hello Link</Link>
   </ThemeProvider>
 ));
-storiesOf('Button', module).add('with text', () => <Button>Hello Button</Button>);
+storiesOf('Button', module)
+  .add('Primary', () => (
+    <ThemeProvider theme={theme}>
+      <Button type="primary">Primary</Button>
+    </ThemeProvider>
+  ))
+  .add('Secondary', () => (
+    <ThemeProvider theme={theme}>
+      <Button type="secondary">Secondary</Button>
+    </ThemeProvider>
+  ));
