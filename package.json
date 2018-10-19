@@ -60,6 +60,12 @@
     "webpack": "^4.21.0",
     "webpack-cli": "^3.1.2"
   },
+  "peerDependencies": {
+    "emotion": "9",
+    "emotion-theming": "9",
+    "react": "16",
+    "react-emotion": "9"
+  },
   "dependencies": {},
   "jest": {
     "snapshotSerializers": [
