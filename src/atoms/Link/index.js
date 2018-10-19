@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
+import PropTypes from 'prop-types';
 
 const Chevron = props => (
   <svg xmlns="http://www.w3.org/2000/svg" width="6" height="9" {...props}>
@@ -15,7 +16,7 @@ const StyledChevron = styled(Chevron)`
   }
 `;
 
-const Link = styled.a`
+const LinkComponent = styled.a`
   color: ${({ theme }) => theme.link.color};
   &:focus,
   &:visited,
@@ -32,9 +33,15 @@ const Link = styled.a`
   line-height: 24px;
 `;
 
-export default ({ children, ...props }) => (
-  <Link {...props}>
+const Link = ({ children, ...props }) => (
+  <LinkComponent {...props}>
     {children}
     <StyledChevron />
-  </Link>
+  </LinkComponent>
 );
+
+Link.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Link;

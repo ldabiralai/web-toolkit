@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders a Button 1`] = `
-<_default
+<Link
   className="css-tvhjjp e6fcafu0"
   type="primary"
 >
   Click me !
-</_default>
+</Link>
 `;

@@ -1,5 +1,6 @@
 import styled, { css } from 'react-emotion';
 import { lighten, rgba } from 'polished';
+import PropTypes from 'prop-types';
 import Link from '../Link';
 
 const Button = styled(Link)`
@@ -44,5 +45,11 @@ const Button = styled(Link)`
 Button.defaultProps = {
   type: 'primary',
 };
+
+Button.propTypes = {
+  type: PropTypes.oneOf(['primary', 'secondary']),
+};
+
+Button.displayName = 'Button';
 
 export default Button;
