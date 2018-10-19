@@ -9,6 +9,6 @@ const buttonStories = storiesOf('Button', module);
 buttonStories.add(
   'configurable',
   withInfo()(() => (
-    <Button type={select('Type', ['primary', 'secondary'], 'primary')}>{text('Children', 'Primary')}</Button>
+    <Button type={select('Type', ['primary', 'secondary'], 'primary')}>{text('Children', 'Children prop text')}</Button>
   ))
 );
