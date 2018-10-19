@@ -18,3 +18,4 @@ Todo:
 - Test treeshaking is working as intended with multiple components
 - Refactor test setup to have 1 file with adaptor/enzyme
 - Improve storybook Info for propTypes description
+- Improve storybook Knobs
