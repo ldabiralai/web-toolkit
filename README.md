@@ -2,15 +2,20 @@
 
 A collection of components to share common functionality across teams.
 
-[View the components](https://eurosport.netlify.com)
+[View the storybook](https://eurosport.netlify.com)
 
-Directory structure follows atomic design:
-- src/atoms
-- src/molecules
-- src/organisms
+## How to use
 
-Decisions:
-- Public github repo
-- Public NPM module that contains all components
-- PR review from one person from both other teams
-- Versioned using semver
+`npm install @eurosport/web-toolkit emotion react-emotion emotion-theming`
+
+All available components are exported as named exports so you can pull them in easily:
+
+```jsx
+import { ThemeProvider } from 'emotion-theming'
+import { theme, Button } from '@eurosport/web-toolkit'
+
+const MyApp = () =>
+  <ThemeProvider theme={theme}>
+    <Button>Hello!</Button>
+  </ThemeProvider>
+```
