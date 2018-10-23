@@ -2,7 +2,7 @@
 
 A collection of components to share common functionality across teams.
 
-[View the storybook](https://eurosport.netlify.com)
+[View the storybook](https://es-web-toolkit.netlify.com)
 
 ## How to use
 
