@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a Link 1`] = `
+<Styled(a)
+  href="/"
+  theme={
+    Object {
+      "button": Object {
+        "primary": Object {
+          "backgroundColor": "#d50032",
+          "color": "white",
+        },
+        "secondary": Object {
+          "color": "#64dcff",
+        },
+      },
+      "link": Object {
+        "color": "#64dcff",
+      },
+    }
+  }
+>
+  Click me !
+  <Styled(Chevron) />
+</Styled(a)>
+`;
