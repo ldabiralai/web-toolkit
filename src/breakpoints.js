@@ -1,4 +1,4 @@
-import { css } from 'react-emotion/macro';
+import { css } from 'react-emotion';
 
 export const small = style => css`
   @media ${'(min-width: 480px)'} {
