@@ -40,6 +40,8 @@ const Link = ({ children, ...props }) => (
   </LinkComponent>
 );
 
+Link.displayName = 'Link';
+
 Link.propTypes = {
   children: PropTypes.node.isRequired,
 };
