@@ -1,0 +1,12 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+const Card = ({ children }) => <div>{children}</div>;
+
+Card.displayName = 'Card';
+
+Card.propTypes = {
+  children: PropTypes.node.isRequired,
+};
+
+export default Card;
