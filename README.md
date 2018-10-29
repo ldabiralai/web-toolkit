@@ -6,7 +6,7 @@ A collection of components to share common functionality across teams.
 
 ## How to use
 
-`npm install @eurosport/web-toolkit emotion react-emotion emotion-theming`
+`npm install @eurosport/web-toolkit emotion react-emotion emotion-theming polished`
 
 All available components are exported as named exports so you can pull them in easily:
 
