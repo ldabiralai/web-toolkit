@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 const StyledFooter = styled('div')`
   border-top: 1px solid black;
+  font-size: 0.8em;
 `;
 
 const CardFooter = ({ children }) => (

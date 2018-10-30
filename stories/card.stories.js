@@ -11,8 +11,8 @@ cardStories.add(
     <Cards.Article />
   ))
 ).add(
-  'Live Card',
+  'VOD Card',
   withInfo()(() => (
-    <Cards.Live />
+    <Cards.Vod live/>
   ))
 );
