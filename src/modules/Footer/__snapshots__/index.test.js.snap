@@ -12,7 +12,7 @@ exports[`Footer renders when everything passed in 1`] = `
   <Styled(div)>
     <Styled(ul)>
       <Styled(li)
-        key="0"
+        key="1"
       >
         <Styled(a)
           href="https://cookie.fr"
@@ -21,7 +21,7 @@ exports[`Footer renders when everything passed in 1`] = `
         </Styled(a)>
       </Styled(li)>
       <Styled(li)
-        key="1"
+        key="2"
       >
         <Styled(a)
           href="https://tm.fr"
@@ -30,7 +30,7 @@ exports[`Footer renders when everything passed in 1`] = `
         </Styled(a)>
       </Styled(li)>
       <Styled(li)
-        key="2"
+        key="3"
       >
         <Styled(a)
           href="https://policy.fr"
@@ -76,7 +76,7 @@ exports[`Footer renders without copyright 1`] = `
   <Styled(div)>
     <Styled(ul)>
       <Styled(li)
-        key="0"
+        key="1"
       >
         <Styled(a)
           href="https://cookie.fr"
@@ -85,7 +85,7 @@ exports[`Footer renders without copyright 1`] = `
         </Styled(a)>
       </Styled(li)>
       <Styled(li)
-        key="1"
+        key="2"
       >
         <Styled(a)
           href="https://tm.fr"
@@ -94,7 +94,7 @@ exports[`Footer renders without copyright 1`] = `
         </Styled(a)>
       </Styled(li)>
       <Styled(li)
-        key="2"
+        key="3"
       >
         <Styled(a)
           href="https://policy.fr"

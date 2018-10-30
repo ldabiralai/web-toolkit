@@ -84,8 +84,8 @@ const Footer = ({ faq, items, copyright }) => (
     </StyledButton>
     <StyledColumn>
       <StyledItems>
-        {items.map((item, i) => (
-          <StyledItem key={i}>
+        {items.map(item => (
+          <StyledItem key={item.id}>
             <StyledLink href={item.link}>{item.label}</StyledLink>
           </StyledItem>
         ))}
@@ -108,6 +108,7 @@ Footer.propTypes = {
   }).isRequired,
   items: PropTypes.arrayOf(
     PropTypes.shape({
+      id: PropTypes.number,
       link: PropTypes.string,
       label: PropTypes.string,
     })
