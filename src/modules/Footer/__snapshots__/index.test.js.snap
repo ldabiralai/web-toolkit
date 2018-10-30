@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders a Footer 1`] = `
+exports[`Footer renders when everything passed in 1`] = `
 <Styled(div)>
   <Styled(Link)
     href="https://google.fr"
@@ -46,7 +46,25 @@ exports[`renders a Footer 1`] = `
 </Styled(div)>
 `;
 
-exports[`renders a footer without copyright 1`] = `
+exports[`Footer renders with no items 1`] = `
+<Styled(div)>
+  <Styled(Link)
+    href="https://google.fr"
+    target="_blank"
+    type="secondary"
+  >
+    Help & Faq
+  </Styled(Link)>
+  <Styled(div)>
+    <Styled(ul) />
+    <Styled(div)>
+      copyright
+    </Styled(div)>
+  </Styled(div)>
+</Styled(div)>
+`;
+
+exports[`Footer renders without copyright 1`] = `
 <Styled(div)>
   <Styled(Link)
     href="https://google.fr"

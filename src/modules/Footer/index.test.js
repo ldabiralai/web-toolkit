@@ -21,10 +21,16 @@ const items = [
   },
 ];
 
-it('renders a Footer', () => {
-  expect(shallow(<Footer faq={faq} items={items} copyright="copyright" />)).toMatchSnapshot();
-});
+describe('Footer', () => {
+  it('renders when everything passed in', () => {
+    expect(shallow(<Footer faq={faq} items={items} copyright="copyright" />)).toMatchSnapshot();
+  });
 
-it('renders a footer without copyright', () => {
-  expect(shallow(<Footer faq={faq} items={items} />)).toMatchSnapshot();
+  it('renders without copyright', () => {
+    expect(shallow(<Footer faq={faq} items={items} />)).toMatchSnapshot();
+  });
+
+  it('renders with no items', () => {
+    expect(shallow(<Footer faq={faq} copyright="copyright" />)).toMatchSnapshot();
+  });
 });

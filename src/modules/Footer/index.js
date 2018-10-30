@@ -1,15 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
 import { Button, breakpoints, colors } from '../..';
 
 const StyledWrapper = styled('div')`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-
   ${breakpoints.medium(css`
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
   `)};
 `;
 
@@ -73,31 +73,45 @@ const StyledLink = styled('a')`
   }
 `;
 
-const StyledCopyright = styled.div`
+const StyledCopyright = styled('div')`
   color: ${colors.manatee};
 `;
 
-const Footer = ({ faq, items, copyright}) => (
+const Footer = ({ faq, items, copyright }) => (
   <StyledWrapper>
     <StyledButton type="secondary" href={faq.link} target="_blank">
       {faq.label}
     </StyledButton>
     <StyledColumn>
       <StyledItems>
-        {items.map( (item, i) => (
+        {items.map((item, i) => (
           <StyledItem key={i}>
             <StyledLink href={item.link}>{item.label}</StyledLink>
           </StyledItem>
         ))}
       </StyledItems>
-      { copyright && <StyledCopyright>{copyright}</StyledCopyright> }
+      {copyright && <StyledCopyright>{copyright}</StyledCopyright>}
     </StyledColumn>
   </StyledWrapper>
 );
 
 Footer.defaultProps = {
-  faq: {},
   items: [],
+  copyright: null,
+};
+
+Footer.propTypes = {
+  copyright: PropTypes.string,
+  faq: PropTypes.shape({
+    link: PropTypes.string,
+    label: PropTypes.string,
+  }).isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      link: PropTypes.string,
+      label: PropTypes.string,
+    })
+  ),
 };
 
 export default Footer;
