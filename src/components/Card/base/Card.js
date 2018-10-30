@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = ({ children }) => <div>{children}</div>;
+const Card = ({ children }) => <div style={ { width: '200px', position: 'relative'} }>{children}</div>;
 
 Card.displayName = 'Card';
 

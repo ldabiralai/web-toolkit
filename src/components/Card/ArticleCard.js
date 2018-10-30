@@ -20,6 +20,9 @@ const ContentDescription = styled(Text)`
   font-weight: bold;
 `;
 
+const TimeStamp = styled(Text)`
+  display: inline;
+`;
 
 
 const ArticleCard = () => (
@@ -32,8 +35,8 @@ const ArticleCard = () => (
       <ContentDescription>Lorem ipsum dolor sit.</ContentDescription>
     </CardContent>
     <CardFooter>
-      <ChannelLogo />
-      <Text>15:00 - 16:00</Text>
+      <ChannelLogo height='20' channel='E2' />
+      <TimeStamp>15:00 - 16:00</TimeStamp>
     </CardFooter>
   </Card>
 );

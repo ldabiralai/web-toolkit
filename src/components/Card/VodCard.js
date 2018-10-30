@@ -38,15 +38,20 @@ const StyledLiveLabel = styled.div`
 
 const StyledPlayIcon = styled(Icon)`
   position: absolute;
-  bottom: 10px;
+  top: 30px;
   left: 10px;
 `;
+
+const TimeStamp = styled(Text)`
+  display: inline;
+`;
+
 
 const VodCard = ( {live = false} ) => (
   <Card>
     <CardHeader style={{position: 'relative'}}>
       <img src="https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=200" />
-      <StyledPlayIcon type='play' width='60' />
+      <StyledPlayIcon type='play' height='60' />
       {live && <StyledLiveLabel>Live</StyledLiveLabel>}
     </CardHeader>
     <CardContent>
@@ -54,8 +59,8 @@ const VodCard = ( {live = false} ) => (
       <ContentDescription>Lorem ipsum dolor sit.</ContentDescription>
     </CardContent>
     <CardFooter>
-      <ChannelLogo />
-      <Text>15:00 - 16:00</Text>
+      <ChannelLogo height='20' channel='E1' />
+      <TimeStamp>15:00 - 16:00</TimeStamp>
     </CardFooter>
 
 
