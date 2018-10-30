@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardHeader, CardContent, CardFooter } from './base';
 import Heading from '../../elements/Heading';
+import Text from '../../elements/Text';
 import styled, { css } from 'react-emotion';
 
 const base = css`
@@ -14,6 +15,11 @@ const StyledHeading = styled(Heading)`
   letter-spacing: 0.2em;
 `;
 
+const StyledText = styled(Text)`
+  font-weight: bold;
+`;
+
+
 const ArticleCard = () => (
   <Card>
     <CardHeader>
@@ -21,7 +27,7 @@ const ArticleCard = () => (
     </CardHeader>
     <CardContent>
       <StyledHeading as="h1">Heading</StyledHeading>
-      <p>Lorem ipsum dolor sit.</p>
+      <StyledText>Lorem ipsum dolor sit.</StyledText>
     </CardContent>
     <CardFooter>
       <span>more info</span>

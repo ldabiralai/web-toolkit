@@ -13,9 +13,9 @@ exports[`renders a ArticleCard 1`] = `
     >
       Heading
     </Styled(Heading)>
-    <p>
+    <Styled(Text)>
       Lorem ipsum dolor sit.
-    </p>
+    </Styled(Text)>
   </CardContent>
   <CardFooter>
     <span>
