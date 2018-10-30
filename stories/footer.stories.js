@@ -1,5 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
+import { text, object } from '@storybook/addon-knobs';
+import { withInfo } from '@storybook/addon-info';
 import { Footer } from '../src';
 
 const footerStories = storiesOf('Footer', module);
@@ -25,4 +27,13 @@ const items = [
   },
 ];
 
-footerStories.add('base', () => <Footer faq={faq} items={items} copyright="copyright" />);
+footerStories.add(
+  'base',
+  withInfo()(() => (
+    <Footer
+      faq={object('faq', faq)}
+      items={object('items', items)}
+      copyright={text('copyright', '© Eurosport, a Discovery Company 2018 – All rights reserved')}
+    />
+  ))
+);
