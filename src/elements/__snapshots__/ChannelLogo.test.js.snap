@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders E ChannelLogo as a default 1`] = `
+<div>
+  E
+</div>
+`;
+
+exports[`renders E1 ChannelLogo 1`] = `
+<div>
+  E1
+</div>
+`;
+
+exports[`renders E2 ChannelLogo 1`] = `
+<div>
+  E2
+</div>
+`;

@@ -2,7 +2,9 @@ import React from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 
-const StyledFooter = styled('div')``;
+const StyledFooter = styled('div')`
+  border-top: 1px solid black;
+`;
 
 const CardFooter = ({ children }) => (
   <StyledFooter>

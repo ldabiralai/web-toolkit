@@ -18,9 +18,10 @@ exports[`renders a ArticleCard 1`] = `
     </Styled(Text)>
   </CardContent>
   <CardFooter>
-    <span>
-      more info
-    </span>
+    <ChannelLogo />
+    <Styled(Text)>
+      15:00 - 16:00
+    </Styled(Text)>
   </CardFooter>
 </Card>
 `;

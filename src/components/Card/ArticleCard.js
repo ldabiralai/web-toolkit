@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardHeader, CardContent, CardFooter } from './base';
 import Heading from '../../elements/Heading';
 import Text from '../../elements/Text';
+import ChannelLogo from '../../elements/ChannelLogo';
 import styled, { css } from 'react-emotion';
 
 const base = css`
@@ -15,8 +16,12 @@ const StyledHeading = styled(Heading)`
   letter-spacing: 0.2em;
 `;
 
-const StyledText = styled(Text)`
+const ContentDescription = styled(Text)`
   font-weight: bold;
+`;
+
+const Timestamp = styled(Text)`
+  font-size: 0.8em;
 `;
 
 
@@ -27,10 +32,11 @@ const ArticleCard = () => (
     </CardHeader>
     <CardContent>
       <StyledHeading as="h1">Heading</StyledHeading>
-      <StyledText>Lorem ipsum dolor sit.</StyledText>
+      <ContentDescription>Lorem ipsum dolor sit.</ContentDescription>
     </CardContent>
     <CardFooter>
-      <span>more info</span>
+      <ChannelLogo />
+      <Timestamp>15:00 - 16:00</Timestamp>
     </CardFooter>
   </Card>
 );
