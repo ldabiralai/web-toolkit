@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders when everything passed in 1`] = `
+<Styled(div)>
+  <Styled(Link)
+    href="https://google.fr"
+    target="_blank"
+    type="secondary"
+  >
+    Help & Faq
+  </Styled(Link)>
+  <Styled(div)>
+    <Styled(ul)>
+      <Styled(li)
+        key="1"
+      >
+        <Styled(a)
+          href="https://cookie.fr"
+        >
+          cookie
+        </Styled(a)>
+      </Styled(li)>
+      <Styled(li)
+        key="2"
+      >
+        <Styled(a)
+          href="https://tm.fr"
+        >
+          Terms & Conditions
+        </Styled(a)>
+      </Styled(li)>
+      <Styled(li)
+        key="3"
+      >
+        <Styled(a)
+          href="https://policy.fr"
+        >
+          privacy policy
+        </Styled(a)>
+      </Styled(li)>
+    </Styled(ul)>
+    <Styled(div)>
+      copyright
+    </Styled(div)>
+  </Styled(div)>
+</Styled(div)>
+`;
+
+exports[`Footer renders with no items 1`] = `
+<Styled(div)>
+  <Styled(Link)
+    href="https://google.fr"
+    target="_blank"
+    type="secondary"
+  >
+    Help & Faq
+  </Styled(Link)>
+  <Styled(div)>
+    <Styled(ul) />
+    <Styled(div)>
+      copyright
+    </Styled(div)>
+  </Styled(div)>
+</Styled(div)>
+`;
+
+exports[`Footer renders without copyright 1`] = `
+<Styled(div)>
+  <Styled(Link)
+    href="https://google.fr"
+    target="_blank"
+    type="secondary"
+  >
+    Help & Faq
+  </Styled(Link)>
+  <Styled(div)>
+    <Styled(ul)>
+      <Styled(li)
+        key="1"
+      >
+        <Styled(a)
+          href="https://cookie.fr"
+        >
+          cookie
+        </Styled(a)>
+      </Styled(li)>
+      <Styled(li)
+        key="2"
+      >
+        <Styled(a)
+          href="https://tm.fr"
+        >
+          Terms & Conditions
+        </Styled(a)>
+      </Styled(li)>
+      <Styled(li)
+        key="3"
+      >
+        <Styled(a)
+          href="https://policy.fr"
+        >
+          privacy policy
+        </Styled(a)>
+      </Styled(li)>
+    </Styled(ul)>
+  </Styled(div)>
+</Styled(div)>
+`;

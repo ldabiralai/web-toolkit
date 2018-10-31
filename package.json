@@ -28,6 +28,7 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^4.0.0-alpha.25",
+    "@storybook/addon-backgrounds": "^4.0.0",
     "@storybook/addon-info": "^4.0.0-rc.1",
     "@storybook/addon-knobs": "^3.4.11",
     "@storybook/addon-links": "^4.0.0-alpha.25",
