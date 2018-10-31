@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentListing Grid renders children 1`] = `
+<Styled(div)>
+  <Styled(div)
+    key=".$1"
+  >
+    <div
+      key="1"
+    >
+      card1
+    </div>
+  </Styled(div)>
+  <Styled(div)
+    key=".$2"
+  >
+    <div
+      key="2"
+    >
+      card2
+    </div>
+  </Styled(div)>
+</Styled(div)>
+`;
