@@ -1,31 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, CardHeader, CardContent, CardFooter } from './base';
-
-import Heading from '../../elements/Heading';
+import UppercaseHeading from '../../elements/UppercaseHeading';
 import Text from '../../elements/Text';
 import ChannelLogo from '../../elements/ChannelLogo';
 import Icon from '../../elements/Icon';
 
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 
-const base = css`
-  color: goldenrod;
-`;
-
-const StyledHeading = styled(Heading)`
-  ${base}
-  text-transform: uppercase;
-  font-size: 1em;
-  letter-spacing: 0.2em;
-`;
 
 const ContentDescription = styled(Text)`
   font-weight: bold;
-`;
-
-const StyledCardHeader = styled(CardHeader)`
-  position: relative
 `;
 
 const StyledLiveLabel = styled.div`
@@ -55,7 +40,7 @@ const VodCard = ( {live = false} ) => (
       {live && <StyledLiveLabel>Live</StyledLiveLabel>}
     </CardHeader>
     <CardContent>
-      <StyledHeading as="h1">Heading</StyledHeading>
+      <UppercaseHeading as="h2">Heading</UppercaseHeading>
       <ContentDescription>Lorem ipsum dolor sit.</ContentDescription>
     </CardContent>
     <CardFooter>

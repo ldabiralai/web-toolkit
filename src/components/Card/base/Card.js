@@ -1,7 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'react-emotion';
 
-const Card = ({ children }) => <div style={ { width: '200px', position: 'relative'} }>{children}</div>;
+const StyledCard = styled('div')`
+  border-radius: .28571429rem;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  overflow: hidden;
+`;
+
+const Card = ({ children, className }) => <StyledCard className={className}>{children}</StyledCard>;
 
 Card.displayName = 'Card';
 

@@ -4,6 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs';
 import { ThemeProvider } from 'emotion-theming';
 import { theme, colors } from '../src';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
+import '../src/reset';
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.*.stories.js$/);
