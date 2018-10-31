@@ -1,5 +1,3 @@
-import Article from './ArticleCard';
-import Vod from './VodCard';
-import Schedule from './ScheduleCard';
+import Content from './ContentCard';
 
-export { Article, Vod, Schedule };
+export { Content };

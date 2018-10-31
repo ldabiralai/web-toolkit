@@ -1,0 +1,28 @@
+import React from 'react';
+import { shallow } from 'enzyme';
+import ContentCard from './ContentCard';
+import { StyledPlayIcon, StyledLiveLabel } from './ContentCard';
+
+const cardData = {
+  img: 'https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=200',
+  title: 'Tennis',
+  description: 'Desription',
+  timestamp: '09:00 - 10:30',
+  channel: 'E1',
+};
+
+it('renders a Article ContentCard', () => {
+  const wrapper = shallow(<ContentCard card={cardData} />);
+  expect(wrapper).toMatchSnapshot();
+  expect(wrapper.find(StyledPlayIcon).length).toEqual(0)
+});
+
+it('renders a ContentCard with play icon', () => {
+  const wrapper = shallow(<ContentCard card={cardData} type="vod" />);
+  expect(wrapper.find(StyledPlayIcon).length).toEqual(1);
+});
+
+it('renders a ContentCard with live label', () => {
+  const wrapper = shallow(<ContentCard card={cardData} live />);
+  expect(wrapper.find(StyledLiveLabel).length).toEqual(1);
+});

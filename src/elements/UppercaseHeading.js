@@ -7,6 +7,8 @@ import { regentGray } from '../colors';
 const StyledHeading = styled(Heading)`
   text-transform: uppercase;
   color: ${regentGray};
+  font-size: 0.8rem;
+  letter-spacing: .1rem;
 `;
 
 const UppercaseHeading  = (props) => {

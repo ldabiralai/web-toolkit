@@ -1,19 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders E ChannelLogo as a default 1`] = `
-<div>
-  E
-</div>
+<Styled(baseIcon)
+  height="50"
+  type="e"
+  width={43.5}
+/>
 `;
 
 exports[`renders E1 ChannelLogo 1`] = `
-<div>
-  E1
-</div>
+<Styled(baseIcon)
+  height="50"
+  type="e1"
+  width={71}
+/>
 `;
 
 exports[`renders E2 ChannelLogo 1`] = `
-<div>
-  E2
-</div>
+<Styled(baseIcon)
+  height="50"
+  type="e2"
+  width={83}
+/>
 `;
