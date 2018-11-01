@@ -7,10 +7,15 @@ const StyledFooter = styled('div')`
   padding-top: 1em;
   border-top: 1px solid rgba(0,0,0,.05);
   font-size: 0.8em;
+  
+  *:second-child{
+    background-color: red;
+  }
+  
 `;
 
-const CardFooter = ({ children }) => (
-  <StyledFooter>
+const CardFooter = ({ children, className }) => (
+  <StyledFooter className={className} >
     {children}
   </StyledFooter>
 );

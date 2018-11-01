@@ -14,7 +14,7 @@ const Wrapper = styled('div')`
 const baseData = {
   img: 'https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=200',
   title: 'Tennis',
-  description: 'Desription',
+  description: 'Klopp happy with Chelsea draw after good performance',
   timestamp: '09:00 - 10:30',
   channel: 'E1',
 };
@@ -26,8 +26,7 @@ cardStories.add(
     <Wrapper>
       <Cards.Content
         card={baseData}
-        live={boolean('Live', false)}
-        type={select('Type', ['vod', 'article'], 'article')}
+        type={select('Type', ['vod', 'article', 'live'], 'article')}
       />
     </Wrapper>
   ))

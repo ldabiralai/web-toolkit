@@ -23,6 +23,7 @@ it('renders a ContentCard with play icon', () => {
 });
 
 it('renders a ContentCard with live label', () => {
-  const wrapper = shallow(<ContentCard card={cardData} live />);
+  const wrapper = shallow(<ContentCard card={cardData} type="live" />);
   expect(wrapper.find(StyledLiveLabel).length).toEqual(1);
+  expect(wrapper.find(StyledPlayIcon).length).toEqual(1);
 });

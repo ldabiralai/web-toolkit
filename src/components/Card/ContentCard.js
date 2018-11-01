@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Card, CardHeader, CardContent, CardFooter } from './base';
 import UppercaseHeading from '../../elements/UppercaseHeading';
 import Text from '../../elements/Text';
-import ChannelLogo from '../../elements/ChannelLogo';
 import Icon from '../../elements/Icon';
 
 import styled from 'react-emotion';
@@ -14,11 +13,18 @@ const ContentDescription = styled(Text)`
 `;
 
 export const StyledLiveLabel = styled.div`
-  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .2em .4em;
+  border-radius: 2px;	
+  background-color: #E00034;
   color: white;
+  font-weight: bold;
+  font-size: 15px;
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 10px;  
 `;
 
 export const StyledPlayIcon = styled(Icon)`
@@ -32,27 +38,37 @@ const TimeStamp = styled(Text)`
 `;
 
 const StyledCardFooter = styled(CardFooter)`
+
   display: flex;
+  align-items: center;
+  
+  * :nth-child(2) {
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: 1px solid black;
+  }
 `;
 
-const ContentCard = ({ card, live, type } ) => {
+const ContentCard = ({ card, type } ) => {
   const { img, title, description, timestamp, channel } = card;
+  const isLive = type === 'live';
+  const isPlayable = isLive || type === 'vod';
+
   return (
     <Card>
       <CardHeader style={{position: 'relative'}}>
         <img src={img} />
-        {type ==='vod' && <StyledPlayIcon type='play' height='60' />}
-        {live && <StyledLiveLabel>Live</StyledLiveLabel>}
+        {isPlayable && <StyledPlayIcon type='play' height='60' />}
+        {isLive && <StyledLiveLabel>Live</StyledLiveLabel>}
       </CardHeader>
       <CardContent>
         <UppercaseHeading as="h2">{title}</UppercaseHeading>
         <ContentDescription>{description}</ContentDescription>
+        <StyledCardFooter>
+          {isLive &&  <Icon height='20' type={channel} />}
+          <TimeStamp>{timestamp}</TimeStamp>
+        </StyledCardFooter>
       </CardContent>
-      <StyledCardFooter>
-        <ChannelLogo height='20' channel={channel} />
-        <TimeStamp>{timestamp}</TimeStamp>
-      </StyledCardFooter>
-
 
     </Card>);
 }
@@ -64,7 +80,6 @@ ContentCard.propTypes = {
     description: PropTypes.string.isRequired,
     timestamp: PropTypes.string,
     channel: PropTypes.string,
-    live: PropTypes.bool,
     type: PropTypes.string
   }),
 };

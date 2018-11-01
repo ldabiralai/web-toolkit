@@ -9,6 +9,6 @@ const iconsStories = storiesOf('Icon', module);
 iconsStories.add(
   'configurable',
   withInfo()(() => (
-    <Icon type={select('Type', ['play', 'pause'], 'play')} height={number('Height', 30)} />
+    <Icon type={select('Type', ['play', 'pause', 'E', 'E1', 'E2'], 'play')} height={number('Height', 50)} />
   ))
 );

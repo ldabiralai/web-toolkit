@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 const StyledContent = styled('div')`
   padding: 6px 10px;
+  line-height: 1.3em;
 `;
 
 const CardContent = ({ children }) => (
