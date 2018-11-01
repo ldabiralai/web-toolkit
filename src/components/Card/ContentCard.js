@@ -34,18 +34,31 @@ export const StyledPlayIcon = styled(Icon)`
 `;
 
 const TimeStamp = styled(Text)`
-  display: inline;
+  display: flex;
 `;
 
 const StyledCardFooter = styled(CardFooter)`
-
   display: flex;
-  align-items: center;
+  margin-top: 15px;
+  border-top: 1px solid grey;
+  height: 30px;
+  
+  img {
+    align-self: center;
+  }
+ 
+  p {
+    display: flex;
+     
+    span{
+      align-self: center;
+      }
+  }
   
   * :nth-child(2) {
-    margin-left: 1em;
-    padding-left: 1em;
-    border-left: 1px solid black;
+      margin-left: 1em;
+      padding-left: 1em;
+      border-left: 1px solid black;
   }
 `;
 
@@ -65,8 +78,8 @@ const ContentCard = ({ card, type } ) => {
         <UppercaseHeading as="h2">{title}</UppercaseHeading>
         <ContentDescription>{description}</ContentDescription>
         <StyledCardFooter>
-          {isLive &&  <Icon height='20' type={channel} />}
-          <TimeStamp>{timestamp}</TimeStamp>
+          {isLive &&  <Icon height='15' type={channel} />}
+          <p><TimeStamp>{timestamp}</TimeStamp></p>
         </StyledCardFooter>
       </CardContent>
 
