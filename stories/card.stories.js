@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { boolean, select } from '@storybook/addon-knobs';
+import { boolean, select, object } from '@storybook/addon-knobs';
 import { Cards } from '../src';
 import styled from 'react-emotion';
 
@@ -25,7 +25,7 @@ cardStories.add(
   withInfo()(() => (
     <Wrapper>
       <Cards.Content
-        card={baseData}
+        card={object('object', baseData)}
         type={select('Type', ['vod', 'article', 'live'], 'article')}
       />
     </Wrapper>
