@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { boolean, select, object } from '@storybook/addon-knobs';
-import { Cards } from '../src';
+import { Cards } from '../../index';
 import styled from 'react-emotion';
 
 const cardStories = storiesOf('Card', module);
@@ -16,7 +16,7 @@ const baseData = {
   title: 'Tennis',
   description: 'Klopp happy with Chelsea draw after good performance',
   timestamp: '09:00 - 10:30',
-  channel: 'E1',
+  channel: 'e1',
 };
 
 
