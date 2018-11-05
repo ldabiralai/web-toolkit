@@ -7,6 +7,11 @@ import Text from '../../elements/Text';
 import Icon from '../../elements/Icon';
 import { colors } from '../..';
 
+const ContentTitle = styled(Text)`
+  font-weight: bold;
+  color: ${colors.whiteLilac};
+`;
+
 const ContentDescription = styled(Text)`
   font-weight: bold;
   color: ${colors.whiteLilac};
@@ -51,7 +56,7 @@ const StyledCardFooter = styled(Footer)`
 `;
 
 const ContentCard = ({ card, type }) => {
-  const { img, title, description, timestamp, channel } = card;
+  const { img, category, title, description, timestamp, channel } = card;
   const isLive = type === 'live';
   const isPlayable = isLive || type === 'vod';
 
@@ -63,8 +68,9 @@ const ContentCard = ({ card, type }) => {
         {isLive && <StyledLiveLabel>Live</StyledLiveLabel>}
       </Header>
       <Content>
-        <UppercaseHeading as="h2">{title}</UppercaseHeading>
-        <ContentDescription>{description}</ContentDescription>
+        <UppercaseHeading as="h2">{category}</UppercaseHeading>
+        <ContentTitle>{title}</ContentTitle>
+        {description && <ContentDescription>{description}</ContentDescription>}
         <StyledCardFooter>
           {isLive && <Icon height="15" type={channel} />}
           <TimeStamp>{timestamp}</TimeStamp>
@@ -77,8 +83,9 @@ const ContentCard = ({ card, type }) => {
 ContentCard.propTypes = {
   card: PropTypes.shape({
     img: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.string,
     timestamp: PropTypes.string,
     channel: PropTypes.string,
   }).isRequired,
