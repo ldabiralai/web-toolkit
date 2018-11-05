@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, select } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
-import { Heading } from '../index';
+import { Heading } from '../../index';
 
 const headingStories = storiesOf('Heading', module);
 

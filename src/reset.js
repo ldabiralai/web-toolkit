@@ -1,4 +1,4 @@
-import { injectGlobal } from 'react-emotion'
+import { injectGlobal } from 'react-emotion';
 
 injectGlobal`
 html, body, div, span, applet, object, iframe,
@@ -44,4 +44,4 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-`
+`;

@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { createMatchers } from 'jest-emotion';
 import * as emotion from 'emotion';
-import Icon, {BaseIcon} from './Icon';
+import Icon, { BaseIcon } from '.';
 
 expect.extend(createMatchers(emotion));
 

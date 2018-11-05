@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Heading from './Heading';
+import Heading from '.';
 
 it('renders a Heading as h1', () => {
   expect(shallow(<Heading as="h1">Heading text</Heading>)).toMatchSnapshot();
