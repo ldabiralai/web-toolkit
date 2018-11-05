@@ -6,7 +6,7 @@ const StyledHeader = styled.div`
   position: relative;
 `;
 
-const Header = ({ children }) => <StyledHeader>{children}</StyledHeader>;
+const Header = ({ className, children }) => <StyledHeader className={className}>{children}</StyledHeader>;
 
 Header.displayName = 'Header';
 

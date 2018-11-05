@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 
-const iconMap = {
+export const iconMap = {
   pause: {
     src:
       'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEyIiBoZWlnaHQ9IjExMiIgdmlld0JveD0iMCAwIDExMiAxMTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlPlBhdXNlPC90aXRsZT48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yLjkyNyA1LjI2OGg5OS45MDJ2OTkuOTAySDIuOTI2eiIvPjxjaXJjbGUgZmlsbD0iIzE0MUI0RCIgb3BhY2l0eT0iLjYiIGN4PSI1NiIgY3k9IjU2IiByPSI1NiIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM5IDMxKSIgZmlsbD0iI0VGRUZGNCI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjUwIiByeD0iNSIvPjxyZWN0IHg9IjI0LjE5NSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjUwIiByeD0iNSIvPjwvZz48L2c+PC9zdmc+',

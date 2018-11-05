@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import ContentCard, { StyledPlayIcon, StyledLiveLabel } from './ContentCard';
+import Icon from '../../elements/Icon/';
 
 const cardData = {
   img: 'https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=200',
@@ -22,8 +23,9 @@ it('renders a ContentCard with play icon', () => {
   expect(wrapper.find(StyledPlayIcon).length).toEqual(1);
 });
 
-it('renders a ContentCard with live label', () => {
+it('renders a ContentCard with live label and channel logo', () => {
   const wrapper = shallow(<ContentCard card={cardData} type="live" />);
   expect(wrapper.find(StyledLiveLabel).length).toEqual(1);
   expect(wrapper.find(StyledPlayIcon).length).toEqual(1);
+  expect(wrapper.find(Icon).prop('type')).toEqual('E1');
 });

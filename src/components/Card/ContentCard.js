@@ -7,14 +7,15 @@ import Text from '../../elements/Text';
 import Icon from '../../elements/Icon';
 import { colors } from '../..';
 
-const ContentTitle = styled(Text)`
+const StyledContentTitle = styled(Text)`
   font-weight: bold;
   color: ${colors.whiteLilac};
+  display: block;
 `;
 
-const ContentDescription = styled(Text)`
-  font-weight: bold;
+const StyledContentDescription = styled(Text)`
   color: ${colors.whiteLilac};
+  display: block;
 `;
 
 export const StyledLiveLabel = styled.div`
@@ -42,7 +43,7 @@ const StyledImage = styled('img')`
   width: 100%;
 `;
 
-const TimeStamp = styled(Text)`
+const StyledTimeStamp = styled(Text)`
   padding: 8px 0;
 `;
 
@@ -62,18 +63,18 @@ const ContentCard = ({ card, type }) => {
 
   return (
     <Card>
-      <Header style={{ position: 'relative' }}>
+      <Header>
         <StyledImage src={img} alt={description} />
         {isPlayable && <StyledPlayIcon type="play" height="60" />}
         {isLive && <StyledLiveLabel>Live</StyledLiveLabel>}
       </Header>
       <Content>
         <UppercaseHeading as="h2">{category}</UppercaseHeading>
-        <ContentTitle>{title}</ContentTitle>
-        {description && <ContentDescription>{description}</ContentDescription>}
+        <StyledContentTitle>{title}</StyledContentTitle>
+        {description && <StyledContentDescription>{description}</StyledContentDescription>}
         <StyledCardFooter>
           {isLive && <Icon height="15" type={channel} />}
-          <TimeStamp>{timestamp}</TimeStamp>
+          <StyledTimeStamp>{timestamp}</StyledTimeStamp>
         </StyledCardFooter>
       </Content>
     </Card>
@@ -89,7 +90,7 @@ ContentCard.propTypes = {
     timestamp: PropTypes.string,
     channel: PropTypes.string,
   }).isRequired,
-  type: PropTypes.string.isRequired,
+  type: PropTypes.oneOf(['vod','article','live'])
 };
 
 export default ContentCard;
