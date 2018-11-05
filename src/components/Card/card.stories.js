@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { boolean, select, object } from '@storybook/addon-knobs';
-import { Cards } from '../../index';
 import styled from 'react-emotion';
+import { Cards } from '../../index';
 
 const cardStories = storiesOf('Card', module);
 
@@ -19,15 +19,11 @@ const baseData = {
   channel: 'e1',
 };
 
-
 cardStories.add(
   'Content Card',
   withInfo()(() => (
     <Wrapper>
-      <Cards.Content
-        card={object('object', baseData)}
-        type={select('Type', ['vod', 'article', 'live'], 'article')}
-      />
+      <Cards.Content card={object('object', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
     </Wrapper>
   ))
 );

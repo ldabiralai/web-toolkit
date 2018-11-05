@@ -1,6 +1,6 @@
 import Card from './Card';
-import CardHeader from './Card.Header';
-import CardContent from './Card.Content';
-import CardFooter from './Card.Footer';
+import Header from './Header';
+import Content from './Content';
+import Footer from './Footer';
 
-export { Card, CardHeader, CardContent, CardFooter };
+export { Card, Header, Content, Footer };

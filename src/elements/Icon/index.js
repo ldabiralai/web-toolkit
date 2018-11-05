@@ -46,7 +46,7 @@ const Icon = ({ type, alt, ...props }) => (
 
 Icon.defaultProps = {
   alt: '',
-}
+};
 
 Icon.propTypes = {
   type: PropTypes.string.isRequired,

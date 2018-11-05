@@ -14,7 +14,7 @@ const cardData = {
 it('renders a Article ContentCard', () => {
   const wrapper = shallow(<ContentCard card={cardData} />);
   expect(wrapper).toMatchSnapshot();
-  expect(wrapper.find(StyledPlayIcon).length).toEqual(0)
+  expect(wrapper.find(StyledPlayIcon).length).toEqual(0);
 });
 
 it('renders a ContentCard with play icon', () => {

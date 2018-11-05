@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import { Card, CardHeader, CardContent, CardFooter } from './base';
+import { Card, Header, Content, Footer } from './base';
 import UppercaseHeading from '../../elements/UppercaseHeading';
 import Text from '../../elements/Text';
 import Icon from '../../elements/Icon';
@@ -35,7 +35,7 @@ const TimeStamp = styled(Text)`
   display: flex;
 `;
 
-const StyledCardFooter = styled(CardFooter)`
+const StyledCardFooter = styled(Footer)`
   display: flex;
   margin-top: 15px;
   border-top: 1px solid grey;
@@ -67,12 +67,12 @@ const ContentCard = ({ card, type }) => {
 
   return (
     <Card>
-      <CardHeader style={{ position: 'relative' }}>
+      <Header style={{ position: 'relative' }}>
         <img src={img} />
         {isPlayable && <StyledPlayIcon type="play" height="60" />}
         {isLive && <StyledLiveLabel>Live</StyledLiveLabel>}
-      </CardHeader>
-      <CardContent>
+      </Header>
+      <Content>
         <UppercaseHeading as="h2">{title}</UppercaseHeading>
         <ContentDescription>{description}</ContentDescription>
         <StyledCardFooter>
@@ -81,7 +81,7 @@ const ContentCard = ({ card, type }) => {
             <TimeStamp>{timestamp}</TimeStamp>
           </p>
         </StyledCardFooter>
-      </CardContent>
+      </Content>
     </Card>
   );
 };

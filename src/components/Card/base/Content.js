@@ -7,16 +7,12 @@ const StyledContent = styled('div')`
   line-height: 1.3em;
 `;
 
-const CardContent = ({ children }) => (
-  <StyledContent>
-    {children}
-  </StyledContent>
-);
+const Content = ({ children }) => <StyledContent>{children}</StyledContent>;
 
-CardContent.displayName = 'CardContent';
+Content.displayName = 'Content';
 
-CardContent.propTypes = {
+Content.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default CardContent;
+export default Content;
