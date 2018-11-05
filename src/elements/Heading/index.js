@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Heading = ({ as, children }) => {
+const Heading = ({ as, children, ...props }) => {
   const HeadingTag = as;
-  return <HeadingTag>{children}</HeadingTag>;
+  return <HeadingTag {...props}>{children}</HeadingTag>;
 };
 
 Heading.propTypes = {

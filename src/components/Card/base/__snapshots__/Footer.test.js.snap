@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders a CardFooter 1`] = `
-<div>
+<div
+  className="css-hoopsu e164txam0"
+>
   CardFooter
 </div>
 `;

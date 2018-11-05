@@ -8,11 +8,11 @@ import { Cards } from '../../index';
 const cardStories = storiesOf('Card', module);
 
 const Wrapper = styled('div')`
-  max-width: 200px;
+  max-width: 500px;
 `;
 
 const baseData = {
-  img: 'https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=200',
+  img: 'https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=500',
   title: 'Tennis',
   description: 'Klopp happy with Chelsea draw after good performance',
   timestamp: '09:00 - 10:30',

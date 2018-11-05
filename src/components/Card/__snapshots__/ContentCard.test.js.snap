@@ -23,13 +23,11 @@ exports[`renders a Article ContentCard 1`] = `
     <Styled(Text)>
       Description
     </Styled(Text)>
-    <Styled(Footer)>
-      <p>
-        <Styled(Text)>
-          09:00 - 10:30
-        </Styled(Text)>
-      </p>
-    </Styled(Footer)>
+    <Styled(div)>
+      <Styled(Text)>
+        09:00 - 10:30
+      </Styled(Text)>
+    </Styled(div)>
   </Content>
 </Card>
 `;

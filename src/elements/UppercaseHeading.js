@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'react-emotion';
 
 import Heading from './Heading';
-import { regentGray } from '../colors';
+import { turquoiseBlue } from '../colors';
 
 const StyledHeading = styled(Heading)`
   text-transform: uppercase;
-  color: ${regentGray};
+  color: ${turquoiseBlue};
   font-size: 0.8rem;
   letter-spacing: 0.1rem;
 `;

@@ -5,9 +5,11 @@ import { Card, Header, Content, Footer } from './base';
 import UppercaseHeading from '../../elements/UppercaseHeading';
 import Text from '../../elements/Text';
 import Icon from '../../elements/Icon';
+import { colors } from '../..';
 
 const ContentDescription = styled(Text)`
   font-weight: bold;
+  color: ${colors.whiteLilac};
 `;
 
 export const StyledLiveLabel = styled.div`
@@ -27,36 +29,20 @@ export const StyledLiveLabel = styled.div`
 
 export const StyledPlayIcon = styled(Icon)`
   position: absolute;
-  top: 30px;
-  left: 10px;
+  bottom: 17px;
+  left: 16px;
 `;
 
 const TimeStamp = styled(Text)`
-  display: flex;
+  padding: 8px 0;
 `;
 
 const StyledCardFooter = styled(Footer)`
-  display: flex;
-  margin-top: 15px;
-  border-top: 1px solid grey;
-  height: 30px;
-
-  img {
-    align-self: center;
-  }
-
-  p {
-    display: flex;
-
-    span {
-      align-self: center;
-    }
-  }
-
   * :nth-child(2) {
     margin-left: 1em;
     padding-left: 1em;
-    border-left: 1px solid black;
+    border-left: 1px solid grey;
+    padding: 8px;
   }
 `;
 
@@ -77,9 +63,7 @@ const ContentCard = ({ card, type }) => {
         <ContentDescription>{description}</ContentDescription>
         <StyledCardFooter>
           {isLive && <Icon height="15" type={channel} />}
-          <p>
-            <TimeStamp>{timestamp}</TimeStamp>
-          </p>
+          <TimeStamp>{timestamp}</TimeStamp>
         </StyledCardFooter>
       </Content>
     </Card>

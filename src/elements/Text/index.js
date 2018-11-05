@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Text = ({ children }) => <span>{children}</span>;
+const Text = ({ children, ...props }) => <span {...props}>{children}</span>;
 
 Text.propTypes = {
   children: PropTypes.node.isRequired,
