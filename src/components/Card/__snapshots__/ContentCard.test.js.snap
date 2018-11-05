@@ -20,9 +20,7 @@ exports[`renders a Article ContentCard 1`] = `
     >
       Tennis
     </UppercaseHeading>
-    <Styled(Text)
-      as="h2"
-    >
+    <Styled(Text)>
       Youth olympic summer games
     </Styled(Text)>
     <Styled(Text)>
