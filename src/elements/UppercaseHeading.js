@@ -11,6 +11,6 @@ const StyledHeading = styled(Heading)`
   letter-spacing: 0.1rem;
 `;
 
-const UppercaseHeading = props => <StyledHeading {...props}>{props.children}</StyledHeading>;
+const UppercaseHeading = ({ children, ...props }) => <StyledHeading {...props}>{children}</StyledHeading>;
 
 export default UppercaseHeading;

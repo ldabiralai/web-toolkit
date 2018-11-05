@@ -1,12 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ContentCard from './ContentCard';
-import { StyledPlayIcon, StyledLiveLabel } from './ContentCard';
+import ContentCard, { StyledPlayIcon, StyledLiveLabel } from './ContentCard';
 
 const cardData = {
   img: 'https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=200',
   title: 'Tennis',
-  description: 'Desription',
+  description: 'Description',
   timestamp: '09:00 - 10:30',
   channel: 'E1',
 };

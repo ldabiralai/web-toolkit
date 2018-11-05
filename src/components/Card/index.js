@@ -1,3 +1,3 @@
 import Content from './ContentCard';
 
-export { Content };
+export default { Content };

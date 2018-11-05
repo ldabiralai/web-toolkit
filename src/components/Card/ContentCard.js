@@ -68,7 +68,7 @@ const ContentCard = ({ card, type }) => {
   return (
     <Card>
       <Header style={{ position: 'relative' }}>
-        <img src={img} />
+        <img src={img} alt={description} />
         {isPlayable && <StyledPlayIcon type="play" height="60" />}
         {isLive && <StyledLiveLabel>Live</StyledLiveLabel>}
       </Header>
@@ -93,8 +93,8 @@ ContentCard.propTypes = {
     description: PropTypes.string.isRequired,
     timestamp: PropTypes.string,
     channel: PropTypes.string,
-    type: PropTypes.string,
-  }),
+  }).isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 export default ContentCard;

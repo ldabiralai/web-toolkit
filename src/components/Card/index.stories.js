@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { boolean, select, object } from '@storybook/addon-knobs';
+import { select, object } from '@storybook/addon-knobs';
 import styled from 'react-emotion';
 import { Cards } from '../../index';
 
