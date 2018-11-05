@@ -23,7 +23,7 @@ cardStories.add(
   'Content Card',
   withInfo()(() => (
     <Wrapper>
-      <Cards.Content card={object('object', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
+      <Cards.Content card={object('card', baseData)} type={select('type', ['vod', 'article', 'live'], 'article')} />
     </Wrapper>
   ))
 );

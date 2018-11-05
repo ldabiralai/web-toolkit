@@ -33,6 +33,10 @@ export const StyledPlayIcon = styled(Icon)`
   left: 16px;
 `;
 
+const StyledImage = styled('img')`
+  width: 100%;
+`;
+
 const TimeStamp = styled(Text)`
   padding: 8px 0;
 `;
@@ -54,7 +58,7 @@ const ContentCard = ({ card, type }) => {
   return (
     <Card>
       <Header style={{ position: 'relative' }}>
-        <img src={img} alt={description} />
+        <StyledImage src={img} alt={description} />
         {isPlayable && <StyledPlayIcon type="play" height="60" />}
         {isLive && <StyledLiveLabel>Live</StyledLiveLabel>}
       </Header>
