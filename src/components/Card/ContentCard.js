@@ -90,7 +90,7 @@ const ContentCard = ({ card, type }) => {
   return (
     <StyledCard>
       <StyledHeader>
-        <StyledImage src={img} alt={description} />
+        <StyledImage src={img} alt={title} />
         {isPlayable && <StyledPlayIcon type="play" height="60" />}
         {isLive && <StyledLiveLabel>Live</StyledLiveLabel>}
       </StyledHeader>
