@@ -1,26 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
+import { rgba } from 'polished';
 import Icon from '../../elements/Icon';
 import * as colors from '../../colors';
 
 const StyledCard = styled('div')`
-  border-radius: 0.28571429rem;
-  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 0 ${rgba(colors.mirage, 0.75)}};
   overflow: hidden;
 `;
 
 const StyledContent = styled('div')`
   padding: 6px 10px;
-  line-height: 1.3em;
+  line-height: 1.3;
   background-color: ${colors.bunting};
 `;
 
 const StyledCategory = styled('p')`
   text-transform: uppercase;
   color: ${colors.turquoiseBlue};
-  font-size: 0.8rem;
-  letter-spacing: 0.1rem;
+  font-size: 12px;
+  letter-spacing: 1px;
 `;
 
 const StyledFooter = styled('div')`
@@ -32,8 +33,8 @@ const StyledFooter = styled('div')`
   font-size: 14px;
 
   * :nth-child(2) {
-    margin-left: 1em;
-    padding-left: 1em;
+    margin-left: 10px;
+    padding-left: 10px;
     border-left: 1px solid ${colors.whiteLilac};
     padding: 8px;
   }
@@ -56,12 +57,13 @@ export const StyledLiveLabel = styled('div')`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.2em 0.4em;
+  padding: 5px 8px;
   border-radius: 2px;
   background-color: ${colors.utahCrimson};
   color: ${colors.white};
   font-weight: bold;
-  font-size: 15px;
+  font-size: 12px;
+  letter-spacing: 1.2px;
   position: absolute;
   top: 10px;
   right: 10px;

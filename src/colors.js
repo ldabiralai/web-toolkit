@@ -13,6 +13,7 @@ export const cerulean = '#009cde';
 export const gunPowder = '#3f455d';
 export const mariner = '#3d5a98';
 export const midnightExpress = '#22263c';
+export const mirage = '#1b1e30';
 export const bunting = '#141b4d';
 export const ebony = '#060825';
 
