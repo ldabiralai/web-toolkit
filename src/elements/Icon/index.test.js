@@ -5,9 +5,7 @@ import Icon, { BaseIcon, iconMap } from '.';
 describe('Icon', () => {
   it('should render source for a valid icon type', () => {
     const wrapper = shallow(<Icon className="test" type="e1" />);
-    expect(wrapper.find(BaseIcon).prop('src')).toEqual(
-      iconMap['e1'].src
-    );
+    expect(wrapper.find(BaseIcon).prop('src')).toEqual(iconMap.e1.src);
   });
 
   it('should display alt text passed in from props', () => {

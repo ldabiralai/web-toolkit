@@ -30,7 +30,7 @@ const StyledFooter = styled('div')`
   border-top: 1px solid ${colors.whiteLilac};
   color: ${colors.santasGray};
   font-size: 14px;
-  
+
   * :nth-child(2) {
     margin-left: 1em;
     padding-left: 1em;
@@ -81,7 +81,6 @@ const StyledTimeStamp = styled('p')`
   padding: 8px 0;
 `;
 
-
 const ContentCard = ({ card, type }) => {
   const { img, category, title, description, timestamp, channel } = card;
   const isLive = type === 'live';
@@ -116,7 +115,7 @@ ContentCard.propTypes = {
     timestamp: PropTypes.string,
     channel: PropTypes.string,
   }).isRequired,
-  type: PropTypes.oneOf(['vod','article','live'])
+  type: PropTypes.oneOf(['vod', 'article', 'live']).isRequired,
 };
 
 export default ContentCard;

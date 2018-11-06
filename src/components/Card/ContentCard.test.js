@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import ContentCard, { StyledIcon, StyledLiveLabel } from './ContentCard';
-import Icon from '../../elements/Icon/';
+import Icon from '../../elements/Icon';
 
 const cardData = {
   img: 'https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=200',
