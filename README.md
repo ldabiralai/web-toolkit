@@ -11,8 +11,11 @@ A collection of components to share common functionality across teams.
 All available components are exported as named exports so you can pull them in easily:
 
 ```jsx
+import { injectGlobal } from 'react-emotion'
 import { ThemeProvider } from 'emotion-theming'
-import { theme, Button } from '@eurosport/web-toolkit'
+import { globalReset, theme, Button } from '@eurosport/web-toolkit'
+
+injectGlobal(globalReset)
 
 const MyApp = () =>
   <ThemeProvider theme={theme}>
