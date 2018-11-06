@@ -4,7 +4,7 @@ exports[`renders a Article ContentCard 1`] = `
 <Styled(div)>
   <Styled(div)>
     <Styled(img)
-      alt="Description"
+      alt="Youth olympic summer games"
       src="https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=200"
     />
   </Styled(div)>

@@ -67,7 +67,7 @@ export const StyledLiveLabel = styled('div')`
   right: 10px;
 `;
 
-export const StyledPlayIcon = styled(Icon)`
+export const StyledIcon = styled(Icon)`
   position: absolute;
   bottom: 17px;
   left: 16px;
@@ -91,7 +91,7 @@ const ContentCard = ({ card, type }) => {
     <StyledCard>
       <StyledHeader>
         <StyledImage src={img} alt={title} />
-        {isPlayable && <StyledPlayIcon type="play" height="60" />}
+        {isPlayable && <StyledIcon type="play" height="60" />}
         {isLive && <StyledLiveLabel>Live</StyledLiveLabel>}
       </StyledHeader>
       <StyledContent>
