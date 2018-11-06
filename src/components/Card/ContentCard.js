@@ -24,8 +24,8 @@ export const StyledLiveLabel = styled.div`
   justify-content: center;
   padding: 0.2em 0.4em;
   border-radius: 2px;
-  background-color: #e00034;
-  color: white;
+  background-color: ${colors.utahCrimson};
+  color: ${colors.white};
   font-weight: bold;
   font-size: 15px;
   position: absolute;
@@ -51,7 +51,7 @@ const StyledCardFooter = styled(Footer)`
   * :nth-child(2) {
     margin-left: 1em;
     padding-left: 1em;
-    border-left: 1px solid grey;
+    border-left: 1px solid ${colors.whiteLilac};
     padding: 8px;
   }
 `;

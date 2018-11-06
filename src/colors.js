@@ -3,6 +3,7 @@ export const zumthor = '#d0d2d7';
 export const frenchGray = '#b9bbca';
 export const regentGray = '#798490';
 export const arsenic = '#3d4248';
+export const santasGray = '#9fa1ae';
 
 export const manatee = '#9999b2';
 
@@ -18,3 +19,6 @@ export const ebony = '#060825';
 export const lemon = '#fffc00';
 
 export const utahCrimson = '#d50032';
+
+export const white = '#ffffff';
+export const black = '#000000';

@@ -1,10 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { createMatchers } from 'jest-emotion';
-import * as emotion from 'emotion';
 import Icon, { BaseIcon, iconMap } from '.';
-
-expect.extend(createMatchers(emotion));
 
 describe('Icon', () => {
   it('should render source for a valid icon type', () => {
