@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`renders a CardContent 1`] = `
-<Styled(div)>
-  CardContent
-</Styled(div)>
-`;
