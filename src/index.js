@@ -5,10 +5,9 @@ import globalReset from './globalReset';
 
 import Button from './atoms/Button';
 import Link from './atoms/Link';
-import Heading from './elements/Heading';
 import Icon from './elements/Icon';
 import Cards from './components/Card';
 import Footer from './modules/Footer';
 import ContentListing from './modules/ContentListing';
 
-export { Button, Link, Footer, ContentListing, Cards, Heading, Icon, globalReset, colors, theme, breakpoints };
+export { Button, Link, Footer, ContentListing, Cards, Icon, globalReset, colors, theme, breakpoints };

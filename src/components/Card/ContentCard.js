@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import UppercaseHeading from '../../elements/UppercaseHeading';
-import Text from '../../elements/Text';
 import Icon from '../../elements/Icon';
 import * as colors from '../../colors';
 
@@ -18,8 +16,14 @@ const StyledContent = styled('div')`
   background-color: ${colors.bunting};
 `;
 
-const StyledCardFooter = styled('div')`
-  
+const StyledCategory = styled('p')`
+  text-transform: uppercase;
+  color: ${colors.turquoiseBlue};
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+`;
+
+const StyledFooter = styled('div')`
   display: flex;
   align-items: center;
   margin-top: 15px;
@@ -39,18 +43,16 @@ const StyledHeader = styled('div')`
   position: relative;
 `;
 
-const StyledContentTitle = styled(Text)`
+const StyledTitle = styled('p')`
   font-weight: bold;
   color: ${colors.whiteLilac};
-  display: block;
 `;
 
-const StyledContentDescription = styled(Text)`
+const StyledDescription = styled('p')`
   color: ${colors.whiteLilac};
-  display: block;
 `;
 
-export const StyledLiveLabel = styled.div`
+export const StyledLiveLabel = styled('div')`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,7 +77,7 @@ const StyledImage = styled('img')`
   width: 100%;
 `;
 
-const StyledTimeStamp = styled(Text)`
+const StyledTimeStamp = styled('p')`
   padding: 8px 0;
 `;
 
@@ -93,13 +95,13 @@ const ContentCard = ({ card, type }) => {
         {isLive && <StyledLiveLabel>Live</StyledLiveLabel>}
       </StyledHeader>
       <StyledContent>
-        <UppercaseHeading as="h2">{category}</UppercaseHeading>
-        <StyledContentTitle>{title}</StyledContentTitle>
-        {description && <StyledContentDescription>{description}</StyledContentDescription>}
-        <StyledCardFooter>
+        <StyledCategory>{category}</StyledCategory>
+        <StyledTitle>{title}</StyledTitle>
+        {description && <StyledDescription>{description}</StyledDescription>}
+        <StyledFooter>
           {isLive && <Icon height="15" type={channel} />}
           <StyledTimeStamp>{timestamp}</StyledTimeStamp>
-        </StyledCardFooter>
+        </StyledFooter>
       </StyledContent>
     </StyledCard>
   );
