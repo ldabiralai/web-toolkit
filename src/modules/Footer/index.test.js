@@ -4,23 +4,31 @@ import Footer from '.';
 
 const faq = {
   label: 'Help & Faq',
-  link: 'https://google.fr',
+  linkProps: {
+    href: 'https://google.fr',
+  },
 };
 const items = [
   {
     id: 1,
-    label: 'cookie',
-    link: 'https://cookie.fr',
+    label: 'Terms & Conditions',
+    linkProps: {
+      href: 'https://google.com',
+    },
   },
   {
     id: 2,
-    label: 'Terms & Conditions',
-    link: 'https://tm.fr',
+    label: 'Privacy Policy',
+    linkProps: {
+      href: 'https://google.com',
+    },
   },
   {
     id: 3,
-    label: 'privacy policy',
-    link: 'https://policy.fr',
+    label: 'Cookie Policy',
+    linkProps: {
+      href: 'https://google.com',
+    },
   },
 ];
 

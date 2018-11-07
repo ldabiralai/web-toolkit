@@ -79,14 +79,14 @@ const StyledCopyright = styled('div')`
 
 const Footer = ({ faq, items, copyright }) => (
   <StyledWrapper>
-    <StyledButton type="secondary" href={faq.link} target="_blank">
+    <StyledButton {...faq.linkProps} type="secondary" target="_blank">
       {faq.label}
     </StyledButton>
     <StyledColumn>
       <StyledItems>
         {items.map(item => (
           <StyledItem key={item.id}>
-            <StyledLink href={item.link}>{item.label}</StyledLink>
+            <StyledLink {...item.linkProps}>{item.label}</StyledLink>
           </StyledItem>
         ))}
       </StyledItems>
@@ -103,14 +103,18 @@ Footer.defaultProps = {
 Footer.propTypes = {
   copyright: PropTypes.string,
   faq: PropTypes.shape({
-    link: PropTypes.string,
     label: PropTypes.string,
+    linkProps: PropTypes.shape({
+      href: PropTypes.string.isRequired,
+    }).isRequired,
   }).isRequired,
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number,
-      link: PropTypes.string,
       label: PropTypes.string,
+      linkProps: PropTypes.shape({
+        href: PropTypes.string.isRequired,
+      }).isRequired,
     })
   ),
 };
