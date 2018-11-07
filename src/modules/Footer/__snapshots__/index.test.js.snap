@@ -7,7 +7,7 @@ exports[`Footer renders when everything passed in 1`] = `
     target="_blank"
     type="secondary"
   >
-    Help & Faq
+    Help & FAQs
   </Styled(Link)>
   <Styled(div)>
     <Styled(ul)>
@@ -15,27 +15,27 @@ exports[`Footer renders when everything passed in 1`] = `
         key="1"
       >
         <Styled(a)
-          href="https://cookie.fr"
+          href="https://google.com"
         >
-          cookie
+          Terms & Conditions
         </Styled(a)>
       </Styled(li)>
       <Styled(li)
         key="2"
       >
         <Styled(a)
-          href="https://tm.fr"
+          href="https://google.com"
         >
-          Terms & Conditions
+          Privacy Policy
         </Styled(a)>
       </Styled(li)>
       <Styled(li)
         key="3"
       >
         <Styled(a)
-          href="https://policy.fr"
+          href="https://google.com"
         >
-          privacy policy
+          Cookie Policy
         </Styled(a)>
       </Styled(li)>
     </Styled(ul)>
@@ -53,7 +53,7 @@ exports[`Footer renders with no items 1`] = `
     target="_blank"
     type="secondary"
   >
-    Help & Faq
+    Help & FAQs
   </Styled(Link)>
   <Styled(div)>
     <Styled(ul) />
@@ -71,7 +71,7 @@ exports[`Footer renders without copyright 1`] = `
     target="_blank"
     type="secondary"
   >
-    Help & Faq
+    Help & FAQs
   </Styled(Link)>
   <Styled(div)>
     <Styled(ul)>
@@ -79,27 +79,27 @@ exports[`Footer renders without copyright 1`] = `
         key="1"
       >
         <Styled(a)
-          href="https://cookie.fr"
+          href="https://google.com"
         >
-          cookie
+          Terms & Conditions
         </Styled(a)>
       </Styled(li)>
       <Styled(li)
         key="2"
       >
         <Styled(a)
-          href="https://tm.fr"
+          href="https://google.com"
         >
-          Terms & Conditions
+          Privacy Policy
         </Styled(a)>
       </Styled(li)>
       <Styled(li)
         key="3"
       >
         <Styled(a)
-          href="https://policy.fr"
+          href="https://google.com"
         >
-          privacy policy
+          Cookie Policy
         </Styled(a)>
       </Styled(li)>
     </Styled(ul)>
