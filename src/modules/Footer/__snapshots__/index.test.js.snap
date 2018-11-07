@@ -7,7 +7,7 @@ exports[`Footer renders when everything passed in 1`] = `
     target="_blank"
     type="secondary"
   >
-    Help & Faq
+    Help & FAQs
   </Styled(Link)>
   <Styled(div)>
     <Styled(ul)>
@@ -53,7 +53,7 @@ exports[`Footer renders with no items 1`] = `
     target="_blank"
     type="secondary"
   >
-    Help & Faq
+    Help & FAQs
   </Styled(Link)>
   <Styled(div)>
     <Styled(ul) />
@@ -71,7 +71,7 @@ exports[`Footer renders without copyright 1`] = `
     target="_blank"
     type="secondary"
   >
-    Help & Faq
+    Help & FAQs
   </Styled(Link)>
   <Styled(div)>
     <Styled(ul)>
