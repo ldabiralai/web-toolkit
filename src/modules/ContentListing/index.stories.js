@@ -1,35 +1,28 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import styled from 'react-emotion';
-import { ContentListing } from '../..';
+import { object, select } from '@storybook/addon-knobs';
+import { ContentListing, Cards } from '../..';
 
 const contentListingStories = storiesOf('ContentListing', module);
 
-const StyledCard = styled('div')`
-  color: white;
-  background-color: red;
-`;
+const baseData = {
+  img: 'https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=500',
+  category: 'British superbike',
+  title: 'World superbikes: Argentina',
+  description: 'Eurosport News',
+  timestamp: '09:00 - 10:30',
+  channel: 'e1',
+};
 
 contentListingStories.add(
   'Grid',
   withInfo()(() => (
     <ContentListing.Grid>
-      <StyledCard>
-        Card1
-        <br />
-        Card1
-        <br />
-        Card1
-        <br />
-        Card1
-        <br />
-        Card1
-      </StyledCard>
-      <StyledCard>Card2</StyledCard>
-      <StyledCard>Card3</StyledCard>
-      <StyledCard>Card4</StyledCard>
-      <StyledCard>Card5</StyledCard>
+      <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
+      <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
+      <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
+      <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
     </ContentListing.Grid>
   ))
 );

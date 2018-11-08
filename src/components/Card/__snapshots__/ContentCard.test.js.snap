@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a Article ContentCard 1`] = `
+<Styled(div)>
+  <Styled(div)>
+    <Styled(img)
+      alt="Youth olympic summer games"
+      src="https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=200"
+    />
+  </Styled(div)>
+  <Styled(div)>
+    <Styled(p)>
+      Tennis
+    </Styled(p)>
+    <Styled(p)>
+      Youth olympic summer games
+    </Styled(p)>
+    <Styled(p)>
+      Description
+    </Styled(p)>
+    <Styled(div)>
+      <Styled(p)>
+        09:00 - 10:30
+      </Styled(p)>
+    </Styled(div)>
+  </Styled(div)>
+</Styled(div)>
+`;
