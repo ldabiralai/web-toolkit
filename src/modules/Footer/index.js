@@ -77,8 +77,8 @@ const StyledCopyright = styled('div')`
   color: ${colors.manatee};
 `;
 
-const Footer = ({ faq, items, copyright }) => (
-  <StyledWrapper>
+const Footer = ({ faq, items, copyright, ...props }) => (
+  <StyledWrapper {...props}>
     <StyledButton {...faq.linkProps} type="secondary" target="_blank">
       {faq.label}
     </StyledButton>
