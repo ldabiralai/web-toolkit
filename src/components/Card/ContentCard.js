@@ -5,26 +5,26 @@ import { rgba } from 'polished';
 import Icon from '../../elements/Icon';
 import * as colors from '../../colors';
 
-const StyledCard = styled('div')`
+const StyledCard = styled.div`
   border-radius: 2px;
   box-shadow: 0 1px 0 0 ${rgba(colors.mirage, 0.75)}};
   overflow: hidden;
 `;
 
-const StyledContent = styled('div')`
+const StyledContent = styled.div`
   padding: 6px 10px;
   line-height: 1.3;
   background-color: ${colors.bunting};
 `;
 
-const StyledCategory = styled('p')`
+const StyledCategory = styled.p`
   text-transform: uppercase;
   color: ${colors.turquoiseBlue};
   font-size: 12px;
   letter-spacing: 1px;
 `;
 
-const StyledFooter = styled('div')`
+const StyledFooter = styled.div`
   display: flex;
   align-items: center;
   margin-top: 15px;
@@ -40,20 +40,20 @@ const StyledFooter = styled('div')`
   }
 `;
 
-const StyledHeader = styled('div')`
+const StyledHeader = styled.div`
   position: relative;
 `;
 
-const StyledTitle = styled('p')`
+const StyledTitle = styled.p`
   font-weight: bold;
   color: ${colors.whiteLilac};
 `;
 
-const StyledDescription = styled('p')`
+const StyledDescription = styled.p`
   color: ${colors.whiteLilac};
 `;
 
-export const StyledLiveLabel = styled('div')`
+export const StyledLiveLabel = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,11 +75,11 @@ export const StyledIcon = styled(Icon)`
   left: 16px;
 `;
 
-const StyledImage = styled('img')`
+const StyledImage = styled.img`
   width: 100%;
 `;
 
-const StyledTimeStamp = styled('p')`
+const StyledTimeStamp = styled.p`
   padding: 8px 0;
 `;
 

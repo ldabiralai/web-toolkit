@@ -7,7 +7,7 @@ import { Cards } from '../../index';
 
 const cardStories = storiesOf('Card', module);
 
-const Wrapper = styled('div')`
+const Wrapper = styled.div`
   max-width: 500px;
 `;
 

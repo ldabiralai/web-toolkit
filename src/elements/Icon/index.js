@@ -33,7 +33,7 @@ export const iconMap = {
   },
 };
 
-export const BaseIcon = styled('img')`
+export const BaseIcon = styled.img`
   background-size: 'contain';
   height: ${({ height }) => `${height}px`};
   width: ${({ type, height }) => `${(iconMap[type].widthRatio || 1) * height}px`};
