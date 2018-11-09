@@ -77,4 +77,9 @@ describe('Footer', () => {
 
     expect(itemLink.props()).toHaveProperty('data-adobe-analytics', 'an-adobe-analytics-value');
   });
+
+  it('should add extra props passed to the component Footer', () => {
+    const component = shallow(<Footer faq={faq} items={items} copyright="copyright" answer="42" />);
+    expect(component.props()).toHaveProperty('answer', '42');
+  });
 });
