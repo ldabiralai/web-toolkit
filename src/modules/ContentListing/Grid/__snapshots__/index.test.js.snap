@@ -1,24 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ContentListing Grid renders children 1`] = `
-<Styled(div)>
-  <Styled(div)
-    key=".$1"
-  >
-    <div
-      key="1"
+exports[`ContentListing Grid renders children with title 1`] = `
+<div>
+  <Styled(h3)>
+    Title
+  </Styled(h3)>
+  <Styled(div)>
+    <Styled(div)
+      key=".$1"
     >
-      card1
-    </div>
-  </Styled(div)>
-  <Styled(div)
-    key=".$2"
-  >
-    <div
-      key="2"
+      <div
+        key="1"
+      >
+        card1
+      </div>
+    </Styled(div)>
+    <Styled(div)
+      key=".$2"
     >
-      card2
-    </div>
+      <div
+        key="2"
+      >
+        card2
+      </div>
+    </Styled(div)>
   </Styled(div)>
-</Styled(div)>
+</div>
+`;
+
+exports[`ContentListing Grid renders children without title 1`] = `
+<div>
+  <Styled(div)>
+    <Styled(div)
+      key=".$1"
+    >
+      <div
+        key="1"
+      >
+        card1
+      </div>
+    </Styled(div)>
+    <Styled(div)
+      key=".$2"
+    >
+      <div
+        key="2"
+      >
+        card2
+      </div>
+    </Styled(div)>
+  </Styled(div)>
+</div>
 `;

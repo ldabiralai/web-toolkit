@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { object, select } from '@storybook/addon-knobs';
+import { object, select, text } from '@storybook/addon-knobs';
 import { ContentListing, Cards } from '../..';
 
 const contentListingStories = storiesOf('ContentListing', module);
@@ -18,7 +18,7 @@ const baseData = {
 contentListingStories.add(
   'Grid',
   withInfo()(() => (
-    <ContentListing.Grid>
+    <ContentListing.Grid title={text('title', 'Articles list')}>
       <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
       <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
       <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />

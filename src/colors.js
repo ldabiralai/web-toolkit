@@ -1,3 +1,4 @@
+export const athensGray = '#f8f8f9';
 export const whiteLilac = '#e8e8eb';
 export const zumthor = '#d0d2d7';
 export const frenchGray = '#b9bbca';
