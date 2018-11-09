@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { css } from 'emotion';
 
 export const iconMap = {
   pause: {
@@ -33,18 +32,16 @@ export const iconMap = {
   },
 };
 
-const Icon = ({ type, alt, height }) =>
+const Icon = ({ type, alt, height, className }) =>
   iconMap[type] ? (
     <img
-      className={css`
-        background-size: 'contain';
+      className={className}
+      css={`
         height: ${height}px;
         width: ${(iconMap[type].widthRatio || 1) * height}px;
-        display: 'inline-block';
       `}
       src={iconMap[type].src}
       alt={alt || iconMap[type].altText}
-      type={type}
     />
   ) : null;
 
@@ -56,6 +53,7 @@ Icon.propTypes = {
   type: PropTypes.string.isRequired,
   alt: PropTypes.string,
   height: PropTypes.number.isRequired,
+  className: PropTypes.string.isRequired,
 };
 
 export default Icon;
