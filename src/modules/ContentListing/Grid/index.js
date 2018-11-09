@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
 import { breakpoints } from '../../..';
 
-const StyledGrid = styled('div')`
+const StyledGrid = styled.div`
   ${breakpoints.medium(css`
     display: flex;
     flex-wrap: wrap;
@@ -12,7 +12,7 @@ const StyledGrid = styled('div')`
   `)};
 `;
 
-const StyledItem = styled('div')`
+const StyledItem = styled.div`
   margin-bottom: 20px;
 
   ${breakpoints.medium(css`

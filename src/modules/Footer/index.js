@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
 import { Button, breakpoints, colors } from '../..';
 
-const StyledWrapper = styled('div')`
+const StyledWrapper = styled.div`
   ${breakpoints.medium(css`
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 20px;
@@ -22,7 +22,7 @@ const StyledButton = styled(Button)`
   `)};
 `;
 
-const StyledColumn = styled('div')`
+const StyledColumn = styled.div`
   font-size: 11px;
   text-align: center;
   margin-bottom: 20px;
@@ -31,7 +31,7 @@ const StyledColumn = styled('div')`
   `)};
 `;
 
-const StyledItems = styled('ul')`
+const StyledItems = styled.ul`
   margin: 30px 0 16px;
   padding-left: 0;
   ${breakpoints.medium(css`
@@ -39,7 +39,7 @@ const StyledItems = styled('ul')`
   `)};
 `;
 
-const StyledItem = styled('li')`
+const StyledItem = styled.li`
   list-style-type: none;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 
@@ -58,7 +58,7 @@ const StyledItem = styled('li')`
   `)};
 `;
 
-const StyledLink = styled('a')`
+const StyledLink = styled.a`
   padding: 15px 0;
   display: block;
   color: ${colors.zumthor};
@@ -73,7 +73,7 @@ const StyledLink = styled('a')`
   }
 `;
 
-const StyledCopyright = styled('div')`
+const StyledCopyright = styled.div`
   color: ${colors.manatee};
 `;
 
