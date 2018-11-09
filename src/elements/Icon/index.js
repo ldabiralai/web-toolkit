@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from 'react-emotion';
 import PropTypes from 'prop-types';
+import { css } from 'emotion';
 
 export const iconMap = {
   pause: {
@@ -33,16 +33,20 @@ export const iconMap = {
   },
 };
 
-export const BaseIcon = styled.img`
-  background-size: 'contain';
-  height: ${({ height }) => `${height}px`};
-  width: ${({ type, height }) => `${(iconMap[type].widthRatio || 1) * height}px`};
-  display: 'inline-block';
-`;
-
-const Icon = ({ type, alt, ...props }) => (
-  <BaseIcon {...props} src={iconMap[type].src} alt={alt || iconMap[type].altText} type={type} />
-);
+const Icon = ({ type, alt, height }) =>
+  iconMap[type] ? (
+    <img
+      className={css`
+        background-size: 'contain';
+        height: ${height}px;
+        width: ${(iconMap[type].widthRatio || 1) * height}px;
+        display: 'inline-block';
+      `}
+      src={iconMap[type].src}
+      alt={alt || iconMap[type].altText}
+      type={type}
+    />
+  ) : null;
 
 Icon.defaultProps = {
   alt: '',
@@ -51,6 +55,7 @@ Icon.defaultProps = {
 Icon.propTypes = {
   type: PropTypes.string.isRequired,
   alt: PropTypes.string,
+  height: PropTypes.number.isRequired,
 };
 
 export default Icon;

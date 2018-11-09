@@ -1,21 +1,26 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Icon, { BaseIcon, iconMap } from '.';
+import Icon, { iconMap } from '.';
 
 describe('Icon', () => {
   it('should render source for a valid icon type', () => {
-    const wrapper = shallow(<Icon className="test" type="e1" />);
-    expect(wrapper.find(BaseIcon).prop('src')).toEqual(iconMap.e1.src);
+    const wrapper = shallow(<Icon className="test" type="e1" height={50} />);
+    expect(wrapper.find('img').prop('src')).toEqual(iconMap.e1.src);
+  });
+
+  it('should not render with an invalid icon type', () => {
+    const wrapper = shallow(<Icon className="test" type="unknown" height={50} />);
+    expect(wrapper.html()).toBeNull();
   });
 
   it('should display alt text passed in from props', () => {
-    const wrapper = shallow(<Icon className="test" type="e1" alt="test-alt" />);
-    expect(wrapper.find(BaseIcon).prop('alt')).toEqual('test-alt');
+    const wrapper = shallow(<Icon className="test" type="e1" alt="test-alt" height={50} />);
+    expect(wrapper.find('img').prop('alt')).toEqual('test-alt');
   });
 
   it('should display default alt text when not passed in props', () => {
-    const wrapper = shallow(<Icon className="test" type="e2" />);
-    expect(wrapper.find(BaseIcon).prop('alt')).toEqual('Eurosport 2');
+    const wrapper = shallow(<Icon className="test" type="e2" height={50} />);
+    expect(wrapper.find('img').prop('alt')).toEqual('Eurosport 2');
   });
 
   it('should default width of icon to be the same as height when ratio is not configured for the icon type', () => {

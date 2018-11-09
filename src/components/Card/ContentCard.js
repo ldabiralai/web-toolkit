@@ -100,7 +100,7 @@ const ContentCard = ({ card, type }) => {
         <StyledTitle>{title}</StyledTitle>
         {description && <StyledDescription>{description}</StyledDescription>}
         <StyledFooter>
-          {isLive && <Icon height="15" type={channel} />}
+          {isLive && <Icon height={15} type={channel} />}
           <StyledTimeStamp>{timestamp}</StyledTimeStamp>
         </StyledFooter>
       </StyledContent>
