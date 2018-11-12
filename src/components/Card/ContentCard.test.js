@@ -12,6 +12,7 @@ const cardData = {
   description: 'Description',
   timestamp: '09:00 - 10:30',
   channel: 'E1',
+  liveLabel: 'live label',
 };
 
 it('renders a Article ContentCard', () => {
@@ -25,11 +26,26 @@ it('renders a ContentCard with play icon', () => {
   expect(wrapper.find(StyledPlayIcon).length).toEqual(1);
 });
 
-it('renders a ContentCard with live label and channel logo', () => {
-  const wrapper = shallow(<ContentCard card={cardData} type="live" />);
-  expect(wrapper.find(StyledLiveLabel).length).toEqual(1);
-  expect(wrapper.find(StyledPlayIcon).length).toEqual(1);
-  expect(wrapper.find(Icon).prop('type')).toEqual('E1');
+describe('Live Content Card', () => {
+  it('renders a live label', () => {
+    const wrapper = shallow(<ContentCard card={cardData} type="live" />);
+    expect(
+      wrapper
+        .find(StyledLiveLabel)
+        .render()
+        .text()
+    ).toContain(cardData.liveLabel);
+  });
+
+  it('renders a play icon', () => {
+    const wrapper = shallow(<ContentCard card={cardData} type="live" />);
+    expect(wrapper.find(StyledPlayIcon).length).toEqual(1);
+  });
+
+  it('renders a channel logo', () => {
+    const wrapper = shallow(<ContentCard card={cardData} type="live" />);
+    expect(wrapper.find(Icon).prop('type')).toEqual('E1');
+  });
 });
 
 describe('linked content card', () => {

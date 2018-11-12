@@ -122,7 +122,7 @@ const StyledTimeStamp = styled.p`
 `;
 
 const ContentCard = ({ card, type, ...props }) => {
-  const { img, url, category, title, description, timestamp, channel } = card;
+  const { img, url, category, title, description, timestamp, channel, liveLabel } = card;
   const isLive = type === 'live';
   const isPlayable = isLive || type === 'vod';
 
@@ -131,7 +131,7 @@ const ContentCard = ({ card, type, ...props }) => {
       <StyledHeader>
         <StyledImage src={img} alt={title} />
         {isPlayable && <StyledPlayIcon height={64} />}
-        {isLive && <StyledLiveLabel>● Live</StyledLiveLabel>}
+        {isLive && <StyledLiveLabel>● {liveLabel}</StyledLiveLabel>}
       </StyledHeader>
       <StyledContent>
         <StyledCategory>{category}</StyledCategory>
@@ -155,6 +155,7 @@ ContentCard.propTypes = {
     description: PropTypes.string,
     timestamp: PropTypes.string,
     channel: PropTypes.string,
+    liveLabel: PropTypes.string.isRequired,
   }).isRequired,
   type: PropTypes.oneOf(['vod', 'article', 'live']).isRequired,
 };

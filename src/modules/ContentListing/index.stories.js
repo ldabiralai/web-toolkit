@@ -13,6 +13,7 @@ const baseData = {
   description: 'Eurosport News',
   timestamp: '09:00 - 10:30',
   channel: 'E2NO',
+  liveLabel: 'live',
 };
 
 contentListingStories.add(

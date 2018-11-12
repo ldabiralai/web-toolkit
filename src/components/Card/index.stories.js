@@ -19,6 +19,7 @@ const baseData = {
   description: 'Day 2',
   timestamp: '09:00 - 10:30',
   channel: 'E1',
+  liveLabel: 'live',
 };
 
 cardStories.add(
