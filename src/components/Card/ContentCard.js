@@ -39,6 +39,7 @@ const StyledCard = styled.a`
   text-decoration: none;
   display: inline-block;
   overflow: hidden;
+  font-family: ${({ theme }) => theme.typography.base};
 
   &:hover {
     ${StyledHeader}:before {
@@ -58,7 +59,6 @@ const StyledContent = styled.div`
 `;
 
 const StyledCategory = styled.p`
-  font-family: 'Inter UI';
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
@@ -86,7 +86,6 @@ const StyledFooter = styled.div`
 `;
 
 const StyledTitle = styled.p`
-  font-family: 'Inter UI';
   font-size: 14px;
   font-weight: bold;
   color: ${colors.whiteLilac};
@@ -95,7 +94,6 @@ const StyledTitle = styled.p`
 
 const StyledDescription = styled.p`
   color: ${colors.manatee};
-  font-family: 'Inter UI';
   font-size: 14px;
   line-height: 20px;
   margin: 0 0 10px;
@@ -109,7 +107,6 @@ export const StyledLiveLabel = styled.div`
   border-radius: 2px;
   background-color: ${colors.utahCrimson};
   color: ${colors.white};
-  font-family: 'Inter UI';
   font-size: 12px;
   letter-spacing: 1.2px;
   position: absolute;
@@ -121,17 +118,16 @@ const StyledTimeStamp = styled.p`
   padding: 8px 0;
   margin: 0;
   color: ${colors.manatee};
-  font-family: 'Inter UI';
   font-size: 12px;
 `;
 
-const ContentCard = ({ card, type }) => {
+const ContentCard = ({ card, type, ...props }) => {
   const { img, url, category, title, description, timestamp, channel } = card;
   const isLive = type === 'live';
   const isPlayable = isLive || type === 'vod';
 
   return (
-    <StyledCard href={url}>
+    <StyledCard {...props} href={url}>
       <StyledHeader>
         <StyledImage src={img} alt={title} />
         {isPlayable && <StyledPlayIcon height={64} />}

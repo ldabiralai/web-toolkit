@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import ContentCard, { StyledPlayIcon, StyledLiveLabel } from './ContentCard';
 import Icon from '../../elements/Icon';
+import { theme } from '../../index';
 
 const cardData = {
   img: 'https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=200',
@@ -33,12 +34,12 @@ it('renders a ContentCard with live label and channel logo', () => {
 
 describe('linked content card', () => {
   it('should be an a tag', () => {
-    const wrapper = shallow(<ContentCard card={cardData} type="vod" />);
+    const wrapper = shallow(<ContentCard theme={theme} card={cardData} type="vod" />);
     expect(wrapper.render().is('a')).toEqual(true);
   });
 
   it('should have correct href', () => {
-    const wrapper = shallow(<ContentCard card={cardData} type="vod" />);
+    const wrapper = shallow(<ContentCard theme={theme} card={cardData} type="vod" />);
     expect(wrapper.render().is('a')).toEqual(true);
   });
 });
