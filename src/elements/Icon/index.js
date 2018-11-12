@@ -65,7 +65,7 @@ const Icon = ({ type, alt, height, className}) =>
 
 Icon.defaultProps = {
   alt: '',
-  className: ''
+  className: '',
 };
 
 Icon.propTypes = {
