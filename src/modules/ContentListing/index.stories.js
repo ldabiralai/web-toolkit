@@ -12,7 +12,7 @@ const baseData = {
   title: 'World superbikes: Argentina',
   description: 'Eurosport News',
   timestamp: '09:00 - 10:30',
-  channel: 'e1',
+  channel: 'E2NO',
 };
 
 contentListingStories.add(

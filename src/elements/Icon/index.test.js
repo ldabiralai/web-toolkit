@@ -23,11 +23,6 @@ describe('Icon', () => {
     expect(wrapper.prop('alt')).toEqual('Eurosport 2');
   });
 
-  it('should default width of icon to be the same as height when ratio is not configured for the icon type', () => {
-    const wrapper = shallow(<Icon className="test" type="play" height={50} />);
-    expect(wrapper).toHaveStyleRule('width', '50px');
-  });
-
   it('should apply correct width of icon when ratio is configured for the icon type', () => {
     const wrapper = shallow(<Icon className="test" type="E2" height={50} />);
     expect(wrapper).toHaveStyleRule('width', '83px');

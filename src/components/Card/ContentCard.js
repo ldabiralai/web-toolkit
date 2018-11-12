@@ -3,12 +3,49 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { rgba } from 'polished';
 import Icon from '../../elements/Icon';
+import PlayIcon from '../../elements/PlayIcon';
 import * as colors from '../../colors';
 
-const StyledCard = styled.div`
+const StyledImage = styled.img`
+  width: 100%;
+  display: block;
+`;
+
+const StyledHeader = styled.div`
+  position: relative;
+
+  :before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: radial-gradient(circle, rgba(14, 20, 61, 0) 0, #0e143d 100%);
+    opacity: 0.5;
+  }
+`;
+
+export const StyledPlayIcon = styled(PlayIcon)`
+  position: absolute;
+  bottom: 17px;
+  left: 16px;
+`;
+
+const StyledCard = styled.a`
   border-radius: 2px;
   box-shadow: 0 1px 0 0 ${rgba(colors.mirage, 0.75)}};
   overflow: hidden;
+  display: block;
+  text-decoration: none;
+
+  &:hover {
+    ${StyledHeader}:before {
+      opacity: 0.1;
+    }
+
+    ${StyledPlayIcon} {
+      border-color: white;
+    }
+  }
 `;
 
 const StyledContent = styled.div`
@@ -40,10 +77,6 @@ const StyledFooter = styled.div`
   }
 `;
 
-const StyledHeader = styled.div`
-  position: relative;
-`;
-
 const StyledTitle = styled.p`
   font-weight: bold;
   color: ${colors.whiteLilac};
@@ -69,30 +102,20 @@ export const StyledLiveLabel = styled.div`
   right: 10px;
 `;
 
-export const StyledIcon = styled(Icon)`
-  position: absolute;
-  bottom: 17px;
-  left: 16px;
-`;
-
-const StyledImage = styled.img`
-  width: 100%;
-`;
-
 const StyledTimeStamp = styled.p`
   padding: 8px 0;
 `;
 
 const ContentCard = ({ card, type }) => {
-  const { img, category, title, description, timestamp, channel } = card;
+  const { img, url, category, title, description, timestamp, channel } = card;
   const isLive = type === 'live';
   const isPlayable = isLive || type === 'vod';
 
   return (
-    <StyledCard>
+    <StyledCard href={url}>
       <StyledHeader>
         <StyledImage src={img} alt={title} />
-        {isPlayable && <StyledIcon type="play" height={64} />}
+        {isPlayable && <StyledPlayIcon height={64} />}
         {isLive && <StyledLiveLabel>Live</StyledLiveLabel>}
       </StyledHeader>
       <StyledContent>
@@ -111,6 +134,7 @@ const ContentCard = ({ card, type }) => {
 ContentCard.propTypes = {
   card: PropTypes.shape({
     img: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string,

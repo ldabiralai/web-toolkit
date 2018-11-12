@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders a Article ContentCard 1`] = `
-<Styled(div)>
+<Styled(a)
+  href="http://url.com"
+>
   <Styled(div)>
     <Styled(img)
       alt="Youth olympic summer games"
@@ -24,5 +26,5 @@ exports[`renders a Article ContentCard 1`] = `
       </Styled(p)>
     </Styled(div)>
   </Styled(div)>
-</Styled(div)>
+</Styled(a)>
 `;

@@ -2,16 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const iconMap = {
-  pause: {
-    src:
-      'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTEyIiBoZWlnaHQ9IjExMiIgdmlld0JveD0iMCAwIDExMiAxMTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHRpdGxlPlBhdXNlPC90aXRsZT48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yLjkyNyA1LjI2OGg5OS45MDJ2OTkuOTAySDIuOTI2eiIvPjxjaXJjbGUgZmlsbD0iIzE0MUI0RCIgb3BhY2l0eT0iLjYiIGN4PSI1NiIgY3k9IjU2IiByPSI1NiIvPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM5IDMxKSIgZmlsbD0iI0VGRUZGNCI+PHJlY3Qgd2lkdGg9IjEwIiBoZWlnaHQ9IjUwIiByeD0iNSIvPjxyZWN0IHg9IjI0LjE5NSIgd2lkdGg9IjEwIiBoZWlnaHQ9IjUwIiByeD0iNSIvPjwvZz48L2c+PC9zdmc+',
-    altText: 'pause',
-  },
-  play: {
-    src:
-      'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48cGF0aCBkPSJNMTUgMzBDNi43MyAzMCAwIDIzLjI3IDAgMTVTNi43MyAwIDE1IDBzMTUgNi43MyAxNSAxNS02LjczIDE1LTE1IDE1eiIgZmlsbD0iIzE0MUI0RCIgb3BhY2l0eT0iLjYiLz48cGF0aCBkPSJNMTUgMjljNy43MTggMCAxNC02LjI4MiAxNC0xNFMyMi43MTggMSAxNSAxIDEgNy4yODIgMSAxNXM2LjI4MiAxNCAxNCAxNHptMCAxQzYuNzMgMzAgMCAyMy4yNyAwIDE1UzYuNzMgMCAxNSAwczE1IDYuNzMgMTUgMTUtNi43MyAxNS0xNSAxNXoiIGZpbGw9IiNDQkNBRDUiIGZpbGwtcnVsZT0ibm9uemVybyIvPjxwYXRoIGQ9Ik0yMC42ODEgMTUuNzRsLTcuMjY5IDUuMDMyYS45LjkgMCAwIDEtMS40MTItLjc0VjkuOTY4YS45LjkgMCAwIDEgMS40MTItLjc0bDcuMjcgNS4wMzJhLjkuOSAwIDAgMSAwIDEuNDh6IiBmaWxsPSIjRkZGIi8+PC9nPjwvc3ZnPg==',
-    altText: 'play',
-  },
   E: {
     src:
       'data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAgMjMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogICAgPGcgZmlsbD0iI0I5QkJDQSIgZmlsbFJ1bGU9ImV2ZW5vZGQiPg0KICAgICAgPHBhdGggZD0iTTEwLjMzNSA2LjY1Nkg1LjM0NlYuOTZjMC0uNDA2LjMzLS43MzcuNzMzLS43MzdoMTMuMDFjLjQwNCAwIC43MzIuMzMzLjczMi43NHYzLjE5MmMwIC40NC0uMjczLjc1NS0uNzA3Ljc1NWgtOC43OHYxLjc0NnpNNS4xNjkgMjIuOTA2bDUuMTY2LTQuNjg1aDguNzY0Yy40MiAwIC43MjQuMzYuNzI0LjczdjMuMjE5YzAgLjQwNi0uMjkyLjczNi0uNjk2LjczNkg1LjE3ek0xMC4zMzUgMTMuOTk3bDYuNjItMi44MzZoLTYuNjJWNi42NTZMNi40OTkgMTEuMTZIMGw0LjE1IDIuODM2TC41ODYgMTguMjJsNS45NTEtMi41OTQgMy43OTcgMi41OTR6IiAvPg0KICAgIDwvZz4NCiAgPC9zdmc+',
@@ -56,7 +46,7 @@ const Icon = ({ type, alt, height, className}) =>
       className={className}
       css={`
         height: ${height}px;
-        width: ${(iconMap[type].widthRatio || 1) * height}px;
+        width: ${iconMap[type].widthRatio * height}px;
       `}
       src={iconMap[type].src}
       alt={alt || iconMap[type].altText}
@@ -69,7 +59,7 @@ Icon.defaultProps = {
 };
 
 Icon.propTypes = {
-  type: PropTypes.oneOf(['play', 'pause', 'E', 'E1', 'E2', 'E2NO', 'E2RUG', 'E2GR']).isRequired,
+  type: PropTypes.oneOf(['E', 'E1', 'E2', 'E2NO', 'E2RUG', 'E2GR']).isRequired,
   alt: PropTypes.string,
   height: PropTypes.number.isRequired,
   className: PropTypes.string,
