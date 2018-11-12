@@ -62,7 +62,7 @@ const StyledCategory = styled.p`
   text-transform: uppercase;
   color: ${colors.turquoiseBlue};
   letter-spacing: 1px;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 `;
 
 const footerBorder = rgba(colors.whiteLilac, 0.15);
@@ -88,7 +88,7 @@ const StyledTitle = styled.p`
   font-size: 14px;
   font-weight: bold;
   color: ${colors.whiteLilac};
-  margin-bottom: 10px;
+  margin-bottom: 0 0 10px;
 `;
 
 const StyledDescription = styled.p`
@@ -96,7 +96,7 @@ const StyledDescription = styled.p`
   font-family: 'Inter UI';
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 0 0 10px;
 `;
 
 export const StyledLiveLabel = styled.div`
@@ -117,6 +117,7 @@ export const StyledLiveLabel = styled.div`
 
 const StyledTimeStamp = styled.p`
   padding: 8px 0;
+  margin: 0;
   color: ${colors.manatee};
   font-family: 'Inter UI';
   font-size: 12px;
