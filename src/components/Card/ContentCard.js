@@ -50,16 +50,19 @@ const StyledCard = styled.a`
 `;
 
 const StyledContent = styled.div`
-  padding: 6px 10px;
+  padding: 16px 10px 6px;
   line-height: 1.3;
   background-color: ${colors.bunting};
 `;
 
 const StyledCategory = styled.p`
+  font-family: 'Inter UI';
+  font-size: 12px;
+  font-weight: bold;
   text-transform: uppercase;
   color: ${colors.turquoiseBlue};
-  font-size: 12px;
   letter-spacing: 1px;
+  margin-bottom: 10px;
 `;
 
 const footerBorder = rgba(colors.whiteLilac, 0.15);
@@ -67,7 +70,7 @@ const footerBorder = rgba(colors.whiteLilac, 0.15);
 const StyledFooter = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 20px;
   border-top: 1px solid ${footerBorder};
   color: ${colors.santasGray};
   font-size: 14px;
@@ -81,12 +84,19 @@ const StyledFooter = styled.div`
 `;
 
 const StyledTitle = styled.p`
+  font-family: 'Inter UI';
+  font-size: 14px;
   font-weight: bold;
   color: ${colors.whiteLilac};
+  margin-bottom: 10px;
 `;
 
 const StyledDescription = styled.p`
   color: ${colors.manatee};
+  font-family: 'Inter UI';
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
 `;
 
 export const StyledLiveLabel = styled.div`
@@ -97,7 +107,7 @@ export const StyledLiveLabel = styled.div`
   border-radius: 2px;
   background-color: ${colors.utahCrimson};
   color: ${colors.white};
-  font-weight: bold;
+  font-family: 'Inter UI';
   font-size: 12px;
   letter-spacing: 1.2px;
   position: absolute;
@@ -108,6 +118,8 @@ export const StyledLiveLabel = styled.div`
 const StyledTimeStamp = styled.p`
   padding: 8px 0;
   color: ${colors.manatee};
+  font-family: 'Inter UI';
+  font-size: 12px;
 `;
 
 const ContentCard = ({ card, type }) => {
