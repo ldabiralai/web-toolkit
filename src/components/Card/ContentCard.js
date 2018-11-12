@@ -8,6 +8,9 @@ import * as colors from '../../colors';
 
 const StyledImage = styled.img`
   width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: 50% 0;
   display: block;
 `;
 
@@ -32,9 +35,7 @@ export const StyledPlayIcon = styled(PlayIcon)`
 
 const StyledCard = styled.a`
   border-radius: 2px;
-  box-shadow: 0 1px 0 0 ${rgba(colors.mirage, 0.75)}};
-  overflow: hidden;
-  display: block;
+  box-shadow: 0 1px 0 0 ${rgba(colors.mirage, 0.75)};
   text-decoration: none;
 
   &:hover {
@@ -61,18 +62,20 @@ const StyledCategory = styled.p`
   letter-spacing: 1px;
 `;
 
+const footerBorder = rgba(colors.whiteLilac, 0.15);
+
 const StyledFooter = styled.div`
   display: flex;
   align-items: center;
   margin-top: 15px;
-  border-top: 1px solid ${colors.whiteLilac};
+  border-top: 1px solid ${footerBorder};
   color: ${colors.santasGray};
   font-size: 14px;
 
   * :nth-child(2) {
     margin-left: 10px;
     padding-left: 10px;
-    border-left: 1px solid ${colors.whiteLilac};
+    border-left: 1px solid ${footerBorder};
     padding: 8px;
   }
 `;
@@ -83,7 +86,7 @@ const StyledTitle = styled.p`
 `;
 
 const StyledDescription = styled.p`
-  color: ${colors.whiteLilac};
+  color: ${colors.manatee};
 `;
 
 export const StyledLiveLabel = styled.div`
@@ -104,6 +107,7 @@ export const StyledLiveLabel = styled.div`
 
 const StyledTimeStamp = styled.p`
   padding: 8px 0;
+  color: ${colors.manatee};
 `;
 
 const ContentCard = ({ card, type }) => {
@@ -116,7 +120,7 @@ const ContentCard = ({ card, type }) => {
       <StyledHeader>
         <StyledImage src={img} alt={title} />
         {isPlayable && <StyledPlayIcon height={64} />}
-        {isLive && <StyledLiveLabel>Live</StyledLiveLabel>}
+        {isLive && <StyledLiveLabel>● Live</StyledLiveLabel>}
       </StyledHeader>
       <StyledContent>
         <StyledCategory>{category}</StyledCategory>

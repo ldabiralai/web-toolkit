@@ -12,7 +12,7 @@ const Wrapper = styled.div`
 `;
 
 const baseData = {
-  img: 'https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=500',
+  img: 'https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640',
   url: 'http://www.eurosport.co.uk',
   category: 'Tennis',
   title: 'Klopp happy with Chelsea draw after good performance',
