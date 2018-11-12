@@ -37,6 +37,8 @@ const StyledCard = styled.a`
   border-radius: 2px;
   box-shadow: 0 1px 0 0 ${rgba(colors.mirage, 0.75)};
   text-decoration: none;
+  display: inline-block;
+  overflow: hidden;
 
   &:hover {
     ${StyledHeader}:before {
@@ -50,7 +52,7 @@ const StyledCard = styled.a`
 `;
 
 const StyledContent = styled.div`
-  padding: 16px 10px 6px;
+  padding: 16px 16px 8px;
   line-height: 1.3;
   background-color: ${colors.bunting};
 `;
@@ -88,7 +90,7 @@ const StyledTitle = styled.p`
   font-size: 14px;
   font-weight: bold;
   color: ${colors.whiteLilac};
-  margin-bottom: 0 0 10px;
+  margin: 0 0 10px;
 `;
 
 const StyledDescription = styled.p`
@@ -96,7 +98,7 @@ const StyledDescription = styled.p`
   font-family: 'Inter UI';
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: 0 0 10px;
+  margin: 0 0 10px;
 `;
 
 export const StyledLiveLabel = styled.div`

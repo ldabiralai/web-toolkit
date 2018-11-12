@@ -7,7 +7,7 @@ import { ContentListing, Cards } from '../..';
 const contentListingStories = storiesOf('ContentListing', module);
 
 const baseData = {
-  img: 'https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=500',
+  img: 'https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-130536.jpeg?w=500',
   category: 'British superbike',
   title: 'World superbikes: Argentina',
   description: 'Eurosport News',
