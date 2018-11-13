@@ -107,6 +107,7 @@ export const StyledLiveLabel = styled.div`
   border-radius: 2px;
   background-color: ${colors.utahCrimson};
   color: ${colors.white};
+  text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 1.2px;
   position: absolute;
