@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChannelIcon should render default correctly 1`] = `
+<img
+  alt="Eurosport"
+  className="css-ckignp"
+  src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMjAgMjMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+DQogICAgPGcgZmlsbD0iI0I5QkJDQSIgZmlsbFJ1bGU9ImV2ZW5vZGQiPg0KICAgICAgPHBhdGggZD0iTTEwLjMzNSA2LjY1Nkg1LjM0NlYuOTZjMC0uNDA2LjMzLS43MzcuNzMzLS43MzdoMTMuMDFjLjQwNCAwIC43MzIuMzMzLjczMi43NHYzLjE5MmMwIC40NC0uMjczLjc1NS0uNzA3Ljc1NWgtOC43OHYxLjc0NnpNNS4xNjkgMjIuOTA2bDUuMTY2LTQuNjg1aDguNzY0Yy40MiAwIC43MjQuMzYuNzI0LjczdjMuMjE5YzAgLjQwNi0uMjkyLjczNi0uNjk2LjczNkg1LjE3ek0xMC4zMzUgMTMuOTk3bDYuNjItMi44MzZoLTYuNjJWNi42NTZMNi40OTkgMTEuMTZIMGw0LjE1IDIuODM2TC41ODYgMTguMjJsNS45NTEtMi41OTQgMy43OTcgMi41OTR6IiAvPg0KICAgIDwvZz4NCiAgPC9zdmc+"
+/>
+`;

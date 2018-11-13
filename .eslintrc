@@ -9,8 +9,9 @@
     "jest": true
   },
   "rules": {
+    "import/no-named-as-default": false,
+    "react/jsx-one-expression-per-line": false,
     "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
-    "import/no-named-as-default": 0,
     "no-console": ["error", { "allow": ["warn", "error", "info"] }],
     "react/jsx-filename-extension": [
       "error",
