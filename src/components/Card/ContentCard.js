@@ -16,12 +16,13 @@ const StyledImage = styled.img`
 
 const StyledHeader = styled.div`
   position: relative;
+  overflow: hidden;
 
   :before {
     content: '';
     position: absolute;
     height: 100%;
-    width: 100%;
+    width: 101%;
     background: radial-gradient(circle, transparent, ${colors.mirage} 100%);
     opacity: 0.5;
   }
