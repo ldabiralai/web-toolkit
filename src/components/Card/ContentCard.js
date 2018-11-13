@@ -154,7 +154,7 @@ ContentCard.propTypes = {
     description: PropTypes.string,
     timestamp: PropTypes.string,
     channel: PropTypes.string,
-    liveLabel: PropTypes.string.isRequired,
+    liveLabel: PropTypes.string,
   }).isRequired,
   type: PropTypes.oneOf(['vod', 'article', 'live']).isRequired,
 };

@@ -59,11 +59,12 @@ const ChannelIcon = ({ type, height, className }) => {
 ChannelIcon.defaultProps = {
   type: 'E',
   className: '',
+  height: 50,
 };
 
 ChannelIcon.propTypes = {
   type: PropTypes.oneOf(['E', 'E1', 'E2', 'E2NO', 'E2RUG', 'E2GR']),
-  height: PropTypes.number.isRequired,
+  height: PropTypes.number,
   className: PropTypes.string,
 };
 
