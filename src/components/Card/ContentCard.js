@@ -159,4 +159,6 @@ ContentCard.propTypes = {
   type: PropTypes.oneOf(['vod', 'article', 'live']).isRequired,
 };
 
+ContentCard.displayName = 'Cards.Content';
+
 export default ContentCard;

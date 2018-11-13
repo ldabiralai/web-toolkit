@@ -24,7 +24,7 @@ const baseData = {
 
 cardStories.add(
   'Content Card',
-  withInfo()(() => (
+  withInfo({ propTablesExclude: [Wrapper] })(() => (
     <Wrapper>
       <Cards.Content card={object('card', baseData)} type={select('type', ['vod', 'article', 'live'], 'article')} />
     </Wrapper>
