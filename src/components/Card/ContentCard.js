@@ -22,7 +22,7 @@ const StyledHeader = styled.div`
     position: absolute;
     height: 100%;
     width: 100%;
-    background: radial-gradient(circle, rgba(14, 20, 61, 0) 0, #0e143d 100%);
+    background: radial-gradient(circle, transparent, ${colors.mirage} 100%);
     opacity: 0.5;
   }
 `;
@@ -68,13 +68,11 @@ const StyledCategory = styled.p`
 `;
 
 const footerBorder = rgba(colors.whiteLilac, 0.15);
-
 const StyledFooter = styled.div`
   display: flex;
   align-items: center;
   margin-top: 20px;
   border-top: 1px solid ${footerBorder};
-  color: ${colors.santasGray};
   font-size: 14px;
 
   * :nth-child(2) {
@@ -131,7 +129,7 @@ const ContentCard = ({ card, type, ...props }) => {
     <StyledCard {...props} href={url}>
       <StyledHeader>
         <StyledImage src={img} alt={title} />
-        {isPlayable && <StyledPlayIcon height={64} />}
+        {isPlayable && <StyledPlayIcon height={50} />}
         {isLive && <StyledLiveLabel>● {liveLabel}</StyledLiveLabel>}
       </StyledHeader>
       <StyledContent>
