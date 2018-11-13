@@ -35,10 +35,12 @@ export const StyledPlayIcon = styled(PlayIcon)`
 `;
 
 const StyledCard = styled.a`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   border-radius: 2px;
   box-shadow: 0 1px 0 0 ${rgba(colors.mirage, 0.75)};
   text-decoration: none;
-  display: inline-block;
   overflow: hidden;
   font-family: ${({ theme }) => theme.typography.base};
 
@@ -57,6 +59,9 @@ const StyledContent = styled.div`
   padding: 16px 16px 8px;
   line-height: 1.3;
   background-color: ${colors.bunting};
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 `;
 
 const StyledCategory = styled.p`
@@ -70,11 +75,18 @@ const StyledCategory = styled.p`
 
 const footerBorder = rgba(colors.whiteLilac, 0.15);
 const StyledFooter = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  margin-top: 20px;
+  font-size: 14px;
+`;
+
+const StyledDetails = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  width: 100%;
   border-top: 1px solid ${footerBorder};
-  font-size: 14px;
 
   * :nth-child(2) {
     margin-left: 10px;
@@ -138,8 +150,10 @@ const ContentCard = ({ card, type, ...props }) => {
         <StyledTitle>{title}</StyledTitle>
         {description && <StyledDescription>{description}</StyledDescription>}
         <StyledFooter>
-          {isLive && <ChannelIcon height={15} type={channel} />}
-          <StyledTimeStamp>{timestamp}</StyledTimeStamp>
+          <StyledDetails>
+            {isLive && <ChannelIcon height={15} type={channel} />}
+            <StyledTimeStamp>{timestamp}</StyledTimeStamp>
+          </StyledDetails>
         </StyledFooter>
       </StyledContent>
     </StyledCard>
