@@ -6,11 +6,11 @@ import ChannelIcon from '../../elements/ChannelIcon';
 import PlayIcon from '../../elements/PlayIcon';
 import * as colors from '../../colors';
 
-const StyledImage = styled.img`
-  width: 100%;
+const StyledImage = styled.div`
   height: 180px;
-  object-fit: cover;
-  object-position: 50% 0;
+  background-image: ${({ src }) => `url(${src})`};
+  background-size: cover;
+  background-position: 50% 0;
   display: block;
 `;
 
@@ -59,7 +59,7 @@ const StyledContent = styled.div`
   padding: 16px 16px 8px;
   line-height: 1.3;
   background-color: ${colors.bunting};
-  flex: 1;
+  flex: 1 auto;
   display: flex;
   flex-direction: column;
 `;
@@ -75,7 +75,7 @@ const StyledCategory = styled.p`
 
 const footerBorder = rgba(colors.whiteLilac, 0.15);
 const StyledFooter = styled.div`
-  flex: 1;
+  flex: 1 auto;
   display: flex;
   align-items: flex-end;
   margin-top: 20px;
@@ -141,7 +141,7 @@ const ContentCard = ({ card, type, ...props }) => {
   return (
     <StyledCard {...props} href={url}>
       <StyledHeader>
-        <StyledImage src={img} alt={title} />
+        <StyledImage src={img} />
         {isPlayable && <StyledPlayIcon height={50} />}
         {isLive && <StyledLiveLabel>● {liveLabel}</StyledLiveLabel>}
       </StyledHeader>
