@@ -3,6 +3,11 @@ import { shallow } from 'enzyme';
 import ChannelIcon, { iconMap } from '.';
 
 describe('ChannelIcon', () => {
+  it('should render default correctly', () => {
+    const wrapper = shallow(<ChannelIcon />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
   it('should render source for a valid icon type', () => {
     const wrapper = shallow(<ChannelIcon type="E1" height={50} />);
     expect(wrapper.prop('src')).toEqual(iconMap.E1.src);
