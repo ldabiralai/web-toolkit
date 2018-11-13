@@ -47,7 +47,7 @@ const StyledCard = styled.a`
     }
 
     ${StyledPlayIcon} {
-      border-color: white;
+      border-color: ${colors.white};
     }
   }
 `;
