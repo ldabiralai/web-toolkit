@@ -16,9 +16,7 @@ const StyledPlayIcon = styled.img`
   background: rgba(${ebony}, 0.2);
 `;
 
-const PlayIcon = ({ alt, className, height }) => (
-  <StyledPlayIcon alt={alt} className={className} src={icon} iconHeight={height} />
-);
+const PlayIcon = ({ height, ...props }) => <StyledPlayIcon {...props} src={icon} iconHeight={height} />;
 
 PlayIcon.defaultProps = {
   alt: 'play',

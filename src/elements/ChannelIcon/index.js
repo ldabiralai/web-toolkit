@@ -40,12 +40,12 @@ export const iconMap = {
   },
 };
 
-const ChannelIcon = ({ type, height, className }) => {
+const ChannelIcon = ({ type, height, ...props }) => {
   const icon = iconMap[type] || iconMap.E;
 
   return icon ? (
     <img
-      className={className}
+      {...props}
       css={`
         height: ${height}px;
         width: ${icon.widthRatio * height}px;
@@ -58,14 +58,12 @@ const ChannelIcon = ({ type, height, className }) => {
 
 ChannelIcon.defaultProps = {
   type: 'E',
-  className: '',
   height: 50,
 };
 
 ChannelIcon.propTypes = {
   type: PropTypes.oneOf(['E', 'E1', 'E2', 'E2NO', 'E2RUG', 'E2GR']),
   height: PropTypes.number,
-  className: PropTypes.string,
 };
 
 export default ChannelIcon;

@@ -45,8 +45,8 @@ const StyledItem = styled.div`
   `)};
 `;
 
-const Grid = ({ title, children }) => (
-  <div>
+const Grid = ({ title, children, ...props }) => (
+  <div {...props}>
     {title && <StyledTitle>{title}</StyledTitle>}
     <StyledGrid>
       {React.Children.map(children, item => (

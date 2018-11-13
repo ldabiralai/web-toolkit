@@ -8,6 +8,11 @@ describe('ChannelIcon', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should spread props', () => {
+    const wrapper = shallow(<ChannelIcon data-test-id="test" />);
+    expect(wrapper.prop('data-test-id')).toEqual('test');
+  });
+
   it('should render source for a valid icon type', () => {
     const wrapper = shallow(<ChannelIcon type="E1" height={50} />);
     expect(wrapper.prop('src')).toEqual(iconMap.E1.src);
