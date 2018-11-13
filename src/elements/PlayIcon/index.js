@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import { rgba } from 'polished'
+import { rgba } from 'polished';
 import { white } from '../../colors';
 
 const icon =

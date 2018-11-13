@@ -6,9 +6,4 @@ import { PlayIcon } from '../../index';
 
 const iconsStories = storiesOf('PlayIcon', module);
 
-iconsStories.add(
-  'configurable',
-  withInfo()(() => (
-    <PlayIcon height={number('Height', 50)} />
-  ))
-);
+iconsStories.add('configurable', withInfo()(() => <PlayIcon height={number('Height', 50)} />));

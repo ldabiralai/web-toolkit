@@ -40,7 +40,7 @@ export const iconMap = {
   },
 };
 
-const Icon = ({ type, alt, height, className}) =>
+const Icon = ({ type, alt, height, className }) =>
   iconMap[type] ? (
     <img
       className={className}
