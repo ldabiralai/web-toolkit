@@ -2,13 +2,16 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { select, number } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
-import { Icon } from '../../index';
+import { ChannelIcon } from '../..';
 
-const iconsStories = storiesOf('Icon', module);
+const iconsStories = storiesOf('ChannelIcon', module);
 
 iconsStories.add(
   'configurable',
   withInfo()(() => (
-    <Icon type={select('Type', ['E', 'E1', 'E2', 'E2NO', 'E2RUG', 'E2GR'], 'E')} height={number('Height', 50)} />
+    <ChannelIcon
+      type={select('Type', ['', 'E', 'E1', 'E2', 'E2NO', 'E2RUG', 'E2GR'], '')}
+      height={number('Height', 50)}
+    />
   ))
 );

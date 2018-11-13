@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import ContentCard, { StyledPlayIcon, StyledLiveLabel } from './ContentCard';
-import Icon from '../../elements/Icon';
+import ChannelIcon from '../../elements/ChannelIcon';
 import { theme } from '../../index';
 
 const cardData = {
@@ -44,7 +44,7 @@ describe('Live Content Card', () => {
 
   it('renders a channel logo', () => {
     const wrapper = shallow(<ContentCard card={cardData} type="live" />);
-    expect(wrapper.find(Icon).prop('type')).toEqual('E1');
+    expect(wrapper.find(ChannelIcon).prop('type')).toEqual('E1');
   });
 });
 

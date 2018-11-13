@@ -5,7 +5,7 @@ import globalReset from './globalReset';
 
 import Button from './atoms/Button';
 import Link from './atoms/Link';
-import Icon from './elements/Icon';
+import ChannelIcon from './elements/ChannelIcon';
 import PlayIcon from './elements/PlayIcon';
 import Cards from './components/Card';
 import Header from './modules/Header';
@@ -22,7 +22,7 @@ export {
   ContentListing,
   Cards,
   PlayIcon,
-  Icon,
+  ChannelIcon,
   globalReset,
   colors,
   theme,

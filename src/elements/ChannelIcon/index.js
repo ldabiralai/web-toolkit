@@ -40,29 +40,31 @@ export const iconMap = {
   },
 };
 
-const Icon = ({ type, alt, height, className }) =>
-  iconMap[type] ? (
+const ChannelIcon = ({ type, height, className }) => {
+  const icon = iconMap[type] || iconMap.E;
+
+  return icon ? (
     <img
       className={className}
       css={`
         height: ${height}px;
-        width: ${iconMap[type].widthRatio * height}px;
+        width: ${icon.widthRatio * height}px;
       `}
-      src={iconMap[type].src}
-      alt={alt || iconMap[type].altText}
+      src={icon.src}
+      alt={icon.altText}
     />
   ) : null;
+};
 
-Icon.defaultProps = {
-  alt: '',
+ChannelIcon.defaultProps = {
+  type: 'E',
   className: '',
 };
 
-Icon.propTypes = {
-  type: PropTypes.oneOf(['E', 'E1', 'E2', 'E2NO', 'E2RUG', 'E2GR']).isRequired,
-  alt: PropTypes.string,
+ChannelIcon.propTypes = {
+  type: PropTypes.oneOf(['E', 'E1', 'E2', 'E2NO', 'E2RUG', 'E2GR']),
   height: PropTypes.number.isRequired,
   className: PropTypes.string,
 };
 
-export default Icon;
+export default ChannelIcon;

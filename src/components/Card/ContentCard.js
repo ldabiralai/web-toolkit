@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { rgba } from 'polished';
-import Icon from '../../elements/Icon';
+import ChannelIcon from '../../elements/ChannelIcon';
 import PlayIcon from '../../elements/PlayIcon';
 import * as colors from '../../colors';
 
@@ -138,7 +138,7 @@ const ContentCard = ({ card, type, ...props }) => {
         <StyledTitle>{title}</StyledTitle>
         {description && <StyledDescription>{description}</StyledDescription>}
         <StyledFooter>
-          {isLive && <Icon height={15} type={channel} />}
+          {isLive && <ChannelIcon height={15} type={channel} />}
           <StyledTimeStamp>{timestamp}</StyledTimeStamp>
         </StyledFooter>
       </StyledContent>
