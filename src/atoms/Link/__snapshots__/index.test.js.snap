@@ -24,6 +24,6 @@ exports[`renders a Link 1`] = `
   }
 >
   Click me !
-  <Styled(Chevron) />
+  <Styled(ReactComponent) />
 </Styled(a)>
 `;

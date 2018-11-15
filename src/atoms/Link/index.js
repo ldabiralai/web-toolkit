@@ -1,12 +1,7 @@
 import React from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
-
-const Chevron = props => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="6" height="9" {...props}>
-    <path fillRule="nonzero" d="M1.145 0L0 1.061 3.71 4.5 0 7.939 1.145 9 6 4.5z" />
-  </svg>
-);
+import { ReactComponent as Chevron } from '../../assets/chevron.svg';
 
 const StyledChevron = styled(Chevron)`
   margin-left: 6px;
