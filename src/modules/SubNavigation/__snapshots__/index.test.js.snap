@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SubNavigation renders when everything passed in 1`] = `
+<Styled(div)>
+  <Styled(ul)>
+    <Styled(li)
+      key="Home"
+    >
+      <Styled(a)
+        href="/"
+      >
+        Home
+      </Styled(a)>
+    </Styled(li)>
+    <Styled(li)
+      key="Watch"
+    >
+      <Styled(a)
+        href="/watch"
+      >
+        Watch
+      </Styled(a)>
+    </Styled(li)>
+    <Styled(li)
+      key="What is Eurosport?"
+    >
+      <Styled(a)
+        href="/what"
+      >
+        What is Eurosport?
+      </Styled(a)>
+    </Styled(li)>
+    <Styled(li)
+      key="Log in"
+    >
+      <Styled(a)
+        href="/login"
+      >
+        Log in
+      </Styled(a)>
+    </Styled(li)>
+  </Styled(ul)>
+</Styled(div)>
+`;

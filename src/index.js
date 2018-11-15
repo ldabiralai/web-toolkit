@@ -11,6 +11,7 @@ import Cards from './components/Card';
 import Header from './modules/Header';
 import Logo from './elements/Logo';
 import Footer from './modules/Footer';
+import SubNavigation from './modules/SubNavigation';
 import ContentListing from './modules/ContentListing';
 
 export {
@@ -27,4 +28,5 @@ export {
   colors,
   theme,
   breakpoints,
+  SubNavigation,
 };
