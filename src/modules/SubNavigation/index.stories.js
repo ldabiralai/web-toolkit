@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { object } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
-import SubNavigation from './index';
+import { SubNavigation } from '../..';
 
 const subNavigationStories = storiesOf('SubNavigation', module);
 const items = [
