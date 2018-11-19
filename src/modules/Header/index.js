@@ -17,8 +17,8 @@ const StyledWrapper = styled.div`
   `)};
 `;
 
-const Header = () => (
-  <StyledWrapper>
+const Header = props => (
+  <StyledWrapper {...props}>
     <Logo />
   </StyledWrapper>
 );
