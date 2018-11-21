@@ -2,13 +2,13 @@
 
 exports[`Footer renders when everything passed in 1`] = `
 <Styled(div)>
-  <Styled(Link)
+  <Styled(ArrowLink)
     href="https://google.fr"
     target="_blank"
     type="secondary"
   >
     Help & FAQs
-  </Styled(Link)>
+  </Styled(ArrowLink)>
   <Styled(div)>
     <Styled(ul)>
       <Styled(li)
@@ -48,13 +48,13 @@ exports[`Footer renders when everything passed in 1`] = `
 
 exports[`Footer renders with no items 1`] = `
 <Styled(div)>
-  <Styled(Link)
+  <Styled(ArrowLink)
     href="https://google.fr"
     target="_blank"
     type="secondary"
   >
     Help & FAQs
-  </Styled(Link)>
+  </Styled(ArrowLink)>
   <Styled(div)>
     <Styled(ul) />
     <Styled(div)>
@@ -66,13 +66,13 @@ exports[`Footer renders with no items 1`] = `
 
 exports[`Footer renders without copyright 1`] = `
 <Styled(div)>
-  <Styled(Link)
+  <Styled(ArrowLink)
     href="https://google.fr"
     target="_blank"
     type="secondary"
   >
     Help & FAQs
-  </Styled(Link)>
+  </Styled(ArrowLink)>
   <Styled(div)>
     <Styled(ul)>
       <Styled(li)

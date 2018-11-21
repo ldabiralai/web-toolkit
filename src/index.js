@@ -3,8 +3,9 @@ import * as colors from './colors';
 import * as breakpoints from './breakpoints';
 import globalReset from './globalReset';
 
-import Button from './atoms/Button';
-import Link from './atoms/Link';
+import Button from './elements/Button';
+import ArrowLink from './elements/ArrowLink';
+import Link from './elements/Link';
 import ChannelIcon from './elements/ChannelIcon';
 import PlayIcon from './elements/PlayIcon';
 import Grid from './elements/Grid';
@@ -17,6 +18,7 @@ import ContentListing from './modules/ContentListing';
 
 export {
   Button,
+  ArrowLink,
   Link,
   Header,
   Logo,

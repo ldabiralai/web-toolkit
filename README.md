@@ -23,3 +23,39 @@ const MyApp = () => (
   </ThemeProvider>
 );
 ```
+
+## Documentation
+
+### Link
+
+The Link component use a default prop "linkComponent" which is a function returning an anchor tag. If you want to override this behaviour, you can specify a custom function in your app as below :
+
+```jsx
+
+import { RouterLink } from 'react-router-dom';
+import { Link } from '@eurosport/web-toolkit';
+
+Link.defaultProps.linkComponent = ({ href, children, ...props }) => (
+  <RouterLink {...props} to={href}>
+    {children}
+  </RouterLink>
+);
+```
+
+If a component defines a prop "linkComponent", then you can override the link behaviour for one instance of this component, by passing a custom function to this prop.
+
+```jsx
+
+import { RouterLink } from 'react-router-dom';
+import { Card } from '@eurosport/web-toolkit';
+
+const overridenLink= ({ href, children, ...props }) => (
+  <RouterLink {...props} to={href}>
+    {children}
+  </RouterLink>
+);
+
+const cardData = {};
+
+<Card.Content card={cardData} type="article" linkComponent={overridenLink} />
+```

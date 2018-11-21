@@ -2,11 +2,10 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import ContentCard, { StyledPlayIcon, StyledLiveLabel } from './ContentCard';
 import ChannelIcon from '../../elements/ChannelIcon';
-import { theme } from '../../index';
 
 const cardData = {
   img: 'https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=200',
-  url: 'http://url.com',
+  url: '/article/1',
   category: 'Tennis',
   title: 'Youth olympic summer games',
   description: 'Description',
@@ -45,17 +44,5 @@ describe('Live Content Card', () => {
   it('renders a channel logo', () => {
     const wrapper = shallow(<ContentCard card={cardData} type="live" />);
     expect(wrapper.find(ChannelIcon).prop('type')).toEqual('E1');
-  });
-});
-
-describe('linked content card', () => {
-  it('should be an a tag', () => {
-    const wrapper = shallow(<ContentCard theme={theme} card={cardData} type="vod" />);
-    expect(wrapper.render().is('a')).toEqual(true);
-  });
-
-  it('should have correct href', () => {
-    const wrapper = shallow(<ContentCard theme={theme} card={cardData} type="vod" />);
-    expect(wrapper.render().is('a')).toEqual(true);
   });
 });

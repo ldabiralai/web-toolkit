@@ -1,7 +1,7 @@
 import styled, { css } from 'react-emotion';
 import { lighten, rgba } from 'polished';
 import PropTypes from 'prop-types';
-import Link from '../Link';
+import Link from '../ArrowLink/index';
 
 const Button = styled(Link)`
   background-color: ${({ theme, type }) => theme.button[type].backgroundColor};

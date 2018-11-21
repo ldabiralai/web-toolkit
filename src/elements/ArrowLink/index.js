@@ -28,17 +28,17 @@ const LinkComponent = styled.a`
   line-height: 24px;
 `;
 
-const Link = ({ children, ...props }) => (
+const ArrowLink = ({ children, ...props }) => (
   <LinkComponent {...props}>
     {children}
     <StyledChevron />
   </LinkComponent>
 );
 
-Link.displayName = 'Link';
+ArrowLink.displayName = 'ArrowLink';
 
-Link.propTypes = {
+ArrowLink.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Link;
+export default ArrowLink;

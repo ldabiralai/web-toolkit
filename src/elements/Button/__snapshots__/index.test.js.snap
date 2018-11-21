@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders a Button 1`] = `
-<Link
-  className="css-tvhjjp e6fcafu0"
+<ArrowLink
+  className="css-tvhjjp ecyc6sh0"
   type="primary"
 >
   Click me !
-</Link>
+</ArrowLink>
 `;

@@ -5,6 +5,7 @@ import { rgba } from 'polished';
 import ChannelIcon from '../../elements/ChannelIcon';
 import PlayIcon from '../../elements/PlayIcon';
 import * as colors from '../../colors';
+import Link from '../../elements/Link';
 
 const StyledImage = styled.div`
   height: 180px;
@@ -34,7 +35,7 @@ export const StyledPlayIcon = styled(PlayIcon)`
   left: 16px;
 `;
 
-const StyledCard = styled.a`
+const StyledCard = styled(Link)`
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -160,6 +161,10 @@ const ContentCard = ({ card, type, ...props }) => {
   );
 };
 
+ContentCard.defaultProps = {
+  linkComponent: undefined,
+};
+
 ContentCard.propTypes = {
   card: PropTypes.shape({
     img: PropTypes.string.isRequired,
@@ -172,6 +177,7 @@ ContentCard.propTypes = {
     liveLabel: PropTypes.string,
   }).isRequired,
   type: PropTypes.oneOf(['vod', 'article', 'live']).isRequired,
+  linkComponent: PropTypes.func,
 };
 
 ContentCard.displayName = 'Cards.Content';

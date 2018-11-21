@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Link renders a Link 1`] = `
+<linkComponent
+  href="/"
+>
+  simple Link
+</linkComponent>
+`;

@@ -13,7 +13,7 @@ const Wrapper = styled.div`
 
 const baseData = {
   img: 'https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640',
-  url: 'http://www.eurosport.co.uk',
+  url: '/article/id',
   category: 'Tennis',
   title: 'Klopp happy with Chelsea draw after good performance',
   description: 'Day 2',

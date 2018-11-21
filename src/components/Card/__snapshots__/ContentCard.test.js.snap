@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders a Article ContentCard 1`] = `
-<Styled(a)
-  href="http://url.com"
+<Styled(Link)
+  href="/article/1"
+  linkComponent={[Function]}
 >
   <Styled(div)>
     <Styled(div)
@@ -27,5 +28,5 @@ exports[`renders a Article ContentCard 1`] = `
       </Styled(div)>
     </Styled(div)>
   </Styled(div)>
-</Styled(a)>
+</Styled(Link)>
 `;
