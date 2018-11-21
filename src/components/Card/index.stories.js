@@ -18,7 +18,7 @@ const baseData = {
   title: 'Klopp happy with Chelsea draw after good performance',
   description: 'Day 2',
   timestamp: '09:00 - 10:30',
-  channel: 'E1',
+  channel: 'E2NO',
   liveLabel: 'live',
 };
 

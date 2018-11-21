@@ -1,6 +1,8 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import ChannelIcon, { iconMap } from '.';
+
+import ChannelIcon from '.';
+import * as getChannelIcon from './getChannelIcon';
 
 describe('ChannelIcon', () => {
   it('should render default correctly', () => {
@@ -11,16 +13,6 @@ describe('ChannelIcon', () => {
   it('should spread props', () => {
     const wrapper = shallow(<ChannelIcon data-test-id="test" />);
     expect(wrapper.prop('data-test-id')).toEqual('test');
-  });
-
-  it('should render source for a valid icon type', () => {
-    const wrapper = shallow(<ChannelIcon type="E1" height={50} />);
-    expect(wrapper.prop('src')).toEqual(iconMap.E1.src);
-  });
-
-  it('should render generic eurosport logo when type is unkown', () => {
-    const wrapper = shallow(<ChannelIcon type="unknown" height={50} />);
-    expect(wrapper.prop('src')).toEqual(iconMap.E.src);
   });
 
   it('should display alt text', () => {
@@ -36,5 +28,16 @@ describe('ChannelIcon', () => {
   it('should apply icon height passed in through props', () => {
     const wrapper = shallow(<ChannelIcon height={50} />);
     expect(wrapper).toHaveStyleRule('height', '50px');
+  });
+
+  it('should call getChannelIcon with type', () => {
+    const originalGetChannelIcon = getChannelIcon.default;
+    const getChannelIconSpy = jest.fn();
+    getChannelIcon.default = getChannelIconSpy;
+
+    shallow(<ChannelIcon type="E1GB" />);
+
+    getChannelIcon.default = originalGetChannelIcon;
+    expect(getChannelIconSpy).toHaveBeenCalledWith('E1GB');
   });
 });

@@ -9,9 +9,6 @@ const iconsStories = storiesOf('ChannelIcon', module);
 iconsStories.add(
   'configurable',
   withInfo()(() => (
-    <ChannelIcon
-      type={select('Type', ['', 'E', 'E1', 'E2', 'E2NO', 'E2RUG', 'E2GR'], '')}
-      height={number('Height', 50)}
-    />
+    <ChannelIcon type={select('Type', ['', 'E1*', 'E2*', 'E2NO', 'E2RUG', 'E2GR'], '')} height={number('Height', 50)} />
   ))
 );
