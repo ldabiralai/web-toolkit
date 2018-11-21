@@ -15,7 +15,7 @@ Each PR should have an approving review from one person from the other two teams
 
 ### SVG as Data URI
 
-You can `import` a SVG right in a JavaScript module. This tells Webpack to include that file in the bundle. Importing a file gives you a [data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) instead of a path. 
+You can `import` a SVG right in a JavaScript module. This tells Webpack to include that file in the bundle. Importing a file gives you a [data URI](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) instead of a path.
 
 Here is an example:
 

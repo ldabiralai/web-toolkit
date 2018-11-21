@@ -8,9 +8,21 @@
     "test:ci": "jest --setupTestFrameworkScriptFile=./testSetup.js",
     "build": "webpack",
     "lint": "eslint .",
+    "prettier": "prettier --write '**/{*.{js?(on),ts,y?(a)ml,graphql,md,scss},.*.y?(a)ml,.*.json,.prettierrc,.stylelintrc}'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prepublish": "npm run build"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -54,10 +66,13 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.4",
     "jest": "^23.6.0",
     "jest-emotion": "^9.2.11",
+    "lint-staged": "^8.0.5",
     "polished": "^2.3.0",
     "prettier": "^1.15.2",
+    "pretty-quick": "^1.8.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
