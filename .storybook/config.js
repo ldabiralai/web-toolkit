@@ -18,6 +18,6 @@ const ThemeDecorator = storyFn => <ThemeProvider theme={theme}>{storyFn()}</Them
 
 addDecorator(ThemeDecorator);
 addDecorator(withKnobs);
-addDecorator(withBackgrounds([{ name: 'default', value: colors.ebony, default: true }]));
+addDecorator(withBackgrounds([{ name: 'default', value: colors.ebony, default: true }, { name: 'white', value: colors.white }]));
 
 configure(loadStories, module);

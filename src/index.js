@@ -7,6 +7,7 @@ import Button from './atoms/Button';
 import Link from './atoms/Link';
 import ChannelIcon from './elements/ChannelIcon';
 import PlayIcon from './elements/PlayIcon';
+import Grid from './elements/Grid';
 import Cards from './components/Card';
 import Header from './modules/Header';
 import Logo from './elements/Logo';
@@ -24,6 +25,7 @@ export {
   Cards,
   PlayIcon,
   ChannelIcon,
+  Grid,
   globalReset,
   colors,
   theme,
