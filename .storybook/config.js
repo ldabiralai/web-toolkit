@@ -1,6 +1,6 @@
 import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
-import { withKnobs } from '@storybook/addon-knobs';
+import { withKnobsOptions } from '@storybook/addon-knobs';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
 import { ThemeProvider } from 'emotion-theming';
 import { injectGlobal } from 'react-emotion';
@@ -17,7 +17,13 @@ function loadStories() {
 const ThemeDecorator = storyFn => <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>;
 
 addDecorator(ThemeDecorator);
-addDecorator(withKnobs);
-addDecorator(withBackgrounds([{ name: 'default', value: colors.ebony, default: true }, { name: 'white', value: colors.white }]));
+addDecorator(
+  withKnobsOptions({
+    escapeHTML: false,
+  })
+);
+addDecorator(
+  withBackgrounds([{ name: 'default', value: colors.ebony, default: true }, { name: 'white', value: colors.white }])
+);
 
 configure(loadStories, module);
