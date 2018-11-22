@@ -1,6 +1,24 @@
 import React from 'react';
 import { shallow } from 'enzyme/build';
-import Grid, { getWidthString, getOffset } from '.';
+import Grid, { getWidthString, getOffset, getContainerStyles } from '.';
+
+describe('renders the good styles for container', () => {
+  it('tiny breakpoint', () => {
+    expect(getContainerStyles('tiny')).toEqual('margin: 0 5.07%;');
+  });
+  it('small breakpoint', () => {
+    expect(getContainerStyles('small')).toEqual('margin: 0 4.44%;');
+  });
+  it('medium breakpoint', () => {
+    expect(getContainerStyles('medium')).toEqual('margin: 0 4.3%;');
+  });
+  it('large breakpoint', () => {
+    expect(getContainerStyles('large')).toEqual('margin: 0 auto;width: 964px;');
+  });
+  it('wide breakpoint', () => {
+    expect(getContainerStyles('wide')).toEqual('margin: 0 auto;width: 1289px;');
+  });
+});
 
 describe('renders the good width and offset for tiny', () => {
   it('renders the good width and offset for tiny for 1 column', () => {

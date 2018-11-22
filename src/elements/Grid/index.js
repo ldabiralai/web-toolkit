@@ -57,6 +57,11 @@ const grid = {
   },
 };
 
+const SIX_COLUMNS = ['1', '2', '3', '4', '5', '6'];
+const TWELVE_COLUMNS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+const SIX_OFFSETS = ['0', '1', '2', '3', '4', '5'];
+const TWELVE_OFFSETS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
+
 export const getWidthString = (colNumber, size) => {
   const width = colNumber * grid[size].columnSize + (colNumber - 1) * grid[size].gap;
   return `width: ${width + grid[size].type};`;
@@ -67,49 +72,37 @@ export const getOffset = (colNumber, size) => {
   return `margin-left: ${width + grid[size].type};`;
 };
 
+export const getContainerStyles = size => {
+  const margin = grid[size].gutter === 'auto' ? `margin: 0 auto;` : `margin: 0 ${grid[size].gutter + grid[size].type};`;
+  const width = grid[size].width ? `width: ${grid[size].width + grid[size].type};` : '';
+
+  return `${margin}${width}`;
+};
+
 export const Container = styled.div`
-  margin: 0 ${grid.tiny.gutter + grid.tiny.type};
+  ${getContainerStyles('tiny')};
 
   ${breakpoints.small(css`
-    margin: 0 ${grid.small.gutter + grid.small.type};
+    ${getContainerStyles('small')};
   `)};
 
   ${breakpoints.medium(css`
-    margin: 0 ${grid.medium.gutter + grid.medium.type};
+    ${getContainerStyles('medium')};
   `)};
 
   ${breakpoints.large(css`
-    margin: 0 ${grid.large.gutter + grid.large.type};
+    ${getContainerStyles('large')};
   `)};
 
   ${breakpoints.wide(css`
-    margin: 0 ${grid.wide.gutter};
-    width: ${grid.wide.width + grid.wide.type};
+    ${getContainerStyles('wide')};
   `)};
 `;
 
-export const Row = styled.div`
+export const Row = styled(Container)`
   display: flex;
   flex-wrap: wrap;
-  margin: 0 ${grid.tiny.gutter + grid.tiny.type};
   justify-content: space-between;
-
-  ${breakpoints.medium(css`
-    margin: 0 ${grid.small.gutter + grid.small.type};
-  `)};
-
-  ${breakpoints.medium(css`
-    margin: 0 ${grid.medium.gutter + grid.medium.type};
-  `)};
-
-  ${breakpoints.large(css`
-    margin: 0 ${grid.large.gutter + grid.large.type};
-  `)};
-
-  ${breakpoints.wide(css`
-    margin: 0 ${grid.wide.gutter};
-    width: ${grid.wide.width + grid.wide.type};
-  `)};
 `;
 
 export const Column = styled.div`
@@ -158,14 +151,16 @@ export const Column = styled.div`
 `;
 
 Column.propTypes = {
-  tiny: PropTypes.oneOf(['1', '2', '3', '4', '5', '6']),
-  small: PropTypes.oneOf(['1', '2', '3', '4', '5', '6']),
-  medium: PropTypes.oneOf(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
-  large: PropTypes.oneOf(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
-  wide: PropTypes.oneOf(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
-  mediumOffset: PropTypes.oneOf(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
-  largeOffset: PropTypes.oneOf(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
-  wideOffset: PropTypes.oneOf(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']),
+  tiny: PropTypes.oneOf(SIX_COLUMNS),
+  small: PropTypes.oneOf(SIX_COLUMNS),
+  medium: PropTypes.oneOf(TWELVE_COLUMNS),
+  large: PropTypes.oneOf(TWELVE_COLUMNS),
+  wide: PropTypes.oneOf(TWELVE_COLUMNS),
+  tinyOffset: PropTypes.oneOf(SIX_OFFSETS),
+  smallOffset: PropTypes.oneOf(SIX_OFFSETS),
+  mediumOffset: PropTypes.oneOf(TWELVE_OFFSETS),
+  largeOffset: PropTypes.oneOf(TWELVE_OFFSETS),
+  wideOffset: PropTypes.oneOf(TWELVE_OFFSETS),
 };
 
-export default { Container, Row, Column };
+export default { Container, Row, Column, SIX_COLUMNS, TWELVE_COLUMNS, SIX_OFFSETS, TWELVE_OFFSETS };

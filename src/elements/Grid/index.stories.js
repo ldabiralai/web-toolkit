@@ -32,14 +32,16 @@ gridStories
     withInfo()(() => (
       <Grid.Row>
         <Grid.Column
-          tiny={select('tiny', ['1', '2', '3', '4', '5', '6'], '6')}
-          small={select('small', ['1', '2', '3', '4', '5', '6'], '6')}
-          medium={select('medium', ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'], '6')}
-          large={select('large', ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'], '6')}
-          wide={select('wide', ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'], '3')}
-          mediumOffset={select('medium offset', ['1', '2', '3', '4', '5', '6'], '0')}
-          largeOffset={select('large offset', ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'], '0')}
-          wideOffset={select('wide offset', ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'], '0')}
+          tiny={select('tiny', Grid.SIX_COLUMNS, '6')}
+          small={select('small', Grid.SIX_COLUMNS, '6')}
+          medium={select('medium', Grid.TWELVE_COLUMNS, '6')}
+          large={select('large', Grid.TWELVE_COLUMNS, '6')}
+          wide={select('wide', Grid.TWELVE_COLUMNS, '3')}
+          tinyOffset={select('tiny offset', Grid.SIX_OFFSETS, '0')}
+          smallOffset={select('small offset', Grid.SIX_OFFSETS, '0')}
+          mediumOffset={select('medium offset', Grid.TWELVE_OFFSETS, '0')}
+          largeOffset={select('large offset', Grid.TWELVE_OFFSETS, '0')}
+          wideOffset={select('wide offset', Grid.TWELVE_OFFSETS, '0')}
         >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet ex iste magni molestiae veniam! Alias
           cupiditate delectus dolorem eveniet, ex id iure iusto natus possimus quisquam? Aperiam aut autem commodi dolor
