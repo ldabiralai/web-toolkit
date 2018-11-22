@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Author renders Author 1`] = `
+<Styled(div)>
+  <Styled(img)
+    alt="name"
+    src="img"
+  />
+  <Styled(div) />
+  <Styled(div)>
+    <Styled(p)>
+      name
+    </Styled(p)>
+    <Styled(p)>
+      time
+    </Styled(p)>
+  </Styled(div)>
+</Styled(div)>
+`;
