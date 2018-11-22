@@ -1,6 +1,6 @@
 import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
-import { breakpoints } from '../..';
+import * as breakpoints from '../../breakpoints';
 
 const grid = {
   tiny: {

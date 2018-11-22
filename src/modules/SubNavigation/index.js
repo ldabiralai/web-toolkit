@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import { colors } from '../..';
+import * as colors from '../../colors';
 
 const StyledWrapper = styled.div`
   background: ${colors.bunting};

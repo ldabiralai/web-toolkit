@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Link as OverridableLink } from '../..';
+import OverridableLink from '.';
 
 describe('Link', () => {
   it('renders a Link', () => {

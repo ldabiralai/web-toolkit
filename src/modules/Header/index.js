@@ -1,6 +1,8 @@
 import React from 'react';
 import styled, { css } from 'react-emotion';
-import { colors, breakpoints, Logo } from '../..';
+import * as breakpoints from '../../breakpoints';
+import * as colors from '../../colors';
+import Logo from '../../elements/Logo';
 
 const StyledWrapper = styled.div`
   background: ${colors.bunting};

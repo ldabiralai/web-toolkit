@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
-import { breakpoints } from '../../..';
+import * as breakpoints from '../../../breakpoints';
 import * as colors from '../../../colors';
 
 const StyledGrid = styled.div`

@@ -1,9 +1,9 @@
 import styled, { css } from 'react-emotion';
 import { lighten, rgba } from 'polished';
 import PropTypes from 'prop-types';
-import Link from '../ArrowLink/index';
+import ArrowLink from '../ArrowLink';
 
-const Button = styled(Link)`
+const Button = styled(ArrowLink)`
   background-color: ${({ theme, type }) => theme.button[type].backgroundColor};
   color: ${({ theme, type }) => theme.button[type].color};
   cursor: pointer;

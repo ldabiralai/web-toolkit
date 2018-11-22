@@ -1,6 +1,6 @@
 import styled, { css } from 'react-emotion';
 import React from 'react';
-import { breakpoints } from '../..';
+import * as breakpoints from '../../breakpoints';
 import eurosport from '../../assets/eurosport.svg';
 
 const StyledLogo = styled.img`

@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
-import { Button, breakpoints, colors } from '../..';
+import * as breakpoints from '../../breakpoints';
+import * as colors from '../../colors';
+import Button from '../../elements/Button';
 
 const StyledWrapper = styled.div`
   ${breakpoints.medium(css`

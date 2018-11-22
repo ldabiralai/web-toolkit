@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { select, object } from '@storybook/addon-knobs';
 import styled from 'react-emotion';
-import { Cards } from '../../index';
+import { Cards } from '../..';
 
 const cardStories = storiesOf('Card', module);
 
