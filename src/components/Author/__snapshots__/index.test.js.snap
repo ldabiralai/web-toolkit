@@ -8,12 +8,12 @@ exports[`Author renders Author 1`] = `
   />
   <Styled(div) />
   <Styled(div)>
-    <Styled(p)>
+    <Styled(div)>
       name
-    </Styled(p)>
-    <Styled(p)>
+    </Styled(div)>
+    <Styled(div)>
       time
-    </Styled(p)>
+    </Styled(div)>
   </Styled(div)>
 </Styled(div)>
 `;

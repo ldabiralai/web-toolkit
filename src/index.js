@@ -1,7 +1,8 @@
 import theme from './theme';
 import * as colors from './colors';
 import * as breakpoints from './breakpoints';
-import globalReset from './globalReset';
+import * as typography from './typography';
+import injectStyles from './injectStyles';
 
 import Button from './elements/Button';
 import ArrowLink from './elements/ArrowLink';
@@ -29,10 +30,11 @@ export {
   Author,
   PlayIcon,
   ChannelIcon,
+  injectStyles,
   Grid,
-  globalReset,
   colors,
   theme,
   breakpoints,
+  typography,
   SubNavigation,
 };

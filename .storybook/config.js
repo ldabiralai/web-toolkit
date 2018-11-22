@@ -3,10 +3,9 @@ import { configure, addDecorator } from '@storybook/react';
 import { withKnobsOptions } from '@storybook/addon-knobs';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
 import { ThemeProvider } from 'emotion-theming';
-import { injectGlobal } from 'react-emotion';
-import { theme, colors, globalReset } from '../src';
+import { theme, colors, injectStyles } from '../src';
 
-injectGlobal(globalReset);
+injectStyles();
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.*.stories.js$/);

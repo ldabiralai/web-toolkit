@@ -11,20 +11,20 @@ exports[`renders a Article ContentCard 1`] = `
     />
   </Styled(div)>
   <Styled(div)>
-    <Styled(p)>
+    <Styled(div)>
       Tennis
-    </Styled(p)>
-    <Styled(p)>
+    </Styled(div)>
+    <Styled(div)>
       Youth olympic summer games
-    </Styled(p)>
-    <Styled(p)>
+    </Styled(div)>
+    <Styled(div)>
       Description
-    </Styled(p)>
+    </Styled(div)>
     <Styled(div)>
       <Styled(div)>
-        <Styled(p)>
+        <Styled(div)>
           09:00 - 10:30
-        </Styled(p)>
+        </Styled(div)>
       </Styled(div)>
     </Styled(div)>
   </Styled(div)>

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
 import E from '../../assets/channels/E.svg';
-import { colors, theme, breakpoints } from '../..';
+import { colors, breakpoints } from '../..';
 
 const StyledAuthor = styled.div`
   display: flex;
@@ -36,7 +36,6 @@ const StyledSpacer = styled.div`
 
 const StyledContent = styled.div`
   flex: 1;
-  font-family: ${theme.typography.base};
   font-size: 14px;
   line-height: 24px;
   ${breakpoints.small(css`
@@ -44,12 +43,12 @@ const StyledContent = styled.div`
   `)};
 `;
 
-const StyledName = styled.p`
+const StyledName = styled.div`
   color: ${colors.white};
   font-weight: bold;
 `;
 
-const StyledTime = styled.p`
+const StyledTime = styled.div`
   color: ${colors.manatee};
 `;
 

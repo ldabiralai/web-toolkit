@@ -13,7 +13,4 @@ export default {
       color: turquoiseBlue,
     },
   },
-  typography: {
-    base: `"Inter UI", "Helvetica Neue", sans-serif`,
-  },
 };

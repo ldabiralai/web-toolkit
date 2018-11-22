@@ -43,7 +43,6 @@ const StyledCard = styled(Link)`
   box-shadow: 0 1px 0 0 ${rgba(colors.mirage, 0.75)};
   text-decoration: none;
   overflow: hidden;
-  font-family: ${({ theme }) => theme.typography.base};
 
   &:hover {
     ${StyledHeader}:before {
@@ -65,7 +64,7 @@ const StyledContent = styled.div`
   flex-direction: column;
 `;
 
-const StyledCategory = styled.p`
+const StyledCategory = styled.div`
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
@@ -97,14 +96,14 @@ const StyledDetails = styled.div`
   }
 `;
 
-const StyledTitle = styled.p`
+const StyledTitle = styled.div`
   font-size: 14px;
   font-weight: bold;
   color: ${colors.whiteLilac};
   margin: 0 0 10px;
 `;
 
-const StyledDescription = styled.p`
+const StyledDescription = styled.div`
   color: ${colors.manatee};
   font-size: 14px;
   line-height: 20px;
@@ -127,7 +126,7 @@ export const StyledLiveLabel = styled.div`
   right: 10px;
 `;
 
-const StyledTimeStamp = styled.p`
+const StyledTimeStamp = styled.div`
   padding: 8px 0;
   margin: 0;
   color: ${colors.manatee};

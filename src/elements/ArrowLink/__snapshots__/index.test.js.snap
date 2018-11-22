@@ -17,9 +17,6 @@ exports[`renders a ArrowLink 1`] = `
       "link": Object {
         "color": "#64dcff",
       },
-      "typography": Object {
-        "base": "\\"Inter UI\\", \\"Helvetica Neue\\", sans-serif",
-      },
     }
   }
 >
