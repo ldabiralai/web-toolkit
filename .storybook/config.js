@@ -3,6 +3,7 @@ import { configure, addDecorator } from '@storybook/react';
 import { withKnobsOptions } from '@storybook/addon-knobs';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
 import { ThemeProvider } from 'emotion-theming';
+import styled from 'react-emotion';
 import { theme, colors, injectStyles } from '../src';
 
 injectStyles();
@@ -13,7 +14,15 @@ function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
 
-const ThemeDecorator = storyFn => <ThemeProvider theme={theme}>{storyFn()}</ThemeProvider>;
+const StyledWrapper = styled.div`
+  padding: 30px;
+`;
+
+const ThemeDecorator = storyFn => (
+  <ThemeProvider theme={theme}>
+    <StyledWrapper>{storyFn()}</StyledWrapper>
+  </ThemeProvider>
+);
 
 addDecorator(ThemeDecorator);
 addDecorator(
