@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContentListing Grid renders children with title 1`] = `
-<div>
-  <Styled(h3)>
+<Styled(div)>
+  <Styled(h2)>
     Title
-  </Styled(h3)>
+  </Styled(h2)>
   <Styled(div)>
     <Styled(div)
       key=".$1"
@@ -25,11 +25,11 @@ exports[`ContentListing Grid renders children with title 1`] = `
       </div>
     </Styled(div)>
   </Styled(div)>
-</div>
+</Styled(div)>
 `;
 
 exports[`ContentListing Grid renders children without title 1`] = `
-<div>
+<Styled(div)>
   <Styled(div)>
     <Styled(div)
       key=".$1"
@@ -50,5 +50,5 @@ exports[`ContentListing Grid renders children without title 1`] = `
       </div>
     </Styled(div)>
   </Styled(div)>
-</div>
+</Styled(div)>
 `;

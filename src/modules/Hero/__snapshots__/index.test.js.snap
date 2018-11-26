@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hero renders Hero 1`] = `
+<Styled(div)
+  img="Picture"
+>
+  <Styled(div)>
+    <Styled(div)
+      medium="9"
+      mediumOffset="1"
+      wide="7"
+    >
+      <Styled(h1)>
+        Title
+      </Styled(h1)>
+      <Styled(Author)
+        img="E.svg"
+        time=""
+      />
+    </Styled(div)>
+  </Styled(div)>
+</Styled(div)>
+`;

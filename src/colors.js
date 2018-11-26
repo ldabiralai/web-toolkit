@@ -14,6 +14,7 @@ export const midnightExpress = '#22263c';
 export const mirage = '#1b1e30';
 export const bunting = '#141b4d';
 export const ebony = '#060825';
+export const vulcan = '#10121e';
 export const lemon = '#fffc00';
 export const utahCrimson = '#d50032';
 export const white = '#ffffff';

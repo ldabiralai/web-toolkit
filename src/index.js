@@ -16,6 +16,7 @@ import Header from './modules/Header';
 import Logo from './elements/Logo';
 import Footer from './modules/Footer';
 import SubNavigation from './modules/SubNavigation';
+import Hero from './modules/Hero';
 import ContentListing from './modules/ContentListing';
 import ArticleContent from './components/ArticleContent';
 
@@ -33,6 +34,7 @@ export {
   ChannelIcon,
   injectStyles,
   Grid,
+  Hero,
   colors,
   theme,
   breakpoints,
