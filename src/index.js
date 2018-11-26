@@ -17,6 +17,7 @@ import Logo from './elements/Logo';
 import Footer from './modules/Footer';
 import SubNavigation from './modules/SubNavigation';
 import ContentListing from './modules/ContentListing';
+import ArticleContent from './components/ArticleContent';
 
 export {
   Button,
@@ -37,4 +38,5 @@ export {
   breakpoints,
   typography,
   SubNavigation,
+  ArticleContent,
 };
