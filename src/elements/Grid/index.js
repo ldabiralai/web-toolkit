@@ -1,3 +1,4 @@
+import React from 'react';
 import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
 import * as breakpoints from '../../breakpoints';
@@ -57,8 +58,8 @@ const grid = {
   },
 };
 
-const SIX_COLUMNS = ['1', '2', '3', '4', '5', '6'];
-const TWELVE_COLUMNS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
+const SIX_COLUMNS = ['1', '2', '3', '4', '5', '6', 'full'];
+const TWELVE_COLUMNS = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', 'full'];
 const SIX_OFFSETS = ['0', '1', '2', '3', '4', '5'];
 const TWELVE_OFFSETS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
 
@@ -67,8 +68,8 @@ export const getWidthString = (colNumber, size) => {
   return `width: ${width + grid[size].type};`;
 };
 
-export const getOffset = (colNumber, size) => {
-  const width = colNumber * grid[size].columnSize + colNumber * grid[size].gap;
+export const getOffset = (offset, size) => {
+  const width = offset * grid[size].columnSize + offset * grid[size].gap;
   return `margin-left: ${width + grid[size].type};`;
 };
 
@@ -77,6 +78,13 @@ export const getContainerStyles = size => {
   const width = grid[size].width ? `width: ${grid[size].width + grid[size].type};` : '';
 
   return `${margin}${width}`;
+};
+
+export const getColumnStyles = (colNumber, offset, size) => {
+  const columns = colNumber === 'full' ? grid[size].columns : colNumber;
+  const width = getWidthString(columns, size);
+  const offsetStyle = getOffset(offset, size);
+  return `${width}${offsetStyle}`;
 };
 
 export const Container = styled.div`
@@ -105,50 +113,78 @@ export const Row = styled(Container)`
   justify-content: space-between;
 `;
 
-export const Column = styled.div`
-  ${({ tiny }) => (tiny ? getWidthString(tiny, 'tiny') : 'width: 100%')};
-  ${({ tinyOffset }) => tinyOffset && getOffset(tinyOffset, 'tiny')};
+export const StyledColumn = styled.div`
+  ${({ tiny, small, medium, large, wide, tinyOffset, smallOffset, mediumOffset, largeOffset, wideOffset }) => css`
+    ${getColumnStyles(tiny, tinyOffset, 'tiny')};
 
-  ${({ small }) =>
-    breakpoints.small(css`
-      ${small && getWidthString(small, 'small')};
+    ${breakpoints.small(css`
+      ${getColumnStyles(small, smallOffset, 'small')};
     `)};
 
-  ${({ medium }) =>
-    breakpoints.medium(css`
-      ${medium && getWidthString(medium, 'medium')};
+    ${breakpoints.medium(css`
+      ${getColumnStyles(medium, mediumOffset, 'medium')};
     `)};
 
-  ${({ large }) =>
-    breakpoints.large(css`
-      ${large && getWidthString(large, 'large')};
+    ${breakpoints.large(css`
+      ${getColumnStyles(large, largeOffset, 'large')};
     `)};
 
-  ${({ wide }) =>
-    breakpoints.wide(css`
-      ${wide && getWidthString(wide, 'wide')};
+    ${breakpoints.wide(css`
+      ${getColumnStyles(wide, wideOffset, 'wide')};
     `)};
-
-  ${({ smallOffset }) =>
-    breakpoints.small(css`
-      ${smallOffset && getOffset(smallOffset, 'small')};
-    `)};
-
-  ${({ mediumOffset }) =>
-    breakpoints.medium(css`
-      ${mediumOffset && getOffset(mediumOffset, 'medium')};
-    `)};
-
-  ${({ largeOffset }) =>
-    breakpoints.large(css`
-      ${largeOffset && getOffset(largeOffset, 'large')};
-    `)};
-
-  ${({ wideOffset }) =>
-    breakpoints.wide(css`
-      ${wideOffset && getOffset(wideOffset, 'wide')};
-    `)};
+  `};
 `;
+
+export const Column = props => {
+  const {
+    children,
+    tiny,
+    small,
+    medium,
+    large,
+    wide,
+    tinyOffset,
+    smallOffset,
+    mediumOffset,
+    largeOffset,
+    wideOffset,
+    ...rest
+  } = props;
+
+  const newProps = {
+    tiny,
+    tinyOffset,
+  };
+
+  newProps.small = small || newProps.tiny;
+  newProps.medium = medium || newProps.small;
+  newProps.large = large || newProps.medium;
+  newProps.wide = wide || newProps.large;
+
+  newProps.smallOffset = smallOffset || newProps.tinyOffset;
+  newProps.mediumOffset = mediumOffset || newProps.smallOffset;
+  newProps.largeOffset = largeOffset || newProps.mediumOffset;
+  newProps.wideOffset = wideOffset || newProps.largeOffset;
+
+  return (
+    <StyledColumn {...newProps} {...rest}>
+      {children}
+    </StyledColumn>
+  );
+};
+
+Column.defaultProps = {
+  tiny: 'full',
+  small: null,
+  medium: null,
+  large: null,
+  wide: null,
+  tinyOffset: '0',
+  smallOffset: null,
+  mediumOffset: null,
+  largeOffset: null,
+  wideOffset: null,
+};
 
 Column.propTypes = {
   tiny: PropTypes.oneOf(SIX_COLUMNS),
