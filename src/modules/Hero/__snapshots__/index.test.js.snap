@@ -5,10 +5,17 @@ exports[`Hero renders Hero 1`] = `
   img="Picture"
 >
   <Styled(div)>
-    <Styled(div)
+    <Column
+      large={null}
+      largeOffset={null}
       medium="9"
       mediumOffset="1"
+      small={null}
+      smallOffset={null}
+      tiny="full"
+      tinyOffset="0"
       wide="7"
+      wideOffset={null}
     >
       <Styled(h1)>
         Title
@@ -17,7 +24,7 @@ exports[`Hero renders Hero 1`] = `
         img="E.svg"
         time=""
       />
-    </Styled(div)>
+    </Column>
   </Styled(div)>
 </Styled(div)>
 `;

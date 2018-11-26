@@ -19,6 +19,7 @@ import SubNavigation from './modules/SubNavigation';
 import Hero from './modules/Hero';
 import ContentListing from './modules/ContentListing';
 import ArticleContent from './components/ArticleContent';
+import Article from './modules/Article';
 
 export {
   Button,
@@ -41,4 +42,5 @@ export {
   typography,
   SubNavigation,
   ArticleContent,
+  Article,
 };
