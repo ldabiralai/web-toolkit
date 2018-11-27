@@ -53,17 +53,19 @@ const StyledTime = styled.div`
   color: ${colors.white};
 `;
 
-const Author = ({ name, img, time, ...props }) => (
-  <StyledAuthor {...props}>
-    <StyledImage src={img} alt={name} />
-    <StyledSpacer />
-
-    <StyledContent>
-      <StyledName>{name}</StyledName>
-      <StyledTime>{time}</StyledTime>
-    </StyledContent>
-  </StyledAuthor>
-);
+const Author = ({ name, img, time, ...props }) => {
+  const avatar = img || E;
+  return (
+    <StyledAuthor {...props}>
+      <StyledImage src={avatar} alt={name} />
+      <StyledSpacer />
+      <StyledContent>
+        <StyledName>{name}</StyledName>
+        <StyledTime>{time}</StyledTime>
+      </StyledContent>
+    </StyledAuthor>
+  );
+};
 
 Author.propTypes = {
   name: PropTypes.string.isRequired,
