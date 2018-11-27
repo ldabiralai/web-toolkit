@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
+import * as breakpoints from '../../breakpoints';
 import * as colors from '../../colors';
 
 const StyledWrapper = styled.div`
@@ -16,6 +17,11 @@ const StyledItems = styled.ul`
 const StyledItem = styled.li`
   margin-right: 30px;
   list-style-type: none;
+  font-size: 14px;
+
+  ${breakpoints.medium(css`
+    font-size: 16px;
+  `)};
 
   &:last-of-type {
     margin-right: 0;
