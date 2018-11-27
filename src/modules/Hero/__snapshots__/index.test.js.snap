@@ -1,9 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Hero renders Hero 1`] = `
-<Styled(div)
-  img="Picture"
->
+<Styled(div)>
+  <Styled(div)
+    img="Picture"
+  />
   <Styled(div)>
     <Column
       large={null}

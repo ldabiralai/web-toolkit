@@ -7,16 +7,11 @@ import { Row, Column } from '../../elements/Grid';
 import Author from '../../components/Author';
 import { H1 } from '../../typography';
 
-const StyledImage = styled.div`
+const StyledWrapper = styled.div`
   position: relative;
-  background-image: ${({ img }) => `url(${img})`};
-  background-size: cover;
-  background-position: 50% 0;
+  background-color: ${colors.mirage};
   clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 30px), 0% 100%);
   height: 445px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
   &:before {
     content: '';
     position: absolute;
@@ -24,16 +19,14 @@ const StyledImage = styled.div`
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(transparent 30%, ${colors.vulcan} 90%, ${colors.vulcan});
+    background: linear-gradient(transparent 30%, ${colors.blackPearl} 90%, ${colors.blackPearl});
     z-index: 1;
+    opacity: 0.4;
   }
+
   ${breakpoints.small(css`
     height: 475px;
     clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 35px), 0% 100%);
-    justify-content: flex-start;
-    &:before {
-      opacity: 0.4;
-    }
   `)};
   ${breakpoints.wide(css`
     height: 630px;
@@ -41,8 +34,27 @@ const StyledImage = styled.div`
   `)};
 `;
 
+const StyledImage = styled.div`
+  position: relative;
+  background-image: ${({ img }) => `url(${img})`};
+  background-size: cover;
+  background-position: 50% 0;
+  opacity: 0.65;
+  height: 100%;
+`;
+
 const StyledRow = styled(Row)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  align-items: flex-end;
+  justify-content: center;
   z-index: 2;
+  ${breakpoints.small(css`
+    justify-content: flex-start;
+  `)};
 `;
 
 const StyledTitle = styled(H1)`
@@ -66,14 +78,15 @@ const StyledAuthor = styled(Author)`
 `;
 
 const Hero = ({ title, img, author, time, ...props }) => (
-  <StyledImage img={img} {...props}>
+  <StyledWrapper {...props}>
+    <StyledImage img={img} />
     <StyledRow>
       <Column mediumOffset="1" medium="9" wide="7">
         <StyledTitle>{title}</StyledTitle>
         <StyledAuthor {...author} time={time} />
       </Column>
     </StyledRow>
-  </StyledImage>
+  </StyledWrapper>
 );
 
 Hero.propTypes = {

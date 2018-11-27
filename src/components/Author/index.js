@@ -50,7 +50,7 @@ const StyledName = styled.div`
 `;
 
 const StyledTime = styled.div`
-  color: ${colors.manatee};
+  color: ${colors.white};
 `;
 
 const Author = ({ name, img, time, ...props }) => (
