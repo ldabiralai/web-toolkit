@@ -41,9 +41,9 @@ const StyledImage = styled.div`
     width: 101%;
     background: linear-gradient(
       180deg,
-      rgba(21, 23, 38, 0) 0%,
-      rgba(21, 23, 38, 0.3) 18.66%,
-      rgba(21, 23, 38, 0.85) 100%
+      transparent,
+      ${rgba(colors.mirage, 0.3)} 18.66%,
+      ${rgba(colors.mirage, 0.85)} 100%
     );
     opacity: 0.5;
   }
