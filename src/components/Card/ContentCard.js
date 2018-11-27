@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { rgba } from 'polished';
-import ChannelIcon from '../../elements/ChannelIcon';
 import PlayIcon from '../../elements/PlayIcon';
 import * as colors from '../../colors';
 import Link from '../../elements/Link';
+import CardDetails from './CardDetails';
 
 const StyledImage = styled.div`
   height: 180px;
@@ -43,6 +43,7 @@ const StyledCard = styled(Link)`
   box-shadow: 0 1px 0 0 ${rgba(colors.mirage, 0.75)};
   text-decoration: none;
   overflow: hidden;
+  background-color: ${colors.bunting};
 
   &:hover {
     ${StyledHeader}:before {
@@ -53,61 +54,6 @@ const StyledCard = styled(Link)`
       border-color: ${colors.white};
     }
   }
-`;
-
-const StyledContent = styled.div`
-  padding: 16px 16px 8px;
-  line-height: 1.3;
-  background-color: ${colors.bunting};
-  flex: 1 auto;
-  display: flex;
-  flex-direction: column;
-`;
-
-const StyledCategory = styled.div`
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: ${colors.turquoiseBlue};
-  letter-spacing: 1px;
-  margin: 0 0 10px;
-`;
-
-const footerBorder = rgba(colors.whiteLilac, 0.15);
-const StyledFooter = styled.div`
-  flex: 1 auto;
-  display: flex;
-  align-items: flex-end;
-  margin-top: 20px;
-  font-size: 14px;
-`;
-
-const StyledDetails = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  border-top: 1px solid ${footerBorder};
-
-  * :nth-child(2) {
-    margin-left: 10px;
-    padding-left: 10px;
-    border-left: 1px solid ${footerBorder};
-    padding: 8px;
-  }
-`;
-
-const StyledTitle = styled.div`
-  font-size: 14px;
-  font-weight: bold;
-  color: ${colors.whiteLilac};
-  margin: 0 0 10px;
-`;
-
-const StyledDescription = styled.div`
-  color: ${colors.manatee};
-  font-size: 14px;
-  line-height: 20px;
-  margin: 0 0 10px;
 `;
 
 export const StyledLiveLabel = styled.div`
@@ -126,17 +72,17 @@ export const StyledLiveLabel = styled.div`
   right: 10px;
 `;
 
-const StyledTimeStamp = styled.div`
-  padding: 8px 0;
-  margin: 0;
-  color: ${colors.manatee};
-  font-size: 12px;
-`;
-
 const ContentCard = ({ card, type, ...props }) => {
-  const { img, url, category, title, description, timestamp, channel, liveLabel } = card;
+  const { img, url, liveLabel } = card;
   const isLive = type === 'live';
   const isPlayable = isLive || type === 'vod';
+  const cardDetailsProps = {
+    category: card.category,
+    title: card.title,
+    description: card.description,
+    channel: card.channel,
+    timestamp: card.timestamp,
+  };
 
   return (
     <StyledCard {...props} href={url}>
@@ -145,17 +91,7 @@ const ContentCard = ({ card, type, ...props }) => {
         {isPlayable && <StyledPlayIcon height={50} />}
         {isLive && <StyledLiveLabel>● {liveLabel}</StyledLiveLabel>}
       </StyledHeader>
-      <StyledContent>
-        <StyledCategory>{category}</StyledCategory>
-        <StyledTitle>{title}</StyledTitle>
-        {description && <StyledDescription>{description}</StyledDescription>}
-        <StyledFooter>
-          <StyledDetails>
-            {isLive && <ChannelIcon height={15} type={channel} />}
-            <StyledTimeStamp>{timestamp}</StyledTimeStamp>
-          </StyledDetails>
-        </StyledFooter>
-      </StyledContent>
+      <CardDetails card={cardDetailsProps} />
     </StyledCard>
   );
 };

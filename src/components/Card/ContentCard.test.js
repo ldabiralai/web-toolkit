@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import ContentCard, { StyledPlayIcon, StyledLiveLabel } from './ContentCard';
-import ChannelIcon from '../../elements/ChannelIcon';
+import CardDetails from './CardDetails';
 
 const cardData = {
   img: 'https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=200',
@@ -25,6 +25,19 @@ it('renders a ContentCard with play icon', () => {
   expect(wrapper.find(StyledPlayIcon).length).toEqual(1);
 });
 
+it('should pass correct props to CardDetails', () => {
+  const wrapper = shallow(<ContentCard card={cardData} type="live" />);
+  expect(wrapper.find(CardDetails).props()).toEqual({
+    card: {
+      category: cardData.category,
+      title: cardData.title,
+      description: cardData.description,
+      channel: cardData.channel,
+      timestamp: cardData.timestamp,
+    },
+  });
+});
+
 describe('Live Content Card', () => {
   it('renders a live label', () => {
     const wrapper = shallow(<ContentCard card={cardData} type="live" />);
@@ -39,10 +52,5 @@ describe('Live Content Card', () => {
   it('renders a play icon', () => {
     const wrapper = shallow(<ContentCard card={cardData} type="live" />);
     expect(wrapper.find(StyledPlayIcon).length).toEqual(1);
-  });
-
-  it('renders a channel logo', () => {
-    const wrapper = shallow(<ContentCard card={cardData} type="live" />);
-    expect(wrapper.find(ChannelIcon).prop('type')).toEqual('E1');
   });
 });
