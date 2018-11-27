@@ -90,15 +90,7 @@ CardDetails.propTypes = {
     description: PropTypes.string,
     timestamp: PropTypes.string,
     channel: PropTypes.string,
-  }),
-};
-
-CardDetails.defaultProps = {
-  card: {
-    description: null,
-    timestamp: null,
-    channel: null,
-  },
+  }).isRequired,
 };
 
 CardDetails.displayName = 'Cards.Content';

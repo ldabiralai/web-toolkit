@@ -68,15 +68,7 @@ ScheduleCard.propTypes = {
     description: PropTypes.string,
     timestamp: PropTypes.string,
     channel: PropTypes.string,
-  }),
-};
-
-ScheduleCard.defaultProps = {
-  card: {
-    description: '',
-    timestamp: '',
-    channel: '',
-  },
+  }).isRequired,
 };
 
 export default ScheduleCard;
