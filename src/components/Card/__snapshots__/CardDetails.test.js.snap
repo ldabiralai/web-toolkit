@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardDetails Renders a carddetail component 1`] = `
+<Styled(div)>
+  <Styled(div)>
+    Tennis
+  </Styled(div)>
+  <Styled(div)>
+    Youth olympic summer games
+  </Styled(div)>
+  <Styled(div)>
+    <Styled(div)>
+      <Styled(div)>
+        09:00 - 10:30
+      </Styled(div)>
+    </Styled(div)>
+  </Styled(div)>
+</Styled(div)>
+`;

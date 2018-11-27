@@ -11,22 +11,49 @@ const Wrapper = styled.div`
   max-width: 500px;
 `;
 
-const baseData = {
+const base = {
   img: 'https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640',
   url: '/article/id',
   category: 'Tennis',
   title: 'Klopp happy with Chelsea draw after good performance',
   description: 'Day 2',
   timestamp: '09:00 - 10:30',
-  channel: 'E2NO',
-  liveLabel: 'live',
 };
 
-cardStories.add(
-  'Content Card',
-  withInfo({ propTablesExclude: [Wrapper] })(() => (
-    <Wrapper>
-      <Cards.Content card={object('card', baseData)} type={select('type', ['vod', 'article', 'live'], 'article')} />
-    </Wrapper>
-  ))
-);
+const data = {
+  vod: base,
+  live: {
+    ...base,
+    channel: 'E2NO',
+    liveLabel: 'live',
+  },
+  article: base,
+};
+
+const schedule = {
+  ...base,
+  channel: 'E1GB',
+};
+
+cardStories
+  .add(
+    'Content Card',
+    withInfo({ propTablesExclude: [Wrapper] })(() => {
+      const type = select('type', ['vod', 'article', 'live'], 'article');
+      const card = object('card', data[type]);
+
+      return (
+        <Wrapper>
+          <Cards.Content card={card} type={type} />
+        </Wrapper>
+      );
+    })
+  )
+  .add(
+    'Schedule Card',
+    withInfo({ propTablesExclude: [Wrapper] })(() => (
+      <Wrapper>
+        <Cards.Schedule card={object('card', schedule)} />
+      </Wrapper>
+    ))
+  );
