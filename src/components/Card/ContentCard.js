@@ -73,16 +73,9 @@ export const StyledLiveLabel = styled.div`
 `;
 
 const ContentCard = ({ card, type, ...props }) => {
-  const { img, url, liveLabel } = card;
+  const { img, url, liveLabel, ...cardDetails } = card;
   const isLive = type === 'live';
   const isPlayable = isLive || type === 'vod';
-  const cardDetailsProps = {
-    category: card.category,
-    title: card.title,
-    description: card.description,
-    channel: card.channel,
-    timestamp: card.timestamp,
-  };
 
   return (
     <StyledCard {...props} href={url}>
@@ -91,7 +84,7 @@ const ContentCard = ({ card, type, ...props }) => {
         {isPlayable && <StyledPlayIcon height={50} />}
         {isLive && <StyledLiveLabel>● {liveLabel}</StyledLiveLabel>}
       </StyledHeader>
-      <CardDetails card={cardDetailsProps} />
+      <CardDetails card={cardDetails} />
     </StyledCard>
   );
 };
