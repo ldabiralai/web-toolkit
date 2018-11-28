@@ -6,9 +6,11 @@ import Hero from '../Hero';
 import ArticleContent from '../../components/ArticleContent';
 
 const StyledArticleContent = styled(ArticleContent)`
-  margin: 37px 0;
+  margin-top: 37px;
+  margin-bottom: 37px;
   ${breakpoints.medium(css`
-    margin: 47px 0;
+    margin-top: 47px;
+    margin-bottom: 47px;
   `)};
 `;
 

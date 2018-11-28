@@ -74,7 +74,11 @@ export const getOffset = (offset, size) => {
 };
 
 export const getContainerStyles = size => {
-  const margin = grid[size].gutter === 'auto' ? `margin: 0 auto;` : `margin: 0 ${grid[size].gutter + grid[size].type};`;
+  const marginValue = grid[size].gutter + grid[size].type;
+  const margin =
+    grid[size].gutter === 'auto'
+      ? `margin-left: auto;margin-right: auto;`
+      : `margin-left: ${marginValue};margin-right: ${marginValue};`;
   const width = grid[size].width ? `width: ${grid[size].width + grid[size].type};` : '';
 
   return `${margin}${width}`;

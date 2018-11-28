@@ -4,19 +4,19 @@ import Grid, { getColumnStyles, getContainerStyles } from '.';
 
 describe('renders the good styles for container', () => {
   it('tiny breakpoint', () => {
-    expect(getContainerStyles('tiny')).toEqual('margin: 0 5.07%;');
+    expect(getContainerStyles('tiny')).toEqual('margin-left: 5.07%;margin-right: 5.07%;');
   });
   it('small breakpoint', () => {
-    expect(getContainerStyles('small')).toEqual('margin: 0 4.44%;');
+    expect(getContainerStyles('small')).toEqual('margin-left: 4.44%;margin-right: 4.44%;');
   });
   it('medium breakpoint', () => {
-    expect(getContainerStyles('medium')).toEqual('margin: 0 4.3%;');
+    expect(getContainerStyles('medium')).toEqual('margin-left: 4.3%;margin-right: 4.3%;');
   });
   it('large breakpoint', () => {
-    expect(getContainerStyles('large')).toEqual('margin: 0 auto;width: 964px;');
+    expect(getContainerStyles('large')).toEqual('margin-left: auto;margin-right: auto;width: 964px;');
   });
   it('wide breakpoint', () => {
-    expect(getContainerStyles('wide')).toEqual('margin: 0 auto;width: 1289px;');
+    expect(getContainerStyles('wide')).toEqual('margin-left: auto;margin-right: auto;width: 1289px;');
   });
 });
 
