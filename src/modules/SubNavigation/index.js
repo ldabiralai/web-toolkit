@@ -7,10 +7,10 @@ import * as colors from '../../colors';
 const StyledWrapper = styled.div`
   background: ${colors.bunting};
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 12px 30px;
+  padding: 12px 18px;
 
   ${breakpoints.medium(css`
-    padding: 16px 30px;
+    padding: 16px 32px;
   `)};
 `;
 
