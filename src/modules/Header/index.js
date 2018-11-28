@@ -7,7 +7,7 @@ import Logo from '../../elements/Logo';
 const StyledWrapper = styled.div`
   background: ${colors.bunting};
   height: 50px;
-  padding-left: 16px;
+  padding-left: 18px;
   display: flex;
   align-items: center;
   ${breakpoints.medium(css`
