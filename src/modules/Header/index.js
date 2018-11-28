@@ -6,16 +6,16 @@ import Logo from '../../elements/Logo';
 
 const StyledWrapper = styled.div`
   background: ${colors.bunting};
-  height: 48px;
+  height: 50px;
   padding-left: 16px;
   display: flex;
   align-items: center;
   ${breakpoints.medium(css`
-    height: 64px;
+    height: 60px;
     padding-left: 32px;
   `)};
   ${breakpoints.large(css`
-    height: 72px;
+    height: 70px;
   `)};
 `;
 
