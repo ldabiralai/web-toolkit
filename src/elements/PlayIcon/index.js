@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { keyframes } from 'react-emotion';
+import styled, { css, keyframes } from 'react-emotion';
 import { rgba } from 'polished';
 import { white, ebony } from '../../colors';
 import play from '../../assets/play.svg';
@@ -13,18 +13,6 @@ const spin = keyframes`
   100% {
     transform: rotate(360deg);
   }
-`;
-
-const StyledWrapper = styled.div`
-  position: relative;
-  display: inline-block;
-  height: ${({ iconHeight }) => `${iconHeight}px`};
-  width: ${({ iconHeight }) => `${iconHeight}px`};
-  padding: ${({ iconHeight }) => `${(iconHeight * 0.45) / 2}px`};
-  box-sizing: border-box;
-  border-radius: 50%;
-  background: ${rgba(ebony, 0.2)};
-  overflow: hidden;
 `;
 
 const StyledBorder = styled.div`
@@ -41,6 +29,28 @@ const StyledBorder = styled.div`
   animation: ${({ isLoading }) => isLoading && `${spin} 1s linear infinite`};
 `;
 
+export const hoverStyles = css`
+  ${StyledBorder} {
+    border-color: white;
+  }
+`;
+
+const StyledWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+  height: ${({ iconHeight }) => `${iconHeight}px`};
+  width: ${({ iconHeight }) => `${iconHeight}px`};
+  padding: ${({ iconHeight }) => `${(iconHeight * 0.45) / 2}px`};
+  box-sizing: border-box;
+  border-radius: 50%;
+  background: ${rgba(ebony, 0.2)};
+  overflow: hidden;
+
+  :hover {
+    ${({ withHoverState }) => withHoverState && hoverStyles}
+  }
+`;
+
 const PlayIcon = ({ alt, height, isLoading, ...props }) => (
   <StyledWrapper {...props} iconHeight={height}>
     <StyledBorder isLoading={isLoading} />
@@ -52,6 +62,7 @@ PlayIcon.defaultProps = {
   alt: 'play',
   className: '',
   isLoading: false,
+  withHoverState: false,
 };
 
 PlayIcon.propTypes = {
@@ -59,6 +70,7 @@ PlayIcon.propTypes = {
   height: PropTypes.number.isRequired,
   className: PropTypes.string,
   isLoading: PropTypes.bool,
+  withHoverState: PropTypes.bool,
 };
 
 export default PlayIcon;

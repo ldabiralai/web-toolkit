@@ -4,6 +4,7 @@ exports[`PlayIcon should render default icon 1`] = `
 <Styled(div)
   className="test"
   iconHeight={50}
+  withHoverState={false}
 >
   <Styled(div)
     isLoading={false}

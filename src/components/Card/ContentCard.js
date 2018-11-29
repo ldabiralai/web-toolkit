@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { rgba } from 'polished';
-import PlayIcon from '../../elements/PlayIcon';
+import PlayIcon, { hoverStyles as playIconHoverStyle } from '../../elements/PlayIcon';
 import * as colors from '../../colors';
 import Link from '../../elements/Link';
 import CardDetails from './CardDetails';
@@ -50,9 +50,7 @@ const StyledCard = styled(Link)`
       opacity: 0.1;
     }
 
-    ${StyledPlayIcon} {
-      border-color: ${colors.white};
-    }
+    ${playIconHoverStyle}
   }
 `;
 
