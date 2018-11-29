@@ -1,10 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PlayIcon should render default icon 1`] = `
-<Styled(img)
-  alt="play"
+<Styled(div)
   className="test"
   iconHeight={50}
-  src="play.svg"
-/>
+>
+  <Styled(div)
+    isLoading={false}
+  />
+  <img
+    alt="play"
+    src="play.svg"
+  />
+</Styled(div)>
 `;
