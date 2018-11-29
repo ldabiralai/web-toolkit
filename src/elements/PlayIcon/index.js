@@ -47,7 +47,7 @@ const StyledWrapper = styled.div`
   overflow: hidden;
 
   :hover {
-    ${({ withHoverState }) => withHoverState && hoverStyles}
+    ${hoverStyles}
   }
 `;
 
@@ -62,7 +62,6 @@ PlayIcon.defaultProps = {
   alt: 'play',
   className: '',
   isLoading: false,
-  withHoverState: false,
 };
 
 PlayIcon.propTypes = {
@@ -70,7 +69,6 @@ PlayIcon.propTypes = {
   height: PropTypes.number.isRequired,
   className: PropTypes.string,
   isLoading: PropTypes.bool,
-  withHoverState: PropTypes.bool,
 };
 
 export default PlayIcon;
