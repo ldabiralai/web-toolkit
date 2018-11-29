@@ -47,12 +47,12 @@ const StyledWrapper = styled.div`
   overflow: hidden;
 
   :hover {
-    ${hoverStyles}
+    ${({ isLoading }) => !isLoading && hoverStyles}
   }
 `;
 
 const PlayIcon = ({ alt, height, isLoading, ...props }) => (
-  <StyledWrapper {...props} iconHeight={height}>
+  <StyledWrapper {...props} isLoading={isLoading} iconHeight={height}>
     <StyledBorder isLoading={isLoading} />
     <img src={play} alt={alt} />
   </StyledWrapper>
