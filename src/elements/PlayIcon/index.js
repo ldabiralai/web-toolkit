@@ -31,7 +31,7 @@ const StyledBorder = styled.div`
 
 export const hoverStyles = css`
   ${StyledBorder} {
-    border-color: white;
+    border-color: ${white};
   }
 `;
 
