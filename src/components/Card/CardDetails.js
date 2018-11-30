@@ -48,13 +48,13 @@ const StyledDetails = styled.div`
 const StyledTitle = styled.div`
   font-size: 14px;
   font-weight: bold;
-  color: ${colors.whiteLilac};
+  color: ${colors.athensGray};
   margin: 0 0 10px;
 `;
 
 const StyledDescription = styled.div`
   color: ${colors.manatee};
-  font-size: 14px;
+  font-size: 12px;
   line-height: 20px;
   margin: 0 0 10px;
 `;
