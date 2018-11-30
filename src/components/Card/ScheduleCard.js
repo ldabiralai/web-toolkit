@@ -8,7 +8,8 @@ import CardDetails from './CardDetails';
 
 const StyledWrapper = styled.div`
   position: relative;
-  height: 169px;
+  height: 100%;
+  min-height: 169px;
   display: flex;
   border-radius: 2px;
   overflow: hidden;
