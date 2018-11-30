@@ -1,26 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 import { rgba } from 'polished';
-import * as breakpoints from '../../breakpoints';
 import * as colors from '../../colors';
 
 import CardDetails from './CardDetails';
 
 const StyledWrapper = styled.div`
   position: relative;
-  height: 169px;
+  height: 100%;
+  min-height: 169px;
   display: flex;
   border-radius: 2px;
   overflow: hidden;
   box-shadow: 0 2px 3px 0 ${rgba(colors.ebony, 0.3)};
-
-  ${breakpoints.small(css`
-    height: 149px;
-  `)};
-  ${breakpoints.large(css`
-    height: 160px;
-  `)};
 `;
 
 const StyledImage = styled.div`
@@ -32,6 +25,7 @@ const StyledImage = styled.div`
   display: block;
   position: absolute;
   opacity: 0.35;
+  z-index: 0;
 
   :before {
     content: '';
@@ -51,6 +45,7 @@ const StyledImage = styled.div`
 
 const StyledCardDetails = styled(CardDetails)`
   padding: 20px 20px 10px;
+  z-index: 1;
 `;
 
 const ScheduleCard = ({ card, ...props }) => (
