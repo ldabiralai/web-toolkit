@@ -27,7 +27,6 @@ const StyledFooter = styled.div`
   flex: 1 auto;
   display: flex;
   align-items: flex-end;
-  margin-top: 20px;
   font-size: 14px;
 `;
 
