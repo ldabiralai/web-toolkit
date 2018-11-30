@@ -8,5 +8,11 @@ const iconsStories = storiesOf('PlayIcon', module);
 
 iconsStories.add(
   'configurable',
-  withInfo()(() => <PlayIcon height={number('Height', 50)} isLoading={boolean('isLoading', false)} />)
+  withInfo()(() => (
+    <PlayIcon
+      height={number('Height', 50)}
+      isLoading={boolean('isLoading', false)}
+      withHoverState={boolean('withHoverState', false)}
+    />
+  ))
 );
