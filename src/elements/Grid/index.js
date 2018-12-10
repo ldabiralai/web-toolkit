@@ -88,7 +88,8 @@ export const getColumnStyles = (colNumber, offset, size) => {
   const columns = colNumber === 'full' ? grid[size].columns : colNumber;
   const width = getWidthString(columns, size);
   const offsetStyle = getOffset(offset, size);
-  return `${width}${offsetStyle}`;
+  const padding = `padding: 0 ${Math.floor((grid[size].gap / 2) * 100) / 100 + grid[size].type};`;
+  return `${width}${offsetStyle}${padding}`;
 };
 
 export const Container = styled.div`
@@ -111,11 +112,34 @@ export const Container = styled.div`
   `)};
 `;
 
-export const Row = styled(Container)`
+const getSubContainerMargin = size => `margin: 0 ${Math.floor((grid[size].gap / -2) * 100) / 100 + grid[size].type};`;
+
+const StyledWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  ${getSubContainerMargin('tiny')}
+  ${breakpoints.small(css`
+    ${getSubContainerMargin('small')}
+  `)};
+
+  ${breakpoints.medium(css`
+    ${getSubContainerMargin('medium')};
+  `)};
+
+  ${breakpoints.large(css`
+    ${getSubContainerMargin('large')};
+  `)};
+
+  ${breakpoints.wide(css`
+    ${getSubContainerMargin('wide')};
+  `)};
 `;
+
+export const Row = ({ children }) => (
+  <Container>
+    <StyledWrapper>{children}</StyledWrapper>
+  </Container>
+);
 
 export const StyledColumn = styled.div`
   ${({ tiny, small, medium, large, wide, tinyOffset, smallOffset, mediumOffset, largeOffset, wideOffset }) => css`
