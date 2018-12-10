@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Hero renders Hero 1`] = `
-<Styled(div)>
+<Styled(header)>
   <Styled(div)
     img="Picture"
   />
@@ -27,5 +27,5 @@ exports[`Hero renders Hero 1`] = `
       />
     </Column>
   </Styled(div)>
-</Styled(div)>
+</Styled(header)>
 `;

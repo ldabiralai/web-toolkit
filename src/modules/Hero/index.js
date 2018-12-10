@@ -7,7 +7,7 @@ import { Row, Column } from '../../elements/Grid';
 import Author from '../../components/Author';
 import { H1 } from '../../typography';
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.header`
   position: relative;
   background-color: ${colors.mirage};
   clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 30px), 0% 100%);

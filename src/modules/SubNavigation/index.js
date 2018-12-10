@@ -4,7 +4,7 @@ import styled, { css } from 'react-emotion';
 import * as breakpoints from '../../breakpoints';
 import * as colors from '../../colors';
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.nav`
   background: ${colors.bunting};
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding: 12px 18px;

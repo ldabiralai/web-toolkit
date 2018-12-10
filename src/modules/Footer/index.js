@@ -5,7 +5,7 @@ import * as breakpoints from '../../breakpoints';
 import * as colors from '../../colors';
 import Button from '../../elements/Button';
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.footer`
   ${breakpoints.medium(css`
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 20px;

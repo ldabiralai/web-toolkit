@@ -4,7 +4,7 @@ import * as breakpoints from '../../breakpoints';
 import * as colors from '../../colors';
 import Logo from '../../elements/Logo';
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.header`
   background: ${colors.bunting};
   height: 50px;
   padding-left: 18px;

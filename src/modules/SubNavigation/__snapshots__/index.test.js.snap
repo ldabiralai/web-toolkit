@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SubNavigation renders when everything passed in 1`] = `
-<Styled(div)>
+<Styled(nav)>
   <Styled(ul)>
     <Styled(li)
       key="Home"
@@ -40,5 +40,5 @@ exports[`SubNavigation renders when everything passed in 1`] = `
       </Styled(a)>
     </Styled(li)>
   </Styled(ul)>
-</Styled(div)>
+</Styled(nav)>
 `;

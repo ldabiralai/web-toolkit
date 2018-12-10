@@ -5,7 +5,7 @@ import * as breakpoints from '../../../breakpoints';
 import * as colors from '../../../colors';
 import { H2 } from '../../../typography';
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.section`
   margin: 48px 0;
 `;
 
