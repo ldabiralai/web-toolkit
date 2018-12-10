@@ -3,9 +3,10 @@ import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
 import * as breakpoints from '../../breakpoints';
 
+// ratio is the content width in percent plus 2 half gaps (so one gap) because of negative margins on the row
 const grid = {
   tiny: {
-    ratio: 100 / 89.86,
+    ratio: 100 / (89.86 + 5.07),
     gutter: 5.07,
     get gap() {
       return 5.07 * this.ratio;
@@ -17,7 +18,7 @@ const grid = {
     type: '%',
   },
   small: {
-    ratio: 100 / 91.12,
+    ratio: 100 / (91.12 + 4.44),
     gutter: 4.44,
     get gap() {
       return 4.44 * this.ratio;
@@ -29,7 +30,7 @@ const grid = {
     type: '%',
   },
   medium: {
-    ratio: 100 / 91.41,
+    ratio: 100 / (91.41 + 2.34),
     gutter: 4.3,
     get gap() {
       return 2.34 * this.ratio;
@@ -114,7 +115,7 @@ export const Container = styled.div`
 
 const getSubContainerMargin = size => `margin: 0 ${Math.floor((grid[size].gap / -2) * 100) / 100 + grid[size].type};`;
 
-const StyledWrapper = styled.div`
+const StyledSubContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   ${getSubContainerMargin('tiny')}
@@ -137,7 +138,7 @@ const StyledWrapper = styled.div`
 
 export const Row = ({ children }) => (
   <Container>
-    <StyledWrapper>{children}</StyledWrapper>
+    <StyledSubContainer>{children}</StyledSubContainer>
   </Container>
 );
 
@@ -199,6 +200,10 @@ export const Column = props => {
       {children}
     </StyledColumn>
   );
+};
+
+Row.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 Column.defaultProps = {
