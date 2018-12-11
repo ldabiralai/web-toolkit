@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ArticleContent renders ArticleContent with teaser and paragraphs 1`] = `
-<Styled(div)>
+<Styled(Row)>
   <Column
     large="5"
     largeOffset={null}
@@ -60,5 +60,5 @@ exports[`ArticleContent renders ArticleContent with teaser and paragraphs 1`] = 
       </Styled(p)>
     </Styled(div)>
   </Column>
-</Styled(div)>
+</Styled(Row)>
 `;

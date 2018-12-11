@@ -136,8 +136,8 @@ const StyledSubContainer = styled.div`
   `)};
 `;
 
-export const Row = ({ children }) => (
-  <Container>
+export const Row = (props, { children }) => (
+  <Container {...props}>
     <StyledSubContainer>{children}</StyledSubContainer>
   </Container>
 );
@@ -203,7 +203,11 @@ export const Column = props => {
 };
 
 Row.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
+};
+
+Row.defaultProps = {
+  children: null,
 };
 
 Column.defaultProps = {
