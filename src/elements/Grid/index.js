@@ -85,11 +85,16 @@ export const getContainerStyles = size => {
   return `${margin}${width}`;
 };
 
+const getHalfGap = (size, negative = false) => {
+  const { gap } = grid[size];
+  return negative ? gap / -2 : gap / 2;
+};
+
 export const getColumnStyles = (colNumber, offset, size) => {
   const columns = colNumber === 'full' ? grid[size].columns : colNumber;
   const width = getWidthString(columns, size);
   const offsetStyle = getOffset(offset, size);
-  const padding = `padding: 0 ${Math.floor((grid[size].gap / 2) * 100) / 100 + grid[size].type};`;
+  const padding = `padding: 0 ${getHalfGap(size)}${grid[size].type};`;
   return `${width}${offsetStyle}${padding}`;
 };
 
@@ -113,7 +118,7 @@ export const Container = styled.div`
   `)};
 `;
 
-const getSubContainerMargin = size => `margin: 0 ${Math.floor((grid[size].gap / -2) * 100) / 100 + grid[size].type};`;
+const getSubContainerMargin = size => `margin: 0 ${getHalfGap(size, true)}${grid[size].type};`;
 
 const StyledSubContainer = styled.div`
   display: flex;
@@ -200,14 +205,6 @@ export const Column = props => {
       {children}
     </StyledColumn>
   );
-};
-
-Row.propTypes = {
-  children: PropTypes.node,
-};
-
-Row.defaultProps = {
-  children: null,
 };
 
 Column.defaultProps = {
