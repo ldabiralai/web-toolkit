@@ -23,24 +23,32 @@ describe('renders the good styles for container', () => {
 describe('renders the good styles for column', () => {
   it('tiny breakpoint', () => {
     expect(getColumnStyles(1, 1, 'tiny')).toEqual(
-      'width: 11.324133572105762%;margin-left: 16.664910987043086%;padding: 0 2.67%;'
+      'width: 11.324133572105762%;margin-left: 16.664910987043086%;padding: 0 2.6703887074686614%;'
     );
-    expect(getColumnStyles(6, 0, 'tiny')).toEqual('width: 94.64868850732117%;margin-left: 0%;padding: 0 2.67%;');
-    expect(getColumnStyles('full', 0, 'tiny')).toEqual('width: 94.64868850732117%;margin-left: 0%;padding: 0 2.67%;');
+    expect(getColumnStyles(6, 0, 'tiny')).toEqual(
+      'width: 94.64868850732117%;margin-left: 0%;padding: 0 2.6703887074686614%;'
+    );
+    expect(getColumnStyles('full', 0, 'tiny')).toEqual(
+      'width: 94.64868850732117%;margin-left: 0%;padding: 0 2.6703887074686614%;'
+    );
   });
   it('small breakpoint', () => {
     expect(getColumnStyles(1, 1, 'small')).toEqual(
-      'width: 12.013394725826707%;margin-left: 16.65969024696526%;padding: 0 2.32%;'
+      'width: 12.013394725826707%;margin-left: 16.65969024696526%;padding: 0 2.323147760569276%;'
     );
-    expect(getColumnStyles(6, 0, 'small')).toEqual('width: 95.311845960653%;margin-left: 0%;padding: 0 2.32%;');
-    expect(getColumnStyles('full', 0, 'small')).toEqual('width: 95.311845960653%;margin-left: 0%;padding: 0 2.32%;');
+    expect(getColumnStyles(6, 0, 'small')).toEqual(
+      'width: 95.311845960653%;margin-left: 0%;padding: 0 2.323147760569276%;'
+    );
+    expect(getColumnStyles('full', 0, 'small')).toEqual(
+      'width: 95.311845960653%;margin-left: 0%;padding: 0 2.323147760569276%;'
+    );
   });
   it('medium breakpoint', () => {
     expect(getColumnStyles(1, 1, 'medium')).toEqual(
-      'width: 5.834666666666666%;margin-left: 8.330666666666666%;padding: 0 1.24%;'
+      'width: 5.834666666666666%;margin-left: 8.330666666666666%;padding: 0 1.248%;'
     );
-    expect(getColumnStyles(12, 0, 'medium')).toEqual('width: 97.472%;margin-left: 0%;padding: 0 1.24%;');
-    expect(getColumnStyles('full', 0, 'medium')).toEqual('width: 97.472%;margin-left: 0%;padding: 0 1.24%;');
+    expect(getColumnStyles(12, 0, 'medium')).toEqual('width: 97.472%;margin-left: 0%;padding: 0 1.248%;');
+    expect(getColumnStyles('full', 0, 'medium')).toEqual('width: 97.472%;margin-left: 0%;padding: 0 1.248%;');
   });
   it('large breakpoint', () => {
     expect(getColumnStyles(1, 1, 'large')).toEqual('width: 62px;margin-left: 82px;padding: 0 10px;');
