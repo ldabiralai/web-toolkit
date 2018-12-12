@@ -136,7 +136,7 @@ const StyledSubContainer = styled.div`
   `)};
 `;
 
-export const Row = (props, { children }) => (
+export const Row = ({ children, ...props }) => (
   <Container {...props}>
     <StyledSubContainer>{children}</StyledSubContainer>
   </Container>
