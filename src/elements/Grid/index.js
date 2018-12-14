@@ -3,9 +3,10 @@ import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
 import * as breakpoints from '../../breakpoints';
 
+// ratio is the content width in percent plus 2 half gaps (so one gap) because of negative margins on the row
 const grid = {
   tiny: {
-    ratio: 100 / 89.86,
+    ratio: 100 / (89.86 + 5.07),
     gutter: 5.07,
     get gap() {
       return 5.07 * this.ratio;
@@ -17,7 +18,7 @@ const grid = {
     type: '%',
   },
   small: {
-    ratio: 100 / 91.12,
+    ratio: 100 / (91.12 + 4.44),
     gutter: 4.44,
     get gap() {
       return 4.44 * this.ratio;
@@ -29,7 +30,7 @@ const grid = {
     type: '%',
   },
   medium: {
-    ratio: 100 / 91.41,
+    ratio: 100 / (91.41 + 2.34),
     gutter: 4.3,
     get gap() {
       return 2.34 * this.ratio;
@@ -84,11 +85,17 @@ export const getContainerStyles = size => {
   return `${margin}${width}`;
 };
 
+const getHalfGap = (size, negative = false) => {
+  const { gap } = grid[size];
+  return negative ? gap / -2 : gap / 2;
+};
+
 export const getColumnStyles = (colNumber, offset, size) => {
   const columns = colNumber === 'full' ? grid[size].columns : colNumber;
   const width = getWidthString(columns, size);
   const offsetStyle = getOffset(offset, size);
-  return `${width}${offsetStyle}`;
+  const padding = `padding: 0 ${getHalfGap(size)}${grid[size].type};`;
+  return `${width}${offsetStyle}${padding}`;
 };
 
 export const Container = styled.div`
@@ -111,11 +118,34 @@ export const Container = styled.div`
   `)};
 `;
 
-export const Row = styled(Container)`
+const getSubContainerMargin = size => `margin: 0 ${getHalfGap(size, true)}${grid[size].type};`;
+
+const StyledSubContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  ${getSubContainerMargin('tiny')}
+  ${breakpoints.small(css`
+    ${getSubContainerMargin('small')}
+  `)};
+
+  ${breakpoints.medium(css`
+    ${getSubContainerMargin('medium')};
+  `)};
+
+  ${breakpoints.large(css`
+    ${getSubContainerMargin('large')};
+  `)};
+
+  ${breakpoints.wide(css`
+    ${getSubContainerMargin('wide')};
+  `)};
 `;
+
+export const Row = ({ children, ...props }) => (
+  <Container {...props}>
+    <StyledSubContainer>{children}</StyledSubContainer>
+  </Container>
+);
 
 export const StyledColumn = styled.div`
   ${({ tiny, small, medium, large, wide, tinyOffset, smallOffset, mediumOffset, largeOffset, wideOffset }) => css`

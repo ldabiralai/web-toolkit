@@ -5,7 +5,7 @@ exports[`Hero renders Hero 1`] = `
   <Styled(div)
     img="Picture"
   />
-  <Styled(div)>
+  <Styled(Row)>
     <Column
       large={null}
       largeOffset={null}
@@ -26,6 +26,6 @@ exports[`Hero renders Hero 1`] = `
         time=""
       />
     </Column>
-  </Styled(div)>
+  </Styled(Row)>
 </Styled(header)>
 `;
