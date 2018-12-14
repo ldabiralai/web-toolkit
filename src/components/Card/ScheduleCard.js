@@ -5,6 +5,7 @@ import { rgba } from 'polished';
 import * as colors from '../../colors';
 
 import CardDetails from './CardDetails';
+import ChannelIcon from '../../elements/ChannelIcon';
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -48,12 +49,16 @@ const StyledCardDetails = styled(CardDetails)`
   z-index: 1;
 `;
 
-const ScheduleCard = ({ card, ...props }) => (
-  <StyledWrapper {...props}>
-    <StyledImage img={card.img} />
-    <StyledCardDetails card={card} />
-  </StyledWrapper>
-);
+const ScheduleCard = ({ card, icon, ...props }) => {
+  const cardIcon = icon || <ChannelIcon height={15} type={card.channel} />;
+
+  return (
+    <StyledWrapper {...props}>
+      <StyledImage img={card.img} />
+      <StyledCardDetails card={card} icon={cardIcon} />
+    </StyledWrapper>
+  );
+};
 
 ScheduleCard.propTypes = {
   card: PropTypes.shape({

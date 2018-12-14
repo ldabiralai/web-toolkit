@@ -6,13 +6,15 @@ import { PlayIcon } from '../..';
 
 const iconsStories = storiesOf('PlayIcon', module);
 
-iconsStories.add(
-  'configurable',
-  withInfo()(() => (
-    <PlayIcon
-      height={number('Height', 50)}
-      isLoading={boolean('isLoading', false)}
-      withHoverState={boolean('withHoverState', false)}
-    />
-  ))
-);
+iconsStories
+  .add(
+    'Encircled',
+    withInfo()(() => (
+      <PlayIcon.PlayIcon
+        height={number('Height', 50)}
+        isLoading={boolean('isLoading', false)}
+        withHoverState={boolean('withHoverState', false)}
+      />
+    ))
+  )
+  .add('Simple', withInfo()(() => <PlayIcon.PlayIconSimple height={number('Height', 50)} />));

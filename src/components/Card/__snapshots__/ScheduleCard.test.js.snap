@@ -16,6 +16,12 @@ exports[`Schedule card Renders a schedule card 1`] = `
         "title": "Youth olympic summer games",
       }
     }
+    icon={
+      <ChannelIcon
+        height={15}
+        type="E1"
+      />
+    }
   />
 </Styled(div)>
 `;

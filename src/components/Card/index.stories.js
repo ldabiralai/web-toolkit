@@ -35,6 +35,11 @@ const schedule = {
   channel: 'E1GB',
 };
 
+const vod = {
+  ...base,
+  timestamp: '01:33:28',
+};
+
 cardStories
   .add(
     'Content Card',
@@ -54,6 +59,14 @@ cardStories
     withInfo({ propTablesExclude: [Wrapper] })(() => (
       <Wrapper>
         <Cards.Schedule card={object('card', schedule)} />
+      </Wrapper>
+    ))
+  )
+  .add(
+    'Vod Card',
+    withInfo({ propTablesExclude: [Wrapper] })(() => (
+      <Wrapper>
+        <Cards.VodCard card={object('card', vod)} />
       </Wrapper>
     ))
   );
