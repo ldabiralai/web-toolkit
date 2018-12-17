@@ -37,6 +37,7 @@ const schedule = {
 
 const vod = {
   ...base,
+  description: null,
   timestamp: '01:33:28',
 };
 

@@ -1,17 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from 'react-emotion';
+import { regentGray } from '../../colors';
 
 import CompactCard from './CompactCard';
-import play from '../../assets/play.svg';
 
-const VodCard = ({ card }) => <CompactCard card={card} icon={<img src={play} alt="play" height={20} />} />;
+const StyledIcon = styled.span`
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 10px;
+  border-color: transparent transparent transparent ${regentGray};
+`;
+
+const VodCard = ({ card, ...props }) => <CompactCard card={card} icon={<StyledIcon />} {...props} />;
 
 VodCard.propTypes = {
   card: PropTypes.shape({
     img: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    description: PropTypes.string,
     timestamp: PropTypes.string,
   }).isRequired,
 };
