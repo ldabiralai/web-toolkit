@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import ContentCard, { StyledPlayIcon, StyledLiveLabel } from './ContentCard';
 import CardDetails from './CardDetails';
+import ChannelIcon from '../../elements/ChannelIcon';
 
 const cardData = {
   img: 'https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=200',
@@ -35,6 +36,7 @@ it('should pass correct props to CardDetails', () => {
       channel: cardData.channel,
       timestamp: cardData.timestamp,
     },
+    icon: <ChannelIcon height={15} type={cardData.channel} />,
   });
 });
 

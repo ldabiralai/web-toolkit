@@ -87,8 +87,8 @@ CardDetails.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
     timestamp: PropTypes.string,
-    icon: PropTypes.node,
   }).isRequired,
+  icon: PropTypes.node.isRequired,
 };
 
 CardDetails.displayName = 'Cards.Content';

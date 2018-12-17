@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import PlayIcon from './PlayIcon';
+import PlayIcon from '.';
 
 describe.only('PlayIcon', () => {
   it('should render default icon', () => {
