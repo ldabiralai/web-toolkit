@@ -62,7 +62,6 @@ CompactCard.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
     timestamp: PropTypes.string,
-    channel: PropTypes.string,
   }).isRequired,
   icon: PropTypes.node.isRequired,
 };
