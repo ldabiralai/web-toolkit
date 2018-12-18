@@ -13,9 +13,9 @@ const StyledIcon = styled.span`
   border-color: transparent transparent transparent ${regentGray};
 `;
 
-const VodCard = ({ card, ...props }) => <CompactCard card={card} icon={<StyledIcon />} {...props} />;
+const VodCompact = ({ card, ...props }) => <CompactCard card={card} icon={<StyledIcon />} {...props} />;
 
-VodCard.propTypes = {
+VodCompact.propTypes = {
   card: PropTypes.shape({
     img: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
@@ -24,4 +24,4 @@ VodCard.propTypes = {
   }).isRequired,
 };
 
-export default VodCard;
+export default VodCompact;

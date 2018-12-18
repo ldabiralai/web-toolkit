@@ -43,7 +43,7 @@ const vod = {
 
 cardStories
   .add(
-    'Content Card',
+    'Content',
     withInfo({ propTablesExclude: [Wrapper] })(() => {
       const type = select('type', ['vod', 'article', 'live'], 'article');
       const card = object('card', data[type]);
@@ -56,7 +56,7 @@ cardStories
     })
   )
   .add(
-    'Schedule Card',
+    'Schedule',
     withInfo({ propTablesExclude: [Wrapper] })(() => (
       <Wrapper>
         <Cards.Schedule card={object('card', schedule)} />
@@ -64,7 +64,7 @@ cardStories
     ))
   )
   .add(
-    'Vod Card',
+    'Vod Compact',
     withInfo({ propTablesExclude: [Wrapper] })(() => (
       <Wrapper>
         <Cards.VodCard card={object('card', vod)} />

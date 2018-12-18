@@ -1,5 +1,5 @@
 import Content from './ContentCard';
 import Schedule from './ScheduleCard';
-import VodCard from './VodCard';
+import VodCompact from './VodCompact';
 
-export default { Content, Schedule, VodCard };
+export default { Content, Schedule, VodCard: VodCompact };
