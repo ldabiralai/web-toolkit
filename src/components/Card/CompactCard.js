@@ -5,6 +5,7 @@ import { rgba } from 'polished';
 import * as colors from '../../colors';
 
 import CardDetails from './CardDetails';
+import Link from '../../elements/Link';
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -48,12 +49,26 @@ const StyledCardDetails = styled(CardDetails)`
   z-index: 1;
 `;
 
-const CompactCard = ({ card, icon, ...props }) => (
-  <StyledWrapper {...props}>
-    <StyledImage img={card.img} />
-    <StyledCardDetails card={card} icon={icon} />
-  </StyledWrapper>
-);
+const StyledLink = styled(Link)`
+  text-decoration: none;
+
+  &:hover {
+    ${StyledImage} {
+      opacity: 0.45;
+    }
+  }
+`;
+
+const CompactCard = ({ card, icon, ...props }) => {
+  const node = (
+    <StyledWrapper {...props}>
+      <StyledImage img={card.img} />
+      <StyledCardDetails card={card} icon={icon} />
+    </StyledWrapper>
+  );
+
+  return card.url ? <StyledLink href={card.url}>{node}</StyledLink> : node;
+};
 
 CompactCard.propTypes = {
   card: PropTypes.shape({

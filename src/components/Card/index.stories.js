@@ -32,6 +32,7 @@ const data = {
 
 const schedule = {
   ...base,
+  url: null,
   channel: 'E1GB',
 };
 
@@ -39,6 +40,7 @@ const vod = {
   ...base,
   description: null,
   timestamp: '01:33:28',
+  url: 'http://eurosport.co.uk',
 };
 
 cardStories
@@ -67,7 +69,7 @@ cardStories
     'Vod Compact',
     withInfo({ propTablesExclude: [Wrapper] })(() => (
       <Wrapper>
-        <Cards.VodCard card={object('card', vod)} />
+        <Cards.VodCompact card={object('card', vod)} />
       </Wrapper>
     ))
   );

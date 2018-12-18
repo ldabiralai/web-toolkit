@@ -24,4 +24,20 @@ describe('Compact card', () => {
     const component = shallow(<CompactCard card={mockCardData} icon={mockIcon} data-test="test-card" />);
     expect(component.props()).toHaveProperty('data-test', 'test-card');
   });
+
+  it('Renders no wrapping link if no url passed in', () => {
+    const wrapper = shallow(<CompactCard card={mockCardData} icon={mockIcon} />);
+    expect(wrapper.props().href).toBeFalsy();
+  });
+
+  it('Renders a link if a url is passed in', () => {
+    const mockCard = {
+      ...mockCardData,
+      url: 'http://test.com',
+    };
+    const wrapper = shallow(<CompactCard card={mockCard} icon={mockIcon} />);
+
+    expect(wrapper.render().attr('href')).toEqual('http://test.com');
+    expect(wrapper.render().is('a')).toEqual(true);
+  });
 });
