@@ -32,12 +32,20 @@ const data = {
 
 const schedule = {
   ...base,
+  url: null,
   channel: 'E1GB',
+};
+
+const vod = {
+  ...base,
+  description: null,
+  timestamp: '01:33:28',
+  url: 'http://eurosport.co.uk',
 };
 
 cardStories
   .add(
-    'Content Card',
+    'Content',
     withInfo({ propTablesExclude: [Wrapper] })(() => {
       const type = select('type', ['vod', 'article', 'live'], 'article');
       const card = object('card', data[type]);
@@ -50,10 +58,18 @@ cardStories
     })
   )
   .add(
-    'Schedule Card',
+    'Schedule',
     withInfo({ propTablesExclude: [Wrapper] })(() => (
       <Wrapper>
         <Cards.Schedule card={object('card', schedule)} />
+      </Wrapper>
+    ))
+  )
+  .add(
+    'Vod Compact',
+    withInfo({ propTablesExclude: [Wrapper] })(() => (
+      <Wrapper>
+        <Cards.VodCompact card={object('card', vod)} />
       </Wrapper>
     ))
   );

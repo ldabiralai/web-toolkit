@@ -10,6 +10,7 @@ exports[`CardDetails Renders a carddetail component 1`] = `
   </Styled(div)>
   <Styled(div)>
     <Styled(div)>
+      <div />
       <Styled(div)>
         09:00 - 10:30
       </Styled(div)>

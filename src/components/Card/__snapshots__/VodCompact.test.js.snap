@@ -1,22 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Schedule card Renders a schedule card 1`] = `
+exports[`VodCompact card Renders a VodCompact card 1`] = `
 <CompactCard
   card={
     Object {
       "category": "Tennis",
-      "channel": "E1",
       "description": "Description",
       "img": "https://i.eurosport.com/2018/10/29/2450727-50913270-2560-1440.jpg?w=200",
-      "timestamp": "09:00 - 10:30",
+      "timestamp": "01:09:28",
       "title": "Youth olympic summer games",
     }
   }
-  icon={
-    <ChannelIcon
-      height={15}
-      type="E1"
-    />
-  }
+  icon={<Styled(span) />}
 />
 `;

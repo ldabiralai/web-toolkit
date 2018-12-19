@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { rgba } from 'polished';
 import PlayIcon, { hoverStyles as playIconHoverStyle } from '../../elements/PlayIcon';
+import ChannelIcon from '../../elements/ChannelIcon';
 import * as colors from '../../colors';
 import Link from '../../elements/Link';
 import CardDetails from './CardDetails';
@@ -74,6 +75,7 @@ const ContentCard = ({ card, type, ...props }) => {
   const { img, url, liveLabel, ...cardDetails } = card;
   const isLive = type === 'live';
   const isPlayable = isLive || type === 'vod';
+  const icon = isLive ? <ChannelIcon height={15} type={card.channel} /> : null;
 
   return (
     <StyledCard {...props} href={url}>
@@ -82,7 +84,7 @@ const ContentCard = ({ card, type, ...props }) => {
         {isPlayable && <StyledPlayIcon height={50} />}
         {isLive && <StyledLiveLabel>● {liveLabel}</StyledLiveLabel>}
       </StyledHeader>
-      <CardDetails card={cardDetails} />
+      <CardDetails card={cardDetails} icon={icon} />
     </StyledCard>
   );
 };

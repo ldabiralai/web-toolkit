@@ -20,6 +20,7 @@ exports[`renders a Article ContentCard 1`] = `
         "title": "Youth olympic summer games",
       }
     }
+    icon={null}
   />
 </Styled(Link)>
 `;

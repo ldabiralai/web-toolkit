@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
 import { rgba } from 'polished';
-import ChannelIcon from '../../elements/ChannelIcon';
 import * as colors from '../../colors';
 
 const StyledContent = styled.div`
@@ -65,8 +64,8 @@ const StyledTimeStamp = styled.div`
   font-size: 12px;
 `;
 
-const CardDetails = ({ card, ...props }) => {
-  const { category, title, description, timestamp, channel } = card;
+const CardDetails = ({ card, icon, ...props }) => {
+  const { category, title, description, timestamp } = card;
   return (
     <StyledContent {...props}>
       <StyledCategory>{category}</StyledCategory>
@@ -74,7 +73,7 @@ const CardDetails = ({ card, ...props }) => {
       {description && <StyledDescription>{description}</StyledDescription>}
       <StyledFooter>
         <StyledDetails>
-          {channel && <ChannelIcon height={15} type={channel} />}
+          {icon}
           <StyledTimeStamp>{timestamp}</StyledTimeStamp>
         </StyledDetails>
       </StyledFooter>
@@ -88,8 +87,8 @@ CardDetails.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string,
     timestamp: PropTypes.string,
-    channel: PropTypes.string,
   }).isRequired,
+  icon: PropTypes.node.isRequired,
 };
 
 CardDetails.displayName = 'Cards.Content';
