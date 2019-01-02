@@ -30,7 +30,10 @@ contentListingStories
   .add(
     'Content card',
     withInfo()(() => (
-      <ContentListing.Grid title={text('title', 'Articles list')}>
+      <ContentListing.Grid
+        title={text('title', 'Articles list')}
+        subLink={object('subLink', { text: 'View Schedule', href: '#' })}
+      >
         <Cards.Content card={cardWithDescription} type={select('Type', ['vod', 'article', 'live'], 'article')} />
         <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
         <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
