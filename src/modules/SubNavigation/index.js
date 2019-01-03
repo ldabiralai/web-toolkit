@@ -5,7 +5,7 @@ import * as breakpoints from '../../breakpoints';
 import * as colors from '../../colors';
 
 const StyledWrapper = styled.nav`
-  background: ${colors.bunting};
+  background: ${colors.brandBase};
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding: 12px 18px;
 
@@ -37,7 +37,7 @@ const StyledLink = styled.a`
   text-decoration: none;
 
   :hover {
-    color: white;
+    color: coreLightMinus1;
   }
 `;
 

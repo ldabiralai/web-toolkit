@@ -1,4 +1,4 @@
-import { turquoiseBlue, utahCrimson } from './colors';
+import { coreLightMinus1, turquoiseBlue, actionTwoDarkBase } from './colors';
 
 export default {
   link: {
@@ -6,8 +6,8 @@ export default {
   },
   button: {
     primary: {
-      color: 'white',
-      backgroundColor: utahCrimson,
+      color: coreLightMinus1,
+      backgroundColor: actionTwoDarkBase,
     },
     secondary: {
       color: turquoiseBlue,

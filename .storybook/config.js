@@ -31,7 +31,10 @@ addDecorator(
   })
 );
 addDecorator(
-  withBackgrounds([{ name: 'default', value: colors.ebony, default: true }, { name: 'white', value: colors.white }])
+  withBackgrounds([
+    { name: 'default', value: colors.brandPlus2, default: true },
+    { name: 'coreLightMinus1', value: colors.coreLightMinus1 },
+  ])
 );
 
 configure(loadStories, module);

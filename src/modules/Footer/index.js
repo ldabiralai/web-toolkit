@@ -71,7 +71,7 @@ const StyledLink = styled.a`
     padding: 0;
   `)};
   :hover {
-    color: white;
+    color: coreLightMinus1;
   }
 `;
 

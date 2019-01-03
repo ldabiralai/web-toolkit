@@ -14,7 +14,7 @@ const StyledWrapper = styled.div`
   display: flex;
   border-radius: 2px;
   overflow: hidden;
-  box-shadow: 0 2px 3px 0 ${rgba(colors.ebony, 0.3)};
+  box-shadow: 0 2px 3px 0 ${rgba(colors.brandPlus2, 0.3)};
 `;
 
 const StyledImage = styled.div`

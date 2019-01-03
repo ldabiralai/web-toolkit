@@ -44,7 +44,7 @@ const StyledCard = styled(Link)`
   box-shadow: 0 1px 0 0 ${rgba(colors.mirage, 0.75)};
   text-decoration: none;
   overflow: hidden;
-  background-color: ${colors.bunting};
+  background-color: ${colors.brandBase};
 
   &:hover {
     ${StyledHeader}:before {
@@ -61,8 +61,8 @@ export const StyledLiveLabel = styled.div`
   justify-content: center;
   padding: 5px 8px;
   border-radius: 2px;
-  background-color: ${colors.utahCrimson};
-  color: ${colors.white};
+  background-color: ${colors.actionTwoDarkBase};
+  color: ${colors.coreLightMinus1};
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 1.2px;

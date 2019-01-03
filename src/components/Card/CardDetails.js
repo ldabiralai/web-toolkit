@@ -16,7 +16,7 @@ const StyledCategory = styled.div`
   font-size: 12px;
   font-weight: bold;
   text-transform: uppercase;
-  color: ${colors.turquoiseBlue};
+  color: ${colors.featureOneMinus2};
   letter-spacing: 1px;
   margin: 0 0 10px;
 `;
@@ -46,12 +46,12 @@ const StyledDetails = styled.div`
 const StyledTitle = styled.div`
   font-size: 14px;
   font-weight: bold;
-  color: ${colors.athensGray};
+  color: ${colors.coreLightBase};
   margin: 0 0 10px;
 `;
 
 const StyledDescription = styled.div`
-  color: ${colors.manatee};
+  color: ${colors.coreNeutral4};
   font-size: 12px;
   line-height: 20px;
   margin: 0 0 10px;
@@ -60,7 +60,7 @@ const StyledDescription = styled.div`
 const StyledTimeStamp = styled.div`
   padding: 8px 0;
   margin: 0;
-  color: ${colors.manatee};
+  color: ${colors.coreNeutral4};
   font-size: 12px;
 `;
 
