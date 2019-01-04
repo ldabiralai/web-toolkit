@@ -11,8 +11,8 @@ export const actionTwoLightMinus1 = '#ff3d5c';
 export const actionTwoLightBase = '#ff0043';
 export const actionTwoLightPlus1 = '#cc0036';
 
-export const actionOneDarkMinus1 = '#7982FF';
-export const actionOneDarkBase = '#4652FF';
+export const actionOneDarkMinus1 = '#7982ff';
+export const actionOneDarkBase = '#4652ff';
 export const actionOneDarkPlus1 = '#1322ff';
 export const actionTwoDarkMinus1 = '#ff0943';
 export const actionTwoDarkBase = '#d50032';

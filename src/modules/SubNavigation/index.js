@@ -37,7 +37,7 @@ const StyledLink = styled.a`
   text-decoration: none;
 
   :hover {
-    color: coreLightMinus1;
+    color: ${colors.coreLightMinus1};
   }
 `;
 
