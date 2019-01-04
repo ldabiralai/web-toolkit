@@ -76,6 +76,5 @@ export const featureSevenPlus1 = '#8800cc';
 export const featureSevenPlus2 = '#7900c3';
 
 /* old colours */
-export const regentGray = '#798490';
 export const turquoiseBlue = '#64dcff';
 export const mirage = '#1b1e30';
