@@ -21,7 +21,7 @@ const StyledCategory = styled.div`
   margin: 0 0 10px;
 `;
 
-const footerBorder = rgba(colors.whiteLilac, 0.15);
+const footerBorder = rgba(colors.coreLightMinus1, 0.15);
 const StyledFooter = styled.div`
   flex: 1 auto;
   display: flex;
