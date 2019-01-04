@@ -11,11 +11,11 @@ exports[`renders a ArrowLink 1`] = `
           "color": "#ffffff",
         },
         "secondary": Object {
-          "color": "#64dcff",
+          "color": "#66cef9",
         },
       },
       "link": Object {
-        "color": "#64dcff",
+        "color": "#66cef9",
       },
     }
   }
