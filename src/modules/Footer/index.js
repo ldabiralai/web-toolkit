@@ -76,7 +76,7 @@ const StyledLink = styled.a`
 `;
 
 const StyledCopyright = styled.div`
-  color: ${colors.manatee};
+  color: ${colors.coreNeutral4};
 `;
 
 const Footer = ({ faq, items, copyright, ...props }) => (

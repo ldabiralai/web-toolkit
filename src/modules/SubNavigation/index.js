@@ -33,7 +33,7 @@ const StyledItem = styled.li`
 `;
 
 const StyledLink = styled.a`
-  color: ${colors.manatee};
+  color: ${colors.coreNeutral4};
   text-decoration: none;
 
   :hover {
