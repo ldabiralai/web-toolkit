@@ -1,8 +1,8 @@
-import { coreLightMinus1, turquoiseBlue, actionTwoDarkBase } from './colors';
+import { coreLightMinus1, featureOneMinus2, actionTwoDarkBase } from './colors';
 
 export default {
   link: {
-    color: turquoiseBlue,
+    color: featureOneMinus2,
   },
   button: {
     primary: {
@@ -10,7 +10,7 @@ export default {
       backgroundColor: actionTwoDarkBase,
     },
     secondary: {
-      color: turquoiseBlue,
+      color: featureOneMinus2,
     },
   },
 };
