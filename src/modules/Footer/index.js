@@ -63,7 +63,7 @@ const StyledItem = styled.li`
 const StyledLink = styled.a`
   padding: 15px 0;
   display: block;
-  color: ${colors.zumthor};
+  color: ${colors.coreLightBase};
   text-decoration: none;
   ${breakpoints.medium(css`
     display: inline-block;
