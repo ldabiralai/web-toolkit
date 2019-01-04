@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css, keyframes } from 'react-emotion';
 import { rgba } from 'polished';
-import { white, ebony } from '../../colors';
+import { coreLightMinus1, brandPlus2 } from '../../colors';
 import play from '../../assets/play.svg';
 
 const spin = keyframes`
@@ -24,14 +24,14 @@ const StyledBorder = styled.div`
   bottom: 0;
   box-sizing: border-box;
   border-radius: 50%;
-  border: 2px solid ${rgba(white, 0.5)};
+  border: 2px solid ${rgba(coreLightMinus1, 0.5)};
   border-right-color: ${({ isLoading }) => isLoading && `transparent`};
   animation: ${({ isLoading }) => isLoading && `${spin} 1s linear infinite`};
 `;
 
 export const hoverStyles = css`
   ${StyledBorder} {
-    border-color: ${white};
+    border-color: ${coreLightMinus1};
   }
 `;
 
@@ -43,7 +43,7 @@ const StyledWrapper = styled.div`
   padding: ${({ iconHeight }) => `${(iconHeight * 0.45) / 2}px`};
   box-sizing: border-box;
   border-radius: 50%;
-  background: ${rgba(ebony, 0.2)};
+  background: ${rgba(brandPlus2, 0.2)};
   overflow: hidden;
 
   :hover {

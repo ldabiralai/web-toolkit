@@ -63,7 +63,7 @@ const StyledItem = styled.li`
 const StyledLink = styled.a`
   padding: 15px 0;
   display: block;
-  color: ${colors.zumthor};
+  color: ${colors.coreLightBase};
   text-decoration: none;
   ${breakpoints.medium(css`
     display: inline-block;
@@ -71,12 +71,12 @@ const StyledLink = styled.a`
     padding: 0;
   `)};
   :hover {
-    color: white;
+    color: ${colors.coreLightMinus1};
   }
 `;
 
 const StyledCopyright = styled.div`
-  color: ${colors.manatee};
+  color: ${colors.coreNeutral4};
 `;
 
 const Footer = ({ faq, items, copyright, ...props }) => (

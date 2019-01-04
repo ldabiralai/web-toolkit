@@ -5,7 +5,7 @@ import * as colors from '../../colors';
 import Logo from '../../elements/Logo';
 
 const StyledWrapper = styled.header`
-  background: ${colors.bunting};
+  background: ${colors.brandBase};
   height: 50px;
   padding-left: 18px;
   display: flex;

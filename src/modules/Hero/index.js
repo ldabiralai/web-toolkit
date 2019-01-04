@@ -9,7 +9,7 @@ import { H1 } from '../../typography';
 
 const StyledWrapper = styled.header`
   position: relative;
-  background-color: ${colors.mirage};
+  background-color: ${colors.brandPlus2};
   clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 30px), 0% 100%);
   height: 445px;
   &:before {
@@ -19,7 +19,7 @@ const StyledWrapper = styled.header`
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(transparent 30%, ${colors.blackPearl} 90%, ${colors.blackPearl});
+    background: linear-gradient(transparent 30%, ${colors.coreDarkPlus1} 90%, ${colors.coreDarkPlus1});
     z-index: 1;
     opacity: 0.4;
   }
@@ -58,7 +58,7 @@ const StyledRow = styled(Row)`
 `;
 
 const StyledTitle = styled(H1)`
-  color: ${colors.white};
+  color: ${colors.coreLightMinus1};
   word-break: break-word;
   margin-bottom: 32px;
   ${breakpoints.medium(css`

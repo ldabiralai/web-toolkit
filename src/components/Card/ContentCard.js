@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import { rgba } from 'polished';
 import PlayIcon, { hoverStyles as playIconHoverStyle } from '../../elements/PlayIcon';
 import ChannelIcon from '../../elements/ChannelIcon';
 import * as colors from '../../colors';
@@ -25,7 +24,7 @@ const StyledHeader = styled.div`
     position: absolute;
     height: 100%;
     width: 101%;
-    background: radial-gradient(circle, transparent, ${colors.mirage} 100%);
+    background: radial-gradient(circle, transparent, ${colors.brandPlus2} 100%);
     opacity: 0.5;
   }
 `;
@@ -41,10 +40,9 @@ const StyledCard = styled(Link)`
   flex-direction: column;
   height: 100%;
   border-radius: 2px;
-  box-shadow: 0 1px 0 0 ${rgba(colors.mirage, 0.75)};
   text-decoration: none;
   overflow: hidden;
-  background-color: ${colors.bunting};
+  background-color: ${colors.brandBase};
 
   &:hover {
     ${StyledHeader}:before {
@@ -61,8 +59,8 @@ export const StyledLiveLabel = styled.div`
   justify-content: center;
   padding: 5px 8px;
   border-radius: 2px;
-  background-color: ${colors.utahCrimson};
-  color: ${colors.white};
+  background-color: ${colors.actionTwoDarkBase};
+  color: ${colors.coreLightMinus1};
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 1.2px;

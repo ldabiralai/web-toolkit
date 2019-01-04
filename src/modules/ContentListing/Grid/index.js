@@ -21,7 +21,7 @@ const StyledGrid = styled.div`
 `;
 
 export const StyledTitle = styled(H2)`
-  color: ${colors.athensGray};
+  color: ${colors.coreLightBase};
   margin-bottom: 24px;
   margin-left: 5px;
 `;
@@ -60,11 +60,11 @@ export const StyledChevron = styled(Chevron)`
 export const StyledLink = styled(Link)`
   margin-left: 40px;
   text-decoration: none;
-  color: ${colors.athensGray};
+  color: ${colors.coreLightBase};
   border-bottom: 2px solid currentColor;
   :hover,
   :active {
-    color: ${colors.athensGray};
+    color: ${colors.coreLightBase};
   }
 `;
 

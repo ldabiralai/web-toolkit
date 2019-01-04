@@ -2,7 +2,7 @@
 
 exports[`renders a Button 1`] = `
 <ArrowLink
-  className="css-tvhjjp ecyc6sh0"
+  className="css-gbpd69 ecyc6sh0"
   type="primary"
 >
   Click me !
