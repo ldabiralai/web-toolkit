@@ -9,7 +9,7 @@ import { H1 } from '../../typography';
 
 const StyledWrapper = styled.header`
   position: relative;
-  background-color: ${colors.mirage};
+  background-color: ${colors.brandPlus2};
   clip-path: polygon(0 0, 100% 0%, 100% calc(100% - 30px), 0% 100%);
   height: 445px;
   &:before {

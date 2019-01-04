@@ -74,6 +74,3 @@ export const featureSevenMinus1 = '#9f30d6';
 export const featureSevenBase = '#9600d4';
 export const featureSevenPlus1 = '#8800cc';
 export const featureSevenPlus2 = '#7900c3';
-
-/* old colours */
-export const mirage = '#1b1e30';
