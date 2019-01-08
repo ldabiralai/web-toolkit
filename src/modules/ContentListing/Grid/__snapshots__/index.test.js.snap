@@ -1,27 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ContentListing Grid base grid 1`] = `
-<Styled(section)>
-  <Styled(div) />
-  <Styled(div)>
-    <Styled(div)
+<Styled(div)>
+  <Row>
+    <Column
+      large={null}
+      largeOffset={null}
+      medium={null}
+      mediumOffset={null}
+      small={null}
+      smallOffset={null}
+      tiny="full"
+      tinyOffset="0"
+      wide={null}
+      wideOffset={null}
+    >
+      <Styled(div) />
+    </Column>
+  </Row>
+  <Row>
+    <Styled(Column)
       key=".$1"
+      large="4"
+      largeOffset={null}
+      medium="6"
+      mediumOffset={null}
+      small={null}
+      smallOffset={null}
+      tiny="full"
+      tinyOffset="0"
+      wide="3"
+      wideOffset={null}
     >
       <div
         key="1"
       >
         card1
       </div>
-    </Styled(div)>
-    <Styled(div)
+    </Styled(Column)>
+    <Styled(Column)
       key=".$2"
+      large="4"
+      largeOffset={null}
+      medium="6"
+      mediumOffset={null}
+      small={null}
+      smallOffset={null}
+      tiny="full"
+      tinyOffset="0"
+      wide="3"
+      wideOffset={null}
     >
       <div
         key="2"
       >
         card2
       </div>
-    </Styled(div)>
-  </Styled(div)>
-</Styled(section)>
+    </Styled(Column)>
+  </Row>
+</Styled(div)>
 `;
