@@ -1,47 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'react-emotion';
-import * as breakpoints from '../../../breakpoints';
+import styled from 'react-emotion';
 import * as colors from '../../../colors';
 import { H2 } from '../../../typography';
 import Link from '../../../elements/Link';
 import { ReactComponent as Chevron } from '../../../assets/chevron.svg';
+import { Column, Row, Container } from '../../../elements/Grid';
 
-const StyledWrapper = styled.section`
+const StyledContainer = styled(Container)`
   margin: 48px 0;
 `;
 
-const StyledGrid = styled.div`
-  ${breakpoints.medium(css`
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -10px;
-    margin-right: -10px;
-  `)};
+const StyledColumn = styled(Column)`
+  margin-bottom: 20px;
 `;
 
 export const StyledTitle = styled(H2)`
   color: ${colors.coreLightBase};
   margin-bottom: 24px;
   margin-left: 5px;
-`;
-
-const StyledItem = styled.div`
-  margin-bottom: 20px;
-
-  ${breakpoints.medium(css`
-    padding: 0 10px;
-    box-sizing: border-box;
-    width: 50%;
-  `)};
-
-  ${breakpoints.large(css`
-    width: 33.3%;
-  `)};
-
-  ${breakpoints.wide(css`
-    width: 25%;
-  `)};
 `;
 
 const StyledHeading = styled.div`
@@ -69,23 +46,29 @@ export const StyledLink = styled(Link)`
 `;
 
 const Grid = ({ title, subLink, children, ...props }) => (
-  <StyledWrapper {...props}>
-    <StyledHeading>
-      {title && <StyledTitle>{title}</StyledTitle>}
-      {subLink && (
-        <StyledLink href={subLink.href} linkComponent={subLink.linkComponent}>
-          {subLink.text}
-          <StyledChevron />
-        </StyledLink>
-      )}
-    </StyledHeading>
+  <StyledContainer {...props}>
+    <Row>
+      <Column tiny="full">
+        <StyledHeading>
+          {title && <StyledTitle>{title}</StyledTitle>}
+          {subLink && (
+            <StyledLink href={subLink.href} linkComponent={subLink.linkComponent}>
+              {subLink.text}
+              <StyledChevron />
+            </StyledLink>
+          )}
+        </StyledHeading>
+      </Column>
+    </Row>
 
-    <StyledGrid>
+    <Row>
       {React.Children.map(children, item => (
-        <StyledItem key={item.key}>{item}</StyledItem>
+        <StyledColumn key={item.key} tiny="full" medium="6" large="4" wide="3">
+          {item}
+        </StyledColumn>
       ))}
-    </StyledGrid>
-  </StyledWrapper>
+    </Row>
+  </StyledContainer>
 );
 
 Grid.displayName = 'Grid';
