@@ -10,6 +10,7 @@ const StyledContent = styled.div`
   flex: 1 auto;
   display: flex;
   flex-direction: column;
+  width: 100%;
 `;
 
 const StyledCategory = styled.div`
