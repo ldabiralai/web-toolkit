@@ -65,7 +65,7 @@ const SIX_OFFSETS = ['0', '1', '2', '3', '4', '5'];
 const TWELVE_OFFSETS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
 
 export const getWidthString = (colNumber, size) => {
-  const width = colNumber * grid[size].columnSize + (colNumber - 1) * grid[size].gap;
+  const width = colNumber * grid[size].columnSize + (colNumber - 1) * grid[size].gap + grid[size].gap;
   return `width: ${width + grid[size].type};`;
 };
 
@@ -148,6 +148,7 @@ export const Row = ({ children, ...props }) => (
 );
 
 export const StyledColumn = styled.div`
+  box-sizing: border-box;
   ${({ tiny, small, medium, large, wide, tinyOffset, smallOffset, mediumOffset, largeOffset, wideOffset }) => css`
     ${getColumnStyles(tiny, tinyOffset, 'tiny')};
 
