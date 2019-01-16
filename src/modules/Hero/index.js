@@ -52,6 +52,7 @@ const StyledRow = styled(Row)`
   align-items: flex-end;
   justify-content: center;
   z-index: 2;
+  display: flex;
   ${breakpoints.small(css`
     justify-content: flex-start;
   `)};
