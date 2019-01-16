@@ -5,6 +5,7 @@ import PlayIcon, { hoverStyles as playIconHoverStyle } from '../../elements/Play
 import ChannelIcon from '../../elements/ChannelIcon';
 import * as colors from '../../colors';
 import Link from '../../elements/Link';
+import LiveLabel from '../../elements/LiveLabel';
 import CardDetails from './CardDetails';
 
 const StyledImage = styled.div`
@@ -53,17 +54,7 @@ const StyledCard = styled(Link)`
   }
 `;
 
-export const StyledLiveLabel = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 5px 8px;
-  border-radius: 2px;
-  background-color: ${colors.actionTwoDarkBase};
-  color: ${colors.coreLightMinus1};
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1.2px;
+export const StyledLiveLabel = styled(LiveLabel)`
   position: absolute;
   top: 10px;
   right: 10px;

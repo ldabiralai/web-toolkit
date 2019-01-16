@@ -1,9 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ChannelIcon should render default correctly 1`] = `
-<img
-  alt="Eurosport"
-  className="css-ckignp"
-  src="E.svg"
-/>
-`;
+exports[`ChannelIcon should render default correctly 1`] = `<Styled(ReactComponent) />`;

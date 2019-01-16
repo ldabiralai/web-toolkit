@@ -1,22 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
+import styled from 'react-emotion';
 import getChannelIcon from './getChannelIcon';
 
 const ChannelIcon = ({ type, height, ...props }) => {
   const icon = getChannelIcon(type);
+  if (!icon) return null;
+  const StyledChannelIcon = styled(icon.component)`
+    height: ${height}px;
+    width: ${icon.widthRatio * height}px;
+  `;
 
-  return icon ? (
-    <img
-      {...props}
-      css={`
-        height: ${height}px;
-        width: ${icon.widthRatio * height}px;
-      `}
-      src={icon.src}
-      alt={icon.altText}
-    />
-  ) : null;
+  return <StyledChannelIcon {...props} />;
 };
 
 ChannelIcon.defaultProps = {

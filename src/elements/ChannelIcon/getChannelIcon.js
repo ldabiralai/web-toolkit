@@ -1,40 +1,40 @@
-import E from '../../assets/channels/E.svg';
-import E1 from '../../assets/channels/E1.svg';
-import E2 from '../../assets/channels/E2.svg';
-import E2GR from '../../assets/channels/E2GR.svg';
-import E2NO from '../../assets/channels/E2NO.svg';
-import E2RUG from '../../assets/channels/E2RUG.svg';
+import { ReactComponent as EComponent } from '../../assets/channels/E.svg';
+import { ReactComponent as E1Component } from '../../assets/channels/E1.svg';
+import { ReactComponent as E2Component } from '../../assets/channels/E2.svg';
+import { ReactComponent as E2GRComponent } from '../../assets/channels/E2GR.svg';
+import { ReactComponent as E2NOComponent } from '../../assets/channels/E2NO.svg';
+import { ReactComponent as E2RUGComponent } from '../../assets/channels/E2RUG.svg';
 
 export const icons = {
   E2GR: {
-    src: E2GR,
     altText: 'Eurosport 2',
     widthRatio: 3.5,
+    component: E2GRComponent,
   },
   E2NO: {
-    src: E2NO,
     altText: 'Eurosport 2',
     widthRatio: 2.06,
+    component: E2NOComponent,
   },
   E2RUG: {
-    src: E2RUG,
     altText: 'Eurosport 2',
     widthRatio: 4,
+    component: E2RUGComponent,
   },
   E1: {
-    src: E1,
     altText: 'Eurosport 1',
     widthRatio: 1.42,
+    component: E1Component,
   },
   E2: {
-    src: E2,
     altText: 'Eurosport 2',
     widthRatio: 1.66,
+    component: E2Component,
   },
   E: {
-    src: E,
     altText: 'Eurosport',
     widthRatio: 0.87,
+    component: EComponent,
   },
 };
 
@@ -58,6 +58,5 @@ export default callsign => {
   if (callsign.startsWith('E2')) {
     return icons.E2;
   }
-
   return icons.E;
 };

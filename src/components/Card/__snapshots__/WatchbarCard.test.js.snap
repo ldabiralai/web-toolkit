@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a WatchbarCard 1`] = `
+<Styled(Link)
+  href="/article/id"
+  linkComponent={[Function]}
+>
+  <Styled(div)>
+    <Styled(div)
+      src="https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640"
+    />
+    <Styled(ChannelIcon)
+      height={15}
+      type="E1FR"
+    />
+    <Styled(PlayIcon)
+      alt="play"
+      className=""
+      height={32}
+      isLoading={false}
+    />
+  </Styled(div)>
+  <Styled(div)>
+    <Styled(div)>
+      Darts: BDO World Championship
+    </Styled(div)>
+    <Styled(div)>
+      09:00 - 10:30
+    </Styled(div)>
+  </Styled(div)>
+</Styled(Link)>
+`;

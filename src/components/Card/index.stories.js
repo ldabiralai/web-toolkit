@@ -43,6 +43,14 @@ const vod = {
   url: 'http://eurosport.co.uk',
 };
 
+const watchbar = {
+  ...base,
+  title: 'Darts: BDO World Championship',
+  channel: 'E1FR',
+  liveLabel: 'live',
+  isLive: true,
+};
+
 cardStories
   .add(
     'Content',
@@ -70,6 +78,14 @@ cardStories
     withInfo({ propTablesExclude: [Wrapper] })(() => (
       <Wrapper>
         <Cards.VodCompact card={object('card', vod)} />
+      </Wrapper>
+    ))
+  )
+  .add(
+    'Watchbar',
+    withInfo({ propTablesExclude: [Wrapper] })(() => (
+      <Wrapper>
+        <Cards.Watchbar card={object('card', watchbar)} />
       </Wrapper>
     ))
   );

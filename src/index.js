@@ -9,6 +9,7 @@ import ArrowLink from './elements/ArrowLink';
 import Link from './elements/Link';
 import ChannelIcon from './elements/ChannelIcon';
 import PlayIcon from './elements/PlayIcon';
+import LiveLabel from './elements/LiveLabel';
 import Grid from './elements/Grid';
 import Cards from './components/Card';
 import Author from './components/Author';
@@ -32,6 +33,7 @@ export {
   Cards,
   Author,
   PlayIcon,
+  LiveLabel,
   ChannelIcon,
   injectStyles,
   Grid,
