@@ -19,7 +19,7 @@ export const StyledTeaser = styled.h4`
   `)};
 `;
 
-export const StyledParagraphs = styled.div`
+export const StyledHtml = styled.div`
   font-size: 14px;
   margin-top: 25px;
   line-height: 20px;
@@ -27,25 +27,22 @@ export const StyledParagraphs = styled.div`
     font-size: 16px;
     line-height: 24px;
   `)};
-`;
-
-const StyledParagraph = styled.p`
-  margin-top: 15px;
+  p {
+    margin-top: 15px;
+  }
 `;
 
 const ArticleContent = props => {
-  const { teaser, paragraphs, ...otherProps } = props;
+  const { teaser, html, ...otherProps } = props;
   return (
     <StyledWrapper {...otherProps}>
       <Column mediumOffset="2" medium="8" large="5">
         {teaser && <StyledTeaser>{teaser}</StyledTeaser>}
-        {paragraphs.length > 0 && (
-          <StyledParagraphs>
-            {paragraphs.map((paragraph, index) => (
-              // eslint-disable-next-line
-              <StyledParagraph key={index}>{paragraph}</StyledParagraph>
-            ))}
-          </StyledParagraphs>
+        {html && (
+          <StyledHtml>
+            {/* eslint-disable react/no-danger */}
+            <div dangerouslySetInnerHTML={{ __html: html }} />
+          </StyledHtml>
         )}
       </Column>
     </StyledWrapper>
@@ -54,12 +51,12 @@ const ArticleContent = props => {
 
 ArticleContent.defaultProps = {
   teaser: '',
-  paragraphs: [],
+  html: '',
 };
 
 ArticleContent.propTypes = {
   teaser: PropTypes.string,
-  paragraphs: PropTypes.arrayOf(PropTypes.string),
+  html: PropTypes.string,
 };
 
 export default ArticleContent;

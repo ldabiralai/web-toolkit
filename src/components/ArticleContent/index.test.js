@@ -1,33 +1,25 @@
 import { shallow } from 'enzyme/build';
 import React from 'react';
-import ArticleContent, { StyledParagraphs, StyledTeaser } from './index';
+import ArticleContent, { StyledHtml, StyledTeaser } from './index';
 
 const data = {
   teaser:
     'Liverpool manager Jurgen Klopp described the pre-match praise he received from Napoli boss Carlo Ancelotti as tactics before the teams play each other in the League.',
-  paragraphs: [
-    'Liverpool have carried their fine domestic form into Europe and beat Paris St Germain 3-2 in their Group C opener.',
-    'Ancelotti hailed last year’s finalists as one of the strongest teams in Europe in his news conference, but Klopp suggested the Italian was playing mind games.',
-    '“I like Carlo Ancelotti. In Germany we say he’s a smart fox. He’s said very positive things about us and nice things about me before a game. It’s nice... but it’s tactics. Carlo is so long in the business,” Klopp told reporters on Tuesday.',
-    '“We’re ready for a real battle. I don’t care too much for what people say about us, how they see our situation... tomorrow we need to step up. This is a fantastic manager, a fantastic team and an emotional crowd so that will be a real challenge.”',
-    'Liverpool thrashed Napoli 5-0 in a pre-season friendly in August but Klopp said he would tell his side to forget that result and focus on the challenge ahead at the San Paolo stadium.',
-    '“It was a pre-season friendly, in Dublin, nothing else,” The German said. “It was very Liverpool-orientated, and we scored with each shot pretty much. Napoli had a lot of chances and didn’t score. That’s absolutely not important.',
-    '“We didn’t talk about that game. It has nothing to do with the preparation for this game. Napoli is really organised with quality in all departments and that makes it a good team',
-    '“The good news for us is that we’re not too bad as well, that’s why we’re looking forward to the game, but it will be difficult for both.”',
-  ],
+  html:
+    '<p>Liverpool have carried their fine domestic form into Europe and beat Paris St Germain 3-2 in their Group C opener.</p> <p>Ancelotti hailed last year’s finalists as one of the strongest teams in Europe in his news conference, but Klopp suggested the Italian was playing mind games.</p> <p>“I like Carlo Ancelotti. In Germany we say he’s a smart fox. He’s said very positive things about us and nice things about me before a game. It’s nice... but it’s tactics. Carlo is so long in the business,” Klopp told reporters on Tuesday.</p> <p>“We’re ready for a real battle. I don’t care too much for what people say about us, how they see our situation... tomorrow we need to step up. This is a fantastic manager, a fantastic team and an emotional crowd so that will be a real challenge.</p> <p>Liverpool thrashed Napoli 5-0 in a pre-season friendly in August but Klopp said he would tell his side to forget that result and focus on the challenge ahead at the San Paolo stadium.</p> <p>“It was a pre-season friendly, in Dublin, nothing else,” The German said. “It was very Liverpool-orientated, and we scored with each shot pretty much. Napoli had a lot of chances and didn’t score. That’s absolutely not important.</p> <p>“We didn’t talk about that game. It has nothing to do with the preparation for this game. Napoli is really organised with quality in all departments and that makes it a good team.</p> <p>“The good news for us is that we’re not too bad as well, that’s why we’re looking forward to the game, but it will be difficult for both.”</p>',
 };
 
 describe('ArticleContent', () => {
   it('renders ArticleContent with teaser and paragraphs', () => {
-    expect(shallow(<ArticleContent teaser={data.teaser} paragraphs={data.paragraphs} />)).toMatchSnapshot();
+    expect(shallow(<ArticleContent teaser={data.teaser} html={data.html} />)).toMatchSnapshot();
   });
   it('renders ArticleContent without teaser', () => {
-    const wrapper = shallow(<ArticleContent paragraphs={data.paragraphs} />);
+    const wrapper = shallow(<ArticleContent html={data.html} />);
     expect(wrapper.find(StyledTeaser).length).toEqual(0);
   });
   it('renders ArticleContent without paragraphs', () => {
     const wrapper = shallow(<ArticleContent teaser={data.teaser} />);
-    expect(wrapper.find(StyledParagraphs).length).toEqual(0);
+    expect(wrapper.find(StyledHtml).length).toEqual(0);
   });
   it('should add extra props passed to the component ArticleContent', () => {
     const component = shallow(<ArticleContent answer="42" />);

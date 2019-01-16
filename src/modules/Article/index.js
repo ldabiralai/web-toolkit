@@ -14,10 +14,10 @@ const StyledArticleContent = styled(ArticleContent)`
   `)};
 `;
 
-const Article = ({ data: { title, img, author, time, teaser, paragraphs }, ...props }) => (
+const Article = ({ data: { title, img, author, time, teaser, html }, ...props }) => (
   <article {...props}>
     <Hero title={title} img={img} author={author} time={time} />
-    <StyledArticleContent teaser={teaser} paragraphs={paragraphs} />
+    <StyledArticleContent teaser={teaser} html={html} />
   </article>
 );
 
@@ -31,7 +31,7 @@ Article.propTypes = {
     }),
     time: PropTypes.string,
     teaser: PropTypes.string,
-    paragraphs: PropTypes.arrayOf(PropTypes.string),
+    html: PropTypes.string,
   }).isRequired,
 };
 
