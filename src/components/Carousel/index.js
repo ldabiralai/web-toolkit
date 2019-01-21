@@ -99,7 +99,7 @@ export default class Carousel extends React.Component {
         <StyledArrow onClick={() => this.slide(true)}>Left</StyledArrow>
         <StyledContainer innerRef={this.wrapperRef}>
           <Swipeable
-            onSwiping={(e, deltaX, velocity) => this.handleSwipe(deltaX, velocity)}
+            onSwiping={(e, deltaX, deltaY, absX, absY, velocity) => this.handleSwipe(deltaX, velocity)}
             onSwiped={(e, deltaX) => this.lockSlides(deltaX)}
           >
             <StyledSlidesTrack
