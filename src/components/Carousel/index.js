@@ -14,7 +14,7 @@ const StyledSlidesTrack = styled.div`
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: ${props => props.nbSlides * props.slideWidth}px;
+  width: ${props => props.length * props.slideWidth}px;
   transition: left 200ms ease-out;
 `;
 
@@ -40,60 +40,58 @@ export default class Carousel extends React.Component {
       left: 0,
       currentSlide: 1,
       slideWidth: 300,
-      nbSlides: 0,
-      wrapperWitdh: 0,
+      slideByRow: 4,
+      length: 0,
     };
-
-    this.trackRef = React.createRef();
     this.wrapperRef = React.createRef();
-  }
-
-  handleSwipe(deltaX, velocity) {
-    const newLeft = this.state.left + ((deltaX * -1) / 5) * velocity;
-    if (newLeft <= 0 && newLeft > this.state.slideWidth * this.state.nbSlides * -1 + this.state.wrapperWidth) {
-      this.setState({ left: newLeft });
-    }
+    this.slidesTrackRef = React.createRef();
   }
 
   componentDidMount() {
     this.setState({
-      slideWidth: this.trackRef.current.children[0].offsetWidth + 15,
-      nbSlides: this.trackRef.current.children.length,
+      slideWidth: this.slidesTrackRef.current.children[0].offsetWidth + 15,
+      length: this.slidesTrackRef.current.children.length,
       wrapperWidth: this.wrapperRef.current.offsetWidth,
     });
   }
 
+  handleSwipe(deltaX, velocity) {
+    const { left, slideWidth, length, wrapperWidth } = this.state;
+    const newLeft = left + ((deltaX * -1) / 5) * velocity;
+    if (newLeft <= 0 && newLeft > slideWidth * length * -1 + wrapperWidth) {
+      this.setState({ left: newLeft });
+    }
+  }
+
   lockSlides(deltaX) {
+    const { slideWidth, left } = this.state;
     const magneticAreaRatio = deltaX < 0 ? -0.8 : -0.2;
-    const cardWidth = this.state.slideWidth;
     setTimeout(() => {
-      const ratio = this.state.left / cardWidth;
-      let newPos = 0;
-      if (this.state.left % cardWidth > cardWidth * magneticAreaRatio) {
-        newPos = Math.ceil(ratio) * cardWidth;
+      const ratio = left / slideWidth;
+      let newLeftPosition = 0;
+      if (left % slideWidth > slideWidth * magneticAreaRatio) {
+        newLeftPosition = Math.ceil(ratio) * slideWidth;
       } else {
-        newPos = Math.floor(ratio) * cardWidth;
+        newLeftPosition = Math.floor(ratio) * slideWidth;
       }
-      this.setState({ left: newPos });
+      this.setState({ left: newLeftPosition });
     }, 25);
   }
 
   slide(inverted = false) {
-    this.setState(previousState => {
-      const children = this.state.nbSlides;
-      const slides = Math.ceil(children);
-      const newCursor = this.state.currentSlide + (inverted ? -1 : 1);
-      const slideWidth = this.state.slideWidth;
-      if (newCursor <= 0 || newCursor > slides - 3) return;
-      return {
+    const { length, slideWidth, currentSlide, slideByRow } = this.state;
+    const newCursor = currentSlide + (inverted ? -1 : 1);
+    if (newCursor > 0 && newCursor <= length - (slideByRow - 1)) {
+      this.setState(previousState => ({
         left: previousState.left - slideWidth * (inverted ? -1 : 1),
         currentSlide: newCursor,
-      };
-    });
+      }));
+    }
   }
 
   render() {
     const { children } = this.props;
+    const { left, slideWidth, length } = this.state;
     return (
       <div>
         <StyledArrow onClick={() => this.slide(true)}>Left</StyledArrow>
@@ -102,14 +100,10 @@ export default class Carousel extends React.Component {
             onSwiping={(e, deltaX, deltaY, absX, absY, velocity) => this.handleSwipe(deltaX, velocity)}
             onSwiped={(e, deltaX) => this.lockSlides(deltaX)}
           >
-            <StyledSlidesTrack
-              innerRef={this.trackRef}
-              left={this.state.left}
-              slideWidth={this.state.slideWidth}
-              nbSlides={this.state.nbSlides}
-            >
-              {children.map(child => (
-                <StyledSlide>{child}</StyledSlide>
+            <StyledSlidesTrack innerRef={this.slidesTrackRef} left={left} slideWidth={slideWidth} length={length}>
+              {children.map((child, index) => (
+                /* eslint-disable-next-line react/no-array-index-key */
+                <StyledSlide key={index}>{child}</StyledSlide>
               ))}
             </StyledSlidesTrack>
           </Swipeable>
@@ -122,4 +116,8 @@ export default class Carousel extends React.Component {
 
 Carousel.propTypes = {
   children: PropTypes.node,
+};
+
+Carousel.defaultProps = {
+  children: null,
 };
