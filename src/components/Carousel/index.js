@@ -49,8 +49,12 @@ export default class Carousel extends React.Component {
   }
 
   componentDidMount() {
+    this.calculateElementsSizes();
+    window.addEventListener('resize', this.calculateElementsSizes.bind(this));
+  }
+
+  calculateElementsSizes() {
     const { slideMargin } = this.state;
-    // Initialize the elements size
     this.setState({
       slideWidth: this.slidesTrackRef.current.children[0].offsetWidth + slideMargin,
       length: this.slidesTrackRef.current.children.length,
