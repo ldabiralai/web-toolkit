@@ -1,0 +1,190 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel test must render the carousel 1`] = `
+<Carousel>
+  <div>
+    <Styled(div)
+      onClick={[Function]}
+    >
+      <div
+        className="css-ojw5fp e595p113"
+        onClick={[Function]}
+      >
+        Left
+      </div>
+    </Styled(div)>
+    <Styled(div)
+      innerRef={
+        Object {
+          "current": <div
+            class="css-i6bazn e595p110"
+          >
+            <div>
+              <div
+                class="css-ifbtvj e595p111"
+              >
+                <div
+                  class="css-2oxj0h e595p112"
+                >
+                  <div>
+                    1
+                  </div>
+                </div>
+                <div
+                  class="css-2oxj0h e595p112"
+                >
+                  <div>
+                    2
+                  </div>
+                </div>
+                <div
+                  class="css-2oxj0h e595p112"
+                >
+                  <div>
+                    3
+                  </div>
+                </div>
+                <div
+                  class="css-2oxj0h e595p112"
+                >
+                  <div>
+                    4
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>,
+        }
+      }
+    >
+      <div
+        className="css-i6bazn e595p110"
+      >
+        <Swipeable
+          delta={10}
+          disabled={false}
+          flickThreshold={0.6}
+          nodeName="div"
+          onSwiped={[Function]}
+          onSwiping={[Function]}
+          preventDefaultTouchmoveEvent={false}
+          rotationAngle={0}
+          stopPropagation={false}
+        >
+          <div
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+          >
+            <Styled(div)
+              innerRef={
+                Object {
+                  "current": <div
+                    class="css-ifbtvj e595p111"
+                  >
+                    <div
+                      class="css-2oxj0h e595p112"
+                    >
+                      <div>
+                        1
+                      </div>
+                    </div>
+                    <div
+                      class="css-2oxj0h e595p112"
+                    >
+                      <div>
+                        2
+                      </div>
+                    </div>
+                    <div
+                      class="css-2oxj0h e595p112"
+                    >
+                      <div>
+                        3
+                      </div>
+                    </div>
+                    <div
+                      class="css-2oxj0h e595p112"
+                    >
+                      <div>
+                        4
+                      </div>
+                    </div>
+                  </div>,
+                }
+              }
+              left={0}
+              length={4}
+              slideWidth={15}
+            >
+              <div
+                className="css-ifbtvj e595p111"
+              >
+                <Styled(div)
+                  key="0"
+                  margin={15}
+                >
+                  <div
+                    className="css-2oxj0h e595p112"
+                  >
+                    <div>
+                      1
+                    </div>
+                  </div>
+                </Styled(div)>
+                <Styled(div)
+                  key="1"
+                  margin={15}
+                >
+                  <div
+                    className="css-2oxj0h e595p112"
+                  >
+                    <div>
+                      2
+                    </div>
+                  </div>
+                </Styled(div)>
+                <Styled(div)
+                  key="2"
+                  margin={15}
+                >
+                  <div
+                    className="css-2oxj0h e595p112"
+                  >
+                    <div>
+                      3
+                    </div>
+                  </div>
+                </Styled(div)>
+                <Styled(div)
+                  key="3"
+                  margin={15}
+                >
+                  <div
+                    className="css-2oxj0h e595p112"
+                  >
+                    <div>
+                      4
+                    </div>
+                  </div>
+                </Styled(div)>
+              </div>
+            </Styled(div)>
+          </div>
+        </Swipeable>
+      </div>
+    </Styled(div)>
+    <Styled(div)
+      onClick={[Function]}
+    >
+      <div
+        className="css-ojw5fp e595p113"
+        onClick={[Function]}
+      >
+        Right
+      </div>
+    </Styled(div)>
+  </div>
+</Carousel>
+`;

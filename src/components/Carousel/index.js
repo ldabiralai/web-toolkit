@@ -22,7 +22,7 @@ const StyledSlide = styled.div`
   display: block;
   float: left;
   width: auto;
-  margin-right: 15px;
+  margin-right: ${props => props.margin}px;px;
   &:last-of-type {
     margin-right: 0;
   }
@@ -42,27 +42,39 @@ export default class Carousel extends React.Component {
       slideWidth: 300,
       slideByRow: 4,
       length: 0,
+      slideMargin: 15,
     };
     this.wrapperRef = React.createRef();
     this.slidesTrackRef = React.createRef();
   }
 
   componentDidMount() {
+    const { slideMargin } = this.state;
+    // Initialize the elements size
     this.setState({
-      slideWidth: this.slidesTrackRef.current.children[0].offsetWidth + 15,
+      slideWidth: this.slidesTrackRef.current.children[0].offsetWidth + slideMargin,
       length: this.slidesTrackRef.current.children.length,
       wrapperWidth: this.wrapperRef.current.offsetWidth,
     });
   }
 
+  /**
+   * Calculate the new left position according to the swipe force and avoid it to go behind the limits
+   * @param deltaX
+   * @param velocity
+   */
   handleSwipe(deltaX, velocity) {
     const { left, slideWidth, length, wrapperWidth } = this.state;
     const newLeft = left + ((deltaX * -1) / 5) * velocity;
-    if (newLeft <= 0 && newLeft > slideWidth * length * -1 + wrapperWidth) {
+    if (newLeft <= 0 && newLeft > slideWidth * length * -1 - wrapperWidth) {
       this.setState({ left: newLeft });
     }
   }
 
+  /**
+   * Calculate a new left position to have a "magnetic" effect on the slides
+   * @param deltaX
+   */
   lockSlides(deltaX) {
     const { slideWidth, left } = this.state;
     const magneticAreaRatio = deltaX < 0 ? -0.8 : -0.2;
@@ -78,6 +90,10 @@ export default class Carousel extends React.Component {
     }, 25);
   }
 
+  /**
+   * Go to the next slide or previous slide and avoid to go behind the carousel limits
+   * @param inverted
+   */
   slide(inverted = false) {
     const { length, slideWidth, currentSlide, slideByRow } = this.state;
     const newCursor = currentSlide + (inverted ? -1 : 1);
@@ -91,7 +107,7 @@ export default class Carousel extends React.Component {
 
   render() {
     const { children } = this.props;
-    const { left, slideWidth, length } = this.state;
+    const { left, slideWidth, length, slideMargin } = this.state;
     return (
       <div>
         <StyledArrow onClick={() => this.slide(true)}>Left</StyledArrow>
@@ -103,7 +119,9 @@ export default class Carousel extends React.Component {
             <StyledSlidesTrack innerRef={this.slidesTrackRef} left={left} slideWidth={slideWidth} length={length}>
               {children.map((child, index) => (
                 /* eslint-disable-next-line react/no-array-index-key */
-                <StyledSlide key={index}>{child}</StyledSlide>
+                <StyledSlide key={index} margin={slideMargin}>
+                  {child}
+                </StyledSlide>
               ))}
             </StyledSlidesTrack>
           </Swipeable>
