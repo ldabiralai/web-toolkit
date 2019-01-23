@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 import Swipeable from 'react-swipeable';
 import PropTypes from 'prop-types';
+import { debounce } from 'lodash';
 
 const StyledContainer = styled.div`
   overflow: hidden;
@@ -46,6 +47,7 @@ export default class Carousel extends React.Component {
     };
     this.wrapperRef = React.createRef();
     this.slidesTrackRef = React.createRef();
+    this.calculateElementsSizes = debounce(this.calculateElementsSizes, 200);
   }
 
   componentDidMount() {
