@@ -7,7 +7,7 @@ const initialState = {
   currentSlide: 1,
   slideWidth: 500,
   slideByRow: 2,
-  length: 4,
+  length: 6,
   wrapperWidth: 2000,
 };
 
@@ -17,6 +17,8 @@ const initialSlides = (
     <div>2</div>
     <div>3</div>
     <div>4</div>
+    <div>5</div>
+    <div>6</div>
   </Carousel>
 );
 
@@ -36,16 +38,16 @@ describe('Carousel test', () => {
     expect(wrapper.state().left).toEqual(-500);
     // Swipe to right
     wrapper.instance().handleSwipe(5200, 1);
-    expect(wrapper.state().left).toEqual(-1540);
+    expect(wrapper.state().left).toEqual(-500);
     wrapper.instance().lockSlides(5200);
     await new Promise(resolve => setTimeout(resolve, 50));
-    expect(wrapper.state().left).toEqual(-1500);
+    expect(wrapper.state().left).toEqual(-500);
     // Swipe to left
     wrapper.instance().handleSwipe(-1480, 1);
-    expect(wrapper.state().left).toEqual(-1204);
+    expect(wrapper.state().left).toEqual(-204);
     wrapper.instance().lockSlides(-1480);
     await new Promise(resolve => setTimeout(resolve, 50));
-    expect(wrapper.state().left).toEqual(-1000);
+    expect(wrapper.state().left).toEqual(-0);
   });
   it('slide with arrow', async () => {
     const wrapper = mount(initialSlides);
@@ -58,6 +60,18 @@ describe('Carousel test', () => {
     expect(wrapper.state().left).toEqual(-1000);
     // Next slide
     wrapper.instance().slide();
+    expect(wrapper.state().left).toEqual(-1500);
+    // Next slide
+    wrapper.instance().slide();
+    expect(wrapper.state().left).toEqual(-2000);
+    // Next slide
+    wrapper.instance().slide();
+    expect(wrapper.state().left).toEqual(-2000);
+    // Previous slide
+    wrapper.instance().slide(true);
+    expect(wrapper.state().left).toEqual(-1500);
+    // Previous slide
+    wrapper.instance().slide(true);
     expect(wrapper.state().left).toEqual(-1000);
     // Previous slide
     wrapper.instance().slide(true);

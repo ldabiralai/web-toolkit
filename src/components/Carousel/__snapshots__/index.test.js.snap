@@ -21,7 +21,7 @@ exports[`Carousel test must render the carousel 1`] = `
           >
             <div>
               <div
-                class="css-ifbtvj e595p111"
+                class="css-14q4ezk e595p111"
               >
                 <div
                   class="css-2oxj0h e595p112"
@@ -49,6 +49,20 @@ exports[`Carousel test must render the carousel 1`] = `
                 >
                   <div>
                     4
+                  </div>
+                </div>
+                <div
+                  class="css-2oxj0h e595p112"
+                >
+                  <div>
+                    5
+                  </div>
+                </div>
+                <div
+                  class="css-2oxj0h e595p112"
+                >
+                  <div>
+                    6
                   </div>
                 </div>
               </div>
@@ -81,7 +95,7 @@ exports[`Carousel test must render the carousel 1`] = `
               innerRef={
                 Object {
                   "current": <div
-                    class="css-ifbtvj e595p111"
+                    class="css-14q4ezk e595p111"
                   >
                     <div
                       class="css-2oxj0h e595p112"
@@ -111,15 +125,29 @@ exports[`Carousel test must render the carousel 1`] = `
                         4
                       </div>
                     </div>
+                    <div
+                      class="css-2oxj0h e595p112"
+                    >
+                      <div>
+                        5
+                      </div>
+                    </div>
+                    <div
+                      class="css-2oxj0h e595p112"
+                    >
+                      <div>
+                        6
+                      </div>
+                    </div>
                   </div>,
                 }
               }
               left={0}
-              length={4}
-              slideWidth={15}
+              length={0}
+              slideWidth={300}
             >
               <div
-                className="css-ifbtvj e595p111"
+                className="css-14q4ezk e595p111"
               >
                 <Styled(div)
                   key="0"
@@ -166,6 +194,30 @@ exports[`Carousel test must render the carousel 1`] = `
                   >
                     <div>
                       4
+                    </div>
+                  </div>
+                </Styled(div)>
+                <Styled(div)
+                  key="4"
+                  margin={15}
+                >
+                  <div
+                    className="css-2oxj0h e595p112"
+                  >
+                    <div>
+                      5
+                    </div>
+                  </div>
+                </Styled(div)>
+                <Styled(div)
+                  key="5"
+                  margin={15}
+                >
+                  <div
+                    className="css-2oxj0h e595p112"
+                  >
+                    <div>
+                      6
                     </div>
                   </div>
                 </Styled(div)>

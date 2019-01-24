@@ -72,7 +72,7 @@ export default class Carousel extends React.Component {
   handleSwipe(deltaX, velocity) {
     const { left, slideWidth, length, wrapperWidth } = this.state;
     const newLeft = left + ((deltaX * -1) / 5) * velocity;
-    if (newLeft <= 0 && newLeft > slideWidth * length * -1 - wrapperWidth) {
+    if (newLeft <= 0 && newLeft > slideWidth * length * -1 + wrapperWidth) {
       this.setState({ left: newLeft });
     }
   }
