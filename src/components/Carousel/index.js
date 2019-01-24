@@ -3,6 +3,11 @@ import styled from 'react-emotion';
 import Swipeable from 'react-swipeable';
 import PropTypes from 'prop-types';
 import { debounce } from 'lodash';
+import { ReactComponent as Chevron } from '../../assets/chevron.svg';
+
+const StyledWrapper = styled.div`
+  display: flex;
+`;
 
 const StyledContainer = styled.div`
   overflow: hidden;
@@ -30,8 +35,27 @@ const StyledSlide = styled.div`
 `;
 
 const StyledArrow = styled.div`
-  display: inline-block;
-  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  height: 88px;
+  width: 36px;
+  margin: 0 1px;
+  flex: 0 0 36px;
+  border-radius: 0px 2px 2px 0px;
+`;
+
+const StyledArrowLeft = styled(StyledArrow)`
+  transform: scaleX(-1);
+`;
+
+const StyledChevron = styled(Chevron)`
+  height: 16px;
+  width: 11px;
+  path {
+    fill: white;
+  }
 `;
 
 export default class Carousel extends React.Component {
@@ -115,8 +139,10 @@ export default class Carousel extends React.Component {
     const { children } = this.props;
     const { left, slideWidth, length, slideMargin } = this.state;
     return (
-      <div>
-        <StyledArrow onClick={() => this.slide(true)}>Left</StyledArrow>
+      <StyledWrapper>
+        <StyledArrowLeft onClick={() => this.slide(true)}>
+          <StyledChevron />
+        </StyledArrowLeft>
         <StyledContainer innerRef={this.wrapperRef}>
           <Swipeable
             onSwiping={(e, deltaX, deltaY, absX, absY, velocity) => this.handleSwipe(deltaX, velocity)}
@@ -132,8 +158,10 @@ export default class Carousel extends React.Component {
             </StyledSlidesTrack>
           </Swipeable>
         </StyledContainer>
-        <StyledArrow onClick={() => this.slide()}>Right</StyledArrow>
-      </div>
+        <StyledArrow onClick={() => this.slide()}>
+          <StyledChevron />
+        </StyledArrow>
+      </StyledWrapper>
     );
   }
 }
