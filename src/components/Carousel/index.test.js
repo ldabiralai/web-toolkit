@@ -4,11 +4,17 @@ import Carousel from './index';
 
 const initialState = {
   left: 0,
-  currentSlide: 1,
-  slideWidth: 500,
-  slideByRow: 2,
-  length: 6,
+  currentSlide: 0,
+  slides: [
+    { position: 0, width: 500 },
+    { position: 500, width: 500 },
+    { position: 1000, width: 500 },
+    { position: 1500, width: 500 },
+    { position: 2000, width: 500 },
+    { position: 2500, width: 500 },
+  ],
   wrapperWidth: 2000,
+  trackWidth: 3000,
 };
 
 const initialSlides = (
@@ -63,12 +69,9 @@ describe('Carousel test', () => {
     expect(wrapper.state().left).toEqual(-1500);
     // Next slide
     wrapper.instance().slide();
-    expect(wrapper.state().left).toEqual(-2000);
+    expect(wrapper.state().left).toEqual(-1500);
     // Next slide
     wrapper.instance().slide();
-    expect(wrapper.state().left).toEqual(-2000);
-    // Previous slide
-    wrapper.instance().slide(true);
     expect(wrapper.state().left).toEqual(-1500);
     // Previous slide
     wrapper.instance().slide(true);
