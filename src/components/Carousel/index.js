@@ -1,8 +1,9 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
 import Swipeable from 'react-swipeable';
 import PropTypes from 'prop-types';
 import { debounce } from 'lodash';
+import * as breakpoints from '../../breakpoints';
 import { ReactComponent as Chevron } from '../../assets/chevron.svg';
 
 const StyledWrapper = styled.div`
@@ -11,6 +12,7 @@ const StyledWrapper = styled.div`
 
 const StyledContainer = styled.div`
   overflow: hidden;
+  margin: 0 8px;
 `;
 
 const StyledSlidesTrack = styled.div`
@@ -35,15 +37,20 @@ const StyledSlide = styled.div`
 `;
 
 const StyledArrow = styled.div`
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.08);
-  height: 88px;
   width: 36px;
   margin: 0 1px;
   flex: 0 0 36px;
   border-radius: 0px 2px 2px 0px;
+  height: 76px;
+
+  ${breakpoints.large(css`
+    display: flex;
+    height: 88px;
+  `)};
   &:hover {
     cursor: pointer;
   }
@@ -215,5 +222,5 @@ Carousel.propTypes = {
 
 Carousel.defaultProps = {
   children: null,
-  slideMargin: 15,
+  slideMargin: 8,
 };

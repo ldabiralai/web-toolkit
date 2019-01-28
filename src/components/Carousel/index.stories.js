@@ -3,8 +3,11 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { object } from '@storybook/addon-knobs';
 import styled from 'react-emotion';
+import { rgba } from 'polished';
 import Carousel from '.';
 import WatchbarCard from '../Card/WatchbarCard';
+import { coreLightMinus1, coreNeutral1 } from '../../colors';
+import { ReactComponent as Play } from '../../assets/circleplay.svg';
 
 const indexStories = storiesOf('Carousel', module);
 
@@ -26,21 +29,31 @@ const watchbar = {
 };
 
 const StyledTitle = styled.div`
-  border-bottom: 1px solid rgba(242, 243, 245, 0.3);
+  border-bottom: 1px solid ${rgba(coreLightMinus1, 0.3)};
   text-transform: uppercase;
-  margin: 0 15px 0 0;
   padding-bottom: 6px;
-  font-size: 0.875rem;
-  color: #f2f3f5;
+  font-size: 12px;
+  line-height: 14px;
+  color: ${coreNeutral1};
   width: 100px;
   user-select: none;
+`;
+
+const StyledPlayIco = styled(Play)`
+  width: 16px;
+  height: 16px;
+  display: block;
+  margin-bottom: 8px;
 `;
 
 indexStories.add(
   'Carousel',
   withInfo()(() => (
     <Carousel>
-      <StyledTitle>En direct sur Eurosport Player</StyledTitle>
+      <StyledTitle>
+        <StyledPlayIco />
+        En direct sur Eurosport Player
+      </StyledTitle>
       <WatchbarCard card={object('card', watchbar)} />
       <WatchbarCard card={object('card', watchbar)} />
       <WatchbarCard card={object('card', watchbar)} />
