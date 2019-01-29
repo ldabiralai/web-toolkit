@@ -28,6 +28,13 @@ const watchbar = {
   isLive: true,
 };
 
+const StyledPlayIco = styled(Play)`
+  width: 16px;
+  height: 16px;
+  display: block;
+  margin-bottom: 8px;
+`;
+
 const StyledTitle = styled.div`
   border-bottom: 1px solid ${rgba(coreLightMinus1, 0.3)};
   text-transform: uppercase;
@@ -37,13 +44,6 @@ const StyledTitle = styled.div`
   color: ${coreNeutral1};
   width: 100px;
   user-select: none;
-`;
-
-const StyledPlayIco = styled(Play)`
-  width: 16px;
-  height: 16px;
-  display: block;
-  margin-bottom: 8px;
 `;
 
 indexStories.add(

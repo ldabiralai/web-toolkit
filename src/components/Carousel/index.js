@@ -2,7 +2,6 @@ import React from 'react';
 import styled, { css } from 'react-emotion';
 import Swipeable from 'react-swipeable';
 import PropTypes from 'prop-types';
-import { debounce } from 'lodash';
 import * as breakpoints from '../../breakpoints';
 import { ReactComponent as Chevron } from '../../assets/chevron.svg';
 
@@ -69,53 +68,39 @@ const StyledChevron = styled(Chevron)`
 `;
 
 export default class Carousel extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      left: 0,
-      currentSlide: 0,
-      slideMargin: props.slideMargin,
-      trackWidth: 0,
-    };
-    this.wrapperRef = React.createRef();
-    this.slidesTrackRef = React.createRef();
-    this.calculateElementsSizes = debounce(this.calculateElementsSizes, 200);
-  }
+  state = {
+    left: 0,
+    currentSlide: 0,
+    trackWidth: 0,
+  };
+
+  wrapperRef = React.createRef();
+
+  slidesTrackRef = React.createRef();
 
   componentDidMount() {
-    this.calculateElementsSizes();
-    window.addEventListener('resize', this.calculateElementsSizes.bind(this));
+    setTimeout(() => this.calculateElementsSizes(), 200);
+    window.addEventListener('resize', this.calculateElementsSizes);
   }
 
   getSlidesInformations(children) {
-    const { slideMargin } = this.state;
+    const { slideMargin } = this.props;
     let position = 0;
-    const slides = [];
-    Array.from(children).forEach(slide => {
-      const information = {
+    return Array.from(children).reduce((slides, slide) => {
+      const slideInfo = {
         width: slide.offsetWidth + slideMargin,
         position,
       };
-      position += information.width;
-      slides.push(information);
-    });
-    return slides;
+      position += slideInfo.width;
+      return [...slides, slideInfo];
+    }, []);
   }
 
   static getTrackWidth(slides) {
-    let width = 0;
-    slides.forEach(slide => {
-      width += slide.width;
-    });
-    return width;
+    return slides.reduce((sum, slide) => sum + slide.width, 0);
   }
 
-  isInRange(left) {
-    const { trackWidth, wrapperWidth, slides } = this.state;
-    return !(left > 0 || left < trackWidth * -1 + wrapperWidth - slides[slides.length - 1].width);
-  }
-
-  calculateElementsSizes() {
+  calculateElementsSizes = () => {
     const slides = this.getSlidesInformations(this.slidesTrackRef.current.children);
     this.setState({
       trackWidth: Carousel.getTrackWidth(slides),
@@ -124,6 +109,11 @@ export default class Carousel extends React.Component {
       slides,
       wrapperWidth: this.wrapperRef.current.offsetWidth,
     });
+  };
+
+  isInRange(x) {
+    const { trackWidth, wrapperWidth, slides } = this.state;
+    return x > 0 || x < wrapperWidth - slides[slides.length - 1].width - trackWidth;
   }
 
   /**
@@ -134,7 +124,7 @@ export default class Carousel extends React.Component {
   handleSwipe(deltaX, velocity) {
     let { left } = this.state;
     left += ((deltaX * -1) / 5) * velocity;
-    if (this.isInRange(left)) {
+    if (!this.isInRange(left)) {
       this.setState({ left });
     }
   }
@@ -176,7 +166,7 @@ export default class Carousel extends React.Component {
       left += slides[currentSlide].width * -1;
       currentSlide += 1;
     }
-    if (this.isInRange(left)) {
+    if (!this.isInRange(left)) {
       this.setState({
         left,
         currentSlide,
@@ -185,8 +175,8 @@ export default class Carousel extends React.Component {
   }
 
   render() {
-    const { children } = this.props;
-    const { left, trackWidth, slideMargin } = this.state;
+    const { children, slideMargin } = this.props;
+    const { left, trackWidth } = this.state;
     return (
       <StyledWrapper>
         <StyledArrowLeft onClick={() => this.slide(true)}>
