@@ -21,6 +21,7 @@ import Hero from './modules/Hero';
 import ContentListing from './modules/ContentListing';
 import ArticleContent from './components/ArticleContent';
 import Article from './modules/Article';
+import Carousel from './components/Carousel';
 
 export {
   Button,
@@ -45,4 +46,5 @@ export {
   SubNavigation,
   ArticleContent,
   Article,
+  Carousel,
 };

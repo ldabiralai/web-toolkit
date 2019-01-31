@@ -37,6 +37,7 @@
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/preset-env": "^7.1.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
@@ -89,7 +90,10 @@
     "react": "16",
     "react-emotion": "9"
   },
-  "dependencies": {},
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "react-swipeable": "^4.3.1"
+  },
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
