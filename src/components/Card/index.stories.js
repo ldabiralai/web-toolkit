@@ -49,6 +49,8 @@ const watchbar = {
   channel: 'E1FR',
   liveLabel: 'live',
   isLive: true,
+  startTime: '14h00',
+  endTime: '15h00',
 };
 
 cardStories

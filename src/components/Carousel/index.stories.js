@@ -26,6 +26,8 @@ const watchbar = {
   channel: 'E1FR',
   liveLabel: 'live',
   isLive: true,
+  startTime: '09:00',
+  endTime: '10:00',
 };
 
 const StyledPlayIco = styled(Play)`

@@ -123,7 +123,7 @@ const StyledTitle = styled.div`
 `;
 
 const WatchbarCard = ({ card, ...props }) => {
-  const { img, url, isLive, liveLabel, title, timestamp } = card;
+  const { img, url, isLive, liveLabel, title, startTime, endTime } = card;
 
   return (
     <StyledCard {...props} href={url}>
@@ -135,7 +135,9 @@ const WatchbarCard = ({ card, ...props }) => {
       </StyledHeader>
       <StyledContent {...props}>
         <StyledTitle>{title}</StyledTitle>
-        <StyledFooter>{timestamp}</StyledFooter>
+        <StyledFooter>
+          {startTime} - {endTime}
+        </StyledFooter>
       </StyledContent>
     </StyledCard>
   );
@@ -151,7 +153,8 @@ WatchbarCard.propTypes = {
     url: PropTypes.string.isRequired,
     isLive: PropTypes.bool,
     title: PropTypes.string.isRequired,
-    timestamp: PropTypes.string,
+    startTime: PropTypes.string,
+    endTime: PropTypes.string,
     channel: PropTypes.string,
     liveLabel: PropTypes.string,
   }).isRequired,
