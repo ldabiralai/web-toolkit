@@ -35,6 +35,14 @@ const StyledSlide = styled.div`
   }
 `;
 
+const StyledChevron = styled(Chevron)`
+  height: 16px;
+  width: 11px;
+  path {
+    fill: rgba(255, 255, 255, 0.7);
+  }
+`;
+
 const StyledArrow = styled.div`
   display: none;
   justify-content: center;
@@ -57,14 +65,6 @@ const StyledArrow = styled.div`
 
 const StyledArrowLeft = styled(StyledArrow)`
   transform: scaleX(-1);
-`;
-
-const StyledChevron = styled(Chevron)`
-  height: 16px;
-  width: 11px;
-  path {
-    fill: rgba(255, 255, 255, 0.7);
-  }
 `;
 
 export default class Carousel extends React.Component {
@@ -175,10 +175,10 @@ export default class Carousel extends React.Component {
   }
 
   render() {
-    const { children, slideMargin } = this.props;
+    const { children, slideMargin, className } = this.props;
     const { left, trackWidth } = this.state;
     return (
-      <StyledWrapper>
+      <StyledWrapper className={className}>
         <StyledArrowLeft onClick={() => this.slide(true)}>
           <StyledChevron />
         </StyledArrowLeft>
@@ -208,9 +208,11 @@ export default class Carousel extends React.Component {
 Carousel.propTypes = {
   children: PropTypes.node,
   slideMargin: PropTypes.number,
+  className: PropTypes.string,
 };
 
 Carousel.defaultProps = {
   children: null,
   slideMargin: 8,
+  className: '',
 };

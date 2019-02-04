@@ -25,7 +25,7 @@ exports[`renders a WatchbarCard 1`] = `
       Darts: BDO World Championship
     </Styled(div)>
     <Styled(div)>
-      09:00 - 10:30
+       - 
     </Styled(div)>
   </Styled(div)>
 </Styled(Link)>

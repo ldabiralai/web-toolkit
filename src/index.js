@@ -22,6 +22,7 @@ import ContentListing from './modules/ContentListing';
 import ArticleContent from './components/ArticleContent';
 import Article from './modules/Article';
 import Carousel from './components/Carousel';
+import WatchBar from './modules/Watchbar';
 
 export {
   Button,
