@@ -1,0 +1,267 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel test must render the carousel 1`] = `
+<Carousel
+  slideMargin={8}
+>
+  <Styled(div)>
+    <div
+      className="css-k008qs e595p110"
+    >
+      <Styled(div)
+        onClick={[Function]}
+      >
+        <div
+          className="css-1wpos47 e595p115"
+          onClick={[Function]}
+        >
+          <Styled(ReactComponent)>
+            <ReactComponent
+              className="css-1otx8zx e595p116"
+            >
+              <svg
+                className="css-1otx8zx e595p116"
+              >
+                chevron.svg
+              </svg>
+            </ReactComponent>
+          </Styled(ReactComponent)>
+        </div>
+      </Styled(div)>
+      <Styled(div)
+        innerRef={
+          Object {
+            "current": <div
+              class="css-157rgxb e595p111"
+            >
+              <div>
+                <div
+                  class="css-14q4ezk e595p112"
+                >
+                  <div
+                    class="css-r0a4tm e595p113"
+                  >
+                    <div>
+                      1
+                    </div>
+                  </div>
+                  <div
+                    class="css-r0a4tm e595p113"
+                  >
+                    <div>
+                      2
+                    </div>
+                  </div>
+                  <div
+                    class="css-r0a4tm e595p113"
+                  >
+                    <div>
+                      3
+                    </div>
+                  </div>
+                  <div
+                    class="css-r0a4tm e595p113"
+                  >
+                    <div>
+                      4
+                    </div>
+                  </div>
+                  <div
+                    class="css-r0a4tm e595p113"
+                  >
+                    <div>
+                      5
+                    </div>
+                  </div>
+                  <div
+                    class="css-r0a4tm e595p113"
+                  >
+                    <div>
+                      6
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>,
+          }
+        }
+      >
+        <div
+          className="css-157rgxb e595p111"
+        >
+          <Swipeable
+            delta={10}
+            disabled={false}
+            flickThreshold={0.6}
+            nodeName="div"
+            onSwiped={[Function]}
+            onSwiping={[Function]}
+            preventDefaultTouchmoveEvent={false}
+            rotationAngle={0}
+            stopPropagation={false}
+          >
+            <div
+              onMouseDown={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+            >
+              <Styled(div)
+                innerRef={
+                  Object {
+                    "current": <div
+                      class="css-14q4ezk e595p112"
+                    >
+                      <div
+                        class="css-r0a4tm e595p113"
+                      >
+                        <div>
+                          1
+                        </div>
+                      </div>
+                      <div
+                        class="css-r0a4tm e595p113"
+                      >
+                        <div>
+                          2
+                        </div>
+                      </div>
+                      <div
+                        class="css-r0a4tm e595p113"
+                      >
+                        <div>
+                          3
+                        </div>
+                      </div>
+                      <div
+                        class="css-r0a4tm e595p113"
+                      >
+                        <div>
+                          4
+                        </div>
+                      </div>
+                      <div
+                        class="css-r0a4tm e595p113"
+                      >
+                        <div>
+                          5
+                        </div>
+                      </div>
+                      <div
+                        class="css-r0a4tm e595p113"
+                      >
+                        <div>
+                          6
+                        </div>
+                      </div>
+                    </div>,
+                  }
+                }
+                left={0}
+                trackWidth={0}
+              >
+                <div
+                  className="css-14q4ezk e595p112"
+                >
+                  <Styled(div)
+                    key="0"
+                    margin={8}
+                  >
+                    <div
+                      className="css-r0a4tm e595p113"
+                    >
+                      <div>
+                        1
+                      </div>
+                    </div>
+                  </Styled(div)>
+                  <Styled(div)
+                    key="1"
+                    margin={8}
+                  >
+                    <div
+                      className="css-r0a4tm e595p113"
+                    >
+                      <div>
+                        2
+                      </div>
+                    </div>
+                  </Styled(div)>
+                  <Styled(div)
+                    key="2"
+                    margin={8}
+                  >
+                    <div
+                      className="css-r0a4tm e595p113"
+                    >
+                      <div>
+                        3
+                      </div>
+                    </div>
+                  </Styled(div)>
+                  <Styled(div)
+                    key="3"
+                    margin={8}
+                  >
+                    <div
+                      className="css-r0a4tm e595p113"
+                    >
+                      <div>
+                        4
+                      </div>
+                    </div>
+                  </Styled(div)>
+                  <Styled(div)
+                    key="4"
+                    margin={8}
+                  >
+                    <div
+                      className="css-r0a4tm e595p113"
+                    >
+                      <div>
+                        5
+                      </div>
+                    </div>
+                  </Styled(div)>
+                  <Styled(div)
+                    key="5"
+                    margin={8}
+                  >
+                    <div
+                      className="css-r0a4tm e595p113"
+                    >
+                      <div>
+                        6
+                      </div>
+                    </div>
+                  </Styled(div)>
+                </div>
+              </Styled(div)>
+            </div>
+          </Swipeable>
+        </div>
+      </Styled(div)>
+      <Styled(div)
+        onClick={[Function]}
+      >
+        <div
+          className="css-6m9tj6 e595p114"
+          onClick={[Function]}
+        >
+          <Styled(ReactComponent)>
+            <ReactComponent
+              className="css-1otx8zx e595p116"
+            >
+              <svg
+                className="css-1otx8zx e595p116"
+              >
+                chevron.svg
+              </svg>
+            </ReactComponent>
+          </Styled(ReactComponent)>
+        </div>
+      </Styled(div)>
+    </div>
+  </Styled(div)>
+</Carousel>
+`;

@@ -5,11 +5,7 @@ import * as colors from '../../../colors';
 import { H2 } from '../../../typography';
 import Link from '../../../elements/Link';
 import { ReactComponent as Chevron } from '../../../assets/chevron.svg';
-import { Column, Row, Container } from '../../../elements/Grid';
-
-const StyledContainer = styled(Container)`
-  margin: 48px 0;
-`;
+import { Column, Row } from '../../../elements/Grid';
 
 const StyledColumn = styled(Column)`
   margin-bottom: 20px;
@@ -46,7 +42,7 @@ export const StyledLink = styled(Link)`
 `;
 
 const Grid = ({ title, subLink, children, ...props }) => (
-  <StyledContainer {...props}>
+  <div {...props}>
     <Row>
       <Column tiny="full">
         <StyledHeading>
@@ -68,7 +64,7 @@ const Grid = ({ title, subLink, children, ...props }) => (
         </StyledColumn>
       ))}
     </Row>
-  </StyledContainer>
+  </div>
 );
 
 Grid.displayName = 'Grid';
