@@ -7,10 +7,6 @@ import { Carousel, Cards } from '../..';
 import { coreLightMinus1, coreNeutral1 } from '../../colors';
 import { ReactComponent as Play } from '../../assets/circleplay.svg';
 
-const StyledWrapper = styled.div`
-  display: flex;
-`;
-
 const StyledPlayIco = styled(Play)`
   width: 16px;
   height: 16px;
@@ -19,9 +15,8 @@ const StyledPlayIco = styled(Play)`
 `;
 
 const StyledTitle = styled.div`
-  border-bottom: 1px solid ${rgba(coreLightMinus1, 0.3)};
+  float: left;
   text-transform: uppercase;
-  padding-bottom: 6px;
   font-size: 12px;
   line-height: 14px;
   color: ${coreNeutral1};
@@ -35,8 +30,21 @@ const StyledTitle = styled.div`
   `)};
 `;
 
+const StyledTitleContent = styled.div`
+  height: 76px;
+  display: table-cell;
+  vertical-align: middle;
+  ${breakpoints.large(css`
+    height: 88px;
+  `)};
+`;
+
+const StyledTitleText = styled.div`
+  padding-bottom: 6px;
+  border-bottom: 1px solid ${rgba(coreLightMinus1, 0.3)};
+`;
+
 const StyledCarousel = styled(Carousel)`
-  max-width: 775px;
   ${breakpoints.medium(css`
     ${StyledTitle} {
       display: block;
@@ -50,15 +58,19 @@ const StyledCarousel = styled(Carousel)`
   `)};
 `;
 
+const generateTitle = title => (
+  <StyledTitle>
+    <StyledTitleContent>
+      <StyledPlayIco />
+      <StyledTitleText>{title}</StyledTitleText>
+    </StyledTitleContent>
+  </StyledTitle>
+);
+
 const generateChildren = (cards, title) => {
   const children = [];
   if (title) {
-    children.push(
-      <StyledTitle>
-        <StyledPlayIco />
-        {title}
-      </StyledTitle>
-    );
+    children.push(generateTitle(title));
   }
   cards.forEach(card => {
     children.push(<Cards.Watchbar card={card} />);
@@ -67,15 +79,10 @@ const generateChildren = (cards, title) => {
 };
 
 const WatchBar = ({ cards, title }) => (
-  <StyledWrapper>
-    {title && (
-      <StyledTitle>
-        <StyledPlayIco />
-        {title}
-      </StyledTitle>
-    )}
+  <div>
+    {title && generateTitle(title)}
     <StyledCarousel>{generateChildren(cards, title)}</StyledCarousel>
-  </StyledWrapper>
+  </div>
 );
 
 WatchBar.propTypes = {

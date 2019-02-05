@@ -116,6 +116,9 @@ export default class Carousel extends React.Component {
     const { slideMargin } = this.props;
     let position = 0;
     return Array.from(children).reduce((slides, slide) => {
+      if (slide.offsetWidth === 0) {
+        return slides;
+      }
       const slideInfo = {
         width: slide.offsetWidth + slideMargin,
         position,
