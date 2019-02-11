@@ -1,8 +1,7 @@
 import React from 'react';
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 import { rgba } from 'polished';
 import PropTypes from 'prop-types';
-import * as breakpoints from '../../breakpoints';
 import { Carousel, Cards } from '../..';
 import { coreLightMinus1, coreNeutral1 } from '../../colors';
 import { ReactComponent as Play } from '../../assets/circleplay.svg';
@@ -17,26 +16,27 @@ const StyledPlayIco = styled(Play)`
 const StyledTitle = styled.div`
   float: left;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 14px;
   color: ${coreNeutral1};
   width: 100px;
   user-select: none;
   display: none;
 
-  ${breakpoints.large(css`
+  @media (min-width: 900px) {
+    font-size: 12px;
     display: block;
     margin-right: 16px;
-  `)};
+  }
 `;
 
 const StyledTitleContent = styled.div`
   height: 76px;
   display: table-cell;
   vertical-align: middle;
-  ${breakpoints.large(css`
+  @media (min-width: 900px) {
     height: 88px;
-  `)};
+  }
 `;
 
 const StyledTitleText = styled.div`
@@ -45,17 +45,15 @@ const StyledTitleText = styled.div`
 `;
 
 const StyledCarousel = styled(Carousel)`
-  ${breakpoints.medium(css`
-    ${StyledTitle} {
-      display: block;
-    }
-  `)};
-  ${breakpoints.large(css`
+  ${StyledTitle} {
+    display: block;
+  }
+  @media (min-width: 900px) {
     ${StyledTitle} {
       display: none;
       margin-right: inherit;
     }
-  `)};
+  }
 `;
 
 const generateTitle = title => (

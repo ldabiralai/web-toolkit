@@ -1,7 +1,6 @@
 import React from 'react';
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 import PropTypes from 'prop-types';
-import * as breakpoints from '../../breakpoints';
 import { ReactComponent as Chevron } from '../../assets/chevron.svg';
 
 const StyledWrapper = styled.div`
@@ -53,10 +52,11 @@ const StyledArrow = styled.div`
   border-radius: 0px 2px 2px 0px;
   height: 76px;
 
-  ${breakpoints.large(css`
+  @media (min-width: 900px) {
     display: flex;
     height: 88px;
-  `)};
+  }
+
   &:hover {
     cursor: pointer;
   }
@@ -71,6 +71,7 @@ export default class Carousel extends React.Component {
     left: 0,
     currentSlide: 0,
     trackWidth: 0,
+    disable: false,
   };
 
   wrapperRef = React.createRef();
@@ -99,9 +100,10 @@ export default class Carousel extends React.Component {
       'touchmove',
       e => {
         let { left } = this.state;
+        const { disable } = this.state;
         this.deltaTouch = this.previousTouch - e.touches[0].clientX;
         left += this.deltaTouch * -1;
-        if (!this.isInRange(left)) {
+        if (!disable && !this.isInRange(left)) {
           this.setState({
             left,
           });
@@ -140,7 +142,14 @@ export default class Carousel extends React.Component {
     this.setState({
       slides,
       wrapperWidth: this.wrapperRef.current.offsetWidth,
+      disable: this.slidesTrackRef.current.offsetWidth <= this.wrapperRef.current.offsetWidth,
     });
+    const { disable } = this.state;
+    if (disable) {
+      this.setState({
+        left: 0,
+      });
+    }
   };
 
   isInRange(x) {
@@ -208,12 +217,14 @@ export default class Carousel extends React.Component {
 
   render() {
     const { children, slideMargin, className } = this.props;
-    const { left, trackWidth } = this.state;
+    const { left, trackWidth, disable } = this.state;
     return (
       <StyledWrapper className={className}>
-        <StyledArrowLeft onClick={() => this.slide(true)}>
-          <StyledChevron />
-        </StyledArrowLeft>
+        {!disable && (
+          <StyledArrowLeft onClick={() => this.slide(true)}>
+            <StyledChevron />
+          </StyledArrowLeft>
+        )}
         <StyledContainer innerRef={this.wrapperRef}>
           <StyledSlidesTrack innerRef={this.slidesTrackRef} left={left} trackWidth={trackWidth}>
             {children.map((child, index) => (
@@ -224,9 +235,11 @@ export default class Carousel extends React.Component {
             ))}
           </StyledSlidesTrack>
         </StyledContainer>
-        <StyledArrow onClick={() => this.slide()}>
-          <StyledChevron />
-        </StyledArrow>
+        {!disable && (
+          <StyledArrow onClick={() => this.slide()}>
+            <StyledChevron />
+          </StyledArrow>
+        )}
       </StyledWrapper>
     );
   }

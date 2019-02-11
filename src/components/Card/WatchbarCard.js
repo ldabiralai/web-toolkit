@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 import * as colors from '../../colors';
-import * as breakpoints from '../../breakpoints';
 import PlayIcon, { hoverStyles as playIconHoverStyle } from '../../elements/PlayIcon';
 import ChannelIcon from '../../elements/ChannelIcon';
 import Link from '../../elements/Link';
@@ -21,9 +20,9 @@ const StyledHeader = styled.div`
 
   flex: 0 0 139px;
 
-  ${breakpoints.large(css`
+  @media (min-width: 900px) {
     flex: 0 0 159px;
-  `)};
+  }
 
   :before {
     content: '';
@@ -64,10 +63,10 @@ const StyledCard = styled(Link)`
   width: 288px;
   height: 76px;
 
-  ${breakpoints.large(css`
+  @media (min-width: 900px) {
     width: 335px;
     height: 88px;
-  `)};
+  }
 
   &:hover {
     ${StyledHeader}:before {
