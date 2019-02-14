@@ -120,6 +120,7 @@ const StyledTitle = styled.div`
   font-weight: bold;
   color: ${colors.coreLightBase};
   margin: 0 0 10px;
+  word-break: break-all;
 `;
 
 const WatchbarCard = ({ card, ...props }) => {
