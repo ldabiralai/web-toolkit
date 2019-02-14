@@ -15,7 +15,7 @@ exports[`Carousel test must render the carousel 1`] = `
         onClick={[Function]}
       >
         <div
-          className="css-1wpos47 e595p116"
+          className="css-7ftdxm e595p116"
           onClick={[Function]}
         >
           <Styled(ReactComponent)>
@@ -227,7 +227,7 @@ exports[`Carousel test must render the carousel 1`] = `
         onClick={[Function]}
       >
         <div
-          className="css-6m9tj6 e595p115"
+          className="css-wf4vmz e595p115"
           onClick={[Function]}
         >
           <Styled(ReactComponent)>
