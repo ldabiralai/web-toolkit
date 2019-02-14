@@ -123,6 +123,7 @@ const StyledTitle = styled.div`
 
 const WatchbarCard = ({ card, ...props }) => {
   const { img, url, isLive, liveLabel, title, startTime, endTime } = card;
+  const characterLimit = (text, limit) => (text.length > limit ? `${text.substr(0, limit - 1).trim()}...` : text);
 
   return (
     <StyledCard {...props} href={url}>
@@ -133,7 +134,7 @@ const WatchbarCard = ({ card, ...props }) => {
         {isLive && <StyledLiveLabel>{liveLabel}</StyledLiveLabel>}
       </StyledHeader>
       <StyledContent {...props}>
-        <StyledTitle>{title}</StyledTitle>
+        <StyledTitle>{characterLimit(title, 28)}</StyledTitle>
         <StyledFooter>
           {startTime} - {endTime}
         </StyledFooter>
