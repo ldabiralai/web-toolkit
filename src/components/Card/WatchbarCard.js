@@ -135,7 +135,7 @@ const WatchbarCard = ({ card, ...props }) => {
       </StyledHeader>
       <StyledContent {...props}>
         <StyledTitle>
-          <ClampLines text={title} lines="2" ellipsis="..." buttons={false} className="ellipsis" />
+          <ClampLines text={title} lines={2} ellipsis="..." buttons={false} className="ellipsis" />
         </StyledTitle>
         <StyledFooter>
           {startTime} - {endTime}

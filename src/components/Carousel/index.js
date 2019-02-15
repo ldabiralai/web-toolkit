@@ -99,13 +99,13 @@ export default class Carousel extends React.Component {
     this.wrapperRef.current.addEventListener(
       'touchmove',
       e => {
-        let { left } = this.state;
-        const { disable } = this.state;
+        const { disable, left } = this.state;
+        let newLeft = left;
         this.deltaTouch = this.previousTouch - e.touches[0].clientX;
-        left += this.deltaTouch * -1;
-        if (!disable && !this.isInRange(left)) {
+        newLeft += this.deltaTouch * -1;
+        if (!disable && this.getLeftInRange(newLeft) !== left) {
           this.setState({
-            left,
+            left: this.getLeftInRange(newLeft),
           });
         }
         this.previousTouch = e.touches[0].clientX;
@@ -114,7 +114,7 @@ export default class Carousel extends React.Component {
     );
   }
 
-  getSlidesInformations(children) {
+  getSlidesInformation(children) {
     const { slideMargin } = this.props;
     let position = 0;
     return Array.from(children).reduce((slides, slide) => {
@@ -134,8 +134,19 @@ export default class Carousel extends React.Component {
     return slides.reduce((sum, slide) => sum + slide.width, 0);
   }
 
+  getLeftInRange(x) {
+    const { trackWidth, wrapperWidth } = this.state;
+    if (x > 0) {
+      return 0;
+    }
+    if (trackWidth - wrapperWidth - Math.abs(x) <= 0) {
+      return trackWidth * -1 + wrapperWidth;
+    }
+    return x;
+  }
+
   calculateElementsSizes = () => {
-    const slides = this.getSlidesInformations(this.slidesTrackRef.current.children);
+    const slides = this.getSlidesInformation(this.slidesTrackRef.current.children);
     this.setState({
       trackWidth: Carousel.getTrackWidth(slides),
     });
@@ -151,24 +162,6 @@ export default class Carousel extends React.Component {
       });
     }
   };
-
-  isInRange(x) {
-    const { trackWidth, wrapperWidth, slides } = this.state;
-    return x > 0 || x < wrapperWidth - slides[slides.length - 1].width - trackWidth;
-  }
-
-  /**
-   * Calculate the new left position according to the swipe force and avoid it to go behind the limits
-   * @param deltaX
-   * @param velocity
-   */
-  handleSwipe(deltaX, velocity) {
-    let { left } = this.state;
-    left += ((deltaX * -1) / 5) * velocity;
-    if (!this.isInRange(left)) {
-      this.setState({ left });
-    }
-  }
 
   /**
    * Calculate a new left position to have a "magnetic" effect on the slides
@@ -188,7 +181,7 @@ export default class Carousel extends React.Component {
           left = slide.position * -1;
           currentSlide = index;
         }
-        this.setState({ left, currentSlide });
+        this.setState({ left: this.getLeftInRange(left), currentSlide });
       }
     });
   }
@@ -198,18 +191,19 @@ export default class Carousel extends React.Component {
    * @param inverted
    */
   slide(inverted = false) {
-    const { slides } = this.state;
-    let { left, currentSlide } = this.state;
+    const { slides, left } = this.state;
+    let { currentSlide } = this.state;
+    let newLeft = left;
     if (inverted && slides[currentSlide - 1]) {
-      left += slides[currentSlide - 1].width;
+      newLeft += slides[currentSlide - 1].width;
       currentSlide -= 1;
     } else if (!inverted) {
-      left += slides[currentSlide].width * -1;
+      newLeft += slides[currentSlide].width * -1;
       currentSlide += 1;
     }
-    if (!this.isInRange(left)) {
+    if (this.getLeftInRange(newLeft) !== left) {
       this.setState({
-        left,
+        left: this.getLeftInRange(newLeft),
         currentSlide,
       });
     }

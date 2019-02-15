@@ -57,7 +57,7 @@ const StyledCarousel = styled(Carousel)`
 `;
 
 const generateTitle = title => (
-  <StyledTitle>
+  <StyledTitle key={title}>
     <StyledTitleContent>
       <StyledPlayIco />
       <StyledTitleText>{title}</StyledTitleText>
@@ -71,7 +71,7 @@ const generateChildren = (cards, title) => {
     children.push(generateTitle(title));
   }
   cards.forEach(card => {
-    children.push(<Cards.Watchbar card={card} />);
+    children.push(<Cards.Watchbar key={card.title + card.startTime + card.endTime} card={card} />);
   });
   return children;
 };

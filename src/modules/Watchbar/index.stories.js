@@ -25,7 +25,7 @@ const watchbarCard = {
 };
 
 const cards = [];
-for (let i = 0; i < 4; i += 1) {
+for (let i = 0; i < 10; i += 1) {
   cards.push(watchbarCard);
 }
 
