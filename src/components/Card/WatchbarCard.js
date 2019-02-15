@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
+import LinesEllipsis from 'react-lines-ellipsis';
+import responsiveHOC from 'react-lines-ellipsis/lib/responsiveHOC';
 import * as colors from '../../colors';
 import PlayIcon, { hoverStyles as playIconHoverStyle } from '../../elements/PlayIcon';
 import ChannelIcon from '../../elements/ChannelIcon';
 import Link from '../../elements/Link';
 import LiveLabel from '../../elements/LiveLabel';
+
+const ResponsiveEllipsis = responsiveHOC()(LinesEllipsis);
 
 const StyledImage = styled.div`
   background-image: ${({ src }) => `url(${src})`};
@@ -106,7 +110,6 @@ const StyledContent = styled.div`
   justify-content: space-between;
   background: ${colors.actionTwoDarkBase};
   font-size: 13px;
-  width: 100%;
 `;
 
 const StyledFooter = styled.div`
@@ -120,12 +123,10 @@ const StyledTitle = styled.div`
   font-weight: bold;
   color: ${colors.coreLightBase};
   margin: 0 0 10px;
-  word-break: break-all;
 `;
 
 const WatchbarCard = ({ card, ...props }) => {
   const { img, url, isLive, liveLabel, title, startTime, endTime } = card;
-  const characterLimit = (text, limit) => (text.length > limit ? `${text.substr(0, limit - 1).trim()}...` : text);
 
   return (
     <StyledCard {...props} href={url}>
@@ -136,7 +137,9 @@ const WatchbarCard = ({ card, ...props }) => {
         {isLive && <StyledLiveLabel>{liveLabel}</StyledLiveLabel>}
       </StyledHeader>
       <StyledContent {...props}>
-        <StyledTitle>{characterLimit(title, 28)}</StyledTitle>
+        <StyledTitle>
+          <ResponsiveEllipsis text={title} maxLine="2" ellipsis="..." trimRight basedOn="letters" />
+        </StyledTitle>
         <StyledFooter>
           {startTime} - {endTime}
         </StyledFooter>
