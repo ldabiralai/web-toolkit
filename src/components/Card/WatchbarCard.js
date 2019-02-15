@@ -1,15 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'react-emotion';
-import LinesEllipsis from 'react-lines-ellipsis';
-import responsiveHOC from 'react-lines-ellipsis/lib/responsiveHOC';
+import ClampLines from 'react-clamp-lines';
 import * as colors from '../../colors';
 import PlayIcon, { hoverStyles as playIconHoverStyle } from '../../elements/PlayIcon';
 import ChannelIcon from '../../elements/ChannelIcon';
 import Link from '../../elements/Link';
 import LiveLabel from '../../elements/LiveLabel';
-
-const ResponsiveEllipsis = responsiveHOC()(LinesEllipsis);
 
 const StyledImage = styled.div`
   background-image: ${({ src }) => `url(${src})`};
@@ -138,7 +135,7 @@ const WatchbarCard = ({ card, ...props }) => {
       </StyledHeader>
       <StyledContent {...props}>
         <StyledTitle>
-          <ResponsiveEllipsis text={title} maxLine="2" ellipsis="..." trimRight basedOn="letters" />
+          <ClampLines text={title} lines="2" ellipsis="..." buttons={false} className="ellipsis" />
         </StyledTitle>
         <StyledFooter>
           {startTime} - {endTime}
