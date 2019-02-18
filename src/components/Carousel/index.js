@@ -9,7 +9,7 @@ const StyledWrapper = styled.div`
 
 const StyledContainer = styled.div`
   overflow: hidden;
-  margin: 0 8px;
+  margin: 0 0 0 8px;
 `;
 
 const StyledSlidesTrack = styled.div`
