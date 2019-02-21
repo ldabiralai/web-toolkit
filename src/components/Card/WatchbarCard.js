@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
+import ClampLines from 'react-clamp-lines';
 import * as colors from '../../colors';
-import * as breakpoints from '../../breakpoints';
 import PlayIcon, { hoverStyles as playIconHoverStyle } from '../../elements/PlayIcon';
 import ChannelIcon from '../../elements/ChannelIcon';
 import Link from '../../elements/Link';
@@ -21,9 +21,9 @@ const StyledHeader = styled.div`
 
   flex: 0 0 139px;
 
-  ${breakpoints.large(css`
+  @media (min-width: 900px) {
     flex: 0 0 159px;
-  `)};
+  }
 
   :before {
     content: '';
@@ -64,10 +64,10 @@ const StyledCard = styled(Link)`
   width: 288px;
   height: 76px;
 
-  ${breakpoints.large(css`
+  @media (min-width: 900px) {
     width: 335px;
     height: 88px;
-  `)};
+  }
 
   &:hover {
     ${StyledHeader}:before {
@@ -123,7 +123,7 @@ const StyledTitle = styled.div`
 `;
 
 const WatchbarCard = ({ card, ...props }) => {
-  const { img, url, isLive, liveLabel, title, timestamp } = card;
+  const { img, url, isLive, liveLabel, title, startTime, endTime } = card;
 
   return (
     <StyledCard {...props} href={url}>
@@ -134,8 +134,12 @@ const WatchbarCard = ({ card, ...props }) => {
         {isLive && <StyledLiveLabel>{liveLabel}</StyledLiveLabel>}
       </StyledHeader>
       <StyledContent {...props}>
-        <StyledTitle>{title}</StyledTitle>
-        <StyledFooter>{timestamp}</StyledFooter>
+        <StyledTitle>
+          <ClampLines text={title} lines={2} ellipsis="..." buttons={false} className="ellipsis" />
+        </StyledTitle>
+        <StyledFooter>
+          {startTime} - {endTime}
+        </StyledFooter>
       </StyledContent>
     </StyledCard>
   );
@@ -151,7 +155,8 @@ WatchbarCard.propTypes = {
     url: PropTypes.string.isRequired,
     isLive: PropTypes.bool,
     title: PropTypes.string.isRequired,
-    timestamp: PropTypes.string,
+    startTime: PropTypes.string,
+    endTime: PropTypes.string,
     channel: PropTypes.string,
     liveLabel: PropTypes.string,
   }).isRequired,

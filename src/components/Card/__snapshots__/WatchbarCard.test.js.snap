@@ -22,10 +22,19 @@ exports[`renders a WatchbarCard 1`] = `
   </Styled(div)>
   <Styled(div)>
     <Styled(div)>
-      Darts: BDO World Championship
+      <ClampLines
+        buttons={false}
+        className="ellipsis"
+        delay={300}
+        ellipsis="..."
+        lessText="Read less"
+        lines={2}
+        moreText="Read more"
+        text="Darts: BDO World Championship"
+      />
     </Styled(div)>
     <Styled(div)>
-      09:00 - 10:30
+       - 
     </Styled(div)>
   </Styled(div)>
 </Styled(Link)>

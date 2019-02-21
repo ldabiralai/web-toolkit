@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a WatchBar 1`] = `
+<div>
+  <Styled(Carousel)
+    className=""
+    slideMargin={8}
+  >
+    <Cards.Content
+      card={
+        Object {
+          "channel": "E1FR",
+          "img": "https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640",
+          "isLive": false,
+          "liveLabel": "live",
+          "timestamp": "09:00 - 10:30",
+          "title": "Darts: BDO World Championship",
+          "url": "/article/id",
+        }
+      }
+      key="Darts: BDO World Championshipundefinedundefined"
+    />
+    <Cards.Content
+      card={
+        Object {
+          "channel": "E1FR",
+          "img": "https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640",
+          "isLive": false,
+          "liveLabel": "live",
+          "timestamp": "09:00 - 10:30",
+          "title": "Darts: BDO World Championship",
+          "url": "/article/id",
+        }
+      }
+      key="Darts: BDO World Championshipundefinedundefined"
+    />
+    <Cards.Content
+      card={
+        Object {
+          "channel": "E1FR",
+          "img": "https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640",
+          "isLive": false,
+          "liveLabel": "live",
+          "timestamp": "09:00 - 10:30",
+          "title": "Darts: BDO World Championship",
+          "url": "/article/id",
+        }
+      }
+      key="Darts: BDO World Championshipundefinedundefined"
+    />
+    <Cards.Content
+      card={
+        Object {
+          "channel": "E1FR",
+          "img": "https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640",
+          "isLive": false,
+          "liveLabel": "live",
+          "timestamp": "09:00 - 10:30",
+          "title": "Darts: BDO World Championship",
+          "url": "/article/id",
+        }
+      }
+      key="Darts: BDO World Championshipundefinedundefined"
+    />
+  </Styled(Carousel)>
+</div>
+`;
+
+exports[`renders a WatchBar with a title 1`] = `
+<div>
+  <Styled(div)
+    key="Live on Eurosport"
+  >
+    <Styled(div)>
+      <Styled(ReactComponent) />
+      <Styled(div)>
+        Live on Eurosport
+      </Styled(div)>
+    </Styled(div)>
+  </Styled(div)>
+  <Styled(Carousel)
+    className=""
+    slideMargin={8}
+  >
+    <Styled(div)
+      key="Live on Eurosport"
+    >
+      <Styled(div)>
+        <Styled(ReactComponent) />
+        <Styled(div)>
+          Live on Eurosport
+        </Styled(div)>
+      </Styled(div)>
+    </Styled(div)>
+    <Cards.Content
+      card={
+        Object {
+          "channel": "E1FR",
+          "img": "https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640",
+          "isLive": false,
+          "liveLabel": "live",
+          "timestamp": "09:00 - 10:30",
+          "title": "Darts: BDO World Championship",
+          "url": "/article/id",
+        }
+      }
+      key="Darts: BDO World Championshipundefinedundefined"
+    />
+    <Cards.Content
+      card={
+        Object {
+          "channel": "E1FR",
+          "img": "https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640",
+          "isLive": false,
+          "liveLabel": "live",
+          "timestamp": "09:00 - 10:30",
+          "title": "Darts: BDO World Championship",
+          "url": "/article/id",
+        }
+      }
+      key="Darts: BDO World Championshipundefinedundefined"
+    />
+    <Cards.Content
+      card={
+        Object {
+          "channel": "E1FR",
+          "img": "https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640",
+          "isLive": false,
+          "liveLabel": "live",
+          "timestamp": "09:00 - 10:30",
+          "title": "Darts: BDO World Championship",
+          "url": "/article/id",
+        }
+      }
+      key="Darts: BDO World Championshipundefinedundefined"
+    />
+    <Cards.Content
+      card={
+        Object {
+          "channel": "E1FR",
+          "img": "https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640",
+          "isLive": false,
+          "liveLabel": "live",
+          "timestamp": "09:00 - 10:30",
+          "title": "Darts: BDO World Championship",
+          "url": "/article/id",
+        }
+      }
+      key="Darts: BDO World Championshipundefinedundefined"
+    />
+  </Styled(Carousel)>
+</div>
+`;
