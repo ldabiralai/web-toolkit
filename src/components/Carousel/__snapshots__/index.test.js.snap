@@ -35,7 +35,7 @@ exports[`Carousel test must render the carousel 1`] = `
         innerRef={
           Object {
             "current": <div
-              class="css-157rgxb e595p111"
+              class="css-1vt1g5a e595p111"
             >
               <div
                 class="css-14q4ezk e595p112"
@@ -88,7 +88,7 @@ exports[`Carousel test must render the carousel 1`] = `
         }
       >
         <div
-          className="css-157rgxb e595p111"
+          className="css-1vt1g5a e595p111"
         >
           <Styled(div)
             innerRef={
