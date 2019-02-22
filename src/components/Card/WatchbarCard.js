@@ -107,6 +107,7 @@ const StyledContent = styled.div`
   justify-content: space-between;
   background: ${colors.actionTwoDarkBase};
   font-size: 13px;
+  flex-basis: 0;
 `;
 
 const StyledFooter = styled.div`
