@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import WatchBar from '../..';
+import { WatchBar } from '../..';
 
 const indexStories = storiesOf('WatchBar', module);
 

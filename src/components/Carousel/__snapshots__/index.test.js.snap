@@ -38,7 +38,7 @@ exports[`Carousel test must render the carousel 1`] = `
               class="css-1vt1g5a e595p111"
             >
               <div
-                class="css-14q4ezk e595p112"
+                class="css-hy2wqf e595p112"
               >
                 <div
                   class="css-r0a4tm e595p113"
@@ -94,7 +94,7 @@ exports[`Carousel test must render the carousel 1`] = `
             innerRef={
               Object {
                 "current": <div
-                  class="css-14q4ezk e595p112"
+                  class="css-hy2wqf e595p112"
                 >
                   <div
                     class="css-r0a4tm e595p113"
@@ -145,7 +145,7 @@ exports[`Carousel test must render the carousel 1`] = `
             trackWidth={0}
           >
             <div
-              className="css-14q4ezk e595p112"
+              className="css-hy2wqf e595p112"
             >
               <Styled(div)
                 key="0"
