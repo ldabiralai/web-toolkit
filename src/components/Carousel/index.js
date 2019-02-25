@@ -21,6 +21,7 @@ const StyledSlidesTrack = styled.div`
   margin-right: auto;
   width: ${props => props.trackWidth}px;
   transition: left 200ms ease-out;
+  user-select: none;
 `;
 
 const StyledSlide = styled.div`
@@ -82,6 +83,9 @@ export default class Carousel extends React.Component {
     setTimeout(() => this.calculateElementsSizes(), 200);
     window.addEventListener('resize', this.calculateElementsSizes);
     this.previousTouch = 0;
+    this.clickTimestamp = null;
+    this.initialTouch = null;
+    this.click = false;
     this.wrapperRef.current.addEventListener(
       'touchstart',
       e => {
@@ -96,19 +100,43 @@ export default class Carousel extends React.Component {
       },
       false
     );
+    this.wrapperRef.current.addEventListener('touchmove', e => this.handleEventSlide(e.touches[0].clientX), false);
     this.wrapperRef.current.addEventListener(
-      'touchmove',
+      'mousedown',
       e => {
-        const { disable, left } = this.state;
-        let newLeft = left;
-        this.deltaTouch = this.previousTouch - e.touches[0].clientX;
-        newLeft += this.deltaTouch * -1;
-        if (!disable && this.getLeftInRange(newLeft) !== left) {
-          this.setState({
-            left: this.getLeftInRange(newLeft),
-          });
+        e.preventDefault();
+        this.clickTimestamp = new Date();
+        this.previousTouch = e.clientX;
+        this.initialTouch = e.clientX;
+        this.click = true;
+      },
+      false
+    );
+    window.addEventListener(
+      'mouseup',
+      e => {
+        e.preventDefault();
+        this.lockSlides(this.deltaTouch);
+        this.click = false;
+      },
+      false
+    );
+    this.wrapperRef.current.addEventListener(
+      'mousemove',
+      e => {
+        e.preventDefault();
+        if (this.click) {
+          this.handleEventSlide(e.clientX);
         }
-        this.previousTouch = e.touches[0].clientX;
+      },
+      false
+    );
+    this.wrapperRef.current.addEventListener(
+      'click',
+      e => {
+        if (new Date() - this.clickTimestamp > 150 && Math.abs(this.initialTouch - e.clientX) > 20) {
+          e.preventDefault();
+        }
       },
       false
     );
@@ -162,6 +190,19 @@ export default class Carousel extends React.Component {
       });
     }
   };
+
+  handleEventSlide(x) {
+    const { disable, left } = this.state;
+    let newLeft = left;
+    this.deltaTouch = this.previousTouch - x;
+    newLeft += this.deltaTouch * -1;
+    if (!disable && this.getLeftInRange(newLeft) !== left) {
+      this.setState({
+        left: this.getLeftInRange(newLeft),
+      });
+    }
+    this.previousTouch = x;
+  }
 
   /**
    * Calculate a new left position to have a "magnetic" effect on the slides

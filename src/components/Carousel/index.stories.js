@@ -4,7 +4,7 @@ import { withInfo } from '@storybook/addon-info';
 import { object } from '@storybook/addon-knobs';
 import styled from 'react-emotion';
 import { rgba } from 'polished';
-import Carousel from '../..';
+import { Carousel } from '../..';
 import WatchbarCard from '../Card/WatchbarCard';
 import { coreLightMinus1, coreNeutral1 } from '../../colors';
 import { ReactComponent as Play } from '../../assets/circleplay.svg';
