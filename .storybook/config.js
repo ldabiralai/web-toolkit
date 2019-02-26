@@ -2,6 +2,7 @@ import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import { withKnobsOptions } from '@storybook/addon-knobs';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
+import { withInfo } from '@storybook/addon-info';
 import { ThemeProvider } from 'emotion-theming';
 import styled from 'react-emotion';
 import { theme, colors, injectStyles } from '../src';
@@ -36,5 +37,7 @@ addDecorator(
     { name: 'coreLightMinus1', value: colors.coreLightMinus1 },
   ])
 );
+
+addDecorator(withInfo);
 
 configure(loadStories, module);
