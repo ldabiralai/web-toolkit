@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css, injectGlobal } from 'react-emotion';
+import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
 
 import Cross from '../../assets/close-cross.svg';
@@ -9,16 +9,9 @@ import RightMenu from './RightMenu';
 import { points } from '../../breakpoints';
 import { withMatchMedia } from '../../hocs';
 
-// eslint-disable-next-line no-unused-expressions
-injectGlobal`
-  body.modal--opened {
-    overflow: hidden;
-  }
-`;
-
 const StyledModal = styled.div`
   display: none;
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   right: 0;

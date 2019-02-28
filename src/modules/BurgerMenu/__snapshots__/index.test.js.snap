@@ -2,7 +2,7 @@
 
 exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
 <div
-  class="css-f0lg3b e1cerjsu0"
+  class="css-tt17dr e1cerjsu0"
   data-test="modal-container"
 >
   <a
@@ -486,7 +486,7 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
 
 exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
 <div
-  class="css-f0lg3b e1cerjsu0"
+  class="css-tt17dr e1cerjsu0"
   data-test="modal-container"
 >
   <a

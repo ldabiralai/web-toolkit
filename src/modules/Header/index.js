@@ -1,5 +1,7 @@
-import React, { Component, Fragment } from 'react';
-import styled, { css } from 'react-emotion';
+import React, { Component } from 'react';
+import styled, { css, injectGlobal } from 'react-emotion';
+import PropTypes from 'prop-types';
+
 import * as breakpoints from '../../breakpoints';
 import * as colors from '../../colors';
 import Logo from '../../elements/Logo';
@@ -12,12 +14,19 @@ import Link from '../../elements/Link';
 const StyledWrapper = styled.header`
   background: ${colors.brandBase};
   height: 50px;
-  padding-left: 18px;
+  ${props =>
+    !props.menuItems &&
+    css`
+      padding-left: 18px;
+
+      ${breakpoints.medium(css`
+        padding-left: 32px;
+      `)}
+    `}
   display: flex;
   align-items: center;
   ${breakpoints.medium(css`
     height: 60px;
-    padding-left: 32px;
   `)};
   ${breakpoints.large(css`
     height: 70px;
@@ -53,10 +62,18 @@ class Header extends Component {
     const { isBurgerMenuOpen } = this.state;
 
     if (!menuItems) return null;
+
+    // eslint-disable-next-line no-unused-expressions
+    injectGlobal`
+      body.modal--opened {
+        overflow: hidden;
+      }
+    `;
+
     return (
       <BurgerMenu
-        open={isBurgerMenuOpen}
-        onClick={this.toggleBurgerMenu}
+        isOpen={isBurgerMenuOpen}
+        onClose={this.toggleBurgerMenu}
         header={menuItems}
         homePageUrl={homePageUrl}
       />
@@ -67,17 +84,30 @@ class Header extends Component {
     const { homePageUrl } = this.props;
 
     return (
-      <Fragment>
+      <StyledWrapper {...this.props}>
         {this.getBurgerMenu()}
-        <StyledWrapper {...this.props}>
-          {this.getBurgerIcon()}
-          <Link href={homePageUrl}>
-            <Logo />
-          </Link>
-        </StyledWrapper>
-      </Fragment>
+        {this.getBurgerIcon()}
+        <Link href={homePageUrl}>
+          <Logo />
+        </Link>
+      </StyledWrapper>
     );
   }
 }
+
+Header.defaultProps = {
+  menuItems: null,
+  homePageUrl: '',
+};
+
+Header.propTypes = {
+  menuItems: PropTypes.shape({
+    items: PropTypes.array,
+    socialItem: PropTypes.shape({
+      name: PropTypes.string,
+    }),
+  }),
+  homePageUrl: PropTypes.string,
+};
 
 export default Header;

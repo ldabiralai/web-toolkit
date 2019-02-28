@@ -21,12 +21,12 @@ const StyledBurger = styled.a`
   transition: background 0.3s;
   background-color: transparent;
   vertical-align: middle;
-  margin: 0 0 0 16px;
+  margin: 0 16px;
 
   ${medium(`
     width: 27px;
     height: 26px;
-    margin-left: 27px;
+    margin: 0 27px;
   `)};
 `;
 
