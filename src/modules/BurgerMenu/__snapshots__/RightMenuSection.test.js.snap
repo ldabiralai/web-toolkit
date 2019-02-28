@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with expected snapshot 1`] = `
+<Styled(div)>
+  <Styled(div) />
+  <Styled(ul) />
+</Styled(div)>
+`;
