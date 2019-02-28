@@ -74,3 +74,12 @@ export const featureSevenMinus1 = '#9f30d6';
 export const featureSevenBase = '#9600d4';
 export const featureSevenPlus1 = '#8800cc';
 export const featureSevenPlus2 = '#7900c3';
+
+export const midnightExpress = '#22263c';
+export const cerulean = '#009cde';
+export const utahCrimson = '#d50032';
+export const arsenic = '#3d4248';
+export const regentGray = '#798490';
+export const turquoiseBlue = '#64dcff';
+export const whiteLilac = '#e8e8eb';
+export const gunPowder = '#3f455d';

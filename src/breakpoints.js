@@ -30,3 +30,9 @@ export const wide = style => css`
     ${style};
   }
 `;
+
+export const untilLarge = style => css`
+  @media (max-width: ${points.large - 1}px) {
+    ${style};
+  }
+`;
