@@ -6,7 +6,7 @@ import BurgerIcon from './index';
 const indexStories = storiesOf('BurgerIcon', module);
 
 indexStories.add(
-  'configurable',
+  'default',
   withInfo()(() => (
     <BurgerIcon
       onClick={e => {

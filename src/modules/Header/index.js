@@ -4,12 +4,8 @@ import PropTypes from 'prop-types';
 
 import * as breakpoints from '../../breakpoints';
 import * as colors from '../../colors';
-import Logo from '../../elements/Logo';
 
-import BurgerMenu from '../BurgerMenu';
-import BurgerIcon from '../../elements/BurgerIcon';
-
-import Link from '../../elements/Link';
+import { Link, Logo, BurgerMenu, BurgerIcon } from '../..';
 
 const StyledWrapper = styled.header`
   background: ${colors.brandBase};

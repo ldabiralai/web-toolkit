@@ -2,10 +2,9 @@ import React from 'react';
 import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
 
-import SocialIcon from '../../elements/SocialIcon';
+import { SocialIcon, Link } from '../..';
 import { large } from '../../breakpoints';
 import { midnightExpress } from '../../colors';
-import Link from '../../elements/Link';
 
 const StyledWrapper = styled.div`
   background: ${midnightExpress};
