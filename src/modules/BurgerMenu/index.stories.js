@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { object, boolean } from '@storybook/addon-knobs';
 import styled from 'react-emotion';
-import BurgerMenu from './index';
+import { BurgerMenu } from '../..';
 import headerMocks from './mocks/header';
 
 const story = storiesOf('BurgerMenu', module).addDecorator(withInfo);
