@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import SocialMenu from './SocialMenu';
-import headerMock from './mocks/header';
+import headerMock from '../mocks/header';
 
 const socialItems = headerMock.socialItem.sections[0].items;
 

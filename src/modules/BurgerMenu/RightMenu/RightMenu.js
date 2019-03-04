@@ -3,8 +3,9 @@ import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
 
 import RightMenuSection from './RightMenuSection';
-import SocialMenu from './SocialMenu';
-import { large } from '../../breakpoints';
+import SocialMenu from '../SocialMenu/SocialMenu';
+import { large } from '../../../breakpoints';
+import * as types from './sectionTypes';
 
 const StyledWrapper = styled.div`
   width: 80%;
@@ -21,7 +22,7 @@ const StyledContainer = styled.div`
   -webkit-overflow-scrolling: touch;
 
   ${props =>
-    props.menuType === 'sports' &&
+    props.menuType === types.MENU.SPORTS &&
     css`
       display: flex;
     `};

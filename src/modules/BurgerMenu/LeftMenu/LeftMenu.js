@@ -1,12 +1,13 @@
 import React from 'react';
 import styled, { css } from 'react-emotion';
+import { rgba } from 'polished';
 import PropTypes from 'prop-types';
 
 import LeftMenuItem from './LeftMenuItem';
-import Logo from '../../elements/Logo';
+import Logo from '../../../elements/Logo';
 
-import { large } from '../../breakpoints';
-import { cerulean, midnightExpress } from '../../colors';
+import { large } from '../../../breakpoints';
+import { cerulean, coreLightMinus1, midnightExpress } from '../../../colors';
 
 const StyledWrapper = styled.div`
   width: 20%;
@@ -35,7 +36,7 @@ const StyledTabLogo = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
+  border-bottom: 1px solid ${rgba(coreLightMinus1, 0.15)};
   &:hover {
     background-color: ${cerulean};
   }

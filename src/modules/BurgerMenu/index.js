@@ -3,8 +3,8 @@ import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
 
 import Cross from '../../assets/close-cross.svg';
-import LeftMenu from './LeftMenu';
-import RightMenu from './RightMenu';
+import LeftMenu from './LeftMenu/LeftMenu';
+import RightMenu from './RightMenu/RightMenu';
 
 import { points } from '../../breakpoints';
 import { withMatchMedia } from '../../hocs';

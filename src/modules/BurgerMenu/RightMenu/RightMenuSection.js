@@ -4,8 +4,9 @@ import styled, { css } from 'react-emotion';
 import { rgba } from 'polished';
 import sortBy from 'lodash/sortBy';
 import RightMenuItem from './RightMenuItem';
-import { large } from '../../breakpoints';
-import { arsenic, cerulean, gunPowder } from '../../colors';
+import { large } from '../../../breakpoints';
+import { arsenic, cerulean, gunPowder } from '../../../colors';
+import * as types from './sectionTypes';
 
 const StyledColumn = styled.div`
   ${props =>
@@ -35,19 +36,19 @@ const StyledColumn = styled.div`
     `};
 
   ${props =>
-    props.menuType === 'sports' &&
+    props.menuType === types.MENU.SPORTS &&
     css`
       padding-right: 20px;
       &:last-of-type {
         padding-right: 0;
       }
 
-      ${props.columnType === 'all-sports' &&
+      ${props.columnType === types.COLUMN.ALL_SPORTS &&
         css`
           flex-basis: 100%;
         `};
 
-      ${props.columnType === 'popular-sports' &&
+      ${props.columnType === types.COLUMN.POPULAR_SPORTS &&
         css`
           flex-basis: 20%;
           display: none;
@@ -55,14 +56,14 @@ const StyledColumn = styled.div`
     `};
 
   ${props =>
-    props.columnType === 'about-us' &&
+    props.columnType === types.COLUMN.ABOUT_US &&
     css`
       flex-grow: 14;
     `};
 
   ${props =>
     large(css`
-    ${props.columnType === 'popular-sports' &&
+    ${props.columnType === types.COLUMN.POPULAR_SPORTS &&
       css`
         display: block;
       `};
@@ -81,7 +82,7 @@ const StyledItems = styled.ul`
 
   ${props =>
     large(css`
-      ${props.columnType === 'all-sports' &&
+      ${props.columnType === types.COLUMN.ALL_SPORTS &&
         css`
           display: flex;
           flex-flow: wrap column;
@@ -89,7 +90,7 @@ const StyledItems = styled.ul`
           overflow-x: hidden;
         `};
 
-      ${props.columnType === 'about-us' &&
+      ${props.columnType === types.COLUMN.ABOUT_US &&
         css`
           columns: 150px 3;
           max-height: 200px;
@@ -165,7 +166,7 @@ const StyledTitle = styled.div`
 `;
 
 const sortIfNecessary = (items, columnType, isMobileMenu) => {
-  if (columnType === 'all-sports' && !isMobileMenu) {
+  if (columnType === types.COLUMN.ALL_SPORTS && !isMobileMenu) {
     return sortBy(items, item => item.name.toLowerCase());
   }
   return items;

@@ -1,7 +1,8 @@
 import React from 'react';
 import styled, { css } from 'react-emotion';
-import { medium } from '../../breakpoints';
-import { cerulean, utahCrimson } from '../../colors';
+import { rgba } from 'polished';
+import { medium } from '../../../breakpoints';
+import { cerulean, coreLightMinus1, utahCrimson } from '../../../colors';
 
 const StyledItem = styled.li`
   order: 3;
@@ -53,11 +54,11 @@ const StyledItem = styled.li`
 const StyledItemLink = styled.a`
   display: block;
   padding: 23px 0;
-  color: white;
+  color: ${coreLightMinus1};
   width: 100%;
   text-decoration: none;
   text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid ${rgba(coreLightMinus1, 0.15)};
   cursor: pointer;
 `;
 

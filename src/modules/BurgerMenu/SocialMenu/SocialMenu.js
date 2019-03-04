@@ -2,13 +2,13 @@ import React from 'react';
 import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
 
-import { SocialIcon, Link } from '../..';
-import { large } from '../../breakpoints';
-import { midnightExpress } from '../../colors';
+import { SocialIcon, Link } from '../../..';
+import { large } from '../../../breakpoints';
+import { coreLightMinus1, midnightExpress } from '../../../colors';
 
 const StyledWrapper = styled.div`
   background: ${midnightExpress};
-  color: white;
+  color: ${coreLightMinus1};
   display: flex;
   align-items: center;
   height: 61px;
@@ -32,7 +32,7 @@ const StyledSocialItems = styled.ul`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: white;
+  color: ${coreLightMinus1};
   vertical-align: middle;
   margin-right: 10px;
   font-size: 12px;

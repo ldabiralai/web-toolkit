@@ -2,8 +2,9 @@
 import React from 'react';
 import styled, { css } from 'react-emotion';
 import kebabCase from 'lodash/kebabCase';
-import { large } from '../../breakpoints';
-import { arsenic, cerulean, regentGray, turquoiseBlue, whiteLilac } from '../../colors';
+import { large } from '../../../breakpoints';
+import { arsenic, cerulean, regentGray, turquoiseBlue, whiteLilac } from '../../../colors';
+import * as types from './sectionTypes';
 
 const StyledItem = styled.li`
   list-style-type: none;
@@ -35,7 +36,7 @@ const StyledItemLink = styled.a`
   }
 
   ${props =>
-    props.columnType === 'popular-sports' &&
+    props.columnType === types.COLUMN.POPULAR_SPORTS &&
     css`
       color: ${cerulean};
       &:hover {
@@ -44,7 +45,7 @@ const StyledItemLink = styled.a`
     `};
 
   ${props =>
-    props.columnType === 'all-sports' &&
+    props.columnType === types.COLUMN.ALL_SPORTS &&
     props.item.items.length > 0 &&
     css`
       display: flex;
@@ -65,7 +66,7 @@ const RightMenuItem = ({ item, menuType, columnType, isMobileMenu, onSubMenuOpen
   <StyledItem>
     <StyledItemLink
       onClick={e => {
-        if (menuType === 'sports' && isMobileMenu && item.items.length) {
+        if (menuType === types.MENU.SPORTS && isMobileMenu && item.items.length) {
           e.preventDefault();
           onSubMenuOpen(item);
         }
@@ -74,7 +75,7 @@ const RightMenuItem = ({ item, menuType, columnType, isMobileMenu, onSubMenuOpen
       item={item}
       columnType={columnType}
       data-test={kebabCase(
-        `${menuType === 'sports' && isMobileMenu && item.items.length ? 'mobile' : 'desktop'}-${item.name}`
+        `${menuType === types.MENU.SPORTS && isMobileMenu && item.items.length ? 'mobile' : 'desktop'}-${item.name}`
       )}
     >
       {item.name}

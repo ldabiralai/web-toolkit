@@ -14,13 +14,13 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
     class="css-ab8yd1 e1cerjsu2"
   >
     <div
-      class="css-nu402e e4f0oua0"
+      class="css-nu402e e15sgnhs0"
     >
       <ul
-        class="css-197wfeu e4f0oua1"
+        class="css-197wfeu e15sgnhs1"
       >
         <a
-          class="css-1ttakqu e4f0oua2"
+          class="css-1g7efpb e15sgnhs2"
           data-test="burger-logo"
           href=""
         >
@@ -31,10 +31,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
           />
         </a>
         <li
-          class="css-hwv33m e1ys3dz70"
+          class="css-hwv33m ez2m5u10"
         >
           <a
-            class="css-blukrc e1ys3dz71"
+            class="css-16jzcww ez2m5u11"
             href="#"
           >
             Tous les sports
@@ -43,46 +43,46 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
       </ul>
     </div>
     <div
-      class="css-1tnfqrp e11mgbmz0"
+      class="css-1tnfqrp emqlr8s0"
     >
       <div
-        class="css-sh3rt0 e1gbpjfg0"
+        class="css-sh3rt0 erde2st0"
         data-test="subnav-sports-mobile"
       >
         <div
-          class="css-yc8xj9 e1gbpjfg2"
+          class="css-yc8xj9 erde2st2"
         >
           <span
-            class="css-ta411o e1gbpjfg3"
+            class="css-ta411o erde2st3"
           />
         </div>
         <div
-          class="css-16j8vyh e1gbpjfg4"
+          class="css-16j8vyh erde2st4"
         />
         <ul
-          class="css-ehk4yy e1gbpjfg1"
+          class="css-ehk4yy erde2st1"
           data-test="mobile-menu-list"
         />
       </div>
       <div
-        class="css-m30wzm e11mgbmz1"
+        class="css-m30wzm emqlr8s1"
       >
         <div
-          class="css-9w1isc e1gbpjfg0"
+          class="css-9w1isc erde2st0"
         >
           <div
-            class="css-uwfgm1 e1gbpjfg4"
+            class="css-uwfgm1 erde2st4"
           >
             Sports à la Une
           </div>
           <ul
-            class="css-ehk4yy e1gbpjfg1"
+            class="css-ehk4yy erde2st1"
           >
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-47egne e1juz1o51"
+                class="css-47egne eacic0h1"
                 data-test="desktop-football"
                 href="/football/"
               >
@@ -90,10 +90,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-47egne e1juz1o51"
+                class="css-47egne eacic0h1"
                 data-test="desktop-tennis"
                 href="/tennis/"
               >
@@ -101,10 +101,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-47egne e1juz1o51"
+                class="css-47egne eacic0h1"
                 data-test="desktop-rugby"
                 href="https://int.rugbyrama.fr/"
               >
@@ -112,10 +112,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-47egne e1juz1o51"
+                class="css-47egne eacic0h1"
                 data-test="desktop-auto-moto"
                 href="/auto-moto/"
               >
@@ -123,10 +123,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-47egne e1juz1o51"
+                class="css-47egne eacic0h1"
                 data-test="desktop-sports-dhiver"
                 href="/hiver/"
               >
@@ -134,10 +134,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-47egne e1juz1o51"
+                class="css-47egne eacic0h1"
                 data-test="desktop-basketball"
                 href="/basketball/"
               >
@@ -145,10 +145,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-47egne e1juz1o51"
+                class="css-47egne eacic0h1"
                 data-test="desktop-grands-recits"
                 href="/home_rub788.shtml"
               >
@@ -158,21 +158,21 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
           </ul>
         </div>
         <div
-          class="css-17pk9hj e1gbpjfg0"
+          class="css-17pk9hj erde2st0"
         >
           <div
-            class="css-uwfgm1 e1gbpjfg4"
+            class="css-uwfgm1 erde2st4"
           >
             Tous les sports
           </div>
           <ul
-            class="css-1xwddlu e1gbpjfg1"
+            class="css-1xwddlu erde2st1"
           >
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="desktop-athletisme"
                 href="/athletisme/"
               >
@@ -180,10 +180,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="desktop-auto-moto"
                 href="/auto-moto/"
               >
@@ -191,10 +191,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="desktop-basketball"
                 href="/basketball/"
               >
@@ -202,10 +202,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-boxe"
                 href="/boxe/"
               >
@@ -213,10 +213,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-course-hippique"
                 href="/course-hippique/"
               >
@@ -224,10 +224,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="desktop-cyclisme"
                 href="/cyclisme/"
               >
@@ -235,10 +235,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-equitation"
                 href="/equitation/"
               >
@@ -246,10 +246,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="desktop-escrime"
                 href="/escrime/"
               >
@@ -257,10 +257,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-f-1"
                 href="/formule-1/"
               >
@@ -268,10 +268,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="desktop-football"
                 href="/football/"
               >
@@ -279,10 +279,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="desktop-golf"
                 href="/golf/"
               >
@@ -290,10 +290,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-grands-recits"
                 href="/home_rub788.shtml"
               >
@@ -301,10 +301,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="desktop-handball"
                 href="/handball/"
               >
@@ -312,10 +312,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="desktop-jeux-olympiques"
                 href="/jeux-olympiques/"
               >
@@ -323,10 +323,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-judo"
                 href="/judo/"
               >
@@ -334,10 +334,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-moto-gp"
                 href="/moto/"
               >
@@ -345,10 +345,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-open-d-australie"
                 href="/tennis/open-d-australie/"
               >
@@ -356,10 +356,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="desktop-rugby"
                 href="https://int.rugbyrama.fr/"
               >
@@ -367,10 +367,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="desktop-sports-dhiver"
                 href="/hiver/"
               >
@@ -378,10 +378,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="desktop-tennis"
                 href="/tennis/"
               >
@@ -389,10 +389,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="desktop-volleyball"
                 href="/volleyball/"
               >
@@ -403,19 +403,19 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
         </div>
       </div>
       <div
-        class="css-yp83z2 e1ks8phc0"
+        class="css-1afmeks e1cn0scz0"
       >
         <div
-          class="css-1pwvd6w e1ks8phc1"
+          class="css-1pwvd6w e1cn0scz1"
         >
           Suivez nous sur :
         </div>
         <ul
-          class="css-14cm0l7 e1ks8phc2"
+          class="css-14cm0l7 e1cn0scz2"
         >
           <li>
             <a
-              class="css-cbsvqg e1ks8phc3"
+              class="css-h3iu64 e1cn0scz3"
               href="//facebook.com/EurosportFR"
               target="_self"
             >
@@ -431,7 +431,7 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
           </li>
           <li>
             <a
-              class="css-cbsvqg e1ks8phc3"
+              class="css-h3iu64 e1cn0scz3"
               href="//twitter.com/Eurosport_FR"
               target="_self"
             >
@@ -447,7 +447,7 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
           </li>
           <li>
             <a
-              class="css-cbsvqg e1ks8phc3"
+              class="css-h3iu64 e1cn0scz3"
               href="//www.snapchat.com/add/eurosportfr"
               target="_self"
             >
@@ -463,7 +463,7 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
           </li>
           <li>
             <a
-              class="css-cbsvqg e1ks8phc3"
+              class="css-h3iu64 e1cn0scz3"
               href="//www.instagram.com/eurosport"
               target="_self"
             >
@@ -498,13 +498,13 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
     class="css-ab8yd1 e1cerjsu2"
   >
     <div
-      class="css-nu402e e4f0oua0"
+      class="css-nu402e e15sgnhs0"
     >
       <ul
-        class="css-197wfeu e4f0oua1"
+        class="css-197wfeu e15sgnhs1"
       >
         <a
-          class="css-1ttakqu e4f0oua2"
+          class="css-1g7efpb e15sgnhs2"
           data-test="burger-logo"
           href=""
         >
@@ -515,10 +515,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
           />
         </a>
         <li
-          class="css-hwv33m e1ys3dz70"
+          class="css-hwv33m ez2m5u10"
         >
           <a
-            class="css-blukrc e1ys3dz71"
+            class="css-16jzcww ez2m5u11"
             href="#"
           >
             Tous les sports
@@ -527,46 +527,46 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
       </ul>
     </div>
     <div
-      class="css-1tnfqrp e11mgbmz0"
+      class="css-1tnfqrp emqlr8s0"
     >
       <div
-        class="css-sh3rt0 e1gbpjfg0"
+        class="css-sh3rt0 erde2st0"
         data-test="subnav-sports-mobile"
       >
         <div
-          class="css-yc8xj9 e1gbpjfg2"
+          class="css-yc8xj9 erde2st2"
         >
           <span
-            class="css-ta411o e1gbpjfg3"
+            class="css-ta411o erde2st3"
           />
         </div>
         <div
-          class="css-16j8vyh e1gbpjfg4"
+          class="css-16j8vyh erde2st4"
         />
         <ul
-          class="css-ehk4yy e1gbpjfg1"
+          class="css-ehk4yy erde2st1"
           data-test="mobile-menu-list"
         />
       </div>
       <div
-        class="css-m30wzm e11mgbmz1"
+        class="css-m30wzm emqlr8s1"
       >
         <div
-          class="css-9w1isc e1gbpjfg0"
+          class="css-9w1isc erde2st0"
         >
           <div
-            class="css-uwfgm1 e1gbpjfg4"
+            class="css-uwfgm1 erde2st4"
           >
             Sports à la Une
           </div>
           <ul
-            class="css-ehk4yy e1gbpjfg1"
+            class="css-ehk4yy erde2st1"
           >
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-47egne e1juz1o51"
+                class="css-47egne eacic0h1"
                 data-test="desktop-football"
                 href="/football/"
               >
@@ -574,10 +574,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-47egne e1juz1o51"
+                class="css-47egne eacic0h1"
                 data-test="desktop-tennis"
                 href="/tennis/"
               >
@@ -585,10 +585,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-47egne e1juz1o51"
+                class="css-47egne eacic0h1"
                 data-test="desktop-rugby"
                 href="https://int.rugbyrama.fr/"
               >
@@ -596,10 +596,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-47egne e1juz1o51"
+                class="css-47egne eacic0h1"
                 data-test="desktop-auto-moto"
                 href="/auto-moto/"
               >
@@ -607,10 +607,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-47egne e1juz1o51"
+                class="css-47egne eacic0h1"
                 data-test="desktop-sports-dhiver"
                 href="/hiver/"
               >
@@ -618,10 +618,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-47egne e1juz1o51"
+                class="css-47egne eacic0h1"
                 data-test="desktop-basketball"
                 href="/basketball/"
               >
@@ -629,10 +629,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-47egne e1juz1o51"
+                class="css-47egne eacic0h1"
                 data-test="desktop-grands-recits"
                 href="/home_rub788.shtml"
               >
@@ -642,21 +642,21 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
           </ul>
         </div>
         <div
-          class="css-17pk9hj e1gbpjfg0"
+          class="css-17pk9hj erde2st0"
         >
           <div
-            class="css-uwfgm1 e1gbpjfg4"
+            class="css-uwfgm1 erde2st4"
           >
             Tous les sports
           </div>
           <ul
-            class="css-1xwddlu e1gbpjfg1"
+            class="css-1xwddlu erde2st1"
           >
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="mobile-football"
                 href="/football/"
               >
@@ -664,10 +664,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="mobile-tennis"
                 href="/tennis/"
               >
@@ -675,10 +675,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="mobile-rugby"
                 href="https://int.rugbyrama.fr/"
               >
@@ -686,10 +686,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="mobile-auto-moto"
                 href="/auto-moto/"
               >
@@ -697,10 +697,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="mobile-sports-dhiver"
                 href="/hiver/"
               >
@@ -708,10 +708,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="mobile-basketball"
                 href="/basketball/"
               >
@@ -719,10 +719,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-grands-recits"
                 href="/home_rub788.shtml"
               >
@@ -730,10 +730,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-open-d-australie"
                 href="/tennis/open-d-australie/"
               >
@@ -741,10 +741,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-f-1"
                 href="/formule-1/"
               >
@@ -752,10 +752,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-moto-gp"
                 href="/moto/"
               >
@@ -763,10 +763,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="mobile-athletisme"
                 href="/athletisme/"
               >
@@ -774,10 +774,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="mobile-cyclisme"
                 href="/cyclisme/"
               >
@@ -785,10 +785,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="mobile-handball"
                 href="/handball/"
               >
@@ -796,10 +796,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="mobile-escrime"
                 href="/escrime/"
               >
@@ -807,10 +807,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-judo"
                 href="/judo/"
               >
@@ -818,10 +818,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-course-hippique"
                 href="/course-hippique/"
               >
@@ -829,10 +829,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="mobile-jeux-olympiques"
                 href="/jeux-olympiques/"
               >
@@ -840,10 +840,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-equitation"
                 href="/equitation/"
               >
@@ -851,10 +851,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-vsadxe e1juz1o51"
+                class="css-vsadxe eacic0h1"
                 data-test="desktop-boxe"
                 href="/boxe/"
               >
@@ -862,10 +862,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="mobile-volleyball"
                 href="/volleyball/"
               >
@@ -873,10 +873,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               </a>
             </li>
             <li
-              class="css-1qsdvd2 e1juz1o50"
+              class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 e1juz1o51"
+                class="css-2np603 eacic0h1"
                 data-test="mobile-golf"
                 href="/golf/"
               >
@@ -887,19 +887,19 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
         </div>
       </div>
       <div
-        class="css-yp83z2 e1ks8phc0"
+        class="css-1afmeks e1cn0scz0"
       >
         <div
-          class="css-1pwvd6w e1ks8phc1"
+          class="css-1pwvd6w e1cn0scz1"
         >
           Suivez nous sur :
         </div>
         <ul
-          class="css-14cm0l7 e1ks8phc2"
+          class="css-14cm0l7 e1cn0scz2"
         >
           <li>
             <a
-              class="css-cbsvqg e1ks8phc3"
+              class="css-h3iu64 e1cn0scz3"
               href="//facebook.com/EurosportFR"
               target="_self"
             >
@@ -910,7 +910,7 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
           </li>
           <li>
             <a
-              class="css-cbsvqg e1ks8phc3"
+              class="css-h3iu64 e1cn0scz3"
               href="//twitter.com/Eurosport_FR"
               target="_self"
             >
@@ -921,7 +921,7 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
           </li>
           <li>
             <a
-              class="css-cbsvqg e1ks8phc3"
+              class="css-h3iu64 e1cn0scz3"
               href="//www.snapchat.com/add/eurosportfr"
               target="_self"
             >
@@ -932,7 +932,7 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
           </li>
           <li>
             <a
-              class="css-cbsvqg e1ks8phc3"
+              class="css-h3iu64 e1cn0scz3"
               href="//www.instagram.com/eurosport"
               target="_self"
             >
