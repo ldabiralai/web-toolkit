@@ -30,6 +30,8 @@ const StyledTabs = styled.ul`
 `;
 
 const StyledTabLogo = styled.a`
+  box-sizing: border-box;
+  padding: 0 25px 0 17px;
   order: 1;
   height: 53px;
   width: 100%;
@@ -43,6 +45,10 @@ const StyledTabLogo = styled.a`
   ${large(css`
     height: 157px;
   `)};
+
+  img {
+    width: 100%;
+  }
 `;
 
 const LeftMenu = ({

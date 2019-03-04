@@ -20,7 +20,7 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
         class="css-197wfeu e15sgnhs1"
       >
         <a
-          class="css-1g7efpb e15sgnhs2"
+          class="css-13qbkl8 e15sgnhs2"
           data-test="burger-logo"
           href=""
         >
@@ -504,7 +504,7 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
         class="css-197wfeu e15sgnhs1"
       >
         <a
-          class="css-1g7efpb e15sgnhs2"
+          class="css-13qbkl8 e15sgnhs2"
           data-test="burger-logo"
           href=""
         >
