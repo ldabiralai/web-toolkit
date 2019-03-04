@@ -5,13 +5,4 @@ import { BurgerIcon } from '../..';
 
 const indexStories = storiesOf('BurgerIcon', module);
 
-indexStories.add(
-  'default',
-  withInfo()(() => (
-    <BurgerIcon
-      onClick={e => {
-        e.preventDefault();
-      }}
-    />
-  ))
-);
+indexStories.add('default', withInfo()(() => <BurgerIcon onClick={() => {}} />));

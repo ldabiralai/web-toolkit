@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BurgerIcon /> render 1`] = `
+<Styled(a)
+  data-test="burger-menu"
+  onClick={[Function]}
+>
+  <Styled(div) />
+</Styled(a)>
+`;

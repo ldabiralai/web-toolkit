@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'react-emotion';
 import PropTypes from 'prop-types';
 
+import { coreLightMinus1 } from '../../colors';
 import { medium } from '../../breakpoints';
 
 const StyledBurger = styled.a`
@@ -13,8 +14,6 @@ const StyledBurger = styled.a`
   width: 20px;
   height: 14px;
   font-size: 0;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   box-shadow: none;
   border: none;
   cursor: pointer;
@@ -37,7 +36,7 @@ const StyledBurgerIcon = styled.div`
   left: 0;
   right: 0;
   height: 2px;
-  background: white;
+  background: ${coreLightMinus1};
   border-radius: 3px;
   &:before,
   &:after {
@@ -46,7 +45,7 @@ const StyledBurgerIcon = styled.div`
     left: 0;
     width: 100%;
     height: 2px;
-    background: white;
+    background: ${coreLightMinus1};
     border-radius: 3px;
     content: '';
   }
@@ -76,7 +75,7 @@ const StyledBurgerIcon = styled.div`
 `;
 
 const BurgerIcon = ({ onClick }) => (
-  <StyledBurger data-test="burger-menu" onClick={onClick} href="#">
+  <StyledBurger data-test="burger-menu" onClick={onClick}>
     <StyledBurgerIcon />
   </StyledBurger>
 );
