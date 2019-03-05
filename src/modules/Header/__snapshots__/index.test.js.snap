@@ -2,6 +2,7 @@
 
 exports[`Header renders Header 1`] = `
 <Styled(header)
+  data-test="header"
   homePageUrl=""
   menuItems={null}
   quantCastMenuLabel=""
@@ -19,6 +20,7 @@ exports[`Header renders Header 1`] = `
 
 exports[`Header with submenu renders Header with BurgerMenu 1`] = `
 <Styled(header)
+  data-test="header"
   homePageUrl=""
   menuItems={
     Object {

@@ -81,7 +81,7 @@ class Header extends Component {
     const { homePageUrl } = this.props;
 
     return (
-      <StyledWrapper {...this.props}>
+      <StyledWrapper {...this.props} data-test="header">
         {this.getBurgerMenu()}
         {this.getBurgerIcon()}
         <Link href={homePageUrl}>
