@@ -8,6 +8,7 @@ exports[`Header renders Header 1`] = `
   quantCastMenuLabel=""
 >
   <Link
+    data-test="header-logo"
     href=""
     linkComponent={[Function]}
   >
@@ -874,6 +875,7 @@ exports[`Header with submenu renders Header with BurgerMenu 1`] = `
     onClick={[Function]}
   />
   <Link
+    data-test="header-logo"
     href=""
     linkComponent={[Function]}
   >

@@ -84,7 +84,7 @@ class Header extends Component {
       <StyledWrapper {...this.props} data-test="header">
         {this.getBurgerMenu()}
         {this.getBurgerIcon()}
-        <Link href={homePageUrl}>
+        <Link href={homePageUrl} data-test="header-logo">
           <Logo />
         </Link>
       </StyledWrapper>
