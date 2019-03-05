@@ -100,61 +100,6 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
                 Tennis
               </a>
             </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-47egne eacic0h1"
-                data-test="desktop-rugby"
-                href="https://int.rugbyrama.fr/"
-              >
-                Rugby
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-47egne eacic0h1"
-                data-test="desktop-auto-moto"
-                href="/auto-moto/"
-              >
-                Auto-Moto
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-47egne eacic0h1"
-                data-test="desktop-sports-dhiver"
-                href="/hiver/"
-              >
-                Sports d'hiver
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-47egne eacic0h1"
-                data-test="desktop-basketball"
-                href="/basketball/"
-              >
-                Basketball
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-47egne eacic0h1"
-                data-test="desktop-grands-recits"
-                href="/home_rub788.shtml"
-              >
-                Grands Récits
-              </a>
-            </li>
           </ul>
         </div>
         <div
@@ -172,99 +117,11 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
               class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 eacic0h1"
-                data-test="desktop-athletisme"
-                href="/athletisme/"
-              >
-                Athlétisme
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="desktop-auto-moto"
-                href="/auto-moto/"
-              >
-                Auto-Moto
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="desktop-basketball"
-                href="/basketball/"
-              >
-                Basketball
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
                 class="css-vsadxe eacic0h1"
                 data-test="desktop-boxe"
                 href="/boxe/"
               >
                 Boxe
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-vsadxe eacic0h1"
-                data-test="desktop-course-hippique"
-                href="/course-hippique/"
-              >
-                Course hippique
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="desktop-cyclisme"
-                href="/cyclisme/"
-              >
-                Cyclisme
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-vsadxe eacic0h1"
-                data-test="desktop-equitation"
-                href="/equitation/"
-              >
-                Equitation
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="desktop-escrime"
-                href="/escrime/"
-              >
-                Escrime
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-vsadxe eacic0h1"
-                data-test="desktop-f-1"
-                href="/formule-1/"
-              >
-                F1
               </a>
             </li>
             <li
@@ -283,83 +140,6 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
             >
               <a
                 class="css-2np603 eacic0h1"
-                data-test="desktop-golf"
-                href="/golf/"
-              >
-                Golf
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-vsadxe eacic0h1"
-                data-test="desktop-grands-recits"
-                href="/home_rub788.shtml"
-              >
-                Grands Récits
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="desktop-handball"
-                href="/handball/"
-              >
-                Handball
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="desktop-jeux-olympiques"
-                href="/jeux-olympiques/"
-              >
-                Jeux Olympiques
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-vsadxe eacic0h1"
-                data-test="desktop-judo"
-                href="/judo/"
-              >
-                Judo
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-vsadxe eacic0h1"
-                data-test="desktop-moto-gp"
-                href="/moto/"
-              >
-                MotoGP
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-vsadxe eacic0h1"
-                data-test="desktop-open-d-australie"
-                href="/tennis/open-d-australie/"
-              >
-                Open d'Australie
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
                 data-test="desktop-rugby"
                 href="https://int.rugbyrama.fr/"
               >
@@ -371,32 +151,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
             >
               <a
                 class="css-2np603 eacic0h1"
-                data-test="desktop-sports-dhiver"
-                href="/hiver/"
-              >
-                Sports d'hiver
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
                 data-test="desktop-tennis"
                 href="/tennis/"
               >
                 Tennis
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="desktop-volleyball"
-                href="/volleyball/"
-              >
-                Volleyball
               </a>
             </li>
           </ul>
@@ -584,61 +342,6 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
                 Tennis
               </a>
             </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-47egne eacic0h1"
-                data-test="desktop-rugby"
-                href="https://int.rugbyrama.fr/"
-              >
-                Rugby
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-47egne eacic0h1"
-                data-test="desktop-auto-moto"
-                href="/auto-moto/"
-              >
-                Auto-Moto
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-47egne eacic0h1"
-                data-test="desktop-sports-dhiver"
-                href="/hiver/"
-              >
-                Sports d'hiver
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-47egne eacic0h1"
-                data-test="desktop-basketball"
-                href="/basketball/"
-              >
-                Basketball
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-47egne eacic0h1"
-                data-test="desktop-grands-recits"
-                href="/home_rub788.shtml"
-              >
-                Grands Récits
-              </a>
-            </li>
           </ul>
         </div>
         <div
@@ -689,198 +392,11 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
               class="css-1qsdvd2 eacic0h0"
             >
               <a
-                class="css-2np603 eacic0h1"
-                data-test="mobile-auto-moto"
-                href="/auto-moto/"
-              >
-                Auto-Moto
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="mobile-sports-dhiver"
-                href="/hiver/"
-              >
-                Sports d'hiver
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="mobile-basketball"
-                href="/basketball/"
-              >
-                Basketball
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-vsadxe eacic0h1"
-                data-test="desktop-grands-recits"
-                href="/home_rub788.shtml"
-              >
-                Grands Récits
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-vsadxe eacic0h1"
-                data-test="desktop-open-d-australie"
-                href="/tennis/open-d-australie/"
-              >
-                Open d'Australie
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-vsadxe eacic0h1"
-                data-test="desktop-f-1"
-                href="/formule-1/"
-              >
-                F1
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-vsadxe eacic0h1"
-                data-test="desktop-moto-gp"
-                href="/moto/"
-              >
-                MotoGP
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="mobile-athletisme"
-                href="/athletisme/"
-              >
-                Athlétisme
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="mobile-cyclisme"
-                href="/cyclisme/"
-              >
-                Cyclisme
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="mobile-handball"
-                href="/handball/"
-              >
-                Handball
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="mobile-escrime"
-                href="/escrime/"
-              >
-                Escrime
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-vsadxe eacic0h1"
-                data-test="desktop-judo"
-                href="/judo/"
-              >
-                Judo
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-vsadxe eacic0h1"
-                data-test="desktop-course-hippique"
-                href="/course-hippique/"
-              >
-                Course hippique
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="mobile-jeux-olympiques"
-                href="/jeux-olympiques/"
-              >
-                Jeux Olympiques
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-vsadxe eacic0h1"
-                data-test="desktop-equitation"
-                href="/equitation/"
-              >
-                Equitation
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
                 class="css-vsadxe eacic0h1"
                 data-test="desktop-boxe"
                 href="/boxe/"
               >
                 Boxe
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="mobile-volleyball"
-                href="/volleyball/"
-              >
-                Volleyball
-              </a>
-            </li>
-            <li
-              class="css-1qsdvd2 eacic0h0"
-            >
-              <a
-                class="css-2np603 eacic0h1"
-                data-test="mobile-golf"
-                href="/golf/"
-              >
-                Golf
               </a>
             </li>
           </ul>

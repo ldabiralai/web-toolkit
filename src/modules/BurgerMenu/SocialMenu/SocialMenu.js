@@ -75,4 +75,6 @@ SocialMenu.propTypes = {
   isMobile: PropTypes.bool,
 };
 
+SocialMenu.displayName = 'SocialMenu';
+
 export default SocialMenu;

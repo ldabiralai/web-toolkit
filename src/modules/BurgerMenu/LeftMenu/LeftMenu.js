@@ -92,7 +92,6 @@ const LeftMenu = ({
 );
 
 LeftMenu.defaultProps = {
-  quantCastMenuLabel: '',
   homePageUrl: '#',
 };
 
@@ -104,7 +103,9 @@ LeftMenu.propTypes = {
   onMenuSelected: PropTypes.func.isRequired,
   isMobileMenu: PropTypes.bool.isRequired,
   homePageUrl: PropTypes.string,
-  quantCastMenuLabel: PropTypes.string,
+  quantCastMenuLabel: PropTypes.string.isRequired,
 };
+
+LeftMenu.displayName = 'LeftMenu';
 
 export default LeftMenu;

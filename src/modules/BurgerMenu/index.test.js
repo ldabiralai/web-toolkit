@@ -8,13 +8,31 @@ headerMock.items = [headerMock.items[1]];
 describe('<BurgerMenu />', () => {
   it('renders with expected snapshot on mobile 1', () => {
     expect(
-      render(<BurgerMenu isOpen onClose={jest.fn()} homePageUrl="" header={headerMock} isMobileMenu />)
+      render(
+        <BurgerMenu
+          isOpen
+          onClose={jest.fn()}
+          homePageUrl=""
+          header={headerMock}
+          isMobileMenu
+          quantCastMenuLabel="privacy"
+        />
+      )
     ).toMatchSnapshot();
   });
 
   it('renders with expected snapshot on desktop', () => {
     expect(
-      render(<BurgerMenu isOpen onClose={jest.fn()} homePageUrl="" header={headerMock} isMobileMenu={false} />)
+      render(
+        <BurgerMenu
+          isOpen
+          onClose={jest.fn()}
+          homePageUrl=""
+          header={headerMock}
+          isMobileMenu={false}
+          quantCastMenuLabel="privacy"
+        />
+      )
     ).toMatchSnapshot();
   });
 });
@@ -24,7 +42,16 @@ describe('required `isMobileMenu` prop is injected to <BurgerMenu /> by default'
 
   it('has `isMobileMenu` prop defined', () => {
     expect(
-      shallow(<BurgerMenuWithMedia header={headerMock} onClose={jest.fn()} homePageUrl="" isOpen />)
+      shallow(
+        <BurgerMenuWithMedia
+          header={headerMock}
+          onClose={jest.fn()}
+          homePageUrl=""
+          isOpen
+          quantCastMenuLabel=""
+          isMobileMenu={false}
+        />
+      )
         .find(BurgerMenu)
         .prop('isMobileMenu')
     ).toBe(true);
