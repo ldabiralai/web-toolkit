@@ -140,4 +140,6 @@ RightMenu.propTypes = {
   selectedMenuId: PropTypes.number,
 };
 
+RightMenu.displayName = 'RightMenu';
+
 export default RightMenu;

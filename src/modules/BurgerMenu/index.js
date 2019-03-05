@@ -56,7 +56,7 @@ export class BurgerMenu extends React.Component {
   };
 
   render() {
-    const { header, onClose, isOpen, isMobileMenu, homePageUrl } = this.props;
+    const { header, onClose, isOpen, isMobileMenu, homePageUrl, quantCastMenuLabel = '' } = this.props;
     const { selectedMenuId } = this.state;
 
     return (
@@ -69,6 +69,7 @@ export class BurgerMenu extends React.Component {
             selectedMenuId={selectedMenuId}
             onMenuSelected={this.onMenuSelected}
             homePageUrl={homePageUrl}
+            quantCastMenuLabel={quantCastMenuLabel}
           />
           <RightMenu isMobileMenu={isMobileMenu} header={header} selectedMenuId={selectedMenuId} />
         </StyledMenu>
@@ -89,6 +90,25 @@ BurgerMenu.propTypes = {
   isOpen: PropTypes.bool.isRequired,
   isMobileMenu: PropTypes.bool.isRequired,
   homePageUrl: PropTypes.string.isRequired,
+  quantCastMenuLabel: PropTypes.string.isRequired,
 };
 
-export default withMatchMedia(`(max-width: ${points.large - 1}px)`, 'isMobileMenu')(BurgerMenu);
+BurgerMenu.displayName = 'BurgerMenu';
+
+const BurgerMenuWithMatchMedia = withMatchMedia(`(max-width: ${points.large - 1}px)`, 'isMobileMenu')(BurgerMenu);
+
+BurgerMenuWithMatchMedia.propTypes = {
+  header: PropTypes.shape({
+    items: PropTypes.array,
+    socialItem: PropTypes.shape({
+      name: PropTypes.string,
+      sections: PropTypes.array,
+    }),
+  }).isRequired,
+  onClose: PropTypes.func.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  homePageUrl: PropTypes.string.isRequired,
+  quantCastMenuLabel: PropTypes.string.isRequired,
+};
+
+export default BurgerMenuWithMatchMedia;

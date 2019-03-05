@@ -54,7 +54,7 @@ class Header extends Component {
   };
 
   getBurgerMenu = () => {
-    const { menuItems, homePageUrl } = this.props;
+    const { menuItems, homePageUrl, quantCastMenuLabel = '' } = this.props;
     const { isBurgerMenuOpen } = this.state;
 
     if (!menuItems) return null;
@@ -72,6 +72,7 @@ class Header extends Component {
         onClose={this.toggleBurgerMenu}
         header={menuItems}
         homePageUrl={homePageUrl}
+        quantCastMenuLabel={quantCastMenuLabel}
       />
     );
   };
@@ -91,19 +92,29 @@ class Header extends Component {
   }
 }
 
+Header.displayName = 'Header';
+
 Header.defaultProps = {
   menuItems: null,
   homePageUrl: '',
+  quantCastMenuLabel: '',
 };
 
 Header.propTypes = {
   menuItems: PropTypes.shape({
-    items: PropTypes.array,
+    items: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired,
+        sections: PropTypes.array,
+      })
+    ).isRequired,
     socialItem: PropTypes.shape({
       name: PropTypes.string,
     }),
   }),
   homePageUrl: PropTypes.string,
+  quantCastMenuLabel: PropTypes.string,
 };
 
 export default Header;
