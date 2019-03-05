@@ -3,7 +3,11 @@ import React from 'react';
 import Logo from '.';
 
 describe('Logo', () => {
-  it('renders Logo', () => {
+  it('renders usual Logo by default', () => {
     expect(shallow(<Logo />)).toMatchSnapshot();
+  });
+
+  it('renders small Logo', () => {
+    expect(shallow(<Logo small />)).toMatchSnapshot();
   });
 });

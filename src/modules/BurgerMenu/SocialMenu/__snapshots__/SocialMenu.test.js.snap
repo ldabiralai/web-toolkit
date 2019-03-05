@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders with expected snapshot on desktop 1`] = `
+<Styled(div)>
+  <Styled(div)>
+    follow us on socials
+  </Styled(div)>
+  <Styled(ul)>
+    <li
+      key="Facebook"
+    >
+      <Styled(Link)
+        href="//facebook.com/EurosportFR"
+        linkComponent={[Function]}
+        target="_self"
+      >
+        <SocialIcon
+          iconText="Facebook"
+          iconType="facebook"
+        />
+      </Styled(Link)>
+    </li>
+    <li
+      key="Twitter"
+    >
+      <Styled(Link)
+        href="//twitter.com/Eurosport_FR"
+        linkComponent={[Function]}
+        target="_self"
+      >
+        <SocialIcon
+          iconText="Twitter"
+          iconType="twitter"
+        />
+      </Styled(Link)>
+    </li>
+    <li
+      key="Snapchat"
+    >
+      <Styled(Link)
+        href="//www.snapchat.com/add/eurosportfr"
+        linkComponent={[Function]}
+        target="_self"
+      >
+        <SocialIcon
+          iconText="Snapchat"
+          iconType="snapchat"
+        />
+      </Styled(Link)>
+    </li>
+    <li
+      key="Instagram"
+    >
+      <Styled(Link)
+        href="//www.instagram.com/eurosport"
+        linkComponent={[Function]}
+        target="_self"
+      >
+        <SocialIcon
+          iconText="Instagram"
+          iconType="instagram"
+        />
+      </Styled(Link)>
+    </li>
+  </Styled(ul)>
+</Styled(div)>
+`;
+
+exports[`renders with expected snapshot on mobile 1`] = `
+<Styled(div)>
+  <Styled(div)>
+    follow us on socials
+  </Styled(div)>
+  <Styled(ul)>
+    <li
+      key="Facebook"
+    >
+      <Styled(Link)
+        href="//facebook.com/EurosportFR"
+        linkComponent={[Function]}
+        target="_self"
+      >
+        <SocialIcon
+          iconText=""
+          iconType="facebook"
+        />
+      </Styled(Link)>
+    </li>
+    <li
+      key="Twitter"
+    >
+      <Styled(Link)
+        href="//twitter.com/Eurosport_FR"
+        linkComponent={[Function]}
+        target="_self"
+      >
+        <SocialIcon
+          iconText=""
+          iconType="twitter"
+        />
+      </Styled(Link)>
+    </li>
+    <li
+      key="Snapchat"
+    >
+      <Styled(Link)
+        href="//www.snapchat.com/add/eurosportfr"
+        linkComponent={[Function]}
+        target="_self"
+      >
+        <SocialIcon
+          iconText=""
+          iconType="snapchat"
+        />
+      </Styled(Link)>
+    </li>
+    <li
+      key="Instagram"
+    >
+      <Styled(Link)
+        href="//www.instagram.com/eurosport"
+        linkComponent={[Function]}
+        target="_self"
+      >
+        <SocialIcon
+          iconText=""
+          iconType="instagram"
+        />
+      </Styled(Link)>
+    </li>
+  </Styled(ul)>
+</Styled(div)>
+`;

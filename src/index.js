@@ -9,20 +9,25 @@ import ArrowLink from './elements/ArrowLink';
 import Link from './elements/Link';
 import ChannelIcon from './elements/ChannelIcon';
 import PlayIcon from './elements/PlayIcon';
+import BurgerIcon from './elements/BurgerIcon';
 import LiveLabel from './elements/LiveLabel';
 import Grid from './elements/Grid';
+import SocialIcon from './elements/SocialIcon';
+import Logo from './elements/Logo';
+
+import ArticleContent from './components/ArticleContent';
+import Carousel from './components/Carousel';
 import Cards from './components/Card';
 import Author from './components/Author';
+
 import Header from './modules/Header';
-import Logo from './elements/Logo';
 import Footer from './modules/Footer';
 import SubNavigation from './modules/SubNavigation';
 import Hero from './modules/Hero';
 import ContentListing from './modules/ContentListing';
-import ArticleContent from './components/ArticleContent';
 import Article from './modules/Article';
-import Carousel from './components/Carousel';
 import WatchBar from './modules/Watchbar';
+import BurgerMenu from './modules/BurgerMenu';
 
 export {
   Button,
@@ -49,4 +54,7 @@ export {
   Article,
   Carousel,
   WatchBar,
+  BurgerMenu,
+  BurgerIcon,
+  SocialIcon,
 };

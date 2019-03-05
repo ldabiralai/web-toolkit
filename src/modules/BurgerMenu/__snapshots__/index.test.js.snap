@@ -1,0 +1,949 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
+<div
+  class="css-tt17dr e1cerjsu0"
+  data-test="modal-container"
+>
+  <a
+    class="css-s4236c e1cerjsu1"
+    data-test="burger-menu-close"
+    href="#"
+  />
+  <div
+    class="css-ab8yd1 e1cerjsu2"
+  >
+    <div
+      class="css-nu402e e15sgnhs0"
+    >
+      <ul
+        class="css-197wfeu e15sgnhs1"
+      >
+        <a
+          class="css-13qbkl8 e15sgnhs2"
+          data-test="burger-logo"
+          href=""
+        >
+          <img
+            alt="Eurosport"
+            class="css-18ix71o eojfomz0"
+            src="eurosport.svg"
+          />
+        </a>
+        <li
+          class="css-hwv33m ez2m5u10"
+        >
+          <a
+            class="css-16jzcww ez2m5u11"
+            href="#"
+          >
+            Tous les sports
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="css-1tnfqrp emqlr8s0"
+    >
+      <div
+        class="css-sh3rt0 erde2st0"
+        data-test="subnav-sports-mobile"
+      >
+        <div
+          class="css-yc8xj9 erde2st2"
+        >
+          <span
+            class="css-ta411o erde2st3"
+          />
+        </div>
+        <div
+          class="css-16j8vyh erde2st4"
+        />
+        <ul
+          class="css-ehk4yy erde2st1"
+          data-test="mobile-menu-list"
+        />
+      </div>
+      <div
+        class="css-m30wzm emqlr8s1"
+      >
+        <div
+          class="css-9w1isc erde2st0"
+        >
+          <div
+            class="css-uwfgm1 erde2st4"
+          >
+            Sports à la Une
+          </div>
+          <ul
+            class="css-ehk4yy erde2st1"
+          >
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-47egne eacic0h1"
+                data-test="desktop-football"
+                href="/football/"
+              >
+                Football
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-47egne eacic0h1"
+                data-test="desktop-tennis"
+                href="/tennis/"
+              >
+                Tennis
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-47egne eacic0h1"
+                data-test="desktop-rugby"
+                href="https://int.rugbyrama.fr/"
+              >
+                Rugby
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-47egne eacic0h1"
+                data-test="desktop-auto-moto"
+                href="/auto-moto/"
+              >
+                Auto-Moto
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-47egne eacic0h1"
+                data-test="desktop-sports-dhiver"
+                href="/hiver/"
+              >
+                Sports d'hiver
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-47egne eacic0h1"
+                data-test="desktop-basketball"
+                href="/basketball/"
+              >
+                Basketball
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-47egne eacic0h1"
+                data-test="desktop-grands-recits"
+                href="/home_rub788.shtml"
+              >
+                Grands Récits
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="css-17pk9hj erde2st0"
+        >
+          <div
+            class="css-uwfgm1 erde2st4"
+          >
+            Tous les sports
+          </div>
+          <ul
+            class="css-1xwddlu erde2st1"
+          >
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="desktop-athletisme"
+                href="/athletisme/"
+              >
+                Athlétisme
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="desktop-auto-moto"
+                href="/auto-moto/"
+              >
+                Auto-Moto
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="desktop-basketball"
+                href="/basketball/"
+              >
+                Basketball
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-boxe"
+                href="/boxe/"
+              >
+                Boxe
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-course-hippique"
+                href="/course-hippique/"
+              >
+                Course hippique
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="desktop-cyclisme"
+                href="/cyclisme/"
+              >
+                Cyclisme
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-equitation"
+                href="/equitation/"
+              >
+                Equitation
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="desktop-escrime"
+                href="/escrime/"
+              >
+                Escrime
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-f-1"
+                href="/formule-1/"
+              >
+                F1
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="desktop-football"
+                href="/football/"
+              >
+                Football
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="desktop-golf"
+                href="/golf/"
+              >
+                Golf
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-grands-recits"
+                href="/home_rub788.shtml"
+              >
+                Grands Récits
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="desktop-handball"
+                href="/handball/"
+              >
+                Handball
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="desktop-jeux-olympiques"
+                href="/jeux-olympiques/"
+              >
+                Jeux Olympiques
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-judo"
+                href="/judo/"
+              >
+                Judo
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-moto-gp"
+                href="/moto/"
+              >
+                MotoGP
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-open-d-australie"
+                href="/tennis/open-d-australie/"
+              >
+                Open d'Australie
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="desktop-rugby"
+                href="https://int.rugbyrama.fr/"
+              >
+                Rugby
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="desktop-sports-dhiver"
+                href="/hiver/"
+              >
+                Sports d'hiver
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="desktop-tennis"
+                href="/tennis/"
+              >
+                Tennis
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="desktop-volleyball"
+                href="/volleyball/"
+              >
+                Volleyball
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="css-1afmeks e1cn0scz0"
+      >
+        <div
+          class="css-1pwvd6w e1cn0scz1"
+        >
+          Suivez nous sur :
+        </div>
+        <ul
+          class="css-14cm0l7 e1cn0scz2"
+        >
+          <li>
+            <a
+              class="css-h3iu64 e1cn0scz3"
+              href="//facebook.com/EurosportFR"
+              target="_self"
+            >
+              <span
+                class="css-5fkscy e18f09mm0"
+              />
+              <span
+                class="css-mbm9py e1862d8r0"
+              >
+                Facebook
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="css-h3iu64 e1cn0scz3"
+              href="//twitter.com/Eurosport_FR"
+              target="_self"
+            >
+              <span
+                class="css-1wskc65 e18f09mm3"
+              />
+              <span
+                class="css-mbm9py e1862d8r0"
+              >
+                Twitter
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="css-h3iu64 e1cn0scz3"
+              href="//www.snapchat.com/add/eurosportfr"
+              target="_self"
+            >
+              <span
+                class="css-mgiwac e18f09mm1"
+              />
+              <span
+                class="css-mbm9py e1862d8r0"
+              >
+                Snapchat
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="css-h3iu64 e1cn0scz3"
+              href="//www.instagram.com/eurosport"
+              target="_self"
+            >
+              <span
+                class="css-1b4f1e e18f09mm2"
+              />
+              <span
+                class="css-mbm9py e1862d8r0"
+              >
+                Instagram
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
+<div
+  class="css-tt17dr e1cerjsu0"
+  data-test="modal-container"
+>
+  <a
+    class="css-s4236c e1cerjsu1"
+    data-test="burger-menu-close"
+    href="#"
+  />
+  <div
+    class="css-ab8yd1 e1cerjsu2"
+  >
+    <div
+      class="css-nu402e e15sgnhs0"
+    >
+      <ul
+        class="css-197wfeu e15sgnhs1"
+      >
+        <a
+          class="css-13qbkl8 e15sgnhs2"
+          data-test="burger-logo"
+          href=""
+        >
+          <img
+            alt="Eurosport"
+            class="css-18ix71o eojfomz0"
+            src="eurosport.small.svg"
+          />
+        </a>
+        <li
+          class="css-hwv33m ez2m5u10"
+        >
+          <a
+            class="css-16jzcww ez2m5u11"
+            href="#"
+          >
+            Tous les sports
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="css-1tnfqrp emqlr8s0"
+    >
+      <div
+        class="css-sh3rt0 erde2st0"
+        data-test="subnav-sports-mobile"
+      >
+        <div
+          class="css-yc8xj9 erde2st2"
+        >
+          <span
+            class="css-ta411o erde2st3"
+          />
+        </div>
+        <div
+          class="css-16j8vyh erde2st4"
+        />
+        <ul
+          class="css-ehk4yy erde2st1"
+          data-test="mobile-menu-list"
+        />
+      </div>
+      <div
+        class="css-m30wzm emqlr8s1"
+      >
+        <div
+          class="css-9w1isc erde2st0"
+        >
+          <div
+            class="css-uwfgm1 erde2st4"
+          >
+            Sports à la Une
+          </div>
+          <ul
+            class="css-ehk4yy erde2st1"
+          >
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-47egne eacic0h1"
+                data-test="desktop-football"
+                href="/football/"
+              >
+                Football
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-47egne eacic0h1"
+                data-test="desktop-tennis"
+                href="/tennis/"
+              >
+                Tennis
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-47egne eacic0h1"
+                data-test="desktop-rugby"
+                href="https://int.rugbyrama.fr/"
+              >
+                Rugby
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-47egne eacic0h1"
+                data-test="desktop-auto-moto"
+                href="/auto-moto/"
+              >
+                Auto-Moto
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-47egne eacic0h1"
+                data-test="desktop-sports-dhiver"
+                href="/hiver/"
+              >
+                Sports d'hiver
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-47egne eacic0h1"
+                data-test="desktop-basketball"
+                href="/basketball/"
+              >
+                Basketball
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-47egne eacic0h1"
+                data-test="desktop-grands-recits"
+                href="/home_rub788.shtml"
+              >
+                Grands Récits
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="css-17pk9hj erde2st0"
+        >
+          <div
+            class="css-uwfgm1 erde2st4"
+          >
+            Tous les sports
+          </div>
+          <ul
+            class="css-1xwddlu erde2st1"
+          >
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="mobile-football"
+                href="/football/"
+              >
+                Football
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="mobile-tennis"
+                href="/tennis/"
+              >
+                Tennis
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="mobile-rugby"
+                href="https://int.rugbyrama.fr/"
+              >
+                Rugby
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="mobile-auto-moto"
+                href="/auto-moto/"
+              >
+                Auto-Moto
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="mobile-sports-dhiver"
+                href="/hiver/"
+              >
+                Sports d'hiver
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="mobile-basketball"
+                href="/basketball/"
+              >
+                Basketball
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-grands-recits"
+                href="/home_rub788.shtml"
+              >
+                Grands Récits
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-open-d-australie"
+                href="/tennis/open-d-australie/"
+              >
+                Open d'Australie
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-f-1"
+                href="/formule-1/"
+              >
+                F1
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-moto-gp"
+                href="/moto/"
+              >
+                MotoGP
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="mobile-athletisme"
+                href="/athletisme/"
+              >
+                Athlétisme
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="mobile-cyclisme"
+                href="/cyclisme/"
+              >
+                Cyclisme
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="mobile-handball"
+                href="/handball/"
+              >
+                Handball
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="mobile-escrime"
+                href="/escrime/"
+              >
+                Escrime
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-judo"
+                href="/judo/"
+              >
+                Judo
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-course-hippique"
+                href="/course-hippique/"
+              >
+                Course hippique
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="mobile-jeux-olympiques"
+                href="/jeux-olympiques/"
+              >
+                Jeux Olympiques
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-equitation"
+                href="/equitation/"
+              >
+                Equitation
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-vsadxe eacic0h1"
+                data-test="desktop-boxe"
+                href="/boxe/"
+              >
+                Boxe
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="mobile-volleyball"
+                href="/volleyball/"
+              >
+                Volleyball
+              </a>
+            </li>
+            <li
+              class="css-1qsdvd2 eacic0h0"
+            >
+              <a
+                class="css-2np603 eacic0h1"
+                data-test="mobile-golf"
+                href="/golf/"
+              >
+                Golf
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="css-1afmeks e1cn0scz0"
+      >
+        <div
+          class="css-1pwvd6w e1cn0scz1"
+        >
+          Suivez nous sur :
+        </div>
+        <ul
+          class="css-14cm0l7 e1cn0scz2"
+        >
+          <li>
+            <a
+              class="css-h3iu64 e1cn0scz3"
+              href="//facebook.com/EurosportFR"
+              target="_self"
+            >
+              <span
+                class="css-5fkscy e18f09mm0"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="css-h3iu64 e1cn0scz3"
+              href="//twitter.com/Eurosport_FR"
+              target="_self"
+            >
+              <span
+                class="css-1wskc65 e18f09mm3"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="css-h3iu64 e1cn0scz3"
+              href="//www.snapchat.com/add/eurosportfr"
+              target="_self"
+            >
+              <span
+                class="css-mgiwac e18f09mm1"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              class="css-h3iu64 e1cn0scz3"
+              href="//www.instagram.com/eurosport"
+              target="_self"
+            >
+              <span
+                class="css-1b4f1e e18f09mm2"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+`;

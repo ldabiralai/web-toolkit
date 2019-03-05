@@ -1,6 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Logo renders Logo 1`] = `
+exports[`Logo renders small Logo 1`] = `
+<Styled(img)
+  alt="Eurosport"
+  src="eurosport.small.svg"
+/>
+`;
+
+exports[`Logo renders usual Logo by default 1`] = `
 <Styled(img)
   alt="Eurosport"
   src="eurosport.svg"
