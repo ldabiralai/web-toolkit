@@ -47,9 +47,19 @@ const StyledTabLogo = styled.a`
     height: 157px;
   `)};
 
-  img {
-    width: 100%;
+  &&& ${Logo.css} {
+    width: 20px;
+    height: 23px;
+    margin: 0 auto;
   }
+
+  ${large(css`
+    padding: 0;
+    &&& ${Logo.css} {
+      width: 140px;
+      margin: 0 auto;
+    }
+  `)}
 `;
 
 class LeftMenu extends Component {

@@ -20,13 +20,13 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
         class="css-197wfeu e15sgnhs1"
       >
         <a
-          class="css-13qbkl8 e15sgnhs2"
+          class="css-13rahiy e15sgnhs2"
           data-test="burger-logo"
           href=""
         >
           <img
             alt="Eurosport"
-            class="css-jwnmhx eojfomz0"
+            class="css-nm00j4 eojfomz0"
             src="eurosport.svg"
           />
         </a>
@@ -262,13 +262,13 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
         class="css-197wfeu e15sgnhs1"
       >
         <a
-          class="css-13qbkl8 e15sgnhs2"
+          class="css-13rahiy e15sgnhs2"
           data-test="burger-logo"
           href=""
         >
           <img
             alt="Eurosport"
-            class="css-jwnmhx eojfomz0"
+            class="css-nm00j4 eojfomz0"
             src="eurosport.small.svg"
           />
         </a>

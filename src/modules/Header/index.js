@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import styled, { css, injectGlobal } from 'react-emotion';
 import PropTypes from 'prop-types';
 
-import * as breakpoints from '../../breakpoints';
-import * as colors from '../../colors';
-
-import { Link, Logo, BurgerMenu, BurgerIcon } from '../..';
+import { Link, Logo, BurgerMenu, BurgerIcon, breakpoints, colors } from '../..';
 
 const StyledWrapper = styled.header`
   box-sizing: border-box;
@@ -22,12 +19,18 @@ const StyledWrapper = styled.header`
     `}
   display: flex;
   align-items: center;
+
   ${breakpoints.medium(css`
-    height: 60px;
-  `)};
-  ${breakpoints.large(css`
     height: 70px;
   `)};
+
+  ${Logo.css} {
+    margin: 4px 15px 0 0px;
+
+    ${breakpoints.medium(css`
+      margin: 0 25px 0 17px;
+    `)}
+  }
 `;
 
 class Header extends Component {

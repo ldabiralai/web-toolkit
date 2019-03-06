@@ -8,11 +8,12 @@ import eurosportSmall from '../../assets/eurosport.small.svg';
 
 const StyledLogo = styled.img`
   box-sizing: border-box;
-  width: 131px;
-  height: 16px;
+  width: 147px;
+  height: 17px;
+
   ${breakpoints.medium(css`
-    width: 197px;
-    height: 24px;
+    width: 213px;
+    height: 26px;
   `)};
 
   ${props =>
@@ -20,11 +21,12 @@ const StyledLogo = styled.img`
     css`
       width: 20px;
       height: 23px;
-      margin: 15px 0;
     `}
 `;
 
 const Logo = ({ small }) => <StyledLogo src={small ? eurosportSmall : eurosport} alt="Eurosport" />;
+
+Logo.css = StyledLogo;
 
 Logo.defaultProps = {
   small: false,
