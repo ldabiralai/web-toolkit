@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable no-underscore-dangle */
+import React, { Component } from 'react';
 import styled, { css } from 'react-emotion';
 import { rgba } from 'polished';
 import PropTypes from 'prop-types';
@@ -51,45 +52,63 @@ const StyledTabLogo = styled.a`
   }
 `;
 
-const LeftMenu = ({
-  header: { items },
-  selectedMenuId,
-  onMenuSelected,
-  isMobileMenu,
-  homePageUrl,
-  quantCastMenuLabel,
-}) => (
-  <StyledWrapper>
-    <StyledTabs>
-      <StyledTabLogo href={homePageUrl} data-test="burger-logo">
-        <Logo small={isMobileMenu} />
-      </StyledTabLogo>
-      {items &&
-        items.map(item => (
-          <LeftMenuItem
-            isMobileMenu={isMobileMenu}
-            selectedMenuId={selectedMenuId}
-            onMenuSelected={onMenuSelected}
-            key={item.id}
-            item={item}
-          />
-        ))}
-      {// eslint-disable-next-line
-      quantCastMenuLabel && window.__cmp && (
-        <LeftMenuItem
-          key="privacy"
-          data-test="burger-privacy"
-          selectedMenuId={selectedMenuId}
-          onClick={() => {
-            // eslint-disable-next-line
-            window.__cmp('displayConsentUi', 2, true);
-          }}
-          item={{ id: 1234, name: quantCastMenuLabel }}
-        />
-      )}
-    </StyledTabs>
-  </StyledWrapper>
-);
+class LeftMenu extends Component {
+  state = {
+    isQuantCastEnabled: false,
+  };
+
+  componentDidMount() {
+    this.setState({
+      isQuantCastEnabled: typeof window.__cmp !== 'undefined',
+    });
+  }
+
+  render() {
+    const {
+      header: { items },
+      selectedMenuId,
+      onMenuSelected,
+      isMobileMenu,
+      homePageUrl,
+      quantCastMenuLabel,
+    } = this.props;
+
+    const { isQuantCastEnabled } = this.state;
+
+    return (
+      <StyledWrapper>
+        <StyledTabs>
+          <StyledTabLogo href={homePageUrl} data-test="burger-logo">
+            <Logo small={isMobileMenu} />
+          </StyledTabLogo>
+          {items &&
+            items.map(item => (
+              <LeftMenuItem
+                isMobileMenu={isMobileMenu}
+                selectedMenuId={selectedMenuId}
+                onMenuSelected={onMenuSelected}
+                key={item.id}
+                item={item}
+              />
+            ))}
+          {// eslint-disable-next-line
+          isQuantCastEnabled && quantCastMenuLabel && (
+            <LeftMenuItem
+              key="privacy"
+              data-test="burger-privacy"
+              selectedMenuId={selectedMenuId}
+              onClick={() => {
+                // eslint-disable-next-line
+                window.__cmp('displayConsentUi', 2, true);
+              }}
+              item={{ id: 1234, name: quantCastMenuLabel }}
+            />
+          )}
+        </StyledTabs>
+      </StyledWrapper>
+    );
+  }
+}
 
 LeftMenu.defaultProps = {
   homePageUrl: '#',

@@ -6,12 +6,12 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
   data-test="modal-container"
 >
   <a
-    class="css-s4236c e1cerjsu1"
+    class="css-17becks e1cerjsu1"
     data-test="burger-menu-close"
     href="#"
   />
   <div
-    class="css-ab8yd1 e1cerjsu2"
+    class="css-1v16yxg e1cerjsu2"
   >
     <div
       class="css-nu402e e15sgnhs0"
@@ -26,7 +26,7 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
         >
           <img
             alt="Eurosport"
-            class="css-18ix71o eojfomz0"
+            class="css-jwnmhx eojfomz0"
             src="eurosport.svg"
           />
         </a>
@@ -248,12 +248,12 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
   data-test="modal-container"
 >
   <a
-    class="css-s4236c e1cerjsu1"
+    class="css-17becks e1cerjsu1"
     data-test="burger-menu-close"
     href="#"
   />
   <div
-    class="css-ab8yd1 e1cerjsu2"
+    class="css-1v16yxg e1cerjsu2"
   >
     <div
       class="css-nu402e e15sgnhs0"
@@ -268,7 +268,7 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
         >
           <img
             alt="Eurosport"
-            class="css-18ix71o eojfomz0"
+            class="css-jwnmhx eojfomz0"
             src="eurosport.small.svg"
           />
         </a>

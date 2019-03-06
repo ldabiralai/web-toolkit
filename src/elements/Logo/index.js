@@ -7,6 +7,7 @@ import eurosport from '../../assets/eurosport.svg';
 import eurosportSmall from '../../assets/eurosport.small.svg';
 
 const StyledLogo = styled.img`
+  box-sizing: border-box;
   width: 131px;
   height: 16px;
   ${breakpoints.medium(css`

@@ -27,13 +27,14 @@ const StyledModal = styled.div`
 `;
 
 const StyledButtonClosed = styled.a`
+  box-sizing: border-box;
   position: absolute;
   right: 0;
   top: 0;
   width: 20px;
   height: 20px;
   z-index: 10;
-  padding: 15px;
+  margin: 15px;
   background: url(${Cross}) no-repeat center center;
   background-size: 20px 20px;
   &:hover {
@@ -42,6 +43,7 @@ const StyledButtonClosed = styled.a`
 `;
 
 const StyledMenu = styled.div`
+  box-sizing: border-box;
   display: flex;
   height: 100%;
 `;

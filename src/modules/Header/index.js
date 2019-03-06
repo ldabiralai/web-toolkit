@@ -8,6 +8,7 @@ import * as colors from '../../colors';
 import { Link, Logo, BurgerMenu, BurgerIcon } from '../..';
 
 const StyledWrapper = styled.header`
+  box-sizing: border-box;
   background: ${colors.brandBase};
   height: 50px;
   ${props =>
