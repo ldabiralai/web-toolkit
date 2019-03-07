@@ -2,7 +2,20 @@ import React, { Component } from 'react';
 import styled, { css, injectGlobal } from 'react-emotion';
 import PropTypes from 'prop-types';
 
-import { Link, Logo, BurgerMenu, BurgerIcon, breakpoints, colors } from '../..';
+import { Link, Logo, BurgerMenu, BurgerIcon, breakpoints, colors, Button } from '../..';
+
+const StyledButton = styled(Button)`
+  margin-left: auto;
+  margin-right: 11px;
+  font-size: 8px;
+  line-height: 10px;
+  padding: 8px 11px;
+  ${breakpoints.medium(css`
+    font-size: 12px;
+    line-height: 15px;
+    padding: 12px 24px;
+  `)}
+`;
 
 const StyledWrapper = styled.header`
   box-sizing: border-box;
@@ -82,7 +95,7 @@ class Header extends Component {
   };
 
   render() {
-    const { homePageUrl } = this.props;
+    const { homePageUrl, cta } = this.props;
 
     return (
       <StyledWrapper {...this.props} data-test="header">
@@ -91,6 +104,11 @@ class Header extends Component {
         <Link href={homePageUrl} data-test="header-logo">
           <Logo />
         </Link>
+        {cta && (
+          <StyledButton href={cta.link} data-test="header-cta">
+            {cta.label}
+          </StyledButton>
+        )}
       </StyledWrapper>
     );
   }

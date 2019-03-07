@@ -19,6 +19,38 @@ exports[`Header renders Header 1`] = `
 </Styled(header)>
 `;
 
+exports[`Header with cta renders Header with cta 1`] = `
+<Styled(header)
+  cta={
+    Object {
+      "label": "subscribe",
+      "link": "www.eurosport.fr",
+    }
+  }
+  data-test="header"
+  homePageUrl=""
+  menuItems={null}
+  quantCastMenuLabel=""
+>
+  <Link
+    data-test="header-logo"
+    href=""
+    linkComponent={[Function]}
+  >
+    <Logo
+      small={false}
+    />
+  </Link>
+  <Styled(ArrowLink)
+    data-test="header-cta"
+    href="www.eurosport.fr"
+    type="primary"
+  >
+    subscribe
+  </Styled(ArrowLink)>
+</Styled(header)>
+`;
+
 exports[`Header with submenu renders Header with BurgerMenu 1`] = `
 <Styled(header)
   data-test="header"

@@ -27,6 +27,14 @@ describe('Header', () => {
     });
   });
 
+  describe('with cta', () => {
+    it('renders Header with cta', () => {
+      const cta = { link: 'www.eurosport.fr', label: 'subscribe' };
+      const wrapper = shallow(<Header cta={cta} />);
+      expect(wrapper).toMatchSnapshot();
+    });
+  });
+
   it('should accept other props', () => {
     const component = shallow(<Header data-test-id="header" />);
 
