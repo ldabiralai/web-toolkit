@@ -7,6 +7,7 @@ import { Header } from '../..';
 
 import headerMenu from '../BurgerMenu/mocks/header';
 
+const cta = { link: 'www.eurosport.fr', label: 'subscribe' };
 storiesOf('Header', module)
   .add('default', withInfo()(() => <Header />))
   .add(
@@ -18,6 +19,20 @@ storiesOf('Header', module)
           homePageUrl={text('homePageUrl', 'https://www.eurosport.com')}
           quantCastMenuLabel={text('quantCastMenuLabel', 'privacy settings')}
           menuItems={object('menuItems', headerMenu)}
+        />
+      );
+    })
+  )
+  .add(
+    'with CTA',
+    withInfo()(() => {
+      window.__cmp = {};
+      return (
+        <Header
+          homePageUrl={text('homePageUrl', 'https://www.eurosport.com')}
+          quantCastMenuLabel={text('quantCastMenuLabel', 'privacy settings')}
+          menuItems={object('menuItems', headerMenu)}
+          cta={object('cta', cta)}
         />
       );
     })
