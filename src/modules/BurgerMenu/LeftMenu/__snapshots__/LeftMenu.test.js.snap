@@ -1,46 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`quantcast privacy integration does not render quantcast 1`] = `
-<Styled(div)>
-  <Styled(ul)>
-    <Styled(a)
-      data-test="burger-logo"
-      href="http://www.google.com"
-    >
-      <Logo
-        small={false}
-      />
-    </Styled(a)>
-  </Styled(ul)>
-</Styled(div)>
-`;
-
 exports[`render renders with expected snapshot for desktop 1`] = `
-<Styled(div)>
-  <Styled(ul)>
-    <Styled(a)
-      data-test="burger-logo"
-      href="http://www.google.com"
-    >
-      <Logo
-        small={false}
-      />
-    </Styled(a)>
-  </Styled(ul)>
-</Styled(div)>
+<Styled(ul)>
+  <Styled(a)
+    data-test="burger-logo"
+    href="http://www.google.com"
+  >
+    <Logo
+      small={false}
+    />
+  </Styled(a)>
+  <LeftMenuItem
+    isMobileMenu={false}
+    item={
+      Object {
+        "id": 2,
+        "name": "test",
+        "sections": Array [],
+      }
+    }
+    key="2"
+    onMenuSelected={[MockFunction]}
+    selectedMenuId={2}
+  />
+</Styled(ul)>
 `;
 
 exports[`render renders with expected snapshot for mobile 1`] = `
-<Styled(div)>
-  <Styled(ul)>
-    <Styled(a)
-      data-test="burger-logo"
-      href="http://www.google.com"
-    >
-      <Logo
-        small={true}
-      />
-    </Styled(a)>
-  </Styled(ul)>
-</Styled(div)>
+<Styled(ul)>
+  <Styled(a)
+    data-test="burger-logo"
+    href="http://www.google.com"
+  >
+    <Logo
+      small={true}
+    />
+  </Styled(a)>
+  <LeftMenuItem
+    isMobileMenu={true}
+    item={
+      Object {
+        "id": 2,
+        "name": "test",
+        "sections": Array [],
+      }
+    }
+    key="2"
+    onMenuSelected={[MockFunction]}
+    selectedMenuId={2}
+  />
+</Styled(ul)>
 `;

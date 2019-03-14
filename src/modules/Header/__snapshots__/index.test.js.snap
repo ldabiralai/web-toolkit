@@ -5,7 +5,6 @@ exports[`Header renders Header 1`] = `
   data-test="header"
   homePageUrl=""
   menuItems={null}
-  quantCastMenuLabel=""
 >
   <Link
     data-test="header-logo"
@@ -30,7 +29,6 @@ exports[`Header with cta renders Header with cta 1`] = `
   data-test="header"
   homePageUrl=""
   menuItems={null}
-  quantCastMenuLabel=""
 >
   <Link
     data-test="header-logo"
@@ -56,415 +54,1152 @@ exports[`Header with submenu renders Header with BurgerMenu 1`] = `
   data-test="header"
   homePageUrl=""
   menuItems={
-    Object {
-      "items": Array [
-        Object {
-          "id": 1,
-          "isBottom": false,
-          "isWatch": false,
-          "items": Array [],
-          "link": Object {
-            "blank": false,
-            "url": "/",
+    Array [
+      Object {
+        "id": 4,
+        "isWatch": true,
+        "link": Object {
+          "url": "/watch-eurosport-live-stream.shtml",
+        },
+        "name": "Watch Eurosport",
+        "sections": Array [
+          Object {
+            "items": Array [
+              Object {
+                "link": Object {
+                  "url": "/watch-eurosport-live-stream.shtml",
+                },
+                "name": "Watch Home",
+              },
+              Object {
+                "link": Object {
+                  "url": "/eurosport-tv-schedule.shtml",
+                },
+                "name": "TV guide",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.co.uk/watch-eurosport-how.shtml",
+                },
+                "name": "How to get Eurosport",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.co.uk/watch-eurosport-how.shtml",
+                },
+                "name": "Don't miss on Eurosport",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.co.uk/watch-eurosport-how.shtml",
+                },
+                "name": "Upcoming Eurosport events",
+              },
+            ],
+            "name": "Watch",
           },
-          "name": "Accueil",
+        ],
+        "shortName": "Watch",
+      },
+      Object {
+        "id": 1,
+        "link": Object {
+          "url": "/",
         },
-        Object {
-          "id": 2,
-          "isBottom": false,
-          "isWatch": false,
-          "items": Array [],
-          "menuType": "sports",
-          "name": "Tous les sports",
-          "sections": Array [
-            Object {
-              "columnType": "popular-sports",
-              "items": Array [
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
-                  "link": Object {
-                    "blank": false,
-                    "url": "/football/",
-                  },
-                  "name": "Football",
+        "name": "Home",
+      },
+      Object {
+        "id": 2,
+        "menuType": "sports",
+        "name": "All sports",
+        "sections": Array [
+          Object {
+            "columnType": "popular-sports",
+            "items": Array [
+              Object {
+                "link": Object {
+                  "url": "/football/",
                 },
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
-                  "link": Object {
-                    "blank": false,
-                    "url": "/tennis/",
-                  },
-                  "name": "Tennis",
+                "name": "Football",
+              },
+              Object {
+                "link": Object {
+                  "url": "/olympics/",
                 },
-              ],
-              "name": "Sports à la Une",
-            },
-            Object {
-              "columnType": "all-sports",
-              "items": Array [
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [
-                    Object {
-                      "isBottom": false,
-                      "isWatch": false,
-                      "items": Array [],
-                      "link": Object {
-                        "blank": false,
-                        "url": "/football/",
-                      },
-                      "name": "Accueil football",
-                    },
-                    Object {
-                      "isBottom": false,
-                      "isWatch": false,
-                      "items": Array [],
-                      "link": Object {
-                        "blank": false,
-                        "url": "/football/ligue-1/",
-                      },
-                      "name": "Ligue 1",
-                    },
-                  ],
-                  "link": Object {
-                    "blank": false,
-                    "url": "/football/",
-                  },
-                  "name": "Football",
+                "name": "Olympics",
+              },
+              Object {
+                "link": Object {
+                  "url": "/winter-sports/",
                 },
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [
-                    Object {
-                      "isBottom": false,
-                      "isWatch": false,
-                      "items": Array [],
-                      "link": Object {
-                        "blank": false,
-                        "url": "/tennis/",
-                      },
-                      "name": "Accueil tennis",
-                    },
-                    Object {
-                      "isBottom": false,
-                      "isWatch": false,
-                      "items": Array [],
-                      "link": Object {
-                        "blank": false,
-                        "url": "/tennis/open-d-australie/",
-                      },
-                      "name": "Open d'Australie",
-                    },
-                    Object {
-                      "isBottom": false,
-                      "isWatch": false,
-                      "items": Array [],
-                      "link": Object {
-                        "blank": false,
-                        "url": "/tennis/roland-garros/",
-                      },
-                      "name": "Roland-Garros",
-                    },
-                  ],
-                  "link": Object {
-                    "blank": false,
-                    "url": "/tennis/",
-                  },
-                  "name": "Tennis",
+                "name": "Winter Sports",
+              },
+              Object {
+                "link": Object {
+                  "url": "/tennis/",
                 },
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [
-                    Object {
-                      "isBottom": false,
-                      "isWatch": false,
-                      "items": Array [],
-                      "link": Object {
-                        "blank": false,
-                        "url": "https://int.rugbyrama.fr/",
-                      },
-                      "name": "Accueil rugby",
-                    },
-                    Object {
-                      "isBottom": false,
-                      "isWatch": false,
-                      "items": Array [],
-                      "link": Object {
-                        "blank": false,
-                        "url": "https://int.rugbyrama.fr/rugby/top-14/",
-                      },
-                      "name": "Top 14",
-                    },
-                    Object {
-                      "isBottom": false,
-                      "isWatch": false,
-                      "items": Array [],
-                      "link": Object {
-                        "blank": false,
-                        "url": "https://int.rugbyrama.fr/rugby/pro-d2/",
-                      },
-                      "name": "Pro D2",
-                    },
-                  ],
-                  "link": Object {
-                    "blank": false,
-                    "url": "https://int.rugbyrama.fr/",
-                  },
-                  "name": "Rugby",
+                "name": "Tennis",
+              },
+              Object {
+                "link": Object {
+                  "url": "/snooker/",
                 },
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
-                  "link": Object {
-                    "blank": false,
-                    "url": "/boxe/",
-                  },
-                  "name": "Boxe",
+                "name": "Snooker",
+              },
+              Object {
+                "link": Object {
+                  "url": "/allmotorsports/",
                 },
-              ],
-              "name": "Tous les sports",
-            },
-          ],
-        },
-        Object {
-          "id": 3,
-          "isBottom": false,
-          "isWatch": false,
-          "items": Array [],
-          "link": Object {
-            "blank": false,
-            "url": "https://int-video.eurosport.fr",
+                "name": "Motorsports",
+              },
+              Object {
+                "link": Object {
+                  "url": "/cycling/",
+                },
+                "name": "Cycling",
+              },
+            ],
+            "name": "Popular sports",
           },
-          "name": "Vidéos",
-        },
-        Object {
-          "id": 4,
-          "isBottom": false,
-          "isWatch": true,
-          "items": Array [],
-          "link": Object {
-            "blank": false,
-            "url": "/regardez-eurosport-en-direct.shtml",
+          Object {
+            "columnType": "all-sports",
+            "items": Array [
+              Object {
+                "items": Array [
+                  Object {
+                    "link": Object {
+                      "url": "/football/",
+                    },
+                    "name": "Home football",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/premier-league/",
+                    },
+                    "name": "Premier League",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/fa-cup/",
+                    },
+                    "name": "The Emirates FA Cup",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/league-cup/",
+                    },
+                    "name": "League Cup",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/champions-league/",
+                    },
+                    "name": "Champions League",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/europa-league/",
+                    },
+                    "name": "Europa League",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/transfers/",
+                    },
+                    "name": "Transfers",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/uefa-nations-league/",
+                    },
+                    "name": "UEFA Nations League",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/liga/",
+                    },
+                    "name": "Liga",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/bundesliga/",
+                    },
+                    "name": "Bundesliga",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/serie-a/",
+                    },
+                    "name": "Serie A",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/ligue-1/",
+                    },
+                    "name": "Ligue 1",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/world-cup/",
+                    },
+                    "name": "World Cup",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/african-cup-of-nations/",
+                    },
+                    "name": "Africa Cup of Nations",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/uefa-women-s-champions-league/",
+                    },
+                    "name": "Women's Champions League",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/championship/standingperson.shtml",
+                    },
+                    "name": "Championship",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/league-one/calendar-result.shtml",
+                    },
+                    "name": "League One",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/league-two/calendar-result.shtml",
+                    },
+                    "name": "League Two",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/scottish-premier-league/calendar-result.shtml",
+                    },
+                    "name": "Scottish Football",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/mls/",
+                    },
+                    "name": "MLS",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/euro/",
+                    },
+                    "name": "Euro 2016",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/copa-america/",
+                    },
+                    "name": "Copa América",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/football/countrylist.shtml",
+                    },
+                    "name": "National competitions",
+                  },
+                ],
+                "link": Object {
+                  "url": "/football/",
+                },
+                "name": "Football",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "link": Object {
+                      "url": "/olympics/",
+                    },
+                    "name": "Home olympics",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/olympics/youth-olympics-2018/youth-olympic-games.shtml",
+                    },
+                    "name": "Youth Olympics 2018",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/olympics/pyeongchang/2018/",
+                    },
+                    "name": "PyeongChang",
+                  },
+                ],
+                "link": Object {
+                  "url": "/olympics/",
+                },
+                "name": "Olympics",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "link": Object {
+                      "url": "/winter-sports/",
+                    },
+                    "name": "Home winter sports",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/alpine-skiing/",
+                    },
+                    "name": "Alpine Skiing",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/alpine-skiing/world-championships/",
+                    },
+                    "name": "World Championship",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/biathlon/",
+                    },
+                    "name": "Biathlon",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/nordic-combined/",
+                    },
+                    "name": "Nordic Combined",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/cross-country-skiing/",
+                    },
+                    "name": "Cross-Country Skiing",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/ski-jumping/",
+                    },
+                    "name": "Ski Jumping",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/ice-hockey/",
+                    },
+                    "name": "Ice Hockey",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/figure-skating/",
+                    },
+                    "name": "Figure Skating",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/curling/",
+                    },
+                    "name": "Curling",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/speed-skating/calendar-result_sea90.shtml",
+                    },
+                    "name": "Speed Skating",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/bobsleigh/",
+                    },
+                    "name": "Bobsleigh",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "https://int-video.eurosport.co.uk/winter-sports/",
+                    },
+                    "name": "Videos",
+                  },
+                ],
+                "link": Object {
+                  "url": "/winter-sports/",
+                },
+                "name": "Winter Sports",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "link": Object {
+                      "url": "/tennis/",
+                    },
+                    "name": "Home tennis",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/tennis/australian-open/",
+                    },
+                    "name": "Australian Open",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/tennis/roland-garros/",
+                    },
+                    "name": "French Open",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/tennis/wimbledon/",
+                    },
+                    "name": "Wimbledon",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/tennis/us-open/",
+                    },
+                    "name": "US Open",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/tennis/being-serena/",
+                    },
+                    "name": "Being Serena",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/tennis/atp/calendar-result.shtml",
+                    },
+                    "name": "ATP Calendar",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/tennis/atp/standing.shtml",
+                    },
+                    "name": "ATP Rankings",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/tennis/wta/calendar-result.shtml",
+                    },
+                    "name": "WTA Calendar",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/tennis/wta/standing.shtml",
+                    },
+                    "name": "WTA Rankings",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/tennis/davis-cup/",
+                    },
+                    "name": "Davis Cup",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/tennis/fed-cup/",
+                    },
+                    "name": "Fed-Cup",
+                  },
+                ],
+                "link": Object {
+                  "url": "/tennis/",
+                },
+                "name": "Tennis",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "link": Object {
+                      "url": "/snooker/",
+                    },
+                    "name": "Home snooker",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/snooker/world-championship/",
+                    },
+                    "name": "World Championship",
+                  },
+                ],
+                "link": Object {
+                  "url": "/snooker/",
+                },
+                "name": "Snooker",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "link": Object {
+                      "url": "/allmotorsports/",
+                    },
+                    "name": "Home motorsports",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/formula-1/",
+                    },
+                    "name": "F1",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/moto/",
+                    },
+                    "name": "MotoGP",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/formula-e/",
+                    },
+                    "name": "Formula E",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/british-superbikes/british-superbikes/",
+                    },
+                    "name": "BSB",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/superbikes/",
+                    },
+                    "name": "Superbikes",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/wrc/",
+                    },
+                    "name": "WRC",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/erc/",
+                    },
+                    "name": "ERC",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/wtcr/",
+                    },
+                    "name": "WTCR",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/wec/",
+                    },
+                    "name": "WEC",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/wec/24-heures-du-mans/",
+                    },
+                    "name": "24 hours of Le Mans",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/fim-ewc/",
+                    },
+                    "name": "FIM EWC",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/rally-raid/dakar/",
+                    },
+                    "name": "Dakar",
+                  },
+                ],
+                "link": Object {
+                  "url": "/allmotorsports/",
+                },
+                "name": "Motorsports",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "link": Object {
+                      "url": "/cycling/",
+                    },
+                    "name": "Home cycling",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/cycling/calendar-result.shtml",
+                    },
+                    "name": "Races – Results",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/cycling/vuelta-a-espana/",
+                    },
+                    "name": "Vuelta a España",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "https://video.eurosport.co.uk/cycling/video-channel/the-bradley-wiggins-show/",
+                    },
+                    "name": "The Bradley Wiggins Show",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "https://fantasy-cycling.eurosport.com/",
+                    },
+                    "name": "Cycling Fantasy",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "https://predictor-cycling.eurosport.com",
+                    },
+                    "name": "Cycling Predictor",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/cycling/tour-de-france/",
+                    },
+                    "name": "Tour de France",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/cycling/giro-d-italia/",
+                    },
+                    "name": "Giro d'Italia",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/cycling/world-championships/",
+                    },
+                    "name": "World Championships",
+                  },
+                ],
+                "link": Object {
+                  "url": "/cycling/",
+                },
+                "name": "Cycling",
+              },
+              Object {
+                "link": Object {
+                  "url": "/darts/",
+                },
+                "name": "Darts",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "link": Object {
+                      "url": "/athletics/",
+                    },
+                    "name": "Home athletics",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/athletics/diamond-league/",
+                    },
+                    "name": "Diamond League",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/athletics/world-athletics-championships/",
+                    },
+                    "name": "World Championships",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/athletics/world-indoor-championships/",
+                    },
+                    "name": "World Indoor Championships",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/athletics/european-championships/",
+                    },
+                    "name": "European Championships",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/athletics/european-indoor-championships/",
+                    },
+                    "name": "Euro Indoor Champs",
+                  },
+                ],
+                "link": Object {
+                  "url": "/athletics/",
+                },
+                "name": "Athletics",
+              },
+              Object {
+                "link": Object {
+                  "url": "/formula-1/",
+                },
+                "name": "F1",
+              },
+              Object {
+                "link": Object {
+                  "url": "/formula-e/",
+                },
+                "name": "Formula E",
+              },
+              Object {
+                "link": Object {
+                  "url": "/horse-racing/",
+                },
+                "name": "Horse Racing",
+              },
+              Object {
+                "link": Object {
+                  "url": "/judo/",
+                },
+                "name": "Judo",
+              },
+              Object {
+                "link": Object {
+                  "url": "/equestrian/",
+                },
+                "name": "Equestrian",
+              },
+              Object {
+                "link": Object {
+                  "url": "/squash/",
+                },
+                "name": "Squash",
+              },
+              Object {
+                "link": Object {
+                  "url": "/cricket/",
+                },
+                "name": "Cricket",
+              },
+              Object {
+                "link": Object {
+                  "url": "/british-superbikes/",
+                },
+                "name": "BSB",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "link": Object {
+                      "url": "/golf/",
+                    },
+                    "name": "Home golf",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/golf/world-ranking/standing.shtml",
+                    },
+                    "name": "World Ranking",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/golf/european-p-g-a-tour/",
+                    },
+                    "name": "European Tour",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/golf/u-s-p-g-a-tour/",
+                    },
+                    "name": "PGA TOUR",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/golf/masters-tournament/standing.shtml",
+                    },
+                    "name": "Masters Tournament",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/golf/british-open/standing.shtml",
+                    },
+                    "name": "British Open",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/golf/u-s-open/standing.shtml",
+                    },
+                    "name": "U.S. Open",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/golf/pga-championship/standing.shtml",
+                    },
+                    "name": "USPGA",
+                  },
+                ],
+                "link": Object {
+                  "url": "/golf/",
+                },
+                "name": "Golf",
+              },
+              Object {
+                "items": Array [
+                  Object {
+                    "link": Object {
+                      "url": "/basketball/",
+                    },
+                    "name": "Home basketball",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/basketball/nba/",
+                    },
+                    "name": "NBA",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/basketball/euroleague/",
+                    },
+                    "name": "Euroleague",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/basketball/euro-cup/",
+                    },
+                    "name": "Eurocup",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/basketball/lega/",
+                    },
+                    "name": "Lega Basket Serie A",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/basketball/liga-acb/",
+                    },
+                    "name": "Liga Endesa",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/basketball/pro-a/",
+                    },
+                    "name": "Jeep Elite",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/basketball/eurobasket/",
+                    },
+                    "name": "Eurobasket",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/basketball/eurobasket-w/",
+                    },
+                    "name": "Eurobasket women (W)",
+                  },
+                  Object {
+                    "link": Object {
+                      "url": "/basketball/world-cup/",
+                    },
+                    "name": "World Cup",
+                  },
+                ],
+                "link": Object {
+                  "url": "/basketball/",
+                },
+                "name": "Basketball",
+              },
+              Object {
+                "link": Object {
+                  "url": "/fencing/",
+                },
+                "name": "Fencing",
+              },
+              Object {
+                "link": Object {
+                  "url": "/boxing/",
+                },
+                "name": "Boxing",
+              },
+            ],
+            "name": "All sports",
           },
-          "name": "S'abonner à Eurosport",
-          "sections": Array [
-            Object {
-              "items": Array [
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
-                  "link": Object {
-                    "blank": false,
-                    "url": "/regardez-eurosport-en-direct.shtml",
-                  },
-                  "name": "Home watch",
-                },
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
-                  "link": Object {
-                    "blank": false,
-                    "url": "/eurosport-guide-tv.shtml",
-                  },
-                  "name": "Guide TV",
-                },
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
-                  "link": Object {
-                    "blank": false,
-                    "url": "https://int.eurosport.fr/watch-eurosport-how.shtml",
-                  },
-                  "name": "Comment regarder Eurosport ?",
-                },
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
-                  "link": Object {
-                    "blank": false,
-                    "url": "https://int.eurosport.fr/watch-eurosport-how.shtml",
-                  },
-                  "name": "A ne pas manquer sur Eurosport",
-                },
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
-                  "link": Object {
-                    "blank": false,
-                    "url": "https://int.eurosport.fr/watch-eurosport-how.shtml",
-                  },
-                  "name": "Prochains évènements Eurosport",
-                },
-              ],
-              "name": "S'abonner",
-            },
-          ],
-          "shortName": "S'abonner",
+        ],
+      },
+      Object {
+        "id": 3,
+        "link": Object {
+          "url": "https://int-video.eurosport.co.uk",
         },
-        Object {
-          "id": 5,
-          "isBottom": false,
-          "isWatch": false,
-          "items": Array [],
-          "name": "Plus",
-          "sections": Array [
-            Object {
-              "columnType": "about-us",
-              "items": Array [
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
-                  "link": Object {
-                    "blank": false,
-                    "url": "https://int-lebuzz.eurosport.fr/home_rub779.shtml",
-                  },
-                  "name": "Le Buzz",
-                },
-              ],
-              "name": "Plus",
-            },
-            Object {
-              "columnType": "about-us",
-              "items": Array [
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
-                  "link": Object {
-                    "blank": false,
-                    "url": "https://int-video.eurosport.fr/omnisport/chaine-video/smit-invest-in-the-future/",
-                  },
-                  "name": "SMIT – Invest in the future",
-                },
-              ],
-              "name": "Partenaires",
-            },
-            Object {
-              "columnType": "about-us",
-              "items": Array [
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
-                  "link": Object {
-                    "blank": false,
-                    "url": "/application-iphone.shtml",
-                  },
-                  "name": "Applications mobiles",
-                },
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
-                  "link": Object {
-                    "blank": false,
-                    "url": "https://helpcenter.eurosport.com/en_ROW",
-                  },
-                  "name": "FAQ",
-                },
-              ],
-              "name": "A propos",
-            },
-          ],
+        "name": "Videos",
+      },
+      Object {
+        "id": 13,
+        "link": Object {
+          "blank": true,
+          "url": "//help.eurosport.com/hc/en-gb",
         },
-        Object {
-          "id": 6,
-          "isBottom": true,
-          "isWatch": false,
-          "items": Array [],
-          "name": "Version FR",
-          "sections": Array [
-            Object {
-              "items": Array [
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
-                  "link": Object {
-                    "blank": false,
-                    "url": "https://int.eurosport.com",
-                  },
-                  "name": "International (English)",
+        "name": "Help",
+      },
+      Object {
+        "id": 5,
+        "name": "More",
+        "sections": Array [
+          Object {
+            "columnType": "about-us",
+            "items": Array [
+              Object {
+                "link": Object {
+                  "url": "http://lebuzz.eurosport.co.uk/",
                 },
-                Object {
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
-                  "link": Object {
-                    "blank": false,
-                    "url": "https://int-espanol.eurosport.com",
-                  },
-                  "name": "Internacional (Español)",
+                "name": "Buzz",
+              },
+            ],
+            "name": "More",
+          },
+          Object {
+            "columnType": "about-us",
+            "items": Array [
+              Object {
+                "link": Object {
+                  "url": "https://www.stubhub.co.uk/",
                 },
-              ],
-              "name": "Sites Eurosport",
-            },
-          ],
-        },
-      ],
-      "socialItem": Object {
+                "name": "StubHub",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int-video.eurosport.co.uk/all-sports/video-channel/amazing-israel-cities-break/",
+                },
+                "name": "Discover the route of Giro crossing Israel",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int-video.eurosport.co.uk/all-sports/video-channel/smit-invest-in-the-future/",
+                },
+                "name": "SMIT – Invest in the future",
+              },
+            ],
+            "name": "Partners",
+          },
+          Object {
+            "columnType": "about-us",
+            "items": Array [
+              Object {
+                "link": Object {
+                  "url": "/mobiles-apps.shtml",
+                },
+                "name": "Mobile apps",
+              },
+              Object {
+                "link": Object {
+                  "url": "http://corporate.eurosport.com/ ",
+                },
+                "name": "About Eurosport",
+              },
+              Object {
+                "link": Object {
+                  "url": "/eurosport/eurosport-privacy-policy_sto4264003/story.shtml",
+                },
+                "name": "Privacy Policy",
+              },
+              Object {
+                "link": Object {
+                  "url": "/eurosport/legal-notice_sto4289230/story.shtml",
+                },
+                "name": "Legal Notice",
+              },
+              Object {
+                "link": Object {
+                  "url": "/eurosport/cookie-policy_sto6832423/story.shtml",
+                },
+                "name": "Cookie Policy",
+              },
+            ],
+            "name": "About us",
+          },
+        ],
+      },
+      Object {
+        "id": 6,
+        "isBottom": true,
+        "name": "Version EN",
+        "sections": Array [
+          Object {
+            "items": Array [
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.com",
+                },
+                "name": "International (English)",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int-espanol.eurosport.com",
+                },
+                "name": "Internacional (Español)",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int-asia.eurosport.com",
+                },
+                "name": "Asia",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int-au.eurosport.com",
+                },
+                "name": "Australia",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.bg",
+                },
+                "name": "България",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.cz",
+                },
+                "name": "Česko",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.dk",
+                },
+                "name": "Danmark",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.de",
+                },
+                "name": "Deutschland",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.nl",
+                },
+                "name": "Dutch",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.es",
+                },
+                "name": "España",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.fi",
+                },
+                "name": "Eesti Vabariik",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.fr",
+                },
+                "name": "France",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int-it.eurosport.com",
+                },
+                "name": "Italia",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.hu",
+                },
+                "name": "Magyarország",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.no",
+                },
+                "name": "Norge",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.ru",
+                },
+                "name": "Россия",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int-tv.eurosport.pl",
+                },
+                "name": "Polska",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://eurosport.tvn24.pl",
+                },
+                "name": "Polska TVN24",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.pt",
+                },
+                "name": "Portuguese",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.ro",
+                },
+                "name": "România",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.rs",
+                },
+                "name": "Srbija",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.se",
+                },
+                "name": "Sverige",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int-tr.eurosport.com",
+                },
+                "name": "Türkiye",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int.eurosport.co.uk",
+                },
+                "name": "United Kingdom",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://arabia.eurosport.com",
+                },
+                "name": "يوروسبورت عربية ",
+              },
+              Object {
+                "link": Object {
+                  "url": "https://int-qq.eurosport.com",
+                },
+                "name": "中文",
+              },
+            ],
+            "name": "Eurosport's sites",
+          },
+        ],
+      },
+      Object {
         "id": 7,
-        "isBottom": false,
-        "isWatch": false,
-        "items": Array [],
-        "name": "Suivez nous sur :",
+        "name": "Follow us on :",
         "sections": Array [
           Object {
             "items": Array [
               Object {
                 "icon": "facebook",
-                "isBottom": false,
-                "isWatch": false,
-                "items": Array [],
                 "link": Object {
-                  "blank": false,
-                  "url": "//facebook.com/EurosportFR",
+                  "url": "//facebook.com/Eurosport-828777003809568",
                 },
                 "name": "Facebook",
               },
               Object {
                 "icon": "twitter",
-                "isBottom": false,
-                "isWatch": false,
-                "items": Array [],
                 "link": Object {
-                  "blank": false,
-                  "url": "//twitter.com/Eurosport_FR",
+                  "url": "//twitter.com/Eurosport_UK",
                 },
                 "name": "Twitter",
               },
               Object {
                 "icon": "snapchat",
-                "isBottom": false,
-                "isWatch": false,
-                "items": Array [],
                 "link": Object {
-                  "blank": false,
-                  "url": "//www.snapchat.com/add/eurosportfr",
+                  "url": "//www.snapchat.com/add/eurosport",
                 },
                 "name": "Snapchat",
               },
               Object {
                 "icon": "instagram",
-                "isBottom": false,
-                "isWatch": false,
-                "items": Array [],
                 "link": Object {
-                  "blank": false,
                   "url": "//www.instagram.com/eurosport",
                 },
                 "name": "Instagram",
@@ -473,421 +1208,1187 @@ exports[`Header with submenu renders Header with BurgerMenu 1`] = `
           },
         ],
       },
-    }
+      Object {
+        "id": 14,
+        "link": Object {
+          "blank": true,
+          "url": "https://int.eurosport.co.uk/eurosport/legal-notice_sto4289230/story.shtml",
+        },
+        "name": "Terms and Conditions",
+      },
+      Object {
+        "id": 15,
+        "link": Object {
+          "blank": true,
+          "url": "https://int.eurosport.co.uk/eurosport/eurosport-privacy-policy_sto4264003/story.shtml",
+        },
+        "name": "Privacy Policy",
+      },
+      Object {
+        "id": 16,
+        "name": "Privacy settings",
+      },
+      Object {
+        "id": 17,
+        "link": Object {
+          "blank": true,
+          "url": "https://int.eurosport.co.uk/eurosport/cookie-policy_sto6832423/story.shtml",
+        },
+        "name": "Cookie Policy",
+      },
+    ]
   }
-  quantCastMenuLabel=""
 >
   <withMatchMedia(BurgerMenu)
-    header={
-      Object {
-        "items": Array [
-          Object {
-            "id": 1,
-            "isBottom": false,
-            "isWatch": false,
-            "items": Array [],
-            "link": Object {
-              "blank": false,
-              "url": "/",
+    homePageUrl=""
+    isOpen={false}
+    items={
+      Array [
+        Object {
+          "id": 4,
+          "isWatch": true,
+          "link": Object {
+            "url": "/watch-eurosport-live-stream.shtml",
+          },
+          "name": "Watch Eurosport",
+          "sections": Array [
+            Object {
+              "items": Array [
+                Object {
+                  "link": Object {
+                    "url": "/watch-eurosport-live-stream.shtml",
+                  },
+                  "name": "Watch Home",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/eurosport-tv-schedule.shtml",
+                  },
+                  "name": "TV guide",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.co.uk/watch-eurosport-how.shtml",
+                  },
+                  "name": "How to get Eurosport",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.co.uk/watch-eurosport-how.shtml",
+                  },
+                  "name": "Don't miss on Eurosport",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.co.uk/watch-eurosport-how.shtml",
+                  },
+                  "name": "Upcoming Eurosport events",
+                },
+              ],
+              "name": "Watch",
             },
-            "name": "Accueil",
+          ],
+          "shortName": "Watch",
+        },
+        Object {
+          "id": 1,
+          "link": Object {
+            "url": "/",
           },
-          Object {
-            "id": 2,
-            "isBottom": false,
-            "isWatch": false,
-            "items": Array [],
-            "menuType": "sports",
-            "name": "Tous les sports",
-            "sections": Array [
-              Object {
-                "columnType": "popular-sports",
-                "items": Array [
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [],
-                    "link": Object {
-                      "blank": false,
-                      "url": "/football/",
-                    },
-                    "name": "Football",
+          "name": "Home",
+        },
+        Object {
+          "id": 2,
+          "menuType": "sports",
+          "name": "All sports",
+          "sections": Array [
+            Object {
+              "columnType": "popular-sports",
+              "items": Array [
+                Object {
+                  "link": Object {
+                    "url": "/football/",
                   },
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [],
-                    "link": Object {
-                      "blank": false,
-                      "url": "/tennis/",
-                    },
-                    "name": "Tennis",
+                  "name": "Football",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/olympics/",
                   },
-                ],
-                "name": "Sports à la Une",
-              },
-              Object {
-                "columnType": "all-sports",
-                "items": Array [
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [
-                      Object {
-                        "isBottom": false,
-                        "isWatch": false,
-                        "items": Array [],
-                        "link": Object {
-                          "blank": false,
-                          "url": "/football/",
-                        },
-                        "name": "Accueil football",
-                      },
-                      Object {
-                        "isBottom": false,
-                        "isWatch": false,
-                        "items": Array [],
-                        "link": Object {
-                          "blank": false,
-                          "url": "/football/ligue-1/",
-                        },
-                        "name": "Ligue 1",
-                      },
-                    ],
-                    "link": Object {
-                      "blank": false,
-                      "url": "/football/",
-                    },
-                    "name": "Football",
+                  "name": "Olympics",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/winter-sports/",
                   },
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [
-                      Object {
-                        "isBottom": false,
-                        "isWatch": false,
-                        "items": Array [],
-                        "link": Object {
-                          "blank": false,
-                          "url": "/tennis/",
-                        },
-                        "name": "Accueil tennis",
-                      },
-                      Object {
-                        "isBottom": false,
-                        "isWatch": false,
-                        "items": Array [],
-                        "link": Object {
-                          "blank": false,
-                          "url": "/tennis/open-d-australie/",
-                        },
-                        "name": "Open d'Australie",
-                      },
-                      Object {
-                        "isBottom": false,
-                        "isWatch": false,
-                        "items": Array [],
-                        "link": Object {
-                          "blank": false,
-                          "url": "/tennis/roland-garros/",
-                        },
-                        "name": "Roland-Garros",
-                      },
-                    ],
-                    "link": Object {
-                      "blank": false,
-                      "url": "/tennis/",
-                    },
-                    "name": "Tennis",
+                  "name": "Winter Sports",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/tennis/",
                   },
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [
-                      Object {
-                        "isBottom": false,
-                        "isWatch": false,
-                        "items": Array [],
-                        "link": Object {
-                          "blank": false,
-                          "url": "https://int.rugbyrama.fr/",
-                        },
-                        "name": "Accueil rugby",
-                      },
-                      Object {
-                        "isBottom": false,
-                        "isWatch": false,
-                        "items": Array [],
-                        "link": Object {
-                          "blank": false,
-                          "url": "https://int.rugbyrama.fr/rugby/top-14/",
-                        },
-                        "name": "Top 14",
-                      },
-                      Object {
-                        "isBottom": false,
-                        "isWatch": false,
-                        "items": Array [],
-                        "link": Object {
-                          "blank": false,
-                          "url": "https://int.rugbyrama.fr/rugby/pro-d2/",
-                        },
-                        "name": "Pro D2",
-                      },
-                    ],
-                    "link": Object {
-                      "blank": false,
-                      "url": "https://int.rugbyrama.fr/",
-                    },
-                    "name": "Rugby",
+                  "name": "Tennis",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/snooker/",
                   },
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [],
-                    "link": Object {
-                      "blank": false,
-                      "url": "/boxe/",
-                    },
-                    "name": "Boxe",
+                  "name": "Snooker",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/allmotorsports/",
                   },
-                ],
-                "name": "Tous les sports",
-              },
-            ],
-          },
-          Object {
-            "id": 3,
-            "isBottom": false,
-            "isWatch": false,
-            "items": Array [],
-            "link": Object {
-              "blank": false,
-              "url": "https://int-video.eurosport.fr",
+                  "name": "Motorsports",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/cycling/",
+                  },
+                  "name": "Cycling",
+                },
+              ],
+              "name": "Popular sports",
             },
-            "name": "Vidéos",
-          },
-          Object {
-            "id": 4,
-            "isBottom": false,
-            "isWatch": true,
-            "items": Array [],
-            "link": Object {
-              "blank": false,
-              "url": "/regardez-eurosport-en-direct.shtml",
+            Object {
+              "columnType": "all-sports",
+              "items": Array [
+                Object {
+                  "items": Array [
+                    Object {
+                      "link": Object {
+                        "url": "/football/",
+                      },
+                      "name": "Home football",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/premier-league/",
+                      },
+                      "name": "Premier League",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/fa-cup/",
+                      },
+                      "name": "The Emirates FA Cup",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/league-cup/",
+                      },
+                      "name": "League Cup",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/champions-league/",
+                      },
+                      "name": "Champions League",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/europa-league/",
+                      },
+                      "name": "Europa League",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/transfers/",
+                      },
+                      "name": "Transfers",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/uefa-nations-league/",
+                      },
+                      "name": "UEFA Nations League",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/liga/",
+                      },
+                      "name": "Liga",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/bundesliga/",
+                      },
+                      "name": "Bundesliga",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/serie-a/",
+                      },
+                      "name": "Serie A",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/ligue-1/",
+                      },
+                      "name": "Ligue 1",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/world-cup/",
+                      },
+                      "name": "World Cup",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/african-cup-of-nations/",
+                      },
+                      "name": "Africa Cup of Nations",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/uefa-women-s-champions-league/",
+                      },
+                      "name": "Women's Champions League",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/championship/standingperson.shtml",
+                      },
+                      "name": "Championship",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/league-one/calendar-result.shtml",
+                      },
+                      "name": "League One",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/league-two/calendar-result.shtml",
+                      },
+                      "name": "League Two",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/scottish-premier-league/calendar-result.shtml",
+                      },
+                      "name": "Scottish Football",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/mls/",
+                      },
+                      "name": "MLS",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/euro/",
+                      },
+                      "name": "Euro 2016",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/copa-america/",
+                      },
+                      "name": "Copa América",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/football/countrylist.shtml",
+                      },
+                      "name": "National competitions",
+                    },
+                  ],
+                  "link": Object {
+                    "url": "/football/",
+                  },
+                  "name": "Football",
+                },
+                Object {
+                  "items": Array [
+                    Object {
+                      "link": Object {
+                        "url": "/olympics/",
+                      },
+                      "name": "Home olympics",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/olympics/youth-olympics-2018/youth-olympic-games.shtml",
+                      },
+                      "name": "Youth Olympics 2018",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/olympics/pyeongchang/2018/",
+                      },
+                      "name": "PyeongChang",
+                    },
+                  ],
+                  "link": Object {
+                    "url": "/olympics/",
+                  },
+                  "name": "Olympics",
+                },
+                Object {
+                  "items": Array [
+                    Object {
+                      "link": Object {
+                        "url": "/winter-sports/",
+                      },
+                      "name": "Home winter sports",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/alpine-skiing/",
+                      },
+                      "name": "Alpine Skiing",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/alpine-skiing/world-championships/",
+                      },
+                      "name": "World Championship",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/biathlon/",
+                      },
+                      "name": "Biathlon",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/nordic-combined/",
+                      },
+                      "name": "Nordic Combined",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/cross-country-skiing/",
+                      },
+                      "name": "Cross-Country Skiing",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/ski-jumping/",
+                      },
+                      "name": "Ski Jumping",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/ice-hockey/",
+                      },
+                      "name": "Ice Hockey",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/figure-skating/",
+                      },
+                      "name": "Figure Skating",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/curling/",
+                      },
+                      "name": "Curling",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/speed-skating/calendar-result_sea90.shtml",
+                      },
+                      "name": "Speed Skating",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/bobsleigh/",
+                      },
+                      "name": "Bobsleigh",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "https://int-video.eurosport.co.uk/winter-sports/",
+                      },
+                      "name": "Videos",
+                    },
+                  ],
+                  "link": Object {
+                    "url": "/winter-sports/",
+                  },
+                  "name": "Winter Sports",
+                },
+                Object {
+                  "items": Array [
+                    Object {
+                      "link": Object {
+                        "url": "/tennis/",
+                      },
+                      "name": "Home tennis",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/tennis/australian-open/",
+                      },
+                      "name": "Australian Open",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/tennis/roland-garros/",
+                      },
+                      "name": "French Open",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/tennis/wimbledon/",
+                      },
+                      "name": "Wimbledon",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/tennis/us-open/",
+                      },
+                      "name": "US Open",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/tennis/being-serena/",
+                      },
+                      "name": "Being Serena",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/tennis/atp/calendar-result.shtml",
+                      },
+                      "name": "ATP Calendar",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/tennis/atp/standing.shtml",
+                      },
+                      "name": "ATP Rankings",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/tennis/wta/calendar-result.shtml",
+                      },
+                      "name": "WTA Calendar",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/tennis/wta/standing.shtml",
+                      },
+                      "name": "WTA Rankings",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/tennis/davis-cup/",
+                      },
+                      "name": "Davis Cup",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/tennis/fed-cup/",
+                      },
+                      "name": "Fed-Cup",
+                    },
+                  ],
+                  "link": Object {
+                    "url": "/tennis/",
+                  },
+                  "name": "Tennis",
+                },
+                Object {
+                  "items": Array [
+                    Object {
+                      "link": Object {
+                        "url": "/snooker/",
+                      },
+                      "name": "Home snooker",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/snooker/world-championship/",
+                      },
+                      "name": "World Championship",
+                    },
+                  ],
+                  "link": Object {
+                    "url": "/snooker/",
+                  },
+                  "name": "Snooker",
+                },
+                Object {
+                  "items": Array [
+                    Object {
+                      "link": Object {
+                        "url": "/allmotorsports/",
+                      },
+                      "name": "Home motorsports",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/formula-1/",
+                      },
+                      "name": "F1",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/moto/",
+                      },
+                      "name": "MotoGP",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/formula-e/",
+                      },
+                      "name": "Formula E",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/british-superbikes/british-superbikes/",
+                      },
+                      "name": "BSB",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/superbikes/",
+                      },
+                      "name": "Superbikes",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/wrc/",
+                      },
+                      "name": "WRC",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/erc/",
+                      },
+                      "name": "ERC",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/wtcr/",
+                      },
+                      "name": "WTCR",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/wec/",
+                      },
+                      "name": "WEC",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/wec/24-heures-du-mans/",
+                      },
+                      "name": "24 hours of Le Mans",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/fim-ewc/",
+                      },
+                      "name": "FIM EWC",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/rally-raid/dakar/",
+                      },
+                      "name": "Dakar",
+                    },
+                  ],
+                  "link": Object {
+                    "url": "/allmotorsports/",
+                  },
+                  "name": "Motorsports",
+                },
+                Object {
+                  "items": Array [
+                    Object {
+                      "link": Object {
+                        "url": "/cycling/",
+                      },
+                      "name": "Home cycling",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/cycling/calendar-result.shtml",
+                      },
+                      "name": "Races – Results",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/cycling/vuelta-a-espana/",
+                      },
+                      "name": "Vuelta a España",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "https://video.eurosport.co.uk/cycling/video-channel/the-bradley-wiggins-show/",
+                      },
+                      "name": "The Bradley Wiggins Show",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "https://fantasy-cycling.eurosport.com/",
+                      },
+                      "name": "Cycling Fantasy",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "https://predictor-cycling.eurosport.com",
+                      },
+                      "name": "Cycling Predictor",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/cycling/tour-de-france/",
+                      },
+                      "name": "Tour de France",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/cycling/giro-d-italia/",
+                      },
+                      "name": "Giro d'Italia",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/cycling/world-championships/",
+                      },
+                      "name": "World Championships",
+                    },
+                  ],
+                  "link": Object {
+                    "url": "/cycling/",
+                  },
+                  "name": "Cycling",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/darts/",
+                  },
+                  "name": "Darts",
+                },
+                Object {
+                  "items": Array [
+                    Object {
+                      "link": Object {
+                        "url": "/athletics/",
+                      },
+                      "name": "Home athletics",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/athletics/diamond-league/",
+                      },
+                      "name": "Diamond League",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/athletics/world-athletics-championships/",
+                      },
+                      "name": "World Championships",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/athletics/world-indoor-championships/",
+                      },
+                      "name": "World Indoor Championships",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/athletics/european-championships/",
+                      },
+                      "name": "European Championships",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/athletics/european-indoor-championships/",
+                      },
+                      "name": "Euro Indoor Champs",
+                    },
+                  ],
+                  "link": Object {
+                    "url": "/athletics/",
+                  },
+                  "name": "Athletics",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/formula-1/",
+                  },
+                  "name": "F1",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/formula-e/",
+                  },
+                  "name": "Formula E",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/horse-racing/",
+                  },
+                  "name": "Horse Racing",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/judo/",
+                  },
+                  "name": "Judo",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/equestrian/",
+                  },
+                  "name": "Equestrian",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/squash/",
+                  },
+                  "name": "Squash",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/cricket/",
+                  },
+                  "name": "Cricket",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/british-superbikes/",
+                  },
+                  "name": "BSB",
+                },
+                Object {
+                  "items": Array [
+                    Object {
+                      "link": Object {
+                        "url": "/golf/",
+                      },
+                      "name": "Home golf",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/golf/world-ranking/standing.shtml",
+                      },
+                      "name": "World Ranking",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/golf/european-p-g-a-tour/",
+                      },
+                      "name": "European Tour",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/golf/u-s-p-g-a-tour/",
+                      },
+                      "name": "PGA TOUR",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/golf/masters-tournament/standing.shtml",
+                      },
+                      "name": "Masters Tournament",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/golf/british-open/standing.shtml",
+                      },
+                      "name": "British Open",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/golf/u-s-open/standing.shtml",
+                      },
+                      "name": "U.S. Open",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/golf/pga-championship/standing.shtml",
+                      },
+                      "name": "USPGA",
+                    },
+                  ],
+                  "link": Object {
+                    "url": "/golf/",
+                  },
+                  "name": "Golf",
+                },
+                Object {
+                  "items": Array [
+                    Object {
+                      "link": Object {
+                        "url": "/basketball/",
+                      },
+                      "name": "Home basketball",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/basketball/nba/",
+                      },
+                      "name": "NBA",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/basketball/euroleague/",
+                      },
+                      "name": "Euroleague",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/basketball/euro-cup/",
+                      },
+                      "name": "Eurocup",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/basketball/lega/",
+                      },
+                      "name": "Lega Basket Serie A",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/basketball/liga-acb/",
+                      },
+                      "name": "Liga Endesa",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/basketball/pro-a/",
+                      },
+                      "name": "Jeep Elite",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/basketball/eurobasket/",
+                      },
+                      "name": "Eurobasket",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/basketball/eurobasket-w/",
+                      },
+                      "name": "Eurobasket women (W)",
+                    },
+                    Object {
+                      "link": Object {
+                        "url": "/basketball/world-cup/",
+                      },
+                      "name": "World Cup",
+                    },
+                  ],
+                  "link": Object {
+                    "url": "/basketball/",
+                  },
+                  "name": "Basketball",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/fencing/",
+                  },
+                  "name": "Fencing",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/boxing/",
+                  },
+                  "name": "Boxing",
+                },
+              ],
+              "name": "All sports",
             },
-            "name": "S'abonner à Eurosport",
-            "sections": Array [
-              Object {
-                "items": Array [
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [],
-                    "link": Object {
-                      "blank": false,
-                      "url": "/regardez-eurosport-en-direct.shtml",
-                    },
-                    "name": "Home watch",
-                  },
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [],
-                    "link": Object {
-                      "blank": false,
-                      "url": "/eurosport-guide-tv.shtml",
-                    },
-                    "name": "Guide TV",
-                  },
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [],
-                    "link": Object {
-                      "blank": false,
-                      "url": "https://int.eurosport.fr/watch-eurosport-how.shtml",
-                    },
-                    "name": "Comment regarder Eurosport ?",
-                  },
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [],
-                    "link": Object {
-                      "blank": false,
-                      "url": "https://int.eurosport.fr/watch-eurosport-how.shtml",
-                    },
-                    "name": "A ne pas manquer sur Eurosport",
-                  },
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [],
-                    "link": Object {
-                      "blank": false,
-                      "url": "https://int.eurosport.fr/watch-eurosport-how.shtml",
-                    },
-                    "name": "Prochains évènements Eurosport",
-                  },
-                ],
-                "name": "S'abonner",
-              },
-            ],
-            "shortName": "S'abonner",
+          ],
+        },
+        Object {
+          "id": 3,
+          "link": Object {
+            "url": "https://int-video.eurosport.co.uk",
           },
-          Object {
-            "id": 5,
-            "isBottom": false,
-            "isWatch": false,
-            "items": Array [],
-            "name": "Plus",
-            "sections": Array [
-              Object {
-                "columnType": "about-us",
-                "items": Array [
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [],
-                    "link": Object {
-                      "blank": false,
-                      "url": "https://int-lebuzz.eurosport.fr/home_rub779.shtml",
-                    },
-                    "name": "Le Buzz",
-                  },
-                ],
-                "name": "Plus",
-              },
-              Object {
-                "columnType": "about-us",
-                "items": Array [
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [],
-                    "link": Object {
-                      "blank": false,
-                      "url": "https://int-video.eurosport.fr/omnisport/chaine-video/smit-invest-in-the-future/",
-                    },
-                    "name": "SMIT – Invest in the future",
-                  },
-                ],
-                "name": "Partenaires",
-              },
-              Object {
-                "columnType": "about-us",
-                "items": Array [
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [],
-                    "link": Object {
-                      "blank": false,
-                      "url": "/application-iphone.shtml",
-                    },
-                    "name": "Applications mobiles",
-                  },
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [],
-                    "link": Object {
-                      "blank": false,
-                      "url": "https://helpcenter.eurosport.com/en_ROW",
-                    },
-                    "name": "FAQ",
-                  },
-                ],
-                "name": "A propos",
-              },
-            ],
+          "name": "Videos",
+        },
+        Object {
+          "id": 13,
+          "link": Object {
+            "blank": true,
+            "url": "//help.eurosport.com/hc/en-gb",
           },
-          Object {
-            "id": 6,
-            "isBottom": true,
-            "isWatch": false,
-            "items": Array [],
-            "name": "Version FR",
-            "sections": Array [
-              Object {
-                "items": Array [
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [],
-                    "link": Object {
-                      "blank": false,
-                      "url": "https://int.eurosport.com",
-                    },
-                    "name": "International (English)",
+          "name": "Help",
+        },
+        Object {
+          "id": 5,
+          "name": "More",
+          "sections": Array [
+            Object {
+              "columnType": "about-us",
+              "items": Array [
+                Object {
+                  "link": Object {
+                    "url": "http://lebuzz.eurosport.co.uk/",
                   },
-                  Object {
-                    "isBottom": false,
-                    "isWatch": false,
-                    "items": Array [],
-                    "link": Object {
-                      "blank": false,
-                      "url": "https://int-espanol.eurosport.com",
-                    },
-                    "name": "Internacional (Español)",
+                  "name": "Buzz",
+                },
+              ],
+              "name": "More",
+            },
+            Object {
+              "columnType": "about-us",
+              "items": Array [
+                Object {
+                  "link": Object {
+                    "url": "https://www.stubhub.co.uk/",
                   },
-                ],
-                "name": "Sites Eurosport",
-              },
-            ],
-          },
-        ],
-        "socialItem": Object {
+                  "name": "StubHub",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int-video.eurosport.co.uk/all-sports/video-channel/amazing-israel-cities-break/",
+                  },
+                  "name": "Discover the route of Giro crossing Israel",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int-video.eurosport.co.uk/all-sports/video-channel/smit-invest-in-the-future/",
+                  },
+                  "name": "SMIT – Invest in the future",
+                },
+              ],
+              "name": "Partners",
+            },
+            Object {
+              "columnType": "about-us",
+              "items": Array [
+                Object {
+                  "link": Object {
+                    "url": "/mobiles-apps.shtml",
+                  },
+                  "name": "Mobile apps",
+                },
+                Object {
+                  "link": Object {
+                    "url": "http://corporate.eurosport.com/ ",
+                  },
+                  "name": "About Eurosport",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/eurosport/eurosport-privacy-policy_sto4264003/story.shtml",
+                  },
+                  "name": "Privacy Policy",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/eurosport/legal-notice_sto4289230/story.shtml",
+                  },
+                  "name": "Legal Notice",
+                },
+                Object {
+                  "link": Object {
+                    "url": "/eurosport/cookie-policy_sto6832423/story.shtml",
+                  },
+                  "name": "Cookie Policy",
+                },
+              ],
+              "name": "About us",
+            },
+          ],
+        },
+        Object {
+          "id": 6,
+          "isBottom": true,
+          "name": "Version EN",
+          "sections": Array [
+            Object {
+              "items": Array [
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.com",
+                  },
+                  "name": "International (English)",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int-espanol.eurosport.com",
+                  },
+                  "name": "Internacional (Español)",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int-asia.eurosport.com",
+                  },
+                  "name": "Asia",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int-au.eurosport.com",
+                  },
+                  "name": "Australia",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.bg",
+                  },
+                  "name": "България",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.cz",
+                  },
+                  "name": "Česko",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.dk",
+                  },
+                  "name": "Danmark",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.de",
+                  },
+                  "name": "Deutschland",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.nl",
+                  },
+                  "name": "Dutch",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.es",
+                  },
+                  "name": "España",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.fi",
+                  },
+                  "name": "Eesti Vabariik",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.fr",
+                  },
+                  "name": "France",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int-it.eurosport.com",
+                  },
+                  "name": "Italia",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.hu",
+                  },
+                  "name": "Magyarország",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.no",
+                  },
+                  "name": "Norge",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.ru",
+                  },
+                  "name": "Россия",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int-tv.eurosport.pl",
+                  },
+                  "name": "Polska",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://eurosport.tvn24.pl",
+                  },
+                  "name": "Polska TVN24",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.pt",
+                  },
+                  "name": "Portuguese",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.ro",
+                  },
+                  "name": "România",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.rs",
+                  },
+                  "name": "Srbija",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.se",
+                  },
+                  "name": "Sverige",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int-tr.eurosport.com",
+                  },
+                  "name": "Türkiye",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int.eurosport.co.uk",
+                  },
+                  "name": "United Kingdom",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://arabia.eurosport.com",
+                  },
+                  "name": "يوروسبورت عربية ",
+                },
+                Object {
+                  "link": Object {
+                    "url": "https://int-qq.eurosport.com",
+                  },
+                  "name": "中文",
+                },
+              ],
+              "name": "Eurosport's sites",
+            },
+          ],
+        },
+        Object {
           "id": 7,
-          "isBottom": false,
-          "isWatch": false,
-          "items": Array [],
-          "name": "Suivez nous sur :",
+          "name": "Follow us on :",
           "sections": Array [
             Object {
               "items": Array [
                 Object {
                   "icon": "facebook",
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
                   "link": Object {
-                    "blank": false,
-                    "url": "//facebook.com/EurosportFR",
+                    "url": "//facebook.com/Eurosport-828777003809568",
                   },
                   "name": "Facebook",
                 },
                 Object {
                   "icon": "twitter",
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
                   "link": Object {
-                    "blank": false,
-                    "url": "//twitter.com/Eurosport_FR",
+                    "url": "//twitter.com/Eurosport_UK",
                   },
                   "name": "Twitter",
                 },
                 Object {
                   "icon": "snapchat",
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
                   "link": Object {
-                    "blank": false,
-                    "url": "//www.snapchat.com/add/eurosportfr",
+                    "url": "//www.snapchat.com/add/eurosport",
                   },
                   "name": "Snapchat",
                 },
                 Object {
                   "icon": "instagram",
-                  "isBottom": false,
-                  "isWatch": false,
-                  "items": Array [],
                   "link": Object {
-                    "blank": false,
                     "url": "//www.instagram.com/eurosport",
                   },
                   "name": "Instagram",
@@ -896,12 +2397,37 @@ exports[`Header with submenu renders Header with BurgerMenu 1`] = `
             },
           ],
         },
-      }
+        Object {
+          "id": 14,
+          "link": Object {
+            "blank": true,
+            "url": "https://int.eurosport.co.uk/eurosport/legal-notice_sto4289230/story.shtml",
+          },
+          "name": "Terms and Conditions",
+        },
+        Object {
+          "id": 15,
+          "link": Object {
+            "blank": true,
+            "url": "https://int.eurosport.co.uk/eurosport/eurosport-privacy-policy_sto4264003/story.shtml",
+          },
+          "name": "Privacy Policy",
+        },
+        Object {
+          "id": 16,
+          "name": "Privacy settings",
+        },
+        Object {
+          "id": 17,
+          "link": Object {
+            "blank": true,
+            "url": "https://int.eurosport.co.uk/eurosport/cookie-policy_sto6832423/story.shtml",
+          },
+          "name": "Cookie Policy",
+        },
+      ]
     }
-    homePageUrl=""
-    isOpen={false}
     onClose={[Function]}
-    quantCastMenuLabel=""
   />
   <BurgerIcon
     onClick={[Function]}

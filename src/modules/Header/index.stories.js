@@ -5,7 +5,7 @@ import { text, object } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import { Header } from '../..';
 
-import headerMenu from '../BurgerMenu/mocks/header';
+import menu from '../BurgerMenu/mocks/feed-menu';
 
 const cta = { link: 'www.eurosport.fr', label: 'subscribe' };
 storiesOf('Header', module)
@@ -17,8 +17,7 @@ storiesOf('Header', module)
       return (
         <Header
           homePageUrl={text('homePageUrl', 'https://www.eurosport.com')}
-          quantCastMenuLabel={text('quantCastMenuLabel', 'privacy settings')}
-          menuItems={object('menuItems', headerMenu)}
+          menuItems={object('menuItems', menu.header)}
         />
       );
     })
@@ -30,9 +29,8 @@ storiesOf('Header', module)
       return (
         <Header
           homePageUrl={text('homePageUrl', 'https://www.eurosport.com')}
-          quantCastMenuLabel={text('quantCastMenuLabel', 'privacy settings')}
-          menuItems={object('menuItems', headerMenu)}
           cta={object('cta', cta)}
+          menuItems={object('menuItems', menu.header)}
         />
       );
     })

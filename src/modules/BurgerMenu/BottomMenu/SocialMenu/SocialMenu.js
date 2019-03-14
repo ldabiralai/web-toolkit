@@ -2,21 +2,22 @@ import React from 'react';
 import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
 
-import { SocialIcon, Link } from '../../..';
-import { large } from '../../../breakpoints';
-import { coreLightMinus1, midnightExpress } from '../../../colors';
+import { SocialIcon, Link } from '../../../..';
+import { coreLightMinus1 } from '../../../../colors';
+import { large, medium } from '../../../../breakpoints';
 
 const StyledWrapper = styled.div`
-  background: ${midnightExpress};
   color: ${coreLightMinus1};
   display: flex;
   align-items: center;
-  height: 61px;
-  padding-left: 22px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  height: auto;
+  padding-top: 15px;
 
-  ${large(css`
-    padding-left: 70px;
-  `)};
+  ${medium(css`
+    padding-top: 0;
+  `)}
 `;
 const StyledTitle = styled.div`
   font-size: 12px;
@@ -28,6 +29,10 @@ const StyledSocialItems = styled.ul`
   list-style-type: none;
   display: flex;
   align-items: center;
+
+  ${large(css`
+    padding-left: 20px;
+  `)}
 `;
 
 const StyledLink = styled(Link)`
@@ -36,6 +41,10 @@ const StyledLink = styled(Link)`
   vertical-align: middle;
   margin-right: 10px;
   font-size: 12px;
+
+  ${large(css`
+    margin-right: 20px;
+  `)}
 `;
 
 const SocialMenu = ({ name, items, isMobile }) => {

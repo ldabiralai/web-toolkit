@@ -2,7 +2,7 @@
 import React from 'react';
 import styled, { css } from 'react-emotion';
 import kebabCase from 'lodash/kebabCase';
-import { large } from '../../../breakpoints';
+import { medium, large } from '../../../breakpoints';
 import { arsenic, cerulean, regentGray, turquoiseBlue, whiteLilac } from '../../../colors';
 import * as types from './sectionTypes';
 
@@ -11,10 +11,6 @@ const StyledItem = styled.li`
   padding: 0;
   margin: 0;
   line-height: 50px;
-
-  ${large(css`
-    line-height: 55px;
-  `)};
 `;
 
 const StyledItemLink = styled.a`
@@ -25,11 +21,15 @@ const StyledItemLink = styled.a`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 20px;
+  font-size: 16px;
+
+  ${medium(css`
+    font-size: 18px;
+  `)};
 
   ${large(css`
     font-size: 24px;
-  `)};
+  `)}
 
   &:hover {
     color: ${regentGray};
@@ -44,9 +44,10 @@ const StyledItemLink = styled.a`
       }
     `};
 
-  ${props =>
-    props.columnType === types.COLUMN.ALL_SPORTS &&
-    props.item.items.length > 0 &&
+  ${({ columnType, item }) =>
+    columnType === types.COLUMN.ALL_SPORTS &&
+    item.items &&
+    item.items.length > 0 &&
     css`
       display: flex;
       justify-content: space-between;
@@ -66,7 +67,7 @@ const RightMenuItem = ({ item, menuType, columnType, isMobileMenu, onSubMenuOpen
   <StyledItem>
     <StyledItemLink
       onClick={e => {
-        if (menuType === types.MENU.SPORTS && isMobileMenu && item.items.length) {
+        if (menuType === types.MENU.SPORTS && isMobileMenu && item.items && item.items.length) {
           e.preventDefault();
           onSubMenuOpen(item);
         }
@@ -75,7 +76,9 @@ const RightMenuItem = ({ item, menuType, columnType, isMobileMenu, onSubMenuOpen
       item={item}
       columnType={columnType}
       data-test={kebabCase(
-        `${menuType === types.MENU.SPORTS && isMobileMenu && item.items.length ? 'mobile' : 'desktop'}-${item.name}`
+        `${menuType === types.MENU.SPORTS && isMobileMenu && item.items && item.items.length ? 'mobile' : 'desktop'}-${
+          item.name
+        }`
       )}
     >
       {item.name}

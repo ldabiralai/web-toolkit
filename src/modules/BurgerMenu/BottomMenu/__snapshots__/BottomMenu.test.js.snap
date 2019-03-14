@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`quantcast privacy integration does not render quantcast 1`] = `
+<Styled(div)>
+  <Styled(ul)>
+    <Styled(li)
+      key="17"
+    >
+      <Link
+        href="https://int.eurosport.co.uk/eurosport/cookie-policy_sto6832423/story.shtml"
+        linkComponent={[Function]}
+        target="__blank"
+      >
+        Cookie Policy
+      </Link>
+    </Styled(li)>
+  </Styled(ul)>
+</Styled(div)>
+`;

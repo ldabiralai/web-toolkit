@@ -10,7 +10,7 @@ exports[`renders with expected snapshot on desktop 1`] = `
       key="Facebook"
     >
       <Styled(Link)
-        href="//facebook.com/EurosportFR"
+        href="//facebook.com/Eurosport-828777003809568"
         linkComponent={[Function]}
         target="_self"
       >
@@ -24,7 +24,7 @@ exports[`renders with expected snapshot on desktop 1`] = `
       key="Twitter"
     >
       <Styled(Link)
-        href="//twitter.com/Eurosport_FR"
+        href="//twitter.com/Eurosport_UK"
         linkComponent={[Function]}
         target="_self"
       >
@@ -38,7 +38,7 @@ exports[`renders with expected snapshot on desktop 1`] = `
       key="Snapchat"
     >
       <Styled(Link)
-        href="//www.snapchat.com/add/eurosportfr"
+        href="//www.snapchat.com/add/eurosport"
         linkComponent={[Function]}
         target="_self"
       >
@@ -76,7 +76,7 @@ exports[`renders with expected snapshot on mobile 1`] = `
       key="Facebook"
     >
       <Styled(Link)
-        href="//facebook.com/EurosportFR"
+        href="//facebook.com/Eurosport-828777003809568"
         linkComponent={[Function]}
         target="_self"
       >
@@ -90,7 +90,7 @@ exports[`renders with expected snapshot on mobile 1`] = `
       key="Twitter"
     >
       <Styled(Link)
-        href="//twitter.com/Eurosport_FR"
+        href="//twitter.com/Eurosport_UK"
         linkComponent={[Function]}
         target="_self"
       >
@@ -104,7 +104,7 @@ exports[`renders with expected snapshot on mobile 1`] = `
       key="Snapchat"
     >
       <Styled(Link)
-        href="//www.snapchat.com/add/eurosportfr"
+        href="//www.snapchat.com/add/eurosport"
         linkComponent={[Function]}
         target="_self"
       >

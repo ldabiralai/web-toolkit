@@ -2,9 +2,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { object, boolean, text } from '@storybook/addon-knobs';
+import { object, boolean } from '@storybook/addon-knobs';
 import { BurgerMenu } from '../..';
-import headerMocks from './mocks/header';
+import menuMocks from './mocks/feed-menu';
 
 const story = storiesOf('BurgerMenu', module).addDecorator(withInfo);
 
@@ -14,10 +14,9 @@ story.add('configurable', () => {
   return (
     <BurgerMenu
       isOpen={boolean('isOpen', true, 'simple props')}
-      quantCastMenuLabel={text('quantCastMenuLabel', 'privacy settings', 'simple props')}
       homePageUrl="www.google.com"
       onClose={e => e.preventDefault()}
-      header={object('header', headerMocks, 'header prop example')}
+      items={object('items', menuMocks.header, 'items prop example')}
     />
   );
 });

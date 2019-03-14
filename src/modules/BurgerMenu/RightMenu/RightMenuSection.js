@@ -12,7 +12,6 @@ const StyledColumn = styled.div`
   ${props =>
     props.subMenuMobile &&
     css`
-      overflow: auto;
       position: fixed;
       bottom: 0;
       right: 0;
@@ -20,8 +19,6 @@ const StyledColumn = styled.div`
       background: white;
       z-index: 1;
       padding: 20px;
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
       left: 100%;
       opacity: 0;
       transition: left 0.3s, opacity 0.3s;
@@ -152,15 +149,15 @@ const StyledTitle = styled.div`
       width: 100%;
       display: inline-block;
       text-transform: uppercase;
-      height: 46px;
-      line-height: 50px;
       font-weight: bold;
-      margin-top: 20px;
-      font-size: 14px;
+      padding: 15px 0;
+      font-size: 16px;
       white-space: nowrap;
     `};
 
   ${large(css`
+    font-size: 14px;
+    line-height: 17px;
     margin: 50px 0 19px 0;
   `)};
 `;
@@ -173,7 +170,7 @@ const sortIfNecessary = (items, columnType, isMobileMenu) => {
 };
 
 const RightMenuSection = ({
-  items,
+  items = [],
   name,
   columnType,
   menuType,

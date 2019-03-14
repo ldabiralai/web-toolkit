@@ -1,26 +1,21 @@
-/* eslint-disable no-underscore-dangle */
-import React, { Component } from 'react';
+import React from 'react';
 import styled, { css } from 'react-emotion';
-import { rgba } from 'polished';
 import PropTypes from 'prop-types';
 
 import LeftMenuItem from './LeftMenuItem';
 import Logo from '../../../elements/Logo';
 
 import { large } from '../../../breakpoints';
-import { cerulean, coreLightMinus1, midnightExpress } from '../../../colors';
+import { cerulean, coreDarkPlus1, coreNeutral8 } from '../../../colors';
 
-const StyledWrapper = styled.div`
-  width: 20%;
+const StyledTabs = styled.ul`
+  width: 21.25%;
   min-width: 100px;
-  background: ${midnightExpress};
+  background: ${coreDarkPlus1};
 
   ${large(css`
     width: 195px;
   `)};
-`;
-
-const StyledTabs = styled.ul`
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -28,18 +23,21 @@ const StyledTabs = styled.ul`
   list-style: none;
   height: 100%;
   text-align: center;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 `;
 
 const StyledTabLogo = styled.a`
   box-sizing: border-box;
   padding: 0 25px 0 17px;
-  order: 1;
-  height: 53px;
+  min-height: 53px;
   width: 100%;
   display: flex;
+  flex-shrink: 1;
+  flex-grow: 0;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid ${rgba(coreLightMinus1, 0.15)};
+  border-bottom: 1px solid ${coreNeutral8};
   &:hover {
     background-color: ${cerulean};
   }
@@ -50,89 +48,63 @@ const StyledTabLogo = styled.a`
   &&& ${Logo.css} {
     width: 20px;
     height: 23px;
-    margin: 0 auto;
+    margin: 0;
   }
 
   ${large(css`
     padding: 0;
     &&& ${Logo.css} {
       width: 140px;
-      margin: 0 auto;
+      margin: 0;
     }
   `)}
 `;
 
-class LeftMenu extends Component {
-  state = {
-    isQuantCastEnabled: false,
-  };
-
-  componentDidMount() {
-    this.setState({
-      isQuantCastEnabled: typeof window.__cmp !== 'undefined',
-    });
-  }
-
-  render() {
-    const {
-      header: { items },
-      selectedMenuId,
-      onMenuSelected,
-      isMobileMenu,
-      homePageUrl,
-      quantCastMenuLabel,
-    } = this.props;
-
-    const { isQuantCastEnabled } = this.state;
-
-    return (
-      <StyledWrapper>
-        <StyledTabs>
-          <StyledTabLogo href={homePageUrl} data-test="burger-logo">
-            <Logo small={isMobileMenu} />
-          </StyledTabLogo>
-          {items &&
-            items.map(item => (
-              <LeftMenuItem
-                isMobileMenu={isMobileMenu}
-                selectedMenuId={selectedMenuId}
-                onMenuSelected={onMenuSelected}
-                key={item.id}
-                item={item}
-              />
-            ))}
-          {// eslint-disable-next-line
-          isQuantCastEnabled && quantCastMenuLabel && (
-            <LeftMenuItem
-              key="privacy"
-              data-test="burger-privacy"
-              selectedMenuId={selectedMenuId}
-              onClick={() => {
-                // eslint-disable-next-line
-                window.__cmp('displayConsentUi', 2, true);
-              }}
-              item={{ id: 1234, name: quantCastMenuLabel }}
-            />
-          )}
-        </StyledTabs>
-      </StyledWrapper>
-    );
-  }
-}
+const LeftMenu = ({ items, selectedMenuId, onMenuSelected, isMobileMenu, homePageUrl }) => (
+  <StyledTabs>
+    <StyledTabLogo href={homePageUrl} data-test="burger-logo">
+      <Logo small={isMobileMenu} />
+    </StyledTabLogo>
+    {items &&
+      items.map(item => (
+        <LeftMenuItem
+          isMobileMenu={isMobileMenu}
+          selectedMenuId={selectedMenuId}
+          onMenuSelected={onMenuSelected}
+          key={item.id}
+          item={item}
+        />
+      ))}
+  </StyledTabs>
+);
 
 LeftMenu.defaultProps = {
   homePageUrl: '#',
+  items: [],
 };
 
 LeftMenu.propTypes = {
-  header: PropTypes.shape({
-    items: PropTypes.array,
-  }).isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      sections: PropTypes.arrayOf(
+        PropTypes.shape({
+          items: PropTypes.arrayOf(
+            PropTypes.shape({
+              url: PropTypes.string,
+              blank: PropTypes.bool,
+              name: PropTypes.string,
+              icon: PropTypes.string,
+            })
+          ),
+        })
+      ),
+    })
+  ),
   selectedMenuId: PropTypes.number.isRequired,
   onMenuSelected: PropTypes.func.isRequired,
   isMobileMenu: PropTypes.bool.isRequired,
   homePageUrl: PropTypes.string,
-  quantCastMenuLabel: PropTypes.string.isRequired,
 };
 
 LeftMenu.displayName = 'LeftMenu';

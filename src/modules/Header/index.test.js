@@ -2,7 +2,7 @@ import { shallow } from 'enzyme/build';
 import React from 'react';
 import Header from '.';
 
-import menuItems from '../BurgerMenu/mocks/header';
+import menu from '../BurgerMenu/mocks/feed-menu';
 import BurgerMenu from '../BurgerMenu';
 import BurgerIcon from '../../elements/BurgerIcon';
 
@@ -13,12 +13,12 @@ describe('Header', () => {
 
   describe('with submenu', () => {
     it('renders Header with BurgerMenu', () => {
-      const wrapper = shallow(<Header menuItems={menuItems} />);
+      const wrapper = shallow(<Header menuItems={menu.header} />);
       expect(wrapper).toMatchSnapshot();
     });
 
     it('click on BurgerIcon opens a submenu', () => {
-      const wrapper = shallow(<Header menuItems={menuItems} />);
+      const wrapper = shallow(<Header menuItems={menu.header} />);
       wrapper.find(BurgerIcon).simulate('click', {
         preventDefault: () => {},
       });

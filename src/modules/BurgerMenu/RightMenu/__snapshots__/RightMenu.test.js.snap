@@ -1,3 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders items for selected menu id 1`] = `
+<Styled(div)>
+  <RightMenuSection
+    isSubMenuOpen={false}
+    onSubMenuClose={[Function]}
+    selectedMobileMenuItem={-1}
+    subMenuMobile={true}
+  />
+  <Styled(div)
+    menuType="menu"
+  >
+    <RightMenuSection
+      columnType="column"
+      isMobileMenu={true}
+      items={
+        Array [
+          Object {
+            "item": "1",
+          },
+          Object {
+            "item": "2",
+          },
+        ]
+      }
+      key="test"
+      menuId={1}
+      menuType="menu"
+      name="test"
+      onSubMenuOpen={[Function]}
+    />
+  </Styled(div)>
+</Styled(div)>
+`;
+
 exports[`renders with expected snapshot 1`] = `""`;
