@@ -70,8 +70,10 @@ const generateChildren = (cards, title) => {
   if (title) {
     children.push(generateTitle(title));
   }
-  cards.forEach(card => {
-    children.push(<Cards.Watchbar key={card.title + card.startTime + card.endTime} card={card} />);
+  cards.forEach((card, index) => {
+    children.push(
+      <Cards.Watchbar key={card.title + card.startTime + card.endTime} card={card} trackingPosition={index} />
+    );
   });
   return children;
 };

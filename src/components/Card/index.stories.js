@@ -46,6 +46,9 @@ const vod = {
 const watchbar = {
   ...base,
   title: 'Darts: BDO World Championship',
+  playerChannelNameAnalytics: 'eurosport-france',
+  titleAnalytics: 'masters-1000-indian-wells',
+  trackingPosition: 0,
   channel: 'E1FR',
   liveLabel: 'live',
   isLive: true,
@@ -87,7 +90,10 @@ cardStories
     'Watchbar',
     withInfo({ propTablesExclude: [Wrapper] })(() => (
       <Wrapper>
-        <Cards.Watchbar card={object('card', watchbar)} />
+        <Cards.Watchbar
+          card={object('card', watchbar)}
+          trackingPosition={object('trackingPosition', watchbar.trackingPosition)}
+        />
       </Wrapper>
     ))
   );

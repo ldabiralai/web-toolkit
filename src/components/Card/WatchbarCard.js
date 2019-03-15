@@ -123,11 +123,13 @@ const StyledTitle = styled.div`
   margin: 0 0 10px;
 `;
 
-const WatchbarCard = ({ card, ...props }) => {
-  const { img, url, isLive, liveLabel, title, startTime, endTime } = card;
+const WatchbarCard = ({ card, trackingPosition, ...props }) => {
+  const { img, url, playerChannelNameAnalytics, titleAnalytics, isLive, liveLabel, title, startTime, endTime } = card;
+
+  const dataTracking = `what-to-watch-bar:${trackingPosition + 1}:${playerChannelNameAnalytics}:${titleAnalytics}`;
 
   return (
-    <StyledCard {...props} href={url}>
+    <StyledCard {...props} href={url} data-aa-livetowatch={dataTracking}>
       <StyledHeader>
         <StyledImage src={img} />
         <StyledChannelIcon height={15} type={card.channel} />

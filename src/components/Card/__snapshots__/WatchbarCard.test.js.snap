@@ -2,6 +2,7 @@
 
 exports[`renders a WatchbarCard 1`] = `
 <Styled(Link)
+  data-aa-livetowatch="what-to-watch-bar:1:eurosport-france:masters-1000-indian-wells"
   href="/article/id"
   linkComponent={[Function]}
 >

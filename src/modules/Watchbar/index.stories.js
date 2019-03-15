@@ -17,6 +17,9 @@ const base = {
 const watchbarCard = {
   ...base,
   title: 'Darts: BDO World Championship',
+  playerChannelNameAnalytics: 'eurosport-france',
+  titleAnalytics: 'masters-1000-indian-wells',
+  trackingPosition: 0,
   channel: 'E1FR',
   liveLabel: 'live',
   isLive: true,
