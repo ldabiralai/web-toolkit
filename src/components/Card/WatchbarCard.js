@@ -126,7 +126,8 @@ const StyledTitle = styled.div`
 const WatchbarCard = ({ card, trackingPosition, ...props }) => {
   const { img, url, playerChannelNameAnalytics, titleAnalytics, isLive, liveLabel, title, startTime, endTime } = card;
 
-  const dataTracking = `what-to-watch-bar:${trackingPosition + 1}:${playerChannelNameAnalytics}:${titleAnalytics}`;
+  const dataTracking = `what-to-watch-bar:block-${trackingPosition +
+    1}:${playerChannelNameAnalytics}:${titleAnalytics}`;
 
   return (
     <StyledCard {...props} href={url} data-aa-livetowatch={dataTracking}>
