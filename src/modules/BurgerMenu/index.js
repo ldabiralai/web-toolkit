@@ -65,9 +65,13 @@ const StyledMenuTop = styled.div`
   height: 100%;
 `;
 
-const TOP_MENU_IDS = [1, 2, 3, 4, 5, 6, 13];
-const BOTTOM_MENU_LINKS_IDS = [14, 15, 16, 17];
-const BOTTOM_MENU_SOCIAL_ID = 7;
+const BOTTOM_MENU_LINKS_IDS = [
+  14, // "Terms and Conditions"
+  15, // "Privacy Policy"
+  16, // "Privacy settings"
+  17, // "Cookie Policy"
+];
+const BOTTOM_MENU_SOCIAL_ID = 7; // "Follow us on :"
 
 export class BurgerMenu extends React.Component {
   state = {
@@ -80,7 +84,7 @@ export class BurgerMenu extends React.Component {
 
   render() {
     const { items, onClose, isOpen, isMobileMenu, homePageUrl } = this.props;
-    const topMenu = items.filter(i => TOP_MENU_IDS.indexOf(i.id) !== -1);
+    const topMenu = items.filter(({ id }) => BOTTOM_MENU_LINKS_IDS.indexOf(id) === -1 && id !== BOTTOM_MENU_SOCIAL_ID);
     const bottomMenu = {
       links: items.filter(i => BOTTOM_MENU_LINKS_IDS.indexOf(i.id) !== -1),
       socials: items.find(i => i.id === BOTTOM_MENU_SOCIAL_ID),
