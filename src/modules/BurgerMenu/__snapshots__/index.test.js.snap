@@ -102,10 +102,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
         </li>
       </ul>
       <div
-        class="css-twqn40 emqlr8s0"
+        class="css-11gsfft emqlr8s0"
       >
         <div
-          class="css-193wy79 erde2st0"
+          class="css-3phua erde2st0"
           data-test="subnav-sports-mobile"
         >
           <div
@@ -124,10 +124,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
           />
         </div>
         <div
-          class="css-1k87ntm emqlr8s1"
+          class="css-1jd1f80 emqlr8s1"
         >
           <div
-            class="css-9w1isc erde2st0"
+            class="css-5xwnhj erde2st0"
           >
             <div
               class="css-1ff9muh erde2st4"
@@ -217,7 +217,7 @@ exports[`<BurgerMenu /> renders with expected snapshot on desktop 1`] = `
             </ul>
           </div>
           <div
-            class="css-17pk9hj erde2st0"
+            class="css-1s18wcu erde2st0"
           >
             <div
               class="css-1ff9muh erde2st4"
@@ -684,10 +684,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
         </li>
       </ul>
       <div
-        class="css-twqn40 emqlr8s0"
+        class="css-11gsfft emqlr8s0"
       >
         <div
-          class="css-193wy79 erde2st0"
+          class="css-3phua erde2st0"
           data-test="subnav-sports-mobile"
         >
           <div
@@ -706,10 +706,10 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
           />
         </div>
         <div
-          class="css-1k87ntm emqlr8s1"
+          class="css-1jd1f80 emqlr8s1"
         >
           <div
-            class="css-9w1isc erde2st0"
+            class="css-5xwnhj erde2st0"
           >
             <div
               class="css-1ff9muh erde2st4"
@@ -799,7 +799,7 @@ exports[`<BurgerMenu /> renders with expected snapshot on mobile 1 1`] = `
             </ul>
           </div>
           <div
-            class="css-17pk9hj erde2st0"
+            class="css-1s18wcu erde2st0"
           >
             <div
               class="css-1ff9muh erde2st4"

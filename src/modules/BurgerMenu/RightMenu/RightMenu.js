@@ -10,8 +10,8 @@ const StyledWrapper = styled.div`
   flex-grow: 1;
   min-width: 79px
   flex-shrink: 0;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+  height: 100%;
 
   ${large(css`
     width: calc(100% - 195px);
@@ -20,6 +20,7 @@ const StyledWrapper = styled.div`
 
 const StyledContainer = styled.div`
   padding: 0 15px;
+  height: 100%;
 
   ${props =>
     props.menuType === types.MENU.SPORTS &&

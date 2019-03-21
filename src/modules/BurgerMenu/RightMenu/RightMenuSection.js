@@ -9,6 +9,11 @@ import { arsenic, cerulean, gunPowder } from '../../../colors';
 import * as types from './sectionTypes';
 
 const StyledColumn = styled.div`
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  box-sizing: border-box;
+
   ${props =>
     props.subMenuMobile &&
     css`
