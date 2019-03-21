@@ -78,12 +78,13 @@ const generateChildren = (cards, title) => {
   return children;
 };
 
-const WatchBar = ({ cards, title }) => (
-  <div>
-    {title && generateTitle(title)}
-    <StyledCarousel>{generateChildren(cards, title)}</StyledCarousel>
-  </div>
-);
+const WatchBar = ({ cards, title }) =>
+  cards.length ? (
+    <div>
+      {title && generateTitle(title)}
+      {<StyledCarousel>{generateChildren(cards, title)}</StyledCarousel>}
+    </div>
+  ) : null;
 
 WatchBar.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.object).isRequired,

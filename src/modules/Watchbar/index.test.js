@@ -23,3 +23,9 @@ it('renders a WatchBar with a title', () => {
   const wrapper = shallow(<WatchBar cards={cards} title="Live on Eurosport" />);
   expect(wrapper).toMatchSnapshot();
 });
+
+it('do not renders Watchbar without cards', () => {
+  const emptyCards = [];
+  const wrapper = shallow(<WatchBar cards={emptyCards} title="Live on Eurosport" />);
+  expect(wrapper).toMatchSnapshot();
+});

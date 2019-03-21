@@ -23,15 +23,13 @@ exports[`renders a WatchbarCard 1`] = `
   </Styled(div)>
   <Styled(div)>
     <Styled(div)>
-      <ClampLines
-        buttons={false}
-        className="ellipsis"
-        delay={300}
+      <Responsive(LinesEllipsis)
+        basedOn="letters"
         ellipsis="..."
-        lessText="Read less"
-        lines={2}
-        moreText="Read more"
+        innerRef={[Function]}
+        maxLine={2}
         text="Darts: BDO World Championship"
+        trimRight={true}
       />
     </Styled(div)>
     <Styled(div)>

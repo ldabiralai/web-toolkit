@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
+import { object } from '@storybook/addon-knobs';
 import { WatchBar } from '../..';
 
 const indexStories = storiesOf('WatchBar', module);
@@ -16,7 +17,7 @@ const base = {
 
 const watchbarCard = {
   ...base,
-  title: 'Darts: BDO World Championship',
+  title: 'Backhoppning: Varldscupen Vikersund',
   playerChannelNameAnalytics: 'eurosport-france',
   titleAnalytics: 'masters-1000-indian-wells',
   trackingPosition: 0,
@@ -32,4 +33,4 @@ for (let i = 0; i < 10; i += 1) {
   cards.push(watchbarCard);
 }
 
-indexStories.add('WatchBar', withInfo()(() => <WatchBar cards={cards} title="Next on Eurosport" />));
+indexStories.add('WatchBar', withInfo()(() => <WatchBar cards={object('Cards', cards)} title="Next on Eurosport" />));
