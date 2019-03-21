@@ -6,7 +6,7 @@ A collection of components to share common functionality across teams.
 
 ## How to use
 
-`npm install @eurosport/web-toolkit emotion react-emotion emotion-theming polished`
+`npm install @eurosport/web-toolkit emotion@9 react-emotion@9 emotion-theming@9 polished@2`
 
 All available components are exported as named exports so you can pull them in easily:
 
@@ -55,4 +55,15 @@ const overridenLink = ({ href, children, ...props }) => (
 const cardData = {};
 
 <Card.Content card={cardData} type="article" linkComponent={overridenLink} />;
+```
+
+###### web-toolkit dependencies which needs to be installed on your own:
+
+```
+"emotion": "9",
+"emotion-theming": "9",
+"polished": "2",
+"prop-types": "15",
+"react": "16",
+"react-emotion": "9"
 ```
