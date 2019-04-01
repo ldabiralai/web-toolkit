@@ -88,7 +88,9 @@ const Footer = ({ faq, items, copyright, ...props }) => (
       <StyledItems>
         {items.map(
           item =>
-            item.linkProps.href && (
+            item.linkProps &&
+            item.linkProps.href &&
+            item.label && (
               <StyledItem key={item.id}>
                 <StyledLink {...item.linkProps}>{item.label}</StyledLink>
               </StyledItem>
