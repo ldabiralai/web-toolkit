@@ -1,5 +1,12 @@
 # Eurosport Web Toolkit
 
+<p>
+<a href="https://www.npmjs.com/package/@eurosport/web-toolkit">  
+    <img src="https://img.shields.io/npm/v/@eurosport/web-toolkit.svg"
+         alt="npm version">
+ </a>
+</p>
+
 A collection of components to share common functionality across teams.
 
 [View the storybook](https://es-web-toolkit.netlify.com)
