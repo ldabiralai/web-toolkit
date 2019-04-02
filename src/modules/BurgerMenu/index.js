@@ -72,11 +72,20 @@ const BOTTOM_MENU_LINKS_IDS = [
   17, // "Cookie Policy"
 ];
 const BOTTOM_MENU_SOCIAL_ID = 7; // "Follow us on :"
+const ALL_SPORTS_MENU_ID = 2;
+const MORE_MENU_ID = 5;
 
 export class BurgerMenu extends React.Component {
-  state = {
-    selectedMenuId: 2,
-  };
+  constructor(props) {
+    super(props);
+    const { items } = this.props;
+    this.topMenu = items.filter(({ id }) => BOTTOM_MENU_LINKS_IDS.indexOf(id) === -1 && id !== BOTTOM_MENU_SOCIAL_ID);
+    const hasAllSportsMenu = this.topMenu.filter(i => i.id === ALL_SPORTS_MENU_ID).length > 0;
+    const selectedMenuId = hasAllSportsMenu ? ALL_SPORTS_MENU_ID : MORE_MENU_ID;
+    this.state = {
+      selectedMenuId,
+    };
+  }
 
   onMenuSelected = id => {
     this.setState({ selectedMenuId: id });
@@ -84,13 +93,11 @@ export class BurgerMenu extends React.Component {
 
   render() {
     const { items, onClose, isOpen, isMobileMenu, homePageUrl } = this.props;
-    const topMenu = items.filter(({ id }) => BOTTOM_MENU_LINKS_IDS.indexOf(id) === -1 && id !== BOTTOM_MENU_SOCIAL_ID);
+    const { selectedMenuId } = this.state;
     const bottomMenu = {
       links: items.filter(i => BOTTOM_MENU_LINKS_IDS.indexOf(i.id) !== -1),
       socials: items.find(i => i.id === BOTTOM_MENU_SOCIAL_ID),
     };
-
-    const { selectedMenuId } = this.state;
 
     return (
       <StyledModal data-test="modal-container" isOpen={isOpen}>
@@ -99,12 +106,12 @@ export class BurgerMenu extends React.Component {
           <StyledMenuTop>
             <LeftMenu
               isMobileMenu={isMobileMenu}
-              items={topMenu}
+              items={this.topMenu}
               selectedMenuId={selectedMenuId}
               onMenuSelected={this.onMenuSelected}
               homePageUrl={homePageUrl}
             />
-            <RightMenu isMobileMenu={isMobileMenu} items={topMenu} selectedMenuId={selectedMenuId} />
+            <RightMenu isMobileMenu={isMobileMenu} items={this.topMenu} selectedMenuId={selectedMenuId} />
           </StyledMenuTop>
           <BottomMenu isMobileMenu={isMobileMenu} links={bottomMenu.links} socials={bottomMenu.socials} />
         </StyledMenu>
