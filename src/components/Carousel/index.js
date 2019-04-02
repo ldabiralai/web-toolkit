@@ -1,6 +1,6 @@
 /* eslint-disable react/sort-comp */
 import React from 'react';
-import { debounce } from 'lodash/function';
+import debounce from 'lodash/debounce';
 import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
 import { ReactComponent as Chevron } from '../../assets/chevron.svg';
