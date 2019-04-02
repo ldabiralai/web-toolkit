@@ -1,7 +1,7 @@
 import { withInfo } from '@storybook/addon-info';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { text, object } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 import { ArticleContent } from '../..';
 
 const article = storiesOf('ArticleContent', module);
@@ -19,5 +19,5 @@ article
   })
   .add(
     'base',
-    withInfo()(() => <ArticleContent teaser={text('teaser', data.teaser)} html={object('html', data.html)} />)
+    withInfo()(() => <ArticleContent teaser={text('teaser', data.teaser)} html={text('html', data.html)} />)
   );
