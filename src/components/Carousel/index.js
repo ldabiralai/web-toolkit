@@ -1,32 +1,53 @@
+/* eslint-disable react/sort-comp */
 import React from 'react';
-import styled from 'react-emotion';
+import { debounce } from 'lodash/function';
+import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
 import { ReactComponent as Chevron } from '../../assets/chevron.svg';
 
 const StyledWrapper = styled.div`
   display: flex;
+  opacity: 0;
+  overflow: hidden;
+  ${props =>
+    props.slides.length &&
+    css`
+      opacity: 1;
+      transition: opacity 250ms ease-out;
+    `}
 `;
 
 const StyledContainer = styled.div`
-  overflow: hidden;
+  overflow: scroll;
+  ${props =>
+    props.trackWidth &&
+    css`
+      overflow: hidden;
+    `}
   margin: 0 0 0 8px;
 `;
 
 const StyledSlidesTrack = styled.div`
   position: relative;
+  white-space: nowrap;
   top: 0;
-  left: ${props => props.left}px;
+  transform: translateX(${props => props.left}px);
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: ${props => props.trackWidth}px;
-  transition: left 200ms ease-out;
+  width: auto;
+  transition: transform 200ms ease-out;
+  ${props =>
+    props.isDragging &&
+    css`
+      transition: none;
+    `}
   user-select: none;
 `;
 
 const StyledSlide = styled.div`
-  display: block;
-  float: left;
+  display: inline-block;
+  vertical-align: top;
   width: auto;
   margin-right: ${props => props.margin}px;
   &:last-of-type {
@@ -69,82 +90,213 @@ const StyledArrowLeft = styled(StyledArrow)`
 
 export default class Carousel extends React.Component {
   state = {
-    left: 0,
-    currentSlide: 0,
+    slides: [],
     trackWidth: 0,
-    disable: false,
+    disableNavigation: false,
+    left: 0,
+    isDragging: false,
+    slideId: 0,
   };
+
+  coords = {
+    x1: 0,
+    x2: 0,
+    deltaX() {
+      return this.x1 - this.x2;
+    },
+  };
+
+  isOnTouchDevice = false;
+
+  clickTimestamp = null;
 
   wrapperRef = React.createRef();
 
   slidesTrackRef = React.createRef();
 
   componentDidMount() {
-    setTimeout(() => this.calculateElementsSizes(), 200);
-    window.addEventListener('resize', this.calculateElementsSizes);
-    this.previousTouch = 0;
-    this.clickTimestamp = null;
-    this.initialTouch = null;
-    this.click = false;
-    this.wrapperRef.current.addEventListener(
-      'touchstart',
-      e => {
-        this.previousTouch = e.touches[0].clientX;
-      },
-      false
+    this.isOnTouchDevice = this.isTouchDevice();
+    this.calculateElementsSizes();
+    this.onWindowResize = debounce(() => this.calculateElementsSizes(), 250);
+
+    window.addEventListener('resize', this.onWindowResize);
+    if (this.isOnTouchDevice) {
+      this.slidesTrackRef.current.addEventListener('touchstart', this.handleTouchStart, false);
+      this.slidesTrackRef.current.addEventListener('touchend', this.handleTouchEnd, false);
+      window.addEventListener('touchend', this.handleTouchEndOnWindow, false);
+    } else {
+      this.slidesTrackRef.current.addEventListener('mousedown', this.handleMouseDown, false);
+      this.slidesTrackRef.current.addEventListener('mouseup', this.handleMouseUp, false);
+      window.addEventListener('mouseup', this.handleMouseUpOnWindow, false);
+    }
+
+    this.slidesTrackRef.current.addEventListener('click', this.handleClick, false);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.onWindowResize);
+    this.slidesTrackRef.current.removeEventListener('touchstart', this.handleTouchStart);
+    this.slidesTrackRef.current.removeEventListener('touchend', this.handleTouchEnd);
+    this.slidesTrackRef.current.removeEventListener('touchmove', this.handleTouchMove);
+    this.slidesTrackRef.current.removeEventListener('mousedown', this.handleMouseDown);
+    window.removeEventListener('mouseup', this.handleMouseUpOnWindow);
+    window.removeEventListener('touchend', this.handleTouchEndOnWindow);
+    this.slidesTrackRef.current.removeEventListener('mousemove', this.handleMouseMove);
+    this.slidesTrackRef.current.removeEventListener('click', this.handleClick);
+  }
+
+  isTouchDevice = () => 'ontouchstart' in window || navigator.msMaxTouchPoints > 0;
+
+  getXCoordFromEvent = e => {
+    if (e.touches && e.touches[0]) {
+      return e.touches[0].clientX;
+    }
+
+    return e.clientX;
+  };
+
+  onTrackMoveStart = e => {
+    const x = this.getXCoordFromEvent(e);
+    this.clickTimestamp = new Date();
+    this.coords.x1 = x;
+    this.coords.x2 = x;
+  };
+
+  onTrackMoveEnd = e => {
+    this.setState({ isDragging: false });
+    const newX2 = this.getXCoordFromEvent(e);
+
+    // during touch end event we don't receive the touch coord and newX2 will be undefined
+    // thus if undefined - we treat last x2 position as valid one
+    if (!this.isOnTouchDevice) {
+      this.coords.x2 = newX2;
+    }
+
+    this.lockSlides();
+  };
+
+  onTrackMove = e => {
+    const { disableNavigation } = this.state;
+    if (disableNavigation) return;
+    e.preventDefault();
+    const { x2 } = this.coords;
+    const x = this.getXCoordFromEvent(e);
+
+    this.setState(state => ({
+      left: state.left - (x2 - x),
+      isDragging: true,
+    }));
+
+    this.coords.x2 = x;
+  };
+
+  handleTouchStart = e => {
+    this.onTrackMoveStart(e);
+    this.slidesTrackRef.current.addEventListener('touchmove', this.handleTouchMove, false);
+  };
+
+  handleTouchEnd = e => {
+    this.onTrackMoveEnd(e);
+    this.slidesTrackRef.current.removeEventListener('touchmove', this.handleTouchMove);
+  };
+
+  handleTouchMove = e => {
+    this.onTrackMove(e);
+  };
+
+  handleMouseDown = e => {
+    this.onTrackMoveStart(e);
+    this.slidesTrackRef.current.addEventListener('mousemove', this.handleMouseMove, false);
+  };
+
+  handleMouseUp = e => {
+    this.onTrackMoveEnd(e);
+    this.slidesTrackRef.current.removeEventListener('mousemove', this.handleMouseMove);
+  };
+
+  handleMouseUpOnWindow = () => {
+    this.slidesTrackRef.current.removeEventListener('mousemove', this.handleMouseMove);
+    this.slidesTrackRef.current.removeEventListener('touchmove', this.handleMouseMove);
+    this.lockSlides();
+    this.setState({ isDragging: false });
+  };
+
+  handleTouchEndOnWindow = () => {
+    this.slidesTrackRef.current.removeEventListener('touchmove', this.handleMouseMove);
+    this.lockSlides();
+    this.setState({ isDragging: false });
+  };
+
+  handleMouseMove = e => {
+    this.onTrackMove(e);
+  };
+
+  handleClick = e => {
+    if (new Date() - this.clickTimestamp > 150 && Math.abs(this.coords.x1 - this.getXCoordFromEvent(e)) > 20) {
+      e.preventDefault();
+    }
+  };
+
+  getValidSlideId(slideId) {
+    const { slides } = this.state;
+
+    if (slideId >= slides.length) {
+      return slides.length - 1;
+    }
+
+    if (slideId < 0) return 0;
+
+    return slideId;
+  }
+
+  calculateElementsSizes = () => {
+    const slides = this.getSlidesInformation(this.slidesTrackRef.current.children);
+    const wrapperOffsetWidth = this.wrapperRef.current.offsetWidth;
+    const trackWidth = this.slidesTrackRef.current.scrollWidth;
+    const shouldDisable = trackWidth <= wrapperOffsetWidth;
+
+    this.setState({
+      left: 0,
+      slideId: 0,
+      slides,
+      trackWidth,
+      wrapperWidth: wrapperOffsetWidth,
+      disableNavigation: shouldDisable,
+    });
+  };
+
+  /**
+   * Calculate a new left position to have a "magnetic" effect on the slides
+   * @param deltaX
+   */
+  lockSlides() {
+    const { slides, left, disableNavigation } = this.state;
+    const deltaX = this.coords.deltaX();
+
+    if (disableNavigation) return;
+
+    let slideToLock = slides.find(
+      slide => Math.abs(left) >= slide.position && Math.abs(left) <= slide.position + slide.width
     );
-    this.wrapperRef.current.addEventListener(
-      'touchend',
-      () => {
-        this.lockSlides(this.deltaTouch);
-      },
-      false
-    );
-    this.wrapperRef.current.addEventListener('touchmove', e => this.handleEventSlide(e.touches[0].clientX), false);
-    this.wrapperRef.current.addEventListener(
-      'mousedown',
-      e => {
-        e.preventDefault();
-        this.clickTimestamp = new Date();
-        this.previousTouch = e.clientX;
-        this.initialTouch = e.clientX;
-        this.click = true;
-      },
-      false
-    );
-    window.addEventListener(
-      'mouseup',
-      e => {
-        e.preventDefault();
-        this.lockSlides(this.deltaTouch);
-        this.click = false;
-      },
-      false
-    );
-    this.wrapperRef.current.addEventListener(
-      'mousemove',
-      e => {
-        e.preventDefault();
-        if (this.click) {
-          this.handleEventSlide(e.clientX);
-        }
-      },
-      false
-    );
-    this.wrapperRef.current.addEventListener(
-      'click',
-      e => {
-        if (new Date() - this.clickTimestamp > 150 && Math.abs(this.initialTouch - e.clientX) > 20) {
-          e.preventDefault();
-        }
-      },
-      false
-    );
+
+    if (slideToLock !== undefined) {
+      const nextSlide = slides.find(s => s.slideId > slideToLock.slideId);
+
+      const ratio = (left * -1 - slideToLock.position) / slideToLock.width;
+      const limit = deltaX > 0 ? 0.2 : 0.8;
+      if (ratio > limit) {
+        slideToLock = nextSlide || slideToLock;
+      }
+
+      this.setTrackPosition(slideToLock);
+    }
   }
 
   getSlidesInformation(children) {
     const { slideMargin } = this.props;
     let position = 0;
+
+    let slideId = 0;
     return Array.from(children).reduce((slides, slide) => {
       if (slide.offsetWidth === 0) {
         return slides;
@@ -152,79 +304,53 @@ export default class Carousel extends React.Component {
       const slideInfo = {
         width: slide.offsetWidth + slideMargin,
         position,
+        slideId,
       };
       position += slideInfo.width;
+      slideId += 1;
       return [...slides, slideInfo];
     }, []);
   }
 
-  static getTrackWidth(slides) {
-    return slides.reduce((sum, slide) => sum + slide.width, 0);
-  }
+  setTrackPosition = ({ position: newSlidePosition, slideId: newSlideId }) => {
+    const { trackWidth, wrapperWidth, left, slides, disableNavigation } = this.state;
 
-  getLeftInRange(x) {
-    const { trackWidth, wrapperWidth } = this.state;
-    if (x > 0) {
-      return 0;
-    }
-    if (trackWidth - wrapperWidth - Math.abs(x) <= 0) {
-      return trackWidth * -1 + wrapperWidth;
-    }
-    return x;
-  }
+    if (disableNavigation) return;
 
-  calculateElementsSizes = () => {
-    const slides = this.getSlidesInformation(this.slidesTrackRef.current.children);
-    this.setState({
-      trackWidth: Carousel.getTrackWidth(slides),
-    });
-    this.setState({
-      slides,
-      wrapperWidth: this.wrapperRef.current.offsetWidth,
-      disable: this.slidesTrackRef.current.offsetWidth <= this.wrapperRef.current.offsetWidth,
-    });
-    const { disable } = this.state;
-    if (disable) {
+    let lastSlide = slides.find(({ position }) => position + wrapperWidth > trackWidth);
+
+    if (lastSlide === undefined) {
+      lastSlide = slides[slides.length - 1];
+    }
+
+    if (newSlideId >= lastSlide.slideId && this.checkSlideOutOfScrollRight(newSlideId)) {
       this.setState({
-        left: 0,
+        left: -(trackWidth - wrapperWidth),
+        slideId: lastSlide.slideId,
       });
+
+      return;
     }
+
+    if (left > 0) {
+      this.setState(({ slides: stateSlides }) => ({
+        left: stateSlides[0].position,
+        slideId: stateSlides[0].slideId,
+      }));
+
+      return;
+    }
+
+    this.setState({
+      left: -newSlidePosition,
+      slideId: newSlideId,
+    });
   };
 
-  handleEventSlide(x) {
-    const { disable, left } = this.state;
-    let newLeft = left;
-    this.deltaTouch = this.previousTouch - x;
-    newLeft += this.deltaTouch * -1;
-    if (!disable && this.getLeftInRange(newLeft) !== left) {
-      this.setState({
-        left: this.getLeftInRange(newLeft),
-      });
-    }
-    this.previousTouch = x;
-  }
-
-  /**
-   * Calculate a new left position to have a "magnetic" effect on the slides
-   * @param deltaX
-   */
-  lockSlides(deltaX) {
-    const { slides } = this.state;
-    let { left, currentSlide } = this.state;
-    slides.forEach((slide, index) => {
-      if (Math.abs(left) >= slide.position && Math.abs(left) <= slide.position + slide.width) {
-        const ratio = (left * -1 - slide.position) / slide.width;
-        const limit = deltaX > 0 ? 0.2 : 0.8;
-        if (ratio > limit) {
-          left = slides[index + 1].position * -1;
-          currentSlide += 1;
-        } else {
-          left = slide.position * -1;
-          currentSlide = index;
-        }
-        this.setState({ left: this.getLeftInRange(left), currentSlide });
-      }
-    });
+  checkSlideOutOfScrollRight(slideId) {
+    const { wrapperWidth, trackWidth, slides } = this.state;
+    const { position, width } = slides.find(s => s.slideId === slideId);
+    return position + width + wrapperWidth > trackWidth;
   }
 
   /**
@@ -232,36 +358,28 @@ export default class Carousel extends React.Component {
    * @param inverted
    */
   slide(inverted = false) {
-    const { slides, left } = this.state;
-    let { currentSlide } = this.state;
-    let newLeft = left;
-    if (inverted && slides[currentSlide - 1]) {
-      newLeft += slides[currentSlide - 1].width;
-      currentSlide -= 1;
-    } else if (!inverted) {
-      newLeft += slides[currentSlide].width * -1;
-      currentSlide += 1;
-    }
-    if (this.getLeftInRange(newLeft) !== left) {
-      this.setState({
-        left: this.getLeftInRange(newLeft),
-        currentSlide,
-      });
+    const { slides, slideId } = this.state;
+
+    const nextSlideIndex = this.getValidSlideId(inverted ? slideId - 1 : slideId + 1);
+    const nextSlide = slides.find(s => s.slideId === nextSlideIndex);
+
+    if (nextSlide !== undefined) {
+      this.setTrackPosition(nextSlide);
     }
   }
 
   render() {
     const { children, slideMargin, className } = this.props;
-    const { left, trackWidth, disable } = this.state;
+    const { left, trackWidth, disableNavigation, slides, isDragging } = this.state;
     return (
-      <StyledWrapper className={className}>
-        {!disable && (
+      <StyledWrapper className={className} slides={slides}>
+        {!disableNavigation && (
           <StyledArrowLeft onClick={() => this.slide(true)}>
             <StyledChevron />
           </StyledArrowLeft>
         )}
-        <StyledContainer innerRef={this.wrapperRef}>
-          <StyledSlidesTrack innerRef={this.slidesTrackRef} left={left} trackWidth={trackWidth}>
+        <StyledContainer trackWidth={trackWidth} innerRef={this.wrapperRef}>
+          <StyledSlidesTrack innerRef={this.slidesTrackRef} left={left} trackWidth={trackWidth} isDragging={isDragging}>
             {children.map((child, index) => (
               /* eslint-disable-next-line react/no-array-index-key */
               <StyledSlide key={index} margin={slideMargin}>
@@ -270,7 +388,7 @@ export default class Carousel extends React.Component {
             ))}
           </StyledSlidesTrack>
         </StyledContainer>
-        {!disable && (
+        {!disableNavigation && (
           <StyledArrow onClick={() => this.slide()}>
             <StyledChevron />
           </StyledArrow>

@@ -1,6 +1,6 @@
 {
   "name": "@eurosport/web-toolkit",
-  "version": "0.10.11",
+  "version": "0.10.12",
   "description": "Eurosport Web Toolkit",
   "main": "dist/index.js",
   "scripts": {
@@ -92,8 +92,7 @@
   },
   "dependencies": {
     "lodash": "^4.17.11",
-    "react-lines-ellipsis": "^0.14.0",
-    "react-swipeable": "^4.3.1"
+    "react-lines-ellipsis": "^0.14.0"
   },
   "jest": {
     "snapshotSerializers": [

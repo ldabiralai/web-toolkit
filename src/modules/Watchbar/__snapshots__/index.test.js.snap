@@ -4,7 +4,7 @@ exports[`do not renders Watchbar without cards 1`] = `""`;
 
 exports[`renders a WatchBar 1`] = `
 <div>
-  <Styled(Carousel)
+  <Carousel
     className=""
     slideMargin={8}
   >
@@ -68,13 +68,14 @@ exports[`renders a WatchBar 1`] = `
       key="Darts: BDO World Championshipundefinedundefined"
       trackingPosition={3}
     />
-  </Styled(Carousel)>
+  </Carousel>
 </div>
 `;
 
 exports[`renders a WatchBar with a title 1`] = `
 <div>
   <Styled(div)
+    isCarouselCard={false}
     key="Live on Eurosport"
   >
     <Styled(div)>
@@ -84,11 +85,12 @@ exports[`renders a WatchBar with a title 1`] = `
       </Styled(div)>
     </Styled(div)>
   </Styled(div)>
-  <Styled(Carousel)
+  <Carousel
     className=""
     slideMargin={8}
   >
     <Styled(div)
+      isCarouselCard={true}
       key="Live on Eurosport"
     >
       <Styled(div)>
@@ -158,6 +160,6 @@ exports[`renders a WatchBar with a title 1`] = `
       key="Darts: BDO World Championshipundefinedundefined"
       trackingPosition={3}
     />
-  </Styled(Carousel)>
+  </Carousel>
 </div>
 `;

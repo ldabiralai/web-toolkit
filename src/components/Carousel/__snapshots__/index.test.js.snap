@@ -7,76 +7,57 @@ exports[`Carousel test must render the carousel 1`] = `
 >
   <Styled(div)
     className=""
+    slides={Array []}
   >
     <div
-      className="css-k008qs e595p110"
+      className="css-95cx95 e595p110"
     >
-      <Styled(div)
-        onClick={[Function]}
-      >
-        <div
-          className="css-7ftdxm e595p116"
-          onClick={[Function]}
-        >
-          <Styled(ReactComponent)>
-            <ReactComponent
-              className="css-1otx8zx e595p114"
-            >
-              <svg
-                className="css-1otx8zx e595p114"
-              >
-                chevron.svg
-              </svg>
-            </ReactComponent>
-          </Styled(ReactComponent)>
-        </div>
-      </Styled(div)>
       <Styled(div)
         innerRef={
           Object {
             "current": <div
-              class="css-1vt1g5a e595p111"
+              class="css-cvtcsk e595p111"
             >
               <div
-                class="css-hy2wqf e595p112"
+                class="css-dllr4j e595p112"
               >
                 <div
-                  class="css-r0a4tm e595p113"
+                  class="css-14gl6bk e595p113"
                 >
                   <div>
                     1
                   </div>
                 </div>
                 <div
-                  class="css-r0a4tm e595p113"
+                  class="css-14gl6bk e595p113"
                 >
                   <div>
                     2
                   </div>
                 </div>
                 <div
-                  class="css-r0a4tm e595p113"
+                  class="css-14gl6bk e595p113"
                 >
                   <div>
                     3
                   </div>
                 </div>
                 <div
-                  class="css-r0a4tm e595p113"
+                  class="css-14gl6bk e595p113"
                 >
                   <div>
                     4
                   </div>
                 </div>
                 <div
-                  class="css-r0a4tm e595p113"
+                  class="css-14gl6bk e595p113"
                 >
                   <div>
                     5
                   </div>
                 </div>
                 <div
-                  class="css-r0a4tm e595p113"
+                  class="css-14gl6bk e595p113"
                 >
                   <div>
                     6
@@ -86,53 +67,54 @@ exports[`Carousel test must render the carousel 1`] = `
             </div>,
           }
         }
+        trackWidth={0}
       >
         <div
-          className="css-1vt1g5a e595p111"
+          className="css-cvtcsk e595p111"
         >
           <Styled(div)
             innerRef={
               Object {
                 "current": <div
-                  class="css-hy2wqf e595p112"
+                  class="css-dllr4j e595p112"
                 >
                   <div
-                    class="css-r0a4tm e595p113"
+                    class="css-14gl6bk e595p113"
                   >
                     <div>
                       1
                     </div>
                   </div>
                   <div
-                    class="css-r0a4tm e595p113"
+                    class="css-14gl6bk e595p113"
                   >
                     <div>
                       2
                     </div>
                   </div>
                   <div
-                    class="css-r0a4tm e595p113"
+                    class="css-14gl6bk e595p113"
                   >
                     <div>
                       3
                     </div>
                   </div>
                   <div
-                    class="css-r0a4tm e595p113"
+                    class="css-14gl6bk e595p113"
                   >
                     <div>
                       4
                     </div>
                   </div>
                   <div
-                    class="css-r0a4tm e595p113"
+                    class="css-14gl6bk e595p113"
                   >
                     <div>
                       5
                     </div>
                   </div>
                   <div
-                    class="css-r0a4tm e595p113"
+                    class="css-14gl6bk e595p113"
                   >
                     <div>
                       6
@@ -141,18 +123,19 @@ exports[`Carousel test must render the carousel 1`] = `
                 </div>,
               }
             }
+            isDragging={false}
             left={0}
             trackWidth={0}
           >
             <div
-              className="css-hy2wqf e595p112"
+              className="css-dllr4j e595p112"
             >
               <Styled(div)
                 key="0"
                 margin={8}
               >
                 <div
-                  className="css-r0a4tm e595p113"
+                  className="css-14gl6bk e595p113"
                 >
                   <div>
                     1
@@ -164,7 +147,7 @@ exports[`Carousel test must render the carousel 1`] = `
                 margin={8}
               >
                 <div
-                  className="css-r0a4tm e595p113"
+                  className="css-14gl6bk e595p113"
                 >
                   <div>
                     2
@@ -176,7 +159,7 @@ exports[`Carousel test must render the carousel 1`] = `
                 margin={8}
               >
                 <div
-                  className="css-r0a4tm e595p113"
+                  className="css-14gl6bk e595p113"
                 >
                   <div>
                     3
@@ -188,7 +171,7 @@ exports[`Carousel test must render the carousel 1`] = `
                 margin={8}
               >
                 <div
-                  className="css-r0a4tm e595p113"
+                  className="css-14gl6bk e595p113"
                 >
                   <div>
                     4
@@ -200,7 +183,7 @@ exports[`Carousel test must render the carousel 1`] = `
                 margin={8}
               >
                 <div
-                  className="css-r0a4tm e595p113"
+                  className="css-14gl6bk e595p113"
                 >
                   <div>
                     5
@@ -212,7 +195,7 @@ exports[`Carousel test must render the carousel 1`] = `
                 margin={8}
               >
                 <div
-                  className="css-r0a4tm e595p113"
+                  className="css-14gl6bk e595p113"
                 >
                   <div>
                     6
@@ -221,26 +204,6 @@ exports[`Carousel test must render the carousel 1`] = `
               </Styled(div)>
             </div>
           </Styled(div)>
-        </div>
-      </Styled(div)>
-      <Styled(div)
-        onClick={[Function]}
-      >
-        <div
-          className="css-wf4vmz e595p115"
-          onClick={[Function]}
-        >
-          <Styled(ReactComponent)>
-            <ReactComponent
-              className="css-1otx8zx e595p114"
-            >
-              <svg
-                className="css-1otx8zx e595p114"
-              >
-                chevron.svg
-              </svg>
-            </ReactComponent>
-          </Styled(ReactComponent)>
         </div>
       </Styled(div)>
     </div>

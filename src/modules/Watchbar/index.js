@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
 import { rgba } from 'polished';
 import PropTypes from 'prop-types';
 import { Carousel, Cards } from '../..';
@@ -28,6 +28,18 @@ const StyledTitle = styled.div`
     display: block;
     margin-right: 16px;
   }
+
+  ${({ isCarouselCard }) =>
+    isCarouselCard &&
+    css`
+    display: block;
+    white-space: normal;
+    @media (min-width: 900px) {
+        display: none;
+        margin-right: inherit;
+    }
+  }
+  `}
 `;
 
 const StyledTitleContent = styled.div`
@@ -44,20 +56,8 @@ const StyledTitleText = styled.div`
   border-bottom: 1px solid ${rgba(coreLightMinus1, 0.3)};
 `;
 
-const StyledCarousel = styled(Carousel)`
-  ${StyledTitle} {
-    display: block;
-  }
-  @media (min-width: 900px) {
-    ${StyledTitle} {
-      display: none;
-      margin-right: inherit;
-    }
-  }
-`;
-
-const generateTitle = title => (
-  <StyledTitle key={title}>
+const generateTitle = (title, isCarouselCard = false) => (
+  <StyledTitle key={title} isCarouselCard={isCarouselCard}>
     <StyledTitleContent>
       <StyledPlayIco />
       <StyledTitleText>{title}</StyledTitleText>
@@ -68,7 +68,7 @@ const generateTitle = title => (
 const generateChildren = (cards, title) => {
   const children = [];
   if (title) {
-    children.push(generateTitle(title));
+    children.push(generateTitle(title, true));
   }
   cards.forEach((card, index) => {
     children.push(
@@ -78,13 +78,19 @@ const generateChildren = (cards, title) => {
   return children;
 };
 
-const WatchBar = ({ cards, title }) =>
-  cards.length ? (
+const WatchBar = ({ cards, title }) => {
+  if (!cards.length) return null;
+
+  const watchBarCarouselCards = generateChildren(cards, title);
+  const watchBarTitle = title && generateTitle(title);
+
+  return (
     <div>
-      {title && generateTitle(title)}
-      {<StyledCarousel>{generateChildren(cards, title)}</StyledCarousel>}
+      {watchBarTitle}
+      <Carousel>{watchBarCarouselCards}</Carousel>
     </div>
-  ) : null;
+  );
+};
 
 WatchBar.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.object).isRequired,

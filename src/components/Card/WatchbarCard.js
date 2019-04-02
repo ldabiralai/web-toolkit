@@ -19,6 +19,7 @@ const StyledImage = styled.div`
 `;
 
 const StyledHeader = styled.div`
+  box-sizing: border-box;
   position: relative;
   overflow: hidden;
 
@@ -58,11 +59,13 @@ const StyledPlayIcon = styled(PlayIcon)`
 const StyledCard = styled(Link)`
   font-family: Helvetica, Roboto, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
   display: flex;
   border-radius: 2px;
   text-decoration: none;
   overflow: hidden;
   background-color: ${colors.brandBase};
+  white-space: normal;
 
   width: 288px;
   height: 76px;
@@ -102,6 +105,7 @@ const StyledChannelIcon = styled(ChannelIcon)`
 `;
 
 const StyledContent = styled.div`
+  box-sizing: border-box;
   padding: 8px 16px;
   line-height: 1.3;
   flex: 1 auto;
@@ -114,6 +118,7 @@ const StyledContent = styled.div`
 `;
 
 const StyledFooter = styled.div`
+  box-sizing: border-box;
   color: rgba(251, 251, 255, 0.8);
   font-size: 11px;
   border-top: 1px solid rgba(242, 243, 245, 0.4);
@@ -121,6 +126,7 @@ const StyledFooter = styled.div`
 `;
 
 const StyledTitle = styled.div`
+  box-sizing: border-box;
   font-weight: bold;
   color: ${colors.coreLightBase};
   margin: 0 0 10px;
