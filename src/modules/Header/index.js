@@ -2,7 +2,15 @@ import React, { Component } from 'react';
 import styled, { css, injectGlobal } from 'react-emotion';
 import PropTypes from 'prop-types';
 
-import { Link, Logo, BurgerMenu, BurgerIcon, breakpoints, colors, Button } from '../..';
+import BurgerMenu from '../BurgerMenu';
+import Link from '../../elements/Link';
+import Logo from '../../elements/Logo';
+import BurgerIcon from '../../elements/BurgerIcon';
+import Button from '../../elements/Button';
+import * as breakpoints from '../../breakpoints';
+import * as colors from '../../colors';
+
+// import { , breakpoints, colors, Button } from '../..';
 
 const StyledButton = styled(Button)`
   margin-left: auto;
