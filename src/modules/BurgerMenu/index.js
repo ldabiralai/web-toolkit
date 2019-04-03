@@ -10,6 +10,7 @@ import BottomMenu from './BottomMenu/BottomMenu';
 
 import { points, large } from '../../breakpoints';
 import { withMatchMedia } from '../../hocs';
+import { BOTTOM_MENU_LINKS_IDS, BOTTOM_MENU_SOCIAL_ID, ALL_SPORTS_MENU_ID, MORE_MENU_ID } from './constants';
 
 const StyledModal = styled.div`
   display: none;
@@ -64,16 +65,6 @@ const StyledMenuTop = styled.div`
   min-height: 20px;
   height: 100%;
 `;
-
-const BOTTOM_MENU_LINKS_IDS = [
-  14, // "Terms and Conditions"
-  15, // "Privacy Policy"
-  16, // "Privacy settings"
-  17, // "Cookie Policy"
-];
-const BOTTOM_MENU_SOCIAL_ID = 7; // "Follow us on :"
-const ALL_SPORTS_MENU_ID = 2;
-const MORE_MENU_ID = 5;
 
 export class BurgerMenu extends React.Component {
   constructor(props) {

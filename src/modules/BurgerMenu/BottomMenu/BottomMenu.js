@@ -5,6 +5,7 @@ import SocialMenu from './SocialMenu/SocialMenu';
 import { Link } from '../../..';
 import { coreNeutral2, coreDarkBase } from '../../../colors';
 import { large, medium } from '../../../breakpoints';
+import { PRIVACY_SETTINGS_ID } from '../constants';
 
 const StyledContainer = styled.div`
   width: 100%;
@@ -101,7 +102,15 @@ export default class BottomMenu extends React.Component {
 
     return (
       <StyledList>
-        {links.map(i => (i.link ? this.renderUsualLink(i) : isQuantCastEnabled && this.renderQuantCastLink(i)))}
+        {links.map(i => {
+          if (i.link && i.link.url) {
+            return this.renderUsualLink(i);
+          }
+          if (i.id === PRIVACY_SETTINGS_ID && isQuantCastEnabled) {
+            return this.renderQuantCastLink(i);
+          }
+          return null;
+        })}
       </StyledList>
     );
   };
