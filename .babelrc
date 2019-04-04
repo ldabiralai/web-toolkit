@@ -1,4 +1,28 @@
 {
   "presets": ["@babel/preset-react", "@babel/preset-env"],
-  "plugins": ["emotion", "@babel/plugin-proposal-class-properties" ,"react-docgen"]
+  "plugins": ["emotion", "@babel/plugin-proposal-class-properties" ,"react-docgen"],
+  "env": {
+    "esm": {
+      "presets": [
+        "@babel/preset-react",
+        [
+          "@babel/preset-env",
+          {
+            "modules": false
+          }
+        ]
+      ],
+      "plugins": [
+        "inline-react-svg",
+        "emotion",
+        [
+          "@babel/plugin-proposal-class-properties",
+          {
+            "loose": true
+          }
+        ]
+      ],
+      "ignore": ["**/*.test.js", "**/*.stories.js"]
+    }
+  }
 }

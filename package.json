@@ -6,12 +6,13 @@
   "scripts": {
     "test": "npm run test:ci -- --watch",
     "test:ci": "jest --setupTestFrameworkScriptFile=./testSetup.js",
-    "build": "webpack",
+    "build": "webpack && npm run babel-esm",
     "lint": "eslint .",
     "prettier": "prettier --write '**/{*.{js?(on),ts,y?(a)ml,graphql,md,scss},.*.y?(a)ml,.*.json,.prettierrc,.stylelintrc}'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "babel-esm": " babel --env-name esm ./src --out-dir=./dist/es6/ -D"
   },
   "husky": {
     "hooks": {
@@ -55,6 +56,7 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.4",
     "babel-plugin-emotion": "^9.2.11",
+    "babel-plugin-inline-react-svg": "^1.0.1",
     "babel-plugin-named-asset-import": "^0.2.3",
     "emotion": "^9.2.12",
     "emotion-theming": "^9.2.9",
