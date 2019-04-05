@@ -3,6 +3,7 @@
   "version": "0.10.13",
   "description": "Eurosport Web Toolkit",
   "main": "dist/index.js",
+  "module": "dist/es6/index.js",
   "scripts": {
     "test": "npm run test:ci -- --watch",
     "test:ci": "jest --setupTestFrameworkScriptFile=./testSetup.js",
