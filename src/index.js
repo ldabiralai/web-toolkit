@@ -20,6 +20,7 @@ import Carousel from './components/Carousel';
 import Cards from './components/Card';
 import Author from './components/Author';
 import DataLayer from './components/DataLayer';
+import GoogleTagManager from './components/GoogleTagManager';
 
 import Header from './modules/Header';
 import Footer from './modules/Footer';
@@ -59,4 +60,5 @@ export {
   BurgerMenu,
   BurgerIcon,
   SocialIcon,
+  GoogleTagManager,
 };
