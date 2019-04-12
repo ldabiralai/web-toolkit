@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DataLayer /> renders with expected snapshot 1`] = `null`;

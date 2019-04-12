@@ -19,6 +19,7 @@ import ArticleContent from './components/ArticleContent';
 import Carousel from './components/Carousel';
 import Cards from './components/Card';
 import Author from './components/Author';
+import DataLayer from './components/DataLayer';
 
 import Header from './modules/Header';
 import Footer from './modules/Footer';
@@ -53,6 +54,7 @@ export {
   ArticleContent,
   Article,
   Carousel,
+  DataLayer,
   WatchBar,
   BurgerMenu,
   BurgerIcon,
