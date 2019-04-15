@@ -182,19 +182,19 @@ const injectQuantcastScript = (scriptUrl, cmpConf) => {
       window.attachEvent('onmessage', cmpMsgHandler);
     }
   })();
-  window.__cmp('init', cmpConf);
+  window.__cmp('init', cmpConf['en']);
   /* eslint-enable */
 };
 
-const Quantcast = ({ scriptUrl, translations }) => {
-  injectQuantcastScript(scriptUrl, translations);
+const Quantcast = ({ scriptUrl, cmpConf }) => {
+  injectQuantcastScript(scriptUrl, cmpConf);
   return <QuantcastStyle />;
 };
 
 Quantcast.propTypes = {
   scriptUrl: PropTypes.string.isRequired,
   // eslint-disable-next-line react/forbid-prop-types
-  translations: PropTypes.object.isRequired,
+  cmpConf: PropTypes.object.isRequired,
 };
 
 export default Quantcast;
