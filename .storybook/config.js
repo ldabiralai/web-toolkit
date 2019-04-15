@@ -14,7 +14,9 @@ function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
 
+const { STORYBOOK_OVERRIDE_BG } = process.env;
 const StyledWrapper = styled.div`
+  background-color: ${() => (STORYBOOK_OVERRIDE_BG ? '#92b900' : 'inherit')};
   padding: 30px;
 `;
 

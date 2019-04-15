@@ -1,15 +1,24 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { text, radios } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
+import styled from 'react-emotion';
 
 import { SocialIcon } from '../..';
 
-const indexStories = storiesOf('SocialIcon', module).addDecorator(withInfo);
+const Wrapper = styled.div`
+  max-width: 500px;
+`;
 
-indexStories.add('configurable', () => (
-  <SocialIcon
-    iconType={radios('iconType', ['facebook', 'twitter', 'snapchat', 'instagram'], 'snapchat')}
-    iconText={text('iconText', 'your icon text goes here')}
-  />
-));
+const indexStories = storiesOf('SocialIcon', module);
+
+indexStories.add(
+  'Icons',
+  withInfo({ propTablesExclude: [Wrapper] })(() => (
+    <>
+      <SocialIcon iconType="facebook" iconText="Facebook" />
+      <SocialIcon iconType="twitter" iconText="Twitter" />
+      <SocialIcon iconType="snapchat" iconText="Snapchat" />
+      <SocialIcon iconType="instagram" iconText="Instagram" />
+    </>
+  ))
+);

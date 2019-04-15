@@ -1,14 +1,11 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { text, select } from '@storybook/addon-knobs';
+import { text } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { Button } from '../..';
 
 const indexStories = storiesOf('Button', module);
 
-indexStories.add(
-  'configurable',
-  withInfo()(() => (
-    <Button type={select('Type', ['primary', 'secondary'], 'primary')}>{text('Children', 'Children prop text')}</Button>
-  ))
-);
+indexStories
+  .add('primary', withInfo()(() => <Button type="primary">{text('Children', 'Children prop text')}</Button>))
+  .add('secondary', withInfo()(() => <Button type="secondary">{text('Children', 'Children prop text')}</Button>));

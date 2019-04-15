@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { select, object } from '@storybook/addon-knobs';
+import { object } from '@storybook/addon-knobs';
 import styled from 'react-emotion';
 import { Cards } from '../..';
 
@@ -56,20 +56,22 @@ const watchbar = {
   endTime: '15h00',
 };
 
-cardStories
-  .add(
-    'Content',
+const contentCardTypes = ['vod', 'article', 'live'];
+contentCardTypes.forEach(type => {
+  cardStories.add(
+    `ContentCard - ${type}`,
     withInfo({ propTablesExclude: [Wrapper] })(() => {
-      const type = select('type', ['vod', 'article', 'live'], 'article');
       const card = object('card', data[type]);
-
       return (
         <Wrapper>
           <Cards.Content card={card} type={type} />
         </Wrapper>
       );
     })
-  )
+  );
+});
+
+cardStories
   .add(
     'Schedule',
     withInfo({ propTablesExclude: [Wrapper] })(() => (

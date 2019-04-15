@@ -6,6 +6,7 @@
   "scripts": {
     "test": "npm run test:ci -- --watch",
     "test:ci": "jest --setupTestFrameworkScriptFile=./testSetup.js",
+    "test:visual": "STORYBOOK_OVERRIDE_BG=true eyes-storybook",
     "build": "webpack",
     "lint": "eslint .",
     "prettier": "prettier --write '**/{*.{js?(on),ts,y?(a)ml,graphql,md,scss},.*.y?(a)ml,.*.json,.prettierrc,.stylelintrc}'",
@@ -35,6 +36,7 @@
   },
   "homepage": "https://github.com/EurosportDigital/web-toolkit#readme",
   "devDependencies": {
+    "@applitools/eyes.storybook": "^2.3.13",
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.5",
     "@babel/plugin-proposal-class-properties": "^7.3.0",
