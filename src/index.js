@@ -19,6 +19,7 @@ import ArticleContent from './components/ArticleContent';
 import Carousel from './components/Carousel';
 import Cards from './components/Card';
 import Author from './components/Author';
+import Adobe from './components/Adobe';
 import DataLayer from './components/DataLayer';
 import GoogleTagManager from './components/GoogleTagManager';
 
@@ -41,6 +42,7 @@ export {
   ContentListing,
   Cards,
   Author,
+  Adobe,
   PlayIcon,
   LiveLabel,
   ChannelIcon,

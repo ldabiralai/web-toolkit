@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Adobe /> client side renders <Adobe /> 1`] = `
+<AdobeClientInjector
+  src="srcUrl"
+/>
+`;
