@@ -336,6 +336,7 @@ exports[`<Quantcast /> renders the Quantcast component 1`] = `
       },
     }
   }
+  languageCode=""
   scriptUrl="'https://quantcast.mgr.consensu.org/cmp.js'"
 >
   <QuantcastStyle>
