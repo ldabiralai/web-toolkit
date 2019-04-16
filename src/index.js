@@ -21,6 +21,7 @@ import Cards from './components/Card';
 import Author from './components/Author';
 import Adobe from './components/Adobe';
 import DataLayer from './components/DataLayer';
+import Quantcast from './components/Quantcast';
 import GoogleTagManager from './components/GoogleTagManager';
 
 import Header from './modules/Header';
@@ -62,5 +63,6 @@ export {
   BurgerMenu,
   BurgerIcon,
   SocialIcon,
+  Quantcast,
   GoogleTagManager,
 };
