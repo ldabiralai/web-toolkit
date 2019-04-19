@@ -372,24 +372,30 @@ export default class Carousel extends React.Component {
     const { children, slideMargin, className } = this.props;
     const { left, trackWidth, disableNavigation, slides, isDragging } = this.state;
     return (
-      <StyledWrapper className={className} slides={slides}>
+      <StyledWrapper className={className} slides={slides} data-test="carousel">
         {!disableNavigation && (
-          <StyledArrowLeft onClick={() => this.slide(true)}>
+          <StyledArrowLeft onClick={() => this.slide(true)} data-test="carousel-arrow-left">
             <StyledChevron />
           </StyledArrowLeft>
         )}
         <StyledContainer trackWidth={trackWidth} innerRef={this.wrapperRef}>
-          <StyledSlidesTrack innerRef={this.slidesTrackRef} left={left} trackWidth={trackWidth} isDragging={isDragging}>
+          <StyledSlidesTrack
+            innerRef={this.slidesTrackRef}
+            left={left}
+            trackWidth={trackWidth}
+            isDragging={isDragging}
+            data-test="carousel-slider"
+          >
             {children.map((child, index) => (
               /* eslint-disable-next-line react/no-array-index-key */
-              <StyledSlide key={index} margin={slideMargin}>
+              <StyledSlide key={index} margin={slideMargin} data-test={`carousel-item-${index}`}>
                 {child}
               </StyledSlide>
             ))}
           </StyledSlidesTrack>
         </StyledContainer>
         {!disableNavigation && (
-          <StyledArrow onClick={() => this.slide()}>
+          <StyledArrow onClick={() => this.slide()} data-test="carousel-arrow-right">
             <StyledChevron />
           </StyledArrow>
         )}

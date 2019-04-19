@@ -2,6 +2,7 @@
 
 exports[`renders a Article ContentCard 1`] = `
 <Styled(Link)
+  data-test="content-card"
   href="/article/1"
   linkComponent={[Function]}
 >

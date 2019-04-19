@@ -7,11 +7,14 @@
     "test": "npm run test:ci -- --watch",
     "test:ci": "jest --setupTestFrameworkScriptFile=./testSetup.js",
     "test:visual": "STORYBOOK_OVERRIDE_BG=true eyes-storybook",
+    "cypress": "cypress run",
+    "cypress:open": "cypress open",
     "build": "webpack",
     "lint": "eslint .",
     "prettier": "prettier --write '**/{*.{js?(on),ts,y?(a)ml,graphql,md,scss},.*.y?(a)ml,.*.json,.prettierrc,.stylelintrc}'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
+    "start-static-storybook": "serve ./storybook-static",
     "prepublish": "npm run build"
   },
   "husky": {
@@ -58,6 +61,7 @@
     "babel-loader": "^8.0.4",
     "babel-plugin-emotion": "^9.2.11",
     "babel-plugin-named-asset-import": "^0.2.3",
+    "cypress": "^3.2.0",
     "emotion": "^9.2.12",
     "emotion-theming": "^9.2.9",
     "enzyme": "^3.7.0",
@@ -81,6 +85,8 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-emotion": "^9.2.12",
+    "serve": "^11.0.0",
+    "wait-on": "^3.2.0",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2"
   },

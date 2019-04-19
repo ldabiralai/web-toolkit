@@ -67,7 +67,7 @@ const ContentCard = ({ card, type, ...props }) => {
   const icon = isLive ? <ChannelIcon height={15} type={card.channel} /> : null;
 
   return (
-    <StyledCard {...props} href={url}>
+    <StyledCard {...props} href={url} data-test="content-card">
       <StyledHeader>
         <StyledImage src={img} />
         {isPlayable && <StyledPlayIcon height={50} />}

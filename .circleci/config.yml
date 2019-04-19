@@ -9,7 +9,7 @@ aliases:
   - &restore_cache
     restore_cache:
       keys:
-        - v1-dependencies-{{ checksum "package-lock.json" }}
+        - v2-dependencies-{{ checksum "package-lock.json" }}
 
 jobs:
   dependencies:
@@ -21,7 +21,8 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package-lock.json" }}
+            - ~/.cache/Cypress
+          key: v2-dependencies-{{ checksum "package-lock.json" }}
   test_unit:
     <<: *defaults
     steps:
@@ -47,12 +48,28 @@ jobs:
             else
               echo "Not running visual test"
             fi
+  test_cypress:
+    <<: *defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - run: npm run build-storybook
+      - run:
+          command: npm run start-static-storybook
+          background: true
+      - run: ./node_modules/.bin/wait-on http://localhost:5000
+      - run: npm run cypress
+      - store_artifacts:
+          path: ./cypress/screenshots/
 
 workflows:
   version: 2
   build_and_test:
     jobs:
       - dependencies
+      - test_cypress:
+          requires:
+            - dependencies
       - test_unit:
           requires:
             - dependencies
@@ -70,6 +87,7 @@ workflows:
           requires:
             - test_unit
             - lint
+            - test_cypress
             - run_visual_test
           filters:
             branches:

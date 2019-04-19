@@ -7,10 +7,12 @@ exports[`Carousel test must render the carousel 1`] = `
 >
   <Styled(div)
     className=""
+    data-test="carousel"
     slides={Array []}
   >
     <div
       className="css-95cx95 e595p110"
+      data-test="carousel"
     >
       <Styled(div)
         innerRef={
@@ -20,9 +22,11 @@ exports[`Carousel test must render the carousel 1`] = `
             >
               <div
                 class="css-dllr4j e595p112"
+                data-test="carousel-slider"
               >
                 <div
                   class="css-14gl6bk e595p113"
+                  data-test="carousel-item-0"
                 >
                   <div>
                     1
@@ -30,6 +34,7 @@ exports[`Carousel test must render the carousel 1`] = `
                 </div>
                 <div
                   class="css-14gl6bk e595p113"
+                  data-test="carousel-item-1"
                 >
                   <div>
                     2
@@ -37,6 +42,7 @@ exports[`Carousel test must render the carousel 1`] = `
                 </div>
                 <div
                   class="css-14gl6bk e595p113"
+                  data-test="carousel-item-2"
                 >
                   <div>
                     3
@@ -44,6 +50,7 @@ exports[`Carousel test must render the carousel 1`] = `
                 </div>
                 <div
                   class="css-14gl6bk e595p113"
+                  data-test="carousel-item-3"
                 >
                   <div>
                     4
@@ -51,6 +58,7 @@ exports[`Carousel test must render the carousel 1`] = `
                 </div>
                 <div
                   class="css-14gl6bk e595p113"
+                  data-test="carousel-item-4"
                 >
                   <div>
                     5
@@ -58,6 +66,7 @@ exports[`Carousel test must render the carousel 1`] = `
                 </div>
                 <div
                   class="css-14gl6bk e595p113"
+                  data-test="carousel-item-5"
                 >
                   <div>
                     6
@@ -73,13 +82,16 @@ exports[`Carousel test must render the carousel 1`] = `
           className="css-cvtcsk e595p111"
         >
           <Styled(div)
+            data-test="carousel-slider"
             innerRef={
               Object {
                 "current": <div
                   class="css-dllr4j e595p112"
+                  data-test="carousel-slider"
                 >
                   <div
                     class="css-14gl6bk e595p113"
+                    data-test="carousel-item-0"
                   >
                     <div>
                       1
@@ -87,6 +99,7 @@ exports[`Carousel test must render the carousel 1`] = `
                   </div>
                   <div
                     class="css-14gl6bk e595p113"
+                    data-test="carousel-item-1"
                   >
                     <div>
                       2
@@ -94,6 +107,7 @@ exports[`Carousel test must render the carousel 1`] = `
                   </div>
                   <div
                     class="css-14gl6bk e595p113"
+                    data-test="carousel-item-2"
                   >
                     <div>
                       3
@@ -101,6 +115,7 @@ exports[`Carousel test must render the carousel 1`] = `
                   </div>
                   <div
                     class="css-14gl6bk e595p113"
+                    data-test="carousel-item-3"
                   >
                     <div>
                       4
@@ -108,6 +123,7 @@ exports[`Carousel test must render the carousel 1`] = `
                   </div>
                   <div
                     class="css-14gl6bk e595p113"
+                    data-test="carousel-item-4"
                   >
                     <div>
                       5
@@ -115,6 +131,7 @@ exports[`Carousel test must render the carousel 1`] = `
                   </div>
                   <div
                     class="css-14gl6bk e595p113"
+                    data-test="carousel-item-5"
                   >
                     <div>
                       6
@@ -129,13 +146,16 @@ exports[`Carousel test must render the carousel 1`] = `
           >
             <div
               className="css-dllr4j e595p112"
+              data-test="carousel-slider"
             >
               <Styled(div)
+                data-test="carousel-item-0"
                 key="0"
                 margin={8}
               >
                 <div
                   className="css-14gl6bk e595p113"
+                  data-test="carousel-item-0"
                 >
                   <div>
                     1
@@ -143,11 +163,13 @@ exports[`Carousel test must render the carousel 1`] = `
                 </div>
               </Styled(div)>
               <Styled(div)
+                data-test="carousel-item-1"
                 key="1"
                 margin={8}
               >
                 <div
                   className="css-14gl6bk e595p113"
+                  data-test="carousel-item-1"
                 >
                   <div>
                     2
@@ -155,11 +177,13 @@ exports[`Carousel test must render the carousel 1`] = `
                 </div>
               </Styled(div)>
               <Styled(div)
+                data-test="carousel-item-2"
                 key="2"
                 margin={8}
               >
                 <div
                   className="css-14gl6bk e595p113"
+                  data-test="carousel-item-2"
                 >
                   <div>
                     3
@@ -167,11 +191,13 @@ exports[`Carousel test must render the carousel 1`] = `
                 </div>
               </Styled(div)>
               <Styled(div)
+                data-test="carousel-item-3"
                 key="3"
                 margin={8}
               >
                 <div
                   className="css-14gl6bk e595p113"
+                  data-test="carousel-item-3"
                 >
                   <div>
                     4
@@ -179,11 +205,13 @@ exports[`Carousel test must render the carousel 1`] = `
                 </div>
               </Styled(div)>
               <Styled(div)
+                data-test="carousel-item-4"
                 key="4"
                 margin={8}
               >
                 <div
                   className="css-14gl6bk e595p113"
+                  data-test="carousel-item-4"
                 >
                   <div>
                     5
@@ -191,11 +219,13 @@ exports[`Carousel test must render the carousel 1`] = `
                 </div>
               </Styled(div)>
               <Styled(div)
+                data-test="carousel-item-5"
                 key="5"
                 margin={8}
               >
                 <div
                   className="css-14gl6bk e595p113"
+                  data-test="carousel-item-5"
                 >
                   <div>
                     6
