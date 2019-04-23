@@ -1,0 +1,22 @@
+{
+  "Language": "en",
+  "Initial Screen Accept Button Text": "I accept",
+  "Purpose Screen Body Text": "Eurosport collects information through technology such as cookies to measure, understand and report on your usage of the service, as explained more fully below (\"Measurement\").  To understand more about these cookies and how to disable them, please see our <a href='https://www.eurosport.co.uk/eurosport/cookie-policy_sto6832423/story.shtml'>Cookies Policy.</a>. <br/> <br/>With regard to cookies and similar technologies used for the purpose of personalised advertising, you can set your consent preferences and determine how you want your data to be used based on the purposes under Third Party Vendors below.  Each purpose has a description so that you know how we and our partners use your data.  ",
+  "Vendor Screen Body Text": "With regard to cookies and similar technologies used for the purpose of personalised advertising, you can set your consent preferences and determine how you want your data to be used based on the purposes below. Each purpose has a description so that you know how we and our partners use your data. ",
+  "Vendor Screen Accept All Button Text": "Accept all",
+  "Vendor Screen Reject All Button Text": "Reject all",
+  "Initial Screen Body Text": "We and our partners process your personal data using technology such as cookies in order to serve advertising, analyse our traffic and deliver customised experiences for you. You have choice in who uses your data and for what purposes and after setting your preferences may come back anytime to make changes.",
+  "Initial Screen Body Text Option": 2,
+  "Publisher Name": "Eurosport",
+  "Publisher Logo": "https://layout.eurosport.com/i/v8_5/logo/esp_logo_dark_2x.png",
+  "Post Consent Page": "https://www.eurosport.com",
+  "Consent Scope": "service",
+  "UI Layout": "banner",
+  "No Option": false,
+  "Publisher Purpose Legitimate Interest IDs": [5],
+  "Publisher Purpose IDs": [5],
+  "Publisher Vendor List URL": "https://www.eurosport.co.uk/.well-known/pubvendors.json",
+  "Custom Links Displayed on Initial Screen": [
+    "[Find out more about cookies by reading our Cookies Policy.](https://www.eurosport.co.uk/eurosport/cookie-policy_sto6832423/story.shtml)"
+  ]
+}

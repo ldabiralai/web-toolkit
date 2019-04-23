@@ -103,7 +103,7 @@ const QuantcastStyle = () => (
   />
 );
 
-const injectQuantcastScript = (scriptUrl, cmpConf, languageCode) => {
+const injectQuantcastScript = (scriptUrl, cmpConf) => {
   /*eslint-disable */
   const elem = document.createElement('script');
   elem.src = scriptUrl;
@@ -182,24 +182,26 @@ const injectQuantcastScript = (scriptUrl, cmpConf, languageCode) => {
       window.attachEvent('onmessage', cmpMsgHandler);
     }
   })();
-  window.__cmp('init', cmpConf[languageCode] || cmpConf['en']);
+  window.__cmp('init', cmpConf);
   /* eslint-enable */
 };
 
-const Quantcast = ({ scriptUrl, cmpConf, languageCode }) => {
-  injectQuantcastScript(scriptUrl, cmpConf, languageCode);
-  return <QuantcastStyle />;
+const Quantcast = ({ scriptUrl, cmpConf }) => {
+  if (cmpConf) {
+    injectQuantcastScript(scriptUrl, cmpConf);
+    return <QuantcastStyle />;
+  }
+  return null;
 };
 
 Quantcast.defaultProps = {
-  languageCode: '',
+  scriptUrl: 'https://quantcast.mgr.consensu.org/v14/cmp.js',
 };
 
 Quantcast.propTypes = {
-  scriptUrl: PropTypes.string.isRequired,
+  scriptUrl: PropTypes.string,
   // eslint-disable-next-line react/forbid-prop-types
   cmpConf: PropTypes.object.isRequired,
-  languageCode: PropTypes.string,
 };
 
 export default Quantcast;
