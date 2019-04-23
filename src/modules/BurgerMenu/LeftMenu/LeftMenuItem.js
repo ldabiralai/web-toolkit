@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'react-emotion';
 import { rgba } from 'polished';
-import { medium, large } from '../../../breakpoints';
+import { large } from '../../../breakpoints';
 import { cerulean, coreLightMinus1, utahCrimson } from '../../../colors';
 
 const StyledItemLink = styled.a`
@@ -52,10 +52,7 @@ const StyledItem = styled.li`
     props.isWatch &&
     css`
       background: ${utahCrimson};
-
-      ${medium(css`
-        text-transform: uppercase;
-      `)};
+      text-transform: uppercase;
 
       &:hover {
         background: ${utahCrimson};
