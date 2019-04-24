@@ -23,6 +23,7 @@ import Adobe from './components/Adobe';
 import DataLayer from './components/DataLayer';
 import Quantcast from './components/Quantcast';
 import GoogleTagManager from './components/GoogleTagManager';
+import StoryCard from './components/StoryCard';
 
 import Header from './modules/Header';
 import Footer from './modules/Footer';
@@ -65,4 +66,5 @@ export {
   SocialIcon,
   Quantcast,
   GoogleTagManager,
+  StoryCard,
 };

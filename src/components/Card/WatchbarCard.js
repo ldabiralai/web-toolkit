@@ -8,6 +8,7 @@ import PlayIcon, { hoverStyles as playIconHoverStyle } from '../../elements/Play
 import ChannelIcon from '../../elements/ChannelIcon';
 import Link from '../../elements/Link';
 import LiveLabel from '../../elements/LiveLabel';
+import { fontFamilies } from '../../typography';
 
 const ResponsiveEllipsis = LinesEllipsisResponsive()(LinesEllipsis);
 
@@ -57,7 +58,7 @@ const StyledPlayIcon = styled(PlayIcon)`
 `;
 
 const StyledCard = styled(Link)`
-  font-family: Helvetica, Roboto, Arial, sans-serif;
+  font-family: ${fontFamilies.helvetica};
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   display: flex;
