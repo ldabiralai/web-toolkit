@@ -92,3 +92,9 @@ workflows:
           filters:
             branches:
               only: /master/
+      - qa_validation:
+          type: approval
+          requires:
+            - test_unit
+            - test_cypress
+            - lint
