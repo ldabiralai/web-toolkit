@@ -4,16 +4,27 @@ defaults: &defaults
   working_directory: ~/repo
   docker:
     - image: circleci/node:10-browsers
+  add_ssh_keys:
+    fingerprints:
+      - "f2:3e:52:f2:7c:f9:3b:bb:b2:cd:c3:ee:5a:94:fc:b6"
 
 aliases:
   - &restore_cache
     restore_cache:
       keys:
         - v2-dependencies-{{ checksum "package-lock.json" }}
+  - &filter-only-master
+    branches:
+      only:
+        - master
   - &authenticate_npm
     run:
-      name: Authenticate with registry
+      name: Authenticate with npm
       command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+  - &authenticate_git
+    run:
+      name: Authenticate with git
+      command: git config user.email "circleci@eurosport.com" && git config user.name "CircleCI"
 
 jobs:
   dependencies:
@@ -71,7 +82,8 @@ jobs:
       - checkout
       - *restore_cache
       - *authenticate_npm
-      - run: npm version patch
+      - *authenticate_git
+      - run: npm version patch -m "%s [skip ci]"
       - run: npm publish
       - run: git push
   npm_minor:
@@ -80,7 +92,8 @@ jobs:
       - checkout
       - *restore_cache
       - *authenticate_npm
-      - run: npm version minor
+      - *authenticate_git
+      - run: npm version minor -m "%s [skip ci]"
       - run: npm publish
       - run: git push
   npm_major:
@@ -89,7 +102,8 @@ jobs:
       - checkout
       - *restore_cache
       - *authenticate_npm
-      - run: npm version major
+      - *authenticate_git
+      - run: npm version major -m "%s [skip ci]"
       - run: npm publish
       - run: git push
 
@@ -111,18 +125,14 @@ workflows:
           type: approval
           requires:
             - dependencies
-          filters:
-            branches:
-              only: /master/
+          filters: *filter-only-master
       - test_visual:
           requires:
             - test_unit
             - lint
             - test_cypress
             - run_visual_test
-          filters:
-            branches:
-              only: /master/
+          filters: *filter-only-master
       - qa_validation:
           type: approval
           requires:
@@ -133,38 +143,26 @@ workflows:
           type: approval
           requires:
             - qa_validation
-          filters:
-            branches:
-              only: /master/
+          filters: *filter-only-master
       - npm_patch:
           requires:
             - run_npm_patch
-          filters:
-            branches:
-              only: /master/
+          filters: *filter-only-master
       - run_npm_minor:
           type: approval
           requires:
             - qa_validation
-          filters:
-            branches:
-              only: /master/
+          filters: *filter-only-master
       - npm_minor:
           requires:
             - run_npm_minor
-          filters:
-            branches:
-              only: /master/
+          filters: *filter-only-master
       - run_npm_major:
           type: approval
           requires:
             - qa_validation
-          filters:
-            branches:
-              only: /master/
+          filters: *filter-only-master
       - npm_major:
           requires:
             - run_npm_major
-          filters:
-            branches:
-              only: /master/
+          filters: *filter-only-master
