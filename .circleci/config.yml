@@ -10,6 +10,10 @@ aliases:
     restore_cache:
       keys:
         - v2-dependencies-{{ checksum "package-lock.json" }}
+  - &authenticate_npm
+    run:
+      name: Authenticate with registry
+      command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
 
 jobs:
   dependencies:
@@ -61,6 +65,33 @@ jobs:
       - run: npm run cypress
       - store_artifacts:
           path: ./cypress/screenshots/
+  npm_patch:
+    <<: *defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - *authenticate_npm
+      - run: npm version patch
+      - run: npm publish
+      - run: git push
+  npm_minor:
+    <<: *defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - *authenticate_npm
+      - run: npm version minor
+      - run: npm publish
+      - run: git push
+  npm_major:
+    <<: *defaults
+    steps:
+      - checkout
+      - *restore_cache
+      - *authenticate_npm
+      - run: npm version major
+      - run: npm publish
+      - run: git push
 
 workflows:
   version: 2
@@ -98,3 +129,42 @@ workflows:
             - test_unit
             - test_cypress
             - lint
+      - run_npm_patch:
+          type: approval
+          requires:
+            - qa_validation
+          filters:
+            branches:
+              only: /master/
+      - npm_patch:
+          requires:
+            - run_npm_patch
+          filters:
+            branches:
+              only: /master/
+      - run_npm_minor:
+          type: approval
+          requires:
+            - qa_validation
+          filters:
+            branches:
+              only: /master/
+      - npm_minor:
+          requires:
+            - run_npm_minor
+          filters:
+            branches:
+              only: /master/
+      - run_npm_major:
+          type: approval
+          requires:
+            - qa_validation
+          filters:
+            branches:
+              only: /master/
+      - npm_major:
+          requires:
+            - run_npm_major
+          filters:
+            branches:
+              only: /master/
