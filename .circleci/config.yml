@@ -20,7 +20,7 @@ aliases:
   - &authenticate_npm
     run:
       name: Authenticate with npm
-      command: echo "//registry.npmjs.org/:_authToken=$npm_TOKEN" > ~/repo/.npmrc
+      command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
   - &authenticate_git
     run:
       name: Authenticate with git
