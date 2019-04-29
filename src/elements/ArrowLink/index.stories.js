@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { ArrowLink } from '../..';
 
-const indexStories = storiesOf('ArrowLink', module);
+const indexStories = storiesOf('Elements|ArrowLink', module);
 
 indexStories.add(
   'ArrowLink',

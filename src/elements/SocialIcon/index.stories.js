@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   max-width: 500px;
 `;
 
-const indexStories = storiesOf('SocialIcon', module);
+const indexStories = storiesOf('Elements|SocialIcon', module);
 
 indexStories.add(
   'Icons',

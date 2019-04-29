@@ -4,7 +4,7 @@ import { number } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { ChannelIcon } from '../..';
 
-const iconsStories = storiesOf('ChannelIcon', module);
+const iconsStories = storiesOf('Elements|ChannelIcon', module);
 
 const iconTypes = ['', 'E1*', 'E2*', 'E2NO', 'E2RUG', 'E2GR'];
 

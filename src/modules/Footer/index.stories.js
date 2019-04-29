@@ -4,7 +4,7 @@ import { text, object } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { Footer } from '../..';
 
-const footerStories = storiesOf('Footer', module);
+const footerStories = storiesOf('Modules|Footer', module);
 const faq = {
   label: 'Help & Faq',
   linkProps: {

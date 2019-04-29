@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { Button } from '../..';
 
-const indexStories = storiesOf('Button', module);
+const indexStories = storiesOf('Elements|Button', module);
 
 indexStories
   .add('primary', withInfo()(() => <Button type="primary">{text('Children', 'Children prop text')}</Button>))

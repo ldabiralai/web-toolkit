@@ -3,7 +3,7 @@ import { withInfo } from '@storybook/addon-info';
 import { storiesOf } from '@storybook/react';
 import { Article } from '../..';
 
-const articleStories = storiesOf('Article', module);
+const articleStories = storiesOf('Modules|Article', module);
 
 const data = {
   title: 'Klopp calls Ancelotti praise tactics ahead of Napoli clash',

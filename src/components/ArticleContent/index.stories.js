@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { text } from '@storybook/addon-knobs';
 import { ArticleContent } from '../..';
 
-const article = storiesOf('ArticleContent', module);
+const article = storiesOf('Components|ArticleContent', module);
 
 const data = {
   teaser:

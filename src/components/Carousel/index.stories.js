@@ -9,7 +9,7 @@ import WatchbarCard from '../Card/WatchbarCard';
 import { coreLightMinus1, coreNeutral1 } from '../../colors';
 import { ReactComponent as Play } from '../../assets/circleplay.svg';
 
-const indexStories = storiesOf('Carousel', module);
+const indexStories = storiesOf('Components|Carousel', module);
 
 const base = {
   img: 'https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640',

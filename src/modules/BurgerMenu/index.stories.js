@@ -6,7 +6,7 @@ import { object, boolean } from '@storybook/addon-knobs';
 import { BurgerMenu } from '../..';
 import menuMocks from './mocks/feed-menu';
 
-const story = storiesOf('BurgerMenu', module).addDecorator(withInfo);
+const story = storiesOf('Modules|BurgerMenu', module).addDecorator(withInfo);
 
 story.add('configurable', () => {
   window.__cmp = () => {};

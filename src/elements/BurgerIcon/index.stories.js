@@ -3,6 +3,6 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { BurgerIcon } from '../..';
 
-const indexStories = storiesOf('BurgerIcon', module);
+const indexStories = storiesOf('Elements|BurgerIcon', module);
 
 indexStories.add('default', withInfo()(() => <BurgerIcon onClick={() => {}} />));

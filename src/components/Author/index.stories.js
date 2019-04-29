@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { Author } from '../..';
 
-const authorStories = storiesOf('Author', module);
+const authorStories = storiesOf('Components|Author', module);
 
 authorStories
   .add(

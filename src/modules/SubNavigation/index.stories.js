@@ -4,7 +4,7 @@ import { object } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { SubNavigation } from '../..';
 
-const subNavigationStories = storiesOf('SubNavigation', module);
+const subNavigationStories = storiesOf('Modules|SubNavigation', module);
 const items = [
   {
     label: 'Home',

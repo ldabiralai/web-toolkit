@@ -8,7 +8,7 @@ import { Header } from '../..';
 import menu from '../BurgerMenu/mocks/feed-menu';
 
 const cta = { link: 'www.eurosport.fr', label: 'subscribe' };
-storiesOf('Header', module)
+storiesOf('Modules|Header', module)
   .add('default', withInfo()(() => <Header />))
   .add(
     'configurable',

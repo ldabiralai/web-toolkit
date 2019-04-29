@@ -13,7 +13,7 @@ describe('Carousel', () => {
   };
 
   beforeEach(() => {
-    cy.visitComponent('Carousel:Carousel');
+    cy.visitComponent('Components:Carousel:Carousel');
   });
   it('should display carousel', () => {
     cy.get('[data-test="carousel"]').should('have.length', 1);

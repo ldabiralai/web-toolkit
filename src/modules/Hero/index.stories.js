@@ -14,7 +14,7 @@ const data = {
   time: 'September 4th 2018 at 12:40PM',
 };
 
-storiesOf('Hero', module)
+storiesOf('Modules|Hero', module)
   .addParameters({
     backgrounds: { disable: true },
   })

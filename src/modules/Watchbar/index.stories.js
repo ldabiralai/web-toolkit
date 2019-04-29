@@ -4,7 +4,7 @@ import { withInfo } from '@storybook/addon-info';
 import { object } from '@storybook/addon-knobs';
 import { WatchBar } from '../..';
 
-const indexStories = storiesOf('WatchBar', module);
+const indexStories = storiesOf('Modules|WatchBar', module);
 
 const base = {
   img: 'https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640',

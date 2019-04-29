@@ -4,7 +4,7 @@ import { number, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { PlayIcon } from '../..';
 
-const iconsStories = storiesOf('PlayIcon', module);
+const iconsStories = storiesOf('Elements|PlayIcon', module);
 
 iconsStories.add(
   'configurable',

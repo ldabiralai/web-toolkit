@@ -4,7 +4,7 @@ import { withInfo } from '@storybook/addon-info';
 import { object, select, text } from '@storybook/addon-knobs';
 import { ContentListing, Cards } from '../..';
 
-const contentListingStories = storiesOf('Content Grid', module);
+const contentListingStories = storiesOf('Modules|Content Grid', module);
 
 const baseData = {
   img: 'https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-130536.jpeg?w=500',

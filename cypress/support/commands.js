@@ -25,8 +25,8 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('visitComponent', storyPath => {
-  const [component, story] = storyPath.split(':');
-  const pathName = `selectedKind=${component}&selectedStory=${story}`;
+  const [type, component, story] = storyPath.split(':');
+  const pathName = `selectedKind=${type}%7C${component}&selectedStory=${story}`;
 
   const iframeUrl = `/iframe?${pathName}`;
 

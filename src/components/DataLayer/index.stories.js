@@ -6,7 +6,7 @@ import { object } from '@storybook/addon-knobs';
 import { DataLayer } from '../..';
 import dataLayerMock from './mocks/dataLayerMock';
 
-const datalayerStories = storiesOf('DataLayer', module).addDecorator(withInfo);
+const datalayerStories = storiesOf('Components|DataLayer', module).addDecorator(withInfo);
 
 datalayerStories.add('configurable', () => (
   <DataLayer dataLayer={object('dataLayer', dataLayerMock.dataLayer, 'dataLayer prop example')} />

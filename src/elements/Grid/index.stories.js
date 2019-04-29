@@ -5,7 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 import { select } from '@storybook/addon-knobs';
 import { Grid, Cards } from '../..';
 
-const gridStories = storiesOf('Grid', module);
+const gridStories = storiesOf('Elements|Grid', module);
 const cardData = {
   img: 'https://i.eurosport.com/taiga/MagicBox/Crop/16_9/0_20180710-125830.jpeg?w=640',
   url: '/article/id',

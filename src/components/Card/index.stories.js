@@ -5,7 +5,7 @@ import { object } from '@storybook/addon-knobs';
 import styled from 'react-emotion';
 import { Cards } from '../..';
 
-const cardStories = storiesOf('Card', module);
+const cardStories = storiesOf('Components|Card', module);
 
 const Wrapper = styled.div`
   max-width: 500px;

@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { Link as OverridableLink } from '../..';
 
-const indexStories = storiesOf('Link', module);
+const indexStories = storiesOf('Elements|Link', module);
 
 indexStories
   .add(
