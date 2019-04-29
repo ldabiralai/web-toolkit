@@ -25,6 +25,10 @@ aliases:
     run:
       name: Authenticate with git
       command: git config user.email "circleci@eurosport.com" && git config user.name "CircleCI"
+  - &slack_notification
+    run:
+      name: Slack notification
+      command: node ./.circleci/deploymentNotification.js
 
 jobs:
   dependencies:
@@ -86,6 +90,7 @@ jobs:
       - run: npm version patch -m "%s [skip ci]"
       - run: npm publish
       - run: git push
+      - *slack_notification
   npm_minor:
     <<: *defaults
     steps:
@@ -96,6 +101,7 @@ jobs:
       - run: npm version minor -m "%s [skip ci]"
       - run: npm publish
       - run: git push
+      - *slack_notification
   npm_major:
     <<: *defaults
     steps:
@@ -106,6 +112,7 @@ jobs:
       - run: npm version major -m "%s [skip ci]"
       - run: npm publish
       - run: git push
+      - *slack_notification
 
 workflows:
   version: 2
