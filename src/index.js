@@ -14,6 +14,7 @@ import LiveLabel from './elements/LiveLabel';
 import Grid from './elements/Grid';
 import SocialIcon from './elements/SocialIcon';
 import Logo from './elements/Logo';
+import Labels from './elements/Labels';
 
 import ArticleContent from './components/ArticleContent';
 import Carousel from './components/Carousel';
@@ -65,4 +66,5 @@ export {
   SocialIcon,
   Quantcast,
   GoogleTagManager,
+  Labels,
 };

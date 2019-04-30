@@ -83,3 +83,5 @@ export const regentGray = '#798490';
 export const turquoiseBlue = '#64dcff';
 export const whiteLilac = '#e8e8eb';
 export const gunPowder = '#3f455d';
+export const royalBlue = '#3c46dc';
+export const dodgerBlue = '#35D0FE';

@@ -1,0 +1,46 @@
+{
+  "liveEventLabels": [
+    {
+      "text": "French Open",
+      "bold": true,
+      "color": "white"
+    },
+    {
+      "text": "Men's singles | Final",
+      "color": "blue"
+    },
+    {
+      "text": "Live",
+      "color": "red",
+      "icon": "•"
+    }
+  ],
+
+  "beforeEventLabels": [
+    {
+      "text": "French Open",
+      "bold": true,
+      "color": "white"
+    },
+    {
+      "text": "Men's singles | Final",
+      "color": "blue"
+    }
+  ],
+
+  "afterEventLabels": [
+    {
+      "text": "French Open",
+      "bold": true,
+      "color": "white"
+    },
+    {
+      "text": "Men's singles | Final",
+      "color": "blue"
+    },
+    {
+      "text": "Result",
+      "color": "cyan"
+    }
+  ]
+}

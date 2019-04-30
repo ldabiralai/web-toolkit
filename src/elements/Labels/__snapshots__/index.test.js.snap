@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Labels renders labels after event 1`] = `
+<Styled(div)>
+  <Styled(div)
+    bold={true}
+    color="white"
+    key="French Openwhite"
+  >
+    French Open
+  </Styled(div)>
+  <Styled(div)
+    color="blue"
+    key="Men's singles | Finalblue"
+  >
+    Men's singles | Final
+  </Styled(div)>
+  <Styled(div)
+    color="cyan"
+    key="Resultcyan"
+  >
+    Result
+  </Styled(div)>
+</Styled(div)>
+`;
+
+exports[`Labels renders labels before event 1`] = `
+<Styled(div)>
+  <Styled(div)
+    bold={true}
+    color="white"
+    key="French Openwhite"
+  >
+    French Open
+  </Styled(div)>
+  <Styled(div)
+    color="blue"
+    key="Men's singles | Finalblue"
+  >
+    Men's singles | Final
+  </Styled(div)>
+</Styled(div)>
+`;
+
+exports[`Labels renders labels live event 1`] = `
+<Styled(div)>
+  <Styled(div)
+    bold={true}
+    color="white"
+    key="French Openwhite"
+  >
+    French Open
+  </Styled(div)>
+  <Styled(div)
+    color="blue"
+    key="Men's singles | Finalblue"
+  >
+    Men's singles | Final
+  </Styled(div)>
+  <Styled(div)
+    color="red"
+    key="Livered"
+  >
+    <Styled(div)>
+      •
+    </Styled(div)>
+    Live
+  </Styled(div)>
+</Styled(div)>
+`;
