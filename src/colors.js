@@ -86,3 +86,4 @@ export const gunPowder = '#3f455d';
 export const royalBlue = '#3c46dc';
 export const dodgerBlue = '#35D0FE';
 export const flawlessMahogany = '#353851';
+export const nobel = '#979797';
