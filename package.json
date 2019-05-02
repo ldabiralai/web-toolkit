@@ -104,7 +104,7 @@
     "react-lines-ellipsis": "^0.14.0"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "./testSetup.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js",
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ],
