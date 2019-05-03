@@ -25,6 +25,7 @@ import Adobe from './components/Adobe';
 import DataLayer from './components/DataLayer';
 import Quantcast from './components/Quantcast';
 import GoogleTagManager from './components/GoogleTagManager';
+import ScoreBlocks from './components/ScoreBlock';
 import PlayerInfos from './components/PlayerInfos';
 import JwPlayer from './components/JwPlayer';
 
@@ -70,6 +71,7 @@ export {
   SocialIcon,
   Quantcast,
   GoogleTagManager,
+  ScoreBlocks,
   PlayerInfos,
   Labels,
   JwPlayer,

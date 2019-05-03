@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SetsScore /> Renders a SetsScore component 1`] = `
+<Styled(div)
+  baseFontSize={null}
+  data-test="sets-score-wrapper"
+>
+  <Team
+    teamData={
+      Object {
+        "hasWon": null,
+        "isServing": false,
+        "playerOneName": "A. MENENDEZ-MACEIRAS",
+        "playerTwoName": "A. Rahman MAKSSOUD",
+        "sets": Array [
+          Object {
+            "score": 6,
+            "set": 5,
+            "tie": null,
+            "won": true,
+          },
+          Object {
+            "score": 6,
+            "set": 4,
+            "tie": null,
+            "won": true,
+          },
+          Object {
+            "score": 6,
+            "set": 3,
+            "tie": 2,
+            "won": false,
+          },
+          Object {
+            "score": 6,
+            "set": 2,
+            "tie": null,
+            "won": true,
+          },
+          Object {
+            "score": 3,
+            "set": 1,
+            "tie": null,
+            "won": false,
+          },
+        ],
+      }
+    }
+  />
+  <Styled(hr) />
+  <Team
+    teamData={
+      Object {
+        "hasWon": null,
+        "isServing": true,
+        "playerOneName": "A. MENENDEZ-MACEIRAS",
+        "playerTwoName": "A. DAVIDOVICH FOKINA",
+        "sets": Array [
+          Object {
+            "score": 3,
+            "set": 5,
+            "tie": null,
+            "won": false,
+          },
+          Object {
+            "score": 3,
+            "set": 4,
+            "tie": null,
+            "won": true,
+          },
+          Object {
+            "score": 7,
+            "set": 3,
+            "tie": 7,
+            "won": true,
+          },
+          Object {
+            "score": 3,
+            "set": 2,
+            "tie": null,
+            "won": false,
+          },
+          Object {
+            "score": 6,
+            "set": 1,
+            "tie": null,
+            "won": true,
+          },
+        ],
+      }
+    }
+  />
+</Styled(div)>
+`;
