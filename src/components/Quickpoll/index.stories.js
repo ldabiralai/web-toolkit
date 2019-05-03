@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { text, array, object, boolean } from '@storybook/addon-knobs';
+import { text, object, boolean } from '@storybook/addon-knobs';
 import { QuickPoll } from '../..';
 
 const choices = [
@@ -23,13 +23,17 @@ const choicesWithResults = [
 const quickPoll = storiesOf('Components|QuickPoll', module).addDecorator(withInfo);
 
 quickPoll.add('QuickPoll', () => (
-  <QuickPoll title={text('title', 'Who will win the 2019 French Open?')} pollItems={object('choices', choices)} />
+  <QuickPoll
+    title={text('title', 'Who will win the 2019 French Open?')}
+    choices={object('choices', choices)}
+    onChoiceClick={id => alert(`You clicked on ${id}`)}
+  />
 ));
 
 quickPoll.add('QuickPoll with results', () => (
   <QuickPoll
     title={text('title', 'Who will win the 2019 French Open?')}
-    pollItems={array('choices', choicesWithResults)}
+    choices={object('choices', choicesWithResults)}
     showResults={boolean('showResults', true)}
   />
 ));

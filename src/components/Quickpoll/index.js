@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { css } from 'react-emotion';
 import * as colors from '../../colors';
+import * as breakpoints from '../../breakpoints';
 import { fontFamilies } from '../../typography';
 import { Button } from '../..';
 
@@ -8,10 +9,12 @@ const StyledContainer = styled.div`
   border-radius: 4px;
   background-color: ${colors.flawlessMahogany};
   position: absolute;
-  /* TO REMOVE */
-  width: 633px;
+  width: 100%;
   height: 392px;
   color: ${colors.coreLightMinus1};
+  ${breakpoints.wide(css`
+    padding-bottom: 30px;
+  `)};
 `;
 
 const StyledBackground = styled.div`
@@ -32,13 +35,17 @@ const StyledTitle = styled.div`
   z-index: 2;
 `;
 
-const StyledPollItems = styled.div`
+const StyledChoices = styled.div`
   position: absolute;
   width: 100%;
   z-index: 2;
 `;
 
-const StyledPollItem = styled(Button)`
+const StyledChoice = styled(Button)`
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 3;
   background-color: ${colors.blackRussian};
   border: 1px solid ${colors.nobel};
   border-radius: 24px;
@@ -53,37 +60,73 @@ const StyledPollItem = styled(Button)`
   }
   ${props =>
     props.showResults &&
-    css`padding: 0;
-    border: 0px;
-    border-radius: 0;
-    background-color: ${colors.actionOneDarkMinus1}
-    height: 48px;
+    css`
+      padding: 2px 0;
+      border: 0px;
+      border-radius: 0;
+      background-color: ${colors.actionOneDarkMinus1};
+      height: 48px;
+      :hover {
+        color: inherit;
+      }
     `}
 `;
 
-const StyledResult = styled.div`
+const StyledResultBar = styled.div`
   background-color: ${colors.actionOneDarkBase};
   width: ${props => props.result};
   height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 4;
+`;
+
+const StyledChoiceText = styled.div`
+  position: relative;
+  z-index: 5;
+  width: 100%;
+`;
+
+const StyledResultPercentage = styled.div`
+  position: absolute;
+  left: 4%;
+  z-index: 5;
 `;
 
 class QuickPoll extends React.Component {
-  handleClick = () => null;
+  handleClick = id => {
+    // eslint-disable-next-line react/prop-types
+    const { showResults, onChoiceClick } = this.props;
+    if (showResults !== true) {
+      onChoiceClick(id);
+    }
+  };
 
   render() {
     // eslint-disable-next-line react/prop-types
-    const { title, pollItems, showResults } = this.props;
+    const { title, choices, showResults } = this.props;
     return (
       <StyledContainer>
         <StyledBackground />
         <StyledTitle>{title}</StyledTitle>
-        <StyledPollItems>
-          {pollItems.map(element => (
-            <StyledPollItem key={element.option} onClick={this.handleClick} type="secondary" showResults={showResults}>
-              {showResults ? <StyledResult result={element.result}>{element.result}</StyledResult> : element.option}
-            </StyledPollItem>
+        <StyledChoices>
+          {choices.map(element => (
+            <StyledChoice
+              key={element.id}
+              onClick={() => this.handleClick(element.id)}
+              type="secondary"
+              showResults={showResults}
+            >
+              {showResults && (
+                <>
+                  <StyledResultPercentage>{element.result}</StyledResultPercentage>
+                  <StyledResultBar result={element.result} />
+                </>
+              )}
+              <StyledChoiceText>{element.choice}</StyledChoiceText>
+            </StyledChoice>
           ))}
-        </StyledPollItems>
+        </StyledChoices>
       </StyledContainer>
     );
   }
