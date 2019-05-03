@@ -36,7 +36,7 @@ const StyledTitle = styled.div`
   z-index: 2;
 `;
 
-const StyledChoices = styled.div`
+export const StyledChoices = styled.div`
   position: absolute;
   width: 100%;
   z-index: 2;
@@ -82,7 +82,7 @@ const StyledResultBar = styled.div`
   z-index: 4;
 `;
 
-const StyledChoiceText = styled.div`
+export const StyledChoiceText = styled.div`
   position: relative;
   z-index: 5;
   width: 100%;

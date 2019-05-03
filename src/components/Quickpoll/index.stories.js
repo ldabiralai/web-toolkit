@@ -4,7 +4,7 @@ import { withInfo } from '@storybook/addon-info';
 import { text, object, boolean } from '@storybook/addon-knobs';
 import { QuickPoll } from '../..';
 
-const choices = [
+export const choices = [
   { id: 123451, choice: 'Nadal' },
   { id: 123452, choice: 'Djokovic' },
   { id: 123453, choice: 'Zverev' },
@@ -12,7 +12,7 @@ const choices = [
   { id: 123455, choice: 'Other' },
 ];
 
-const choicesWithResults = [
+export const choicesWithResults = [
   { id: 123451, choice: 'Nadal', result: '50%' },
   { id: 123452, choice: 'Djokovic', result: '47%' },
   { id: 123453, choice: 'Zverev', result: '34%' },
