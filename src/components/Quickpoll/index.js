@@ -1,7 +1,8 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
 import * as colors from '../../colors';
 import { fontFamilies } from '../../typography';
+import { Button } from '../..';
 
 const StyledContainer = styled.div`
   border-radius: 4px;
@@ -31,35 +32,61 @@ const StyledTitle = styled.div`
   z-index: 2;
 `;
 
-const StyledOptions = styled.div`
+const StyledPollItems = styled.div`
   position: absolute;
   width: 100%;
   z-index: 2;
 `;
 
-const StyledOption = styled.div`
-  text-transform: uppercase;
+const StyledPollItem = styled(Button)`
+  background-color: ${colors.blackRussian};
   border: 1px solid ${colors.nobel};
   border-radius: 24px;
   margin-bottom: 10px;
   margin-right: 19px;
   margin-left: 19px;
-  text-align: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  color: ${colors.coreLightMinus1};
+  font-family: ${fontFamilies.interUi};
+  font-size: 12px;
+  svg {
+    display: none;
+  }
+  ${props =>
+    props.showResults &&
+    css`padding: 0;
+    border: 0px;
+    border-radius: 0;
+    background-color: ${colors.actionOneDarkMinus1}
+    height: 48px;
+    `}
 `;
 
-// eslint-disable-next-line react/prop-types
-const QuickPoll = ({ title, options }) => (
-  <StyledContainer>
-    <StyledBackground />
-    <StyledTitle>{title}</StyledTitle>
-    <StyledOptions>
-      {options.map(option => (
-        <StyledOption key={option}>{option}</StyledOption>
-      ))}
-    </StyledOptions>
-  </StyledContainer>
-);
+const StyledResult = styled.div`
+  background-color: ${colors.actionOneDarkBase};
+  width: ${props => props.result};
+  height: 100%;
+`;
+
+class QuickPoll extends React.Component {
+  handleClick = () => null;
+
+  render() {
+    // eslint-disable-next-line react/prop-types
+    const { title, pollItems, showResults } = this.props;
+    return (
+      <StyledContainer>
+        <StyledBackground />
+        <StyledTitle>{title}</StyledTitle>
+        <StyledPollItems>
+          {pollItems.map(element => (
+            <StyledPollItem key={element.option} onClick={this.handleClick} type="secondary" showResults={showResults}>
+              {showResults ? <StyledResult result={element.result}>{element.result}</StyledResult> : element.option}
+            </StyledPollItem>
+          ))}
+        </StyledPollItems>
+      </StyledContainer>
+    );
+  }
+}
 
 export default QuickPoll;
