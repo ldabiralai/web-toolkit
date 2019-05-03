@@ -28,6 +28,7 @@ import GoogleTagManager from './components/GoogleTagManager';
 import ScoreBlocks from './components/ScoreBlock';
 import PlayerInfos from './components/PlayerInfos';
 import JwPlayer from './components/JwPlayer';
+import Betting from './components/Betting';
 
 import Header from './modules/Header';
 import Footer from './modules/Footer';
@@ -75,4 +76,5 @@ export {
   PlayerInfos,
   Labels,
   JwPlayer,
+  Betting,
 };
