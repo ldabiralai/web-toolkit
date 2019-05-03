@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PlayIconLink should render icon with link and text passed as children 1`] = `
+<Component
+  bgColorIcon="#4652ff"
+  bgColorText="#3c46dc"
+  className="css-qh23ty exb52wv3"
+  href="google.com"
+  target="_blank"
+  title="link title"
+>
+  REPLAY
+</Component>
+`;

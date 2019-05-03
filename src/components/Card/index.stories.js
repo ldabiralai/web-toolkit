@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { object } from '@storybook/addon-knobs';
+import { object, text } from '@storybook/addon-knobs';
 import styled from 'react-emotion';
 import { Cards } from '../..';
 
@@ -97,5 +97,39 @@ cardStories
           trackingPosition={object('trackingPosition', watchbar.trackingPosition)}
         />
       </Wrapper>
+    ))
+  )
+  .add(
+    'Card v2 Big',
+    withInfo()(() => (
+      <div style={{ maxWidth: 852 }}>
+        <Cards.CardBig
+          image={text('image', 'https://i.eurosport.com/2019/04/21/2570541-53309530-2560-1440.jpg?w=800')}
+          topic={text('topic', 'Australian Open')}
+          link={text('link', 'https://www.eurosport.no')}
+          title={text('title', 'Re-Play of the Day: The craziest moments')}
+          labelPlayButton={text('labelPlayButton', 'Replay')}
+          description={text('description', 'Roland-garros')}
+        >
+          <Cards.SpanTimeLabel>0:32:03</Cards.SpanTimeLabel>
+        </Cards.CardBig>
+      </div>
+    ))
+  )
+  .add(
+    'Card v2 Small',
+    withInfo({ propTablesExclude: [Wrapper] })(() => (
+      <div style={{ maxWidth: 343 }}>
+        <Cards.CardSmall
+          image={text('image', 'https://i.eurosport.com/2019/04/21/2570541-53309530-2560-1440.jpg?w=800')}
+          topic={text('topic', 'Australian Open')}
+          link={text('link', 'https://www.eurosport.no')}
+          title={text('title', 'Re-Play of the Day: The craziest moments of the French Open')}
+          labelPlayButton={text('labelPlayButton', 'Replay')}
+          description={text('description', 'Day 19 - Serie A')}
+        >
+          <Cards.SpanTimeLabel>0:32:03</Cards.SpanTimeLabel>
+        </Cards.CardSmall>
+      </div>
     ))
   );

@@ -32,6 +32,7 @@ export const coreNeutral6 = '#6b6c80';
 export const coreNeutral7 = '#55586d';
 export const coreNeutral8 = '#41435b';
 export const coreNeutral9 = '#2d304a';
+export const coreNeutral10 = '#2d2f4a';
 
 export const featureOneMinus2 = '#66cef9';
 export const featureOneMinus1 = '#3fc1f8';

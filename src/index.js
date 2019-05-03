@@ -9,6 +9,7 @@ import ArrowLink from './elements/ArrowLink';
 import Link from './elements/Link';
 import ChannelIcon from './elements/ChannelIcon';
 import PlayIcon from './elements/PlayIcon';
+import PlayIconLink from './elements/PlayIconLink';
 import BurgerIcon from './elements/BurgerIcon';
 import LiveLabel from './elements/LiveLabel';
 import Grid from './elements/Grid';
@@ -48,6 +49,7 @@ export {
   Author,
   Adobe,
   PlayIcon,
+  PlayIconLink,
   LiveLabel,
   ChannelIcon,
   injectStyles,

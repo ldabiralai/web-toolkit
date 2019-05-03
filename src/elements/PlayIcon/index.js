@@ -51,24 +51,30 @@ const StyledWrapper = styled.div`
   }
 `;
 
-const PlayIcon = ({ alt, height, isLoading, ...props }) => (
-  <StyledWrapper {...props} isLoading={isLoading} iconHeight={height}>
-    <StyledBorder isLoading={isLoading} />
-    <img src={play} alt={alt} />
-  </StyledWrapper>
-);
+const PlayIcon = ({ alt, height, isLoading, isRounded, ...props }) =>
+  isRounded ? (
+    <StyledWrapper {...props} isLoading={isLoading} iconHeight={height}>
+      <StyledBorder isLoading={isLoading} />
+      <img src={play} alt={alt} />
+    </StyledWrapper>
+  ) : (
+    <img src={play} alt={alt} {...props} />
+  );
 
 PlayIcon.defaultProps = {
   alt: 'play',
   className: '',
   isLoading: false,
+  isRounded: true,
+  height: 20,
 };
 
 PlayIcon.propTypes = {
   alt: PropTypes.string,
-  height: PropTypes.number.isRequired,
+  height: PropTypes.number,
   className: PropTypes.string,
   isLoading: PropTypes.bool,
+  isRounded: PropTypes.bool,
 };
 
 export default PlayIcon;
