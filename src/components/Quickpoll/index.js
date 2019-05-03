@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
 import * as colors from '../../colors';
 import * as breakpoints from '../../breakpoints';
@@ -95,7 +96,6 @@ const StyledResultPercentage = styled.div`
 
 class QuickPoll extends React.Component {
   handleClick = id => {
-    // eslint-disable-next-line react/prop-types
     const { showResults, onChoiceClick } = this.props;
     if (showResults !== true) {
       onChoiceClick(id);
@@ -103,7 +103,6 @@ class QuickPoll extends React.Component {
   };
 
   render() {
-    // eslint-disable-next-line react/prop-types
     const { title, choices, showResults } = this.props;
     return (
       <StyledContainer>
@@ -131,5 +130,18 @@ class QuickPoll extends React.Component {
     );
   }
 }
+
+const choiceType = PropTypes.shape({
+  id: PropTypes.number,
+  choice: PropTypes.string,
+  result: PropTypes.string,
+});
+
+QuickPoll.propTypes = {
+  title: PropTypes.string.isRequired,
+  choices: PropTypes.arrayOf(choiceType).isRequired,
+  showResults: PropTypes.bool.isRequired,
+  onChoiceClick: PropTypes.func.isRequired,
+};
 
 export default QuickPoll;

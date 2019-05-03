@@ -26,6 +26,7 @@ quickPoll.add('QuickPoll', () => (
   <QuickPoll
     title={text('title', 'Who will win the 2019 French Open?')}
     choices={object('choices', choices)}
+    // eslint-disable-next-line no-alert
     onChoiceClick={id => alert(`You clicked on ${id}`)}
   />
 ));
