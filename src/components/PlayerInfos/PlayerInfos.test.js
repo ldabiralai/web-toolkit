@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { object } from '@storybook/addon-knobs';
 import PlayerInfos from '.';
 
 const player = {
@@ -18,16 +17,16 @@ const player = {
 
 describe('PlayerInfos', () => {
   it('renders its content', () => {
-    expect(shallow(<PlayerInfos player={object('player', player)} />)).toMatchSnapshot();
+    expect(shallow(<PlayerInfos player={player} />)).toMatchSnapshot();
   });
 
   it('renders the players infos with a player pictures URL', () => {
-    const wrapper = shallow(<PlayerInfos player={object('player', player)} />);
+    const wrapper = shallow(<PlayerInfos player={player} />);
     expect(wrapper.find('[data-test="player-picture"]').prop('src')).toEqual(player.pictureUrl);
   });
 
   it('renders the players infos with a flag pictures URL', () => {
-    const wrapper = shallow(<PlayerInfos player={object('player', player)} />);
+    const wrapper = shallow(<PlayerInfos player={player} />);
     expect(wrapper.find('[data-test="flag-picture"]').prop('src')).toEqual(player.flagUrl);
   });
 });
