@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import PropTypes from 'prop-types';
 import SocialMenu from './SocialMenu/SocialMenu';
-import { Link } from '../../..';
+import Link from '../../../elements/Link';
 import { coreNeutral2, coreDarkBase } from '../../../colors';
 import { large, medium } from '../../../breakpoints';
 import { PRIVACY_SETTINGS_ID } from '../constants';

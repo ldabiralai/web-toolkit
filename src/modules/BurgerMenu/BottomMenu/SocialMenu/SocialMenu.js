@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import PropTypes from 'prop-types';
 
-import { SocialIcon, Link } from '../../../..';
+import SocialIcon from '../../../../elements/SocialIcon';
+import Link from '../../../../elements/Link';
 import { coreLightMinus1 } from '../../../../colors';
 import { large, medium } from '../../../../breakpoints';
 

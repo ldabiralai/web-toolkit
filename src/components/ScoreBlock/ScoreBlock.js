@@ -8,7 +8,7 @@ import SetsScore, { StyledSpacer } from './SetsScore';
 import { fontFamilies } from '../../typography';
 import circleWithCross from '../../assets/circle-with-cross.svg';
 import greenCircle from '../../assets/green-circle.svg';
-import { Link } from '../..';
+import Link from '../../elements/Link';
 
 const StyledClickableWrapper = styled(Link)`
   width: 100%;

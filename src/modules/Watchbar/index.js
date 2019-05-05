@@ -3,7 +3,8 @@ import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 import { rgba } from 'polished';
 import PropTypes from 'prop-types';
-import { Carousel, Cards } from '../..';
+import Carousel from '../../components/Carousel';
+import Cards from '../../components/Card';
 import { coreLightMinus1, coreNeutral1 } from '../../colors';
 import { ReactComponent as Play } from '../../assets/circleplay.svg';
 

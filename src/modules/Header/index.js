@@ -3,7 +3,13 @@ import styled from '@emotion/styled';
 import { css, Global } from '@emotion/core';
 import PropTypes from 'prop-types';
 
-import { Link, Logo, BurgerMenu, BurgerIcon, breakpoints, colors, Button } from '../..';
+import Link from '../../elements/Link';
+import Logo from '../../elements/Logo';
+import BurgerMenu from '../BurgerMenu';
+import BurgerIcon from '../../elements/BurgerIcon';
+import * as breakpoints from '../../breakpoints';
+import * as colors from '../../colors';
+import Button from '../../elements/Button';
 
 const StyledButton = styled(Button)`
   margin-left: auto;
