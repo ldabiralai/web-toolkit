@@ -1,14 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { injectGlobal } from 'react-emotion';
+import { Global } from '@emotion/core';
 import { typography } from '.';
-
-injectGlobal(typography.global);
 
 const typographyStories = storiesOf('Typography', module);
 
 typographyStories.add('typography', () => (
   <>
+    <Global styles={typography.global} />
     <typography.H1>H1 – Heading 1</typography.H1>
     <typography.H2>H2 – Heading 2</typography.H2>
     <typography.H3>H3 – Heading 3</typography.H3>

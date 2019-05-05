@@ -2,8 +2,8 @@ import theme from './theme';
 import * as colors from './colors';
 import * as breakpoints from './breakpoints';
 import * as typography from './typography';
-import injectStyles from './injectStyles';
 
+import GlobalStyles from './elements/GlobalStyles';
 import Button from './elements/Button';
 import ArrowLink from './elements/ArrowLink';
 import Link from './elements/Link';
@@ -39,6 +39,7 @@ import WatchBar from './modules/Watchbar';
 import BurgerMenu from './modules/BurgerMenu';
 
 export {
+  GlobalStyles,
   Button,
   ArrowLink,
   Link,
@@ -53,7 +54,6 @@ export {
   PlayIconLink,
   LiveLabel,
   ChannelIcon,
-  injectStyles,
   Grid,
   Hero,
   colors,

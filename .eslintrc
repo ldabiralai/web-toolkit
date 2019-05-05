@@ -9,6 +9,7 @@
     "cy": true,
     "Cypress": true
   },
+  "plugins": ["emotion"],
   "rules": {
     "import/no-named-as-default": false,
     "react/jsx-one-expression-per-line": false,
@@ -20,6 +21,10 @@
       {
         "extensions": [".js"]
       }
-    ]
+    ],
+    "emotion/jsx-import": "error",
+    "emotion/no-vanilla": "error",
+    "emotion/import-from-emotion": "error",
+    "emotion/styled-import": "error"
   }
 }

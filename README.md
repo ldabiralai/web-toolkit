@@ -19,12 +19,11 @@ All available components are exported as named exports so you can pull them in e
 
 ```jsx
 import { ThemeProvider } from 'emotion-theming';
-import { injectStyles, theme, Button } from '@eurosport/web-toolkit';
-
-injectStyles();
+import { GlobalStyles, theme, Button } from '@eurosport/web-toolkit';
 
 const MyApp = () => (
   <ThemeProvider theme={theme}>
+    <GlobalStyles />
     <Button>Hello!</Button>
   </ThemeProvider>
 );

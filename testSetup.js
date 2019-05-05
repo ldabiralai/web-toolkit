@@ -1,8 +1,7 @@
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { createMatchers } from 'jest-emotion';
-import * as emotion from 'emotion';
+import { matchers } from 'jest-emotion';
 
-expect.extend(createMatchers(emotion));
+expect.extend(matchers);
 
 configure({ adapter: new Adapter() });

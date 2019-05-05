@@ -1,4 +1,4 @@
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { medium } from '../../breakpoints';
 
 export const BaseText = styled.span`

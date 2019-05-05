@@ -4,10 +4,8 @@ import { withKnobsOptions } from '@storybook/addon-knobs';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
 import { withOptions } from '@storybook/addon-options';
 import { ThemeProvider } from 'emotion-theming';
-import styled from 'react-emotion';
-import { theme, colors, injectStyles } from '../src';
-
-injectStyles();
+import styled from '@emotion/styled';
+import { theme, colors, GlobalStyles } from '../src';
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.*.stories.js$/);
@@ -23,6 +21,7 @@ const StyledWrapper = styled.div`
 
 const ThemeDecorator = storyFn => (
   <ThemeProvider theme={theme}>
+    <GlobalStyles />
     <StyledWrapper>{storyFn()}</StyledWrapper>
   </ThemeProvider>
 );

@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import styled, { css } from 'react-emotion';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import kebabCase from 'lodash/kebabCase';
 import { medium, large } from '../../../breakpoints';
 import { arsenic, cerulean, regentGray, turquoiseBlue, whiteLilac } from '../../../colors';

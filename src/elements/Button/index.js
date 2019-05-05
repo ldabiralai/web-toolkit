@@ -1,4 +1,5 @@
-import styled, { css } from 'react-emotion';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import { lighten, rgba } from 'polished';
 import PropTypes from 'prop-types';
 import ArrowLink from '../ArrowLink';

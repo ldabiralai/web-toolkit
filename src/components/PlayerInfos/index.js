@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'react-emotion';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import { fontFamilies } from '../../typography';
 import { coreNeutral9, coreLightMinus1, coreNeutral3 } from '../../colors';
 import * as breakpoints from '../../breakpoints';

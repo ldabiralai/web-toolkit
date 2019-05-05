@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { object } from '@storybook/addon-knobs';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { PlayerInfos } from '../..';
 
 const playerinfos = storiesOf('Components|PlayerInfos', module).addDecorator(withInfo);

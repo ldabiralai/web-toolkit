@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import * as colors from '../../../colors';
 import { H2 } from '../../../typography';
 import Link from '../../../elements/Link';

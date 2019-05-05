@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styled, { css, injectGlobal } from 'react-emotion';
+import styled from '@emotion/styled';
+import { css, Global } from '@emotion/core';
 import PropTypes from 'prop-types';
 
 import { Link, Logo, BurgerMenu, BurgerIcon, breakpoints, colors, Button } from '../..';
@@ -76,20 +77,22 @@ class Header extends Component {
 
     if (!menuItems) return null;
 
-    // eslint-disable-next-line no-unused-expressions
-    injectGlobal`
-      body.modal--opened {
-        overflow: hidden;
-      }
-    `;
-
     return (
-      <BurgerMenu
-        isOpen={isBurgerMenuOpen}
-        onClose={this.toggleBurgerMenu}
-        items={menuItems}
-        homePageUrl={homePageUrl}
-      />
+      <>
+        <Global
+          styles={css`
+            body.modal--opened {
+              overflow: hidden;
+            }
+          `}
+        />
+        <BurgerMenu
+          isOpen={isBurgerMenuOpen}
+          onClose={this.toggleBurgerMenu}
+          items={menuItems}
+          homePageUrl={homePageUrl}
+        />
+      </>
     );
   };
 

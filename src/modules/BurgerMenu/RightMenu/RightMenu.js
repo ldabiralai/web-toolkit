@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import styled, { css } from 'react-emotion';
+import styled from '@emotion/styled';
+import { css } from '@emotion/core';
 import PropTypes from 'prop-types';
 
 import RightMenuSection from './RightMenuSection';
