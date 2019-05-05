@@ -8,11 +8,7 @@
 
 import rules from '../webpack-rules';
 
-export default {
-  plugins: [
-    // your custom plugins
-  ],
-  module: {
-    rules,
-  },
+module.exports = ({ config }) => {
+  config.module.rules.push(...rules);
+  return config;
 };
