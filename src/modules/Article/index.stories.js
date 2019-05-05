@@ -1,5 +1,4 @@
 import React from 'react';
-import { withInfo } from '@storybook/addon-info';
 import { storiesOf } from '@storybook/react';
 import { Article } from '../..';
 
@@ -23,4 +22,4 @@ articleStories
   .addParameters({
     backgrounds: { disable: true },
   })
-  .add('default', withInfo()(() => <Article data={data} />));
+  .add('default', () => <Article data={data} />);

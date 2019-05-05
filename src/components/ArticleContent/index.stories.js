@@ -1,4 +1,3 @@
-import { withInfo } from '@storybook/addon-info';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text } from '@storybook/addon-knobs';
@@ -17,7 +16,4 @@ article
   .addParameters({
     backgrounds: { disable: true },
   })
-  .add(
-    'base',
-    withInfo()(() => <ArticleContent teaser={text('teaser', data.teaser)} html={text('html', data.html)} />)
-  );
+  .add('base', () => <ArticleContent teaser={text('teaser', data.teaser)} html={text('html', data.html)} />);
