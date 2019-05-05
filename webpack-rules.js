@@ -23,8 +23,4 @@ export default [
       },
     },
   },
-  {
-    test: /\.svg$/,
-    use: 'url-loader',
-  },
 ];
