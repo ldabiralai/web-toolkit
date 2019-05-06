@@ -28,7 +28,7 @@ const StyledBackground = styled.div`
   z-index: 1;
 `;
 
-const StyledTitle = styled.div`
+export const StyledTitle = styled.div`
   position: relative;
   font-size: 20px;
   font-family: ${fontFamilies.alphaHeadline};
@@ -88,7 +88,7 @@ export const StyledChoiceText = styled.div`
   width: 100%;
 `;
 
-const StyledResultPercentage = styled.div`
+export const StyledResultPercentage = styled.div`
   position: absolute;
   left: 4%;
   z-index: 5;
@@ -131,6 +131,10 @@ class QuickPoll extends React.Component {
   }
 }
 
+QuickPoll.defaultProps = {
+  showResults: false,
+};
+
 const choiceType = PropTypes.shape({
   id: PropTypes.number,
   choice: PropTypes.string,
@@ -140,7 +144,7 @@ const choiceType = PropTypes.shape({
 QuickPoll.propTypes = {
   title: PropTypes.string.isRequired,
   choices: PropTypes.arrayOf(choiceType).isRequired,
-  showResults: PropTypes.bool.isRequired,
+  showResults: PropTypes.bool,
   onChoiceClick: PropTypes.func.isRequired,
 };
 
