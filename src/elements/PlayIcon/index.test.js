@@ -27,4 +27,9 @@ describe.only('PlayIcon', () => {
     const wrapper = shallow(<PlayIcon height={100} />);
     expect(wrapper).toHaveStyleRule('padding', `${(100 * 0.45) / 2}px`);
   });
+
+  it('should not output wrapper when isRounded=false', () => {
+    const wrapper = shallow(<PlayIcon isRounded={false} />);
+    expect(wrapper.type()).toEqual('img');
+  });
 });

@@ -19,6 +19,7 @@ exports[`renders a WatchbarCard 1`] = `
       className=""
       height={32}
       isLoading={false}
+      isRounded={true}
     />
   </Styled(div)>
   <Styled(div)>

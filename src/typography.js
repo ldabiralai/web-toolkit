@@ -114,7 +114,7 @@ export const H5 = styled.h5`
 `;
 
 export const H6 = styled.h6`
-  font-family: fontFamilies.interUi;
+  font-family: ${fontFamilies.interUi};
   font-size: 12px;
   line-height: 18px;
   letter-spacing: 1px;

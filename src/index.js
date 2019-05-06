@@ -9,6 +9,7 @@ import ArrowLink from './elements/ArrowLink';
 import Link from './elements/Link';
 import ChannelIcon from './elements/ChannelIcon';
 import PlayIcon from './elements/PlayIcon';
+import PlayIconLink from './elements/PlayIconLink';
 import BurgerIcon from './elements/BurgerIcon';
 import LiveLabel from './elements/LiveLabel';
 import Grid from './elements/Grid';
@@ -24,8 +25,10 @@ import Adobe from './components/Adobe';
 import DataLayer from './components/DataLayer';
 import Quantcast from './components/Quantcast';
 import GoogleTagManager from './components/GoogleTagManager';
+import ScoreBlocks from './components/ScoreBlock';
 import PlayerInfos from './components/PlayerInfos';
 import QuickPoll from './components/Quickpoll';
+import JwPlayer from './components/JwPlayer';
 
 import Header from './modules/Header';
 import Footer from './modules/Footer';
@@ -48,6 +51,7 @@ export {
   Author,
   Adobe,
   PlayIcon,
+  PlayIconLink,
   LiveLabel,
   ChannelIcon,
   injectStyles,
@@ -68,7 +72,9 @@ export {
   SocialIcon,
   Quantcast,
   GoogleTagManager,
+  ScoreBlocks,
   PlayerInfos,
   Labels,
   QuickPoll,
+  JwPlayer,
 };

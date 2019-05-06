@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content card v2 renders Card with Play Button 1`] = `
+<Component
+  className="css-orqg7e e129r5mb12"
+  description="Roland-garros"
+  image="https://i.eurosport.com/2019/04/21/2570541-53309530-2560-1440.jpg?w=800"
+  labelPlayButton="Replay"
+  link="https://www.eurosport.fr"
+  title="Re-Play of the Day: The craziest moments"
+  topic="Australian Open"
+/>
+`;
+
+exports[`Content card v2 renders Card with Play Button 2`] = `
+<Component
+  className="css-va6jq4 e129r5mb13"
+  description="Roland-garros"
+  image="https://i.eurosport.com/2019/04/21/2570541-53309530-2560-1440.jpg?w=800"
+  labelPlayButton="Replay"
+  link="https://www.eurosport.fr"
+  title="Re-Play of the Day: The craziest moments"
+  topic="Australian Open"
+/>
+`;

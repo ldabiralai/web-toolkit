@@ -32,6 +32,7 @@ export const coreNeutral6 = '#6b6c80';
 export const coreNeutral7 = '#55586d';
 export const coreNeutral8 = '#41435b';
 export const coreNeutral9 = '#2d304a';
+export const coreNeutral10 = '#2d2f4a';
 
 export const featureOneMinus2 = '#66cef9';
 export const featureOneMinus1 = '#3fc1f8';
@@ -76,6 +77,7 @@ export const featureSevenPlus1 = '#8800cc';
 export const featureSevenPlus2 = '#7900c3';
 
 export const midnightExpress = '#22263c';
+export const midnightExpress2 = '#1e2037';
 export const cerulean = '#009cde';
 export const utahCrimson = '#d50032';
 export const arsenic = '#3d4248';
@@ -83,6 +85,7 @@ export const regentGray = '#798490';
 export const turquoiseBlue = '#64dcff';
 export const whiteLilac = '#e8e8eb';
 export const gunPowder = '#3f455d';
+export const venetianRed = '#b6012d';
 export const royalBlue = '#3c46dc';
 export const dodgerBlue = '#35D0FE';
 export const flawlessMahogany = '#353851';
