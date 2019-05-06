@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
 import * as colors from '../../colors';
-import * as breakpoints from '../../breakpoints';
 import { fontFamilies } from '../../typography';
 import { Button } from '../..';
 
@@ -13,9 +12,8 @@ const StyledContainer = styled.div`
   width: 100%;
   height: 392px;
   color: ${colors.coreLightMinus1};
-  ${breakpoints.wide(css`
-    padding-bottom: 30px;
-  `)};
+  padding-bottom: 20px;
+  padding-top: 10px;
 `;
 
 const StyledBackground = styled.div`
