@@ -8,9 +8,8 @@ import { Button } from '../..';
 const StyledContainer = styled.div`
   border-radius: 4px;
   background-color: ${colors.flawlessMahogany};
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 392px;
   color: ${colors.coreLightMinus1};
   padding-bottom: 20px;
   padding-top: 10px;
@@ -35,7 +34,7 @@ export const StyledTitle = styled.div`
 `;
 
 export const StyledChoices = styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
   z-index: 2;
 `;
@@ -67,6 +66,7 @@ const StyledChoice = styled(Button)`
       height: 48px;
       :hover {
         color: inherit;
+        cursor: default;
       }
     `}
 `;
@@ -81,13 +81,12 @@ const StyledResultBar = styled.div`
 `;
 
 export const StyledChoiceText = styled.div`
-  position: relative;
   z-index: 5;
   width: 100%;
 `;
 
 export const StyledResultPercentage = styled.div`
-  position: absolute;
+  position: relative;
   left: 4%;
   z-index: 5;
 `;
@@ -107,20 +106,20 @@ class QuickPoll extends React.Component {
         <StyledBackground />
         <StyledTitle>{title}</StyledTitle>
         <StyledChoices>
-          {choices.map(element => (
+          {choices.map(choice => (
             <StyledChoice
-              key={element.id}
-              onClick={() => this.handleClick(element.id)}
+              key={choice.id}
+              onClick={() => this.handleClick(choice.id)}
               type="secondary"
               showResults={showResults}
             >
               {showResults && (
                 <>
-                  <StyledResultPercentage>{element.result}</StyledResultPercentage>
-                  <StyledResultBar result={element.result} />
+                  <StyledResultPercentage>{choice.result}</StyledResultPercentage>
+                  <StyledResultBar result={choice.result} />
                 </>
               )}
-              <StyledChoiceText>{element.choice}</StyledChoiceText>
+              <StyledChoiceText>{choice.displayText}</StyledChoiceText>
             </StyledChoice>
           ))}
         </StyledChoices>
@@ -135,7 +134,7 @@ QuickPoll.defaultProps = {
 
 const choiceType = PropTypes.shape({
   id: PropTypes.number,
-  choice: PropTypes.string,
+  displayText: PropTypes.string,
   result: PropTypes.string,
 });
 

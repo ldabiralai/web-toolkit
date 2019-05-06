@@ -5,19 +5,19 @@ import { text, object, boolean } from '@storybook/addon-knobs';
 import { QuickPoll } from '../..';
 
 export const choices = [
-  { id: 123451, choice: 'Nadal' },
-  { id: 123452, choice: 'Djokovic' },
-  { id: 123453, choice: 'Zverev' },
-  { id: 123454, choice: 'Federer' },
-  { id: 123455, choice: 'Other' },
+  { id: 123451, displayText: 'Nadal' },
+  { id: 123452, displayText: 'Djokovic' },
+  { id: 123453, displayText: 'Zverev' },
+  { id: 123454, displayText: 'Federer' },
+  { id: 123455, displayText: 'Other' },
 ];
 
 export const choicesWithResults = [
-  { id: 123451, choice: 'Nadal', result: '50%' },
-  { id: 123452, choice: 'Djokovic', result: '47%' },
-  { id: 123453, choice: 'Zverev', result: '34%' },
-  { id: 123454, choice: 'Federer', result: '16%' },
-  { id: 123455, choice: 'Other', result: '1%' },
+  { id: 123451, displayText: 'Nadal', result: '50%' },
+  { id: 123452, displayText: 'Djokovic', result: '47%' },
+  { id: 123453, displayText: 'Zverev', result: '34%' },
+  { id: 123454, displayText: 'Federer', result: '16%' },
+  { id: 123455, displayText: 'Other', result: '1%' },
 ];
 
 const quickPoll = storiesOf('Components|QuickPoll', module).addDecorator(withInfo);
