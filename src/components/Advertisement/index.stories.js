@@ -3,10 +3,17 @@ import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
 import { select, object, boolean, number } from '@storybook/addon-knobs';
 import { AdInit, AdManager, AdPlacement, Button } from '../..';
+import withReload from './AdReload';
+import { HP_MAIN } from './AdManager/page-types';
+import { MPU } from './AdManager/ad-types';
+
+const AdWithReload = withReload(AdPlacement);
 
 const indexStories = storiesOf('Components|Advertisement', module).addParameters({
   backgrounds: { disable: true },
 });
+
+AdManager.defaultSlotsConfig.desktop[HP_MAIN][MPU].count = 7;
 
 indexStories.add(
   'ADS integration',
@@ -43,6 +50,31 @@ indexStories.add(
       3: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoDesktop />
       extra tablet ad - out of page slot configs 4:{' '}
       <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoDesktop />
+      <p>reloaded ads: </p>
+      1:
+      <AdWithReload
+        adType={AdManager.enums.adTypes.MPU}
+        refreshHandler={AdManager.manageAds.refreshAdSlot}
+        reloadInterval={10000}
+        isNoMobile
+        isNoTablet
+      />
+      2:
+      <AdWithReload
+        adType={AdManager.enums.adTypes.MPU}
+        refreshHandler={AdManager.manageAds.refreshAdSlot}
+        reloadInterval={10000}
+        isNoMobile
+        isNoTablet
+      />
+      3:
+      <AdWithReload
+        adType={AdManager.enums.adTypes.MPU}
+        refreshHandler={AdManager.manageAds.refreshAdSlot}
+        reloadInterval={10000}
+        isNoMobile
+        isNoTablet
+      />
     </>
   ))
 );
