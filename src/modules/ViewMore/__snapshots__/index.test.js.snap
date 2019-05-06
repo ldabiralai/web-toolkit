@@ -4,15 +4,19 @@ exports[`ViewMore renders its content 1`] = `
 <ViewMore>
   <Styled(ul)
     blockHeight={0}
+    data-test="item-list"
     innerRef={
       Object {
         "current": <ul
-          class="css-12eg17e e1e87viu1"
+          class="css-n93gab e1e87viu1"
+          data-test="item-list"
         >
           <li
             class="css-1u41msn e1e87viu2"
           >
-            <div>
+            <div
+              data-test="children"
+            >
               match
             </div>
           </li>
@@ -22,7 +26,8 @@ exports[`ViewMore renders its content 1`] = `
     isExpanded={false}
   >
     <ul
-      className="css-12eg17e e1e87viu1"
+      className="css-n93gab e1e87viu1"
+      data-test="item-list"
     >
       <Styled(li)
         key="0"
@@ -31,6 +36,7 @@ exports[`ViewMore renders its content 1`] = `
           className="css-1u41msn e1e87viu2"
         >
           <div
+            data-test="children"
             key="0"
           >
             match
@@ -40,10 +46,12 @@ exports[`ViewMore renders its content 1`] = `
     </ul>
   </Styled(ul)>
   <Styled(span)
+    data-test="view-button"
     onClick={[Function]}
   >
     <span
       className="css-41z9q8 e1e87viu0"
+      data-test="view-button"
       onClick={[Function]}
     >
       Show more

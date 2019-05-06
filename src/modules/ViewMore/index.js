@@ -5,7 +5,7 @@ import { rgba } from 'polished';
 import { coreLightMinus1, coreDarkPlus1 } from '../../colors';
 import { fontFamilies } from '../../typography';
 
-const StyledButton = styled.span`
+export const StyledButton = styled.span`
   color: ${coreLightMinus1};
   font-family: ${fontFamilies.alphaHeadline};
   border: 1px solid ${rgba(coreLightMinus1, 0.35)};
@@ -27,7 +27,7 @@ const StyledList = styled.ul`
       max-height: ${props.blockHeight}px;
     `}
   overflow: hidden;
-  transition: max-height 400ms ease;
+  transition: max-height 140ms ease-out;
 `;
 
 const StyledItem = styled.li`
@@ -91,13 +91,15 @@ export default class ViewMore extends React.Component {
     if (!children || !children.length) return null;
     return (
       <>
-        <StyledList isExpanded={expanded} innerRef={this.listRef} blockHeight={height}>
+        <StyledList data-test="item-list" isExpanded={expanded} innerRef={this.listRef} blockHeight={height}>
           {children.slice(0, itemsToShow).map(child => (
             <StyledItem key={child.key}>{child}</StyledItem>
           ))}
         </StyledList>
         {children.length > 1 && (
-          <StyledButton onClick={() => this.handleClick()}>{expanded ? 'Show less' : 'Show more'}</StyledButton>
+          <StyledButton data-test="view-button" onClick={() => this.handleClick()}>
+            {expanded ? 'Show less' : 'Show more'}
+          </StyledButton>
         )}
       </>
     );
