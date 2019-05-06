@@ -1,6 +1,5 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { object } from '@storybook/addon-knobs';
 import ViewMore, { StyledButton } from '.';
 
 const children = [];
@@ -14,23 +13,27 @@ for (let i = 0; i < 10; i += 1) {
 
 describe('ViewMore', () => {
   it('renders its content', () => {
-    expect(mount(<ViewMore>{object('children', children)}</ViewMore>)).toMatchSnapshot();
+    expect(mount(<ViewMore>{children}</ViewMore>)).toMatchSnapshot();
   });
   describe('items behavior', () => {
     it('should display one item at first load', () => {
-      const wrapper = mount(<ViewMore>{object('children', children)}</ViewMore>);
+      const wrapper = mount(<ViewMore>{children}</ViewMore>);
       expect(wrapper.find('[data-test="children"]').length).toEqual(1);
     });
     it('should display more items when view more button is clicked', () => {
-      const wrapper = mount(<ViewMore>{object('children', children)}</ViewMore>);
+      const wrapper = mount(<ViewMore>{children}</ViewMore>);
       wrapper.find(StyledButton).simulate('click');
       expect(wrapper.find('[data-test="children"]').length).toEqual(10);
     });
-    it('should display one item when view less button is clicked', async () => {
-      const wrapper = mount(<ViewMore>{object('children', children)}</ViewMore>);
+    it('should display one item when view less button is clicked', () => {
+      const wrapper = mount(<ViewMore>{children}</ViewMore>);
+      expect(wrapper.find('[data-test="children"]').length).toEqual(1);
       wrapper.find(StyledButton).simulate('click');
-      wrapper.find('ul').simulate('transitionEnd');
+      wrapper.instance().transitionEndCallback();
+      expect(wrapper.find('[data-test="children"]').length).toEqual(10);
       wrapper.find(StyledButton).simulate('click');
+      wrapper.instance().transitionEndCallback();
+      wrapper.update();
       expect(wrapper.find('[data-test="children"]').length).toEqual(1);
     });
   });
