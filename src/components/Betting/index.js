@@ -1,8 +1,10 @@
 import React from 'react';
-import styled from 'react-emotion';
+import PropTypes from 'prop-types';
+import styled, { css } from 'react-emotion';
 import { rgba } from 'polished';
 import { coreNeutral9, coreLightMinus1, alto, manatee } from '../../colors';
 import { fontFamilies } from '../../typography';
+import { breakpoints } from '../..';
 
 const StyledCard = styled.div`
   background-color: ${coreNeutral9};
@@ -30,7 +32,8 @@ const StyledCard = styled.div`
 `;
 
 const StyledBettingName = styled.div`
-  background: #b4292c;
+  background-color: ${props => props.background};
+  color: ${props => props.text};
   padding: 11px;
   text-transform: uppercase;
   font-weight: 500;
@@ -48,29 +51,18 @@ const StyledBettingSentence = styled.div`
 
 const StyledBetting = styled.div`
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   font-family: ${fontFamilies.alphaHeadline};
   line-height: 30px;
   margin-bottom: 32px;
   justify-content: left;
 `;
 
-const StyledTeamName = styled.div`
-  text-transform: uppercase;
-`;
-
-const StyledFirstTeam = styled(StyledTeamName)`
-  float: left;
-`;
-
-const StyledSecondTeam = styled(StyledTeamName)`
-  float: right;
-`;
-
 const StyledChoiceWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 `;
 
 const StyledChoiceNumber = styled.div`
@@ -78,30 +70,68 @@ const StyledChoiceNumber = styled.div`
   color: ${manatee};
 `;
 const StyledChoiceCote = styled.div`
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 5px 20px;
   font-size: 24px;
   background-color: ${rgba(coreLightMinus1, 0.2)};
   margin: 0 3px;
+  border-radius: 3px;
 `;
 
-const Betting = () => (
+const StyledTeamName = styled.div`
+  text-transform: uppercase;
+  font-weight: normal;
+  ${breakpoints.medium(css`
+    line-height: 40px;
+    position: absolute;
+    top: 30px;
+  `)};
+  ${props =>
+    props.position === 'left' &&
+    breakpoints.medium(css`
+      right: 100%;
+      margin-right: 12px;
+    `)}
+  ${props =>
+    props.position === 'right' &&
+    breakpoints.medium(css`
+      left: 100%;
+      margin-left: 12px;
+    `)}
+`;
+
+const getRandomSentence = sentences => sentences[Math.floor(Math.random() * sentences.length)];
+
+const Betting = ({ sponsor, sentences, choices }) => (
   <StyledCard>
-    <StyledBettingName>Winamax</StyledBettingName>
-    <StyledBettingSentence>Pariez avec Winamax</StyledBettingSentence>
+    <StyledBettingName background={sponsor.backgroundColor} text={sponsor.textColor}>
+      {sponsor.name}
+    </StyledBettingName>
+    <StyledBettingSentence>{getRandomSentence(sentences)}</StyledBettingSentence>
     <StyledBetting>
-      <StyledFirstTeam>NADAL</StyledFirstTeam>
-      <StyledChoiceWrapper>
-        <StyledChoiceNumber>1</StyledChoiceNumber>
-        <StyledChoiceCote>2.80</StyledChoiceCote>
-      </StyledChoiceWrapper>
-      <StyledChoiceWrapper>
-        <StyledChoiceNumber>2</StyledChoiceNumber>
-        <StyledChoiceCote>1.70</StyledChoiceCote>
-      </StyledChoiceWrapper>
-      <StyledSecondTeam>Federerer</StyledSecondTeam>
+      {choices.map(choice => (
+        <StyledChoiceWrapper>
+          <StyledChoiceNumber>{choice.number}</StyledChoiceNumber>
+          <StyledChoiceCote>{choice.cote}</StyledChoiceCote>
+          {choice.label && <StyledTeamName position={choice.position}>{choice.label}</StyledTeamName>}
+        </StyledChoiceWrapper>
+      ))}
     </StyledBetting>
   </StyledCard>
 );
+
+Betting.propTypes = {
+  sponsor: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    backgroundColor: PropTypes.string.isRequired,
+    textColor: PropTypes.string.isRequired,
+  }).isRequired,
+  sentences: PropTypes.arrayOf(PropTypes.string).isRequired,
+  choices: PropTypes.arrayOf(
+    PropTypes.shape({
+      number: PropTypes.number.isRequired,
+      cote: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};
 
 export default Betting;
