@@ -34,7 +34,7 @@ import ContentListing from './modules/ContentListing';
 import Article from './modules/Article';
 import WatchBar from './modules/Watchbar';
 import BurgerMenu from './modules/BurgerMenu';
-import ViewMoreMatches from './modules/ViewMoreMatches';
+import ViewMore from './modules/ViewMore';
 
 export {
   Button,
@@ -70,5 +70,5 @@ export {
   GoogleTagManager,
   PlayerInfos,
   Labels,
-  ViewMoreMatches,
+  ViewMore,
 };

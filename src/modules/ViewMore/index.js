@@ -35,7 +35,7 @@ const StyledItem = styled.li`
   overflow: hidden; /* prevent collapsing margins */
 `;
 
-export default class ViewMoreMatches extends React.Component {
+export default class ViewMore extends React.Component {
   listRef = React.createRef();
 
   transitionEndCallback = this.transitionEndCallback.bind(this);
@@ -104,6 +104,6 @@ export default class ViewMoreMatches extends React.Component {
   }
 }
 
-ViewMoreMatches.propTypes = {
+ViewMore.propTypes = {
   children: PropTypes.arrayOf(PropTypes.node).isRequired,
 };

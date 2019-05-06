@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ViewMoreMatches renders its content 1`] = `
-<ViewMoreMatches>
+exports[`ViewMore renders its content 1`] = `
+<ViewMore>
   <Styled(ul)
     blockHeight={0}
     innerRef={
       Object {
         "current": <ul
-          class="css-12eg17e e1gwa8591"
+          class="css-12eg17e e1e87viu1"
         >
           <li
-            class="css-1u41msn e1gwa8592"
+            class="css-1u41msn e1e87viu2"
           >
             <div>
               match
@@ -22,13 +22,13 @@ exports[`ViewMoreMatches renders its content 1`] = `
     isExpanded={false}
   >
     <ul
-      className="css-12eg17e e1gwa8591"
+      className="css-12eg17e e1e87viu1"
     >
       <Styled(li)
         key="0"
       >
         <li
-          className="css-1u41msn e1gwa8592"
+          className="css-1u41msn e1e87viu2"
         >
           <div
             key="0"
@@ -43,11 +43,11 @@ exports[`ViewMoreMatches renders its content 1`] = `
     onClick={[Function]}
   >
     <span
-      className="css-41z9q8 e1gwa8590"
+      className="css-41z9q8 e1e87viu0"
       onClick={[Function]}
     >
       Show more
     </span>
   </Styled(span)>
-</ViewMoreMatches>
+</ViewMore>
 `;
