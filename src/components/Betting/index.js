@@ -21,8 +21,9 @@ const StyledCard = styled.div`
     content: '';
     position: absolute;
     top: -30px;
+    left: 0;
+    right: 0;
     display: block;
-    width: 100%;
     height: 60px;
     background-color: ${alto};
     transform: skew(0, -5deg);
@@ -72,7 +73,7 @@ const StyledChoiceNumber = styled.div`
 const StyledChoiceCote = styled.a`
   text-decoration: inherit;
   color: inherit;
-  padding: 5px 20px;
+  padding: 5px 20px 2px 20px;
   font-size: 24px;
   background-color: ${rgba(coreLightMinus1, 0.2)};
   margin: 0 3px;
