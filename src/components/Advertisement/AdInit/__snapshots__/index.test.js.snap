@@ -1,0 +1,2452 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdInit matches snapshot 1`] = `
+<AdInit
+  advertisementSlotId={-1}
+  domain="fr"
+  keyValues={Object {}}
+  pageType="live"
+  personalizeAds={true}
+  slotsConfig={
+    Object {
+      "desktop": Object {
+        "article": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "betting-box": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "betting-box",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": null,
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "outstream": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "outstream",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "hp-main": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "betting-box": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "betting-box",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": null,
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 3,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "hp-section": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "betting-box": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "betting-box",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": null,
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 3,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "live": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "betting-box": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "betting-box",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": null,
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "outstream": Object {
+            "count": 10,
+            "creative": Object {
+              "name": "outstream",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "livestream": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "other": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "betting-box": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "betting-box",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": null,
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "result": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "betting-box": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "betting-box",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": null,
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "video": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "betting-box": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "betting-box",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": null,
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+      },
+      "mobile-web": Object {
+        "article": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "outstream": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "outstream",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "hp-main": Object {
+          "banner": Object {
+            "count": 3,
+            "creative": Object {
+              "name": "banner",
+              "sizes": Object {
+                "desktop": null,
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": null,
+              },
+            },
+          },
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 3,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "hp-section": Object {
+          "banner": Object {
+            "count": 3,
+            "creative": Object {
+              "name": "banner",
+              "sizes": Object {
+                "desktop": null,
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": null,
+              },
+            },
+          },
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 3,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "live": Object {
+          "banner": Object {
+            "count": 10,
+            "creative": Object {
+              "name": "banner",
+              "sizes": Object {
+                "desktop": null,
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": null,
+              },
+            },
+          },
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "outstream": Object {
+            "count": 10,
+            "creative": Object {
+              "name": "outstream",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "livestream": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "other": Object {
+          "banner": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner",
+              "sizes": Object {
+                "desktop": null,
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": null,
+              },
+            },
+          },
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+        },
+        "result": Object {
+          "banner": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner",
+              "sizes": Object {
+                "desktop": null,
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": null,
+              },
+            },
+          },
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+        },
+        "video": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+      },
+      "tablet-web": Object {
+        "article": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "betting-box": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "betting-box",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": null,
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "outstream": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "outstream",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "hp-main": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "betting-box": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "betting-box",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": null,
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 3,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "hp-section": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "betting-box": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "betting-box",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": null,
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 3,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "live": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "betting-box": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "betting-box",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": null,
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 10,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "outstream": Object {
+            "count": 10,
+            "creative": Object {
+              "name": "outstream",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    1,
+                    1,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "livestream": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "other": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "result": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+        "video": Object {
+          "banner-sponsorship": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "banner-sponsorship",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    970,
+                    250,
+                  ],
+                  Array [
+                    970,
+                    90,
+                  ],
+                  Array [
+                    728,
+                    90,
+                  ],
+                ],
+                "mobile-web": Array [
+                  320,
+                  50,
+                ],
+                "tablet-web": Array [
+                  728,
+                  90,
+                ],
+              },
+            },
+          },
+          "betting-box": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "betting-box",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": null,
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    170,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+          "interstitiel": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "interstitiel",
+              "sizes": Object {
+                "desktop": Array [
+                  "out-of-page",
+                ],
+                "mobile-web": Array [
+                  "out-of-page",
+                ],
+                "tablet-web": Array [
+                  "out-of-page",
+                ],
+              },
+            },
+          },
+          "mpu": Object {
+            "count": 1,
+            "creative": Object {
+              "name": "mpu",
+              "sizes": Object {
+                "desktop": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  Array [
+                    300,
+                    600,
+                  ],
+                  "fluid",
+                ],
+                "mobile-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+                "tablet-web": Array [
+                  Array [
+                    300,
+                    250,
+                  ],
+                  "fluid",
+                ],
+              },
+            },
+          },
+        },
+      },
+    }
+  }
+  src="//www.googletagservices.com/tag/js/gpt.js"
+>
+  <ScriptInjector
+    async={true}
+    injectPlace="head"
+    innerHTML=""
+    isServer={false}
+    src="//www.googletagservices.com/tag/js/gpt.js"
+  />
+</AdInit>
+`;

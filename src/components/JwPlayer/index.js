@@ -69,7 +69,7 @@ export default class Player extends Component {
 
     return (
       <>
-        <ScriptInjector src={scriptUrl} onLoad={this.initPlayer} />
+        <ScriptInjector isServer={false} src={scriptUrl} onLoad={this.initPlayer} />
         <div id={playerId} />
       </>
     );

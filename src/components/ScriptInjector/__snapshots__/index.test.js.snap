@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScriptInjector client side matches default snapshot 1`] = `
+<ScriptInjector
+  async={false}
+  injectPlace="head"
+  innerHTML=""
+  isServer={false}
+  src=""
+/>
+`;
+
+exports[`ScriptInjector server side matches default snapshot 1`] = `
+<ScriptInjector
+  async={false}
+  injectPlace="head"
+  innerHTML=""
+  isServer={true}
+  src=""
+>
+  <script
+    async={false}
+    src=""
+  />
+</ScriptInjector>
+`;

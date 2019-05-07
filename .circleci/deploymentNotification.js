@@ -8,7 +8,7 @@ const { version } = require('../package.json');
       username: 'Deployment notification',
       icon_url:
         'https://www.beyondanxietyanddepression.com/sites/beyondanxietyanddepression.com/files/styles/large/public/how-stop-panic-attacks-step-step.jpg',
-      text: `[Web-Toolkit] Version ${version} deployed !`
+      text: `[Web-Toolkit] Version ${version} deployed !`,
     })
     .catch(console.error);
 })();
