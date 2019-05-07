@@ -2,19 +2,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
 import { rgba } from 'polished';
-import { coreLightMinus1, coreDarkPlus1 } from '../../colors';
+import { coreLightMinus1, coreLightBase, coreDarkPlus1 } from '../../colors';
 import { fontFamilies } from '../../typography';
 
 export const StyledButton = styled.span`
-  color: ${coreLightMinus1};
+  color: ${coreLightBase};
   font-family: ${fontFamilies.alphaHeadline};
   border: 1px solid ${rgba(coreLightMinus1, 0.35)};
   background: ${rgba(coreDarkPlus1, 0.2)};
   border-radius: 3px;
   text-transform: uppercase;
   font-size: 11px;
-  padding: 6px 14px;
+  padding: 8px 14px;
   line-height: 11px;
+  letter-spacing: 1.3px;
   &:hover {
     cursor: pointer;
   }
@@ -55,7 +56,7 @@ export default class ViewMore extends React.Component {
   }
 
   getItemHeight() {
-    return this.listRef.current.children[0].clientHeight;
+    return this.listRef.current.children[0].offsetHeight;
   }
 
   transitionEndCallback() {
