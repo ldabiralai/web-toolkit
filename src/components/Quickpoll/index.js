@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
 import * as colors from '../../colors';
 import { fontFamilies } from '../../typography';
-import { Button } from '../..';
+import Button from '../../elements/Button';
 
 const StyledContainer = styled.div`
   border-radius: 4px;
