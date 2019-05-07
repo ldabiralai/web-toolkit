@@ -24,9 +24,7 @@ exports[`Betting renders Betting for double choices 1`] = `
       >
         2.80
       </Styled(a)>
-      <Styled(div)
-        position="left"
-      >
+      <Styled(div)>
         Nadal
       </Styled(div)>
     </Styled(div)>
@@ -42,9 +40,7 @@ exports[`Betting renders Betting for double choices 1`] = `
       >
         1.70
       </Styled(a)>
-      <Styled(div)
-        position="right"
-      >
+      <Styled(div)>
         Federer
       </Styled(div)>
     </Styled(div)>
@@ -76,9 +72,7 @@ exports[`Betting renders Betting for triple choices 1`] = `
       >
         2.80
       </Styled(a)>
-      <Styled(div)
-        position="left"
-      >
+      <Styled(div)>
         Nadal
       </Styled(div)>
     </Styled(div)>
@@ -107,9 +101,7 @@ exports[`Betting renders Betting for triple choices 1`] = `
       >
         1.70
       </Styled(a)>
-      <Styled(div)
-        position="right"
-      >
+      <Styled(div)>
         Federer
       </Styled(div)>
     </Styled(div)>

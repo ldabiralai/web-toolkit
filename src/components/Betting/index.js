@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
 import { rgba } from 'polished';
-import { coreNeutral9, coreLightMinus1, alto, manatee } from '../../colors';
+import { coreNeutral9, coreLightMinus1, martinique, manatee } from '../../colors';
 import { fontFamilies } from '../../typography';
 import { breakpoints } from '../..';
 
@@ -25,7 +25,7 @@ const StyledCard = styled.div`
     right: 0;
     display: block;
     height: 60px;
-    background-color: ${rgba(alto, 0.04)};
+    background-color: ${martinique};
     transform: skew(0, -5deg);
     z-index: 1;
   }
@@ -71,16 +71,20 @@ const StyledChoiceNumber = styled.div`
   color: ${manatee};
 `;
 const StyledChoiceCote = styled.a`
+  display: block;
   text-decoration: inherit;
   color: inherit;
   padding: 6px 20px 4px 20px;
   font-size: 24px;
   background-color: ${rgba(coreLightMinus1, 0.2)};
-  margin: 0 3px;
+  margin: 0 8px;
   border-radius: 3px;
   &:hover {
     background-color: ${rgba(coreLightMinus1, 0.4)};
   }
+  ${breakpoints.medium(css`
+    margin: 0 3px;
+  `)}
 `;
 
 const StyledTeamName = styled.div`
@@ -91,18 +95,19 @@ const StyledTeamName = styled.div`
     position: absolute;
     top: 30px;
   `)};
-  ${props =>
-    props.position === 'left' &&
-    breakpoints.medium(css`
+  ${StyledChoiceWrapper}:first-child & {
+    ${breakpoints.medium(css`
       right: 100%;
       margin-right: 12px;
     `)}
-  ${props =>
-    props.position === 'right' &&
-    breakpoints.medium(css`
+  }
+
+  ${StyledChoiceWrapper}:last-child & {
+    ${breakpoints.medium(css`
       left: 100%;
       margin-left: 12px;
     `)}
+  }
 `;
 
 export const getRandomSentence = sentences => sentences[Math.floor(Math.random() * sentences.length)];
@@ -120,7 +125,7 @@ const Betting = ({ sponsor, sentences, choices }) => (
           <StyledChoiceCote href={choice.link} target="_blank">
             {choice.cote}
           </StyledChoiceCote>
-          {choice.label && <StyledTeamName position={choice.position}>{choice.label}</StyledTeamName>}
+          {choice.label && <StyledTeamName>{choice.label}</StyledTeamName>}
         </StyledChoiceWrapper>
       ))}
     </StyledBetting>
@@ -139,6 +144,7 @@ Betting.propTypes = {
       number: PropTypes.number.isRequired,
       cote: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,
+      label: PropTypes.string,
     })
   ).isRequired,
 };
