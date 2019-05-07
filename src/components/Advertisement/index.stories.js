@@ -13,14 +13,14 @@ const indexStories = storiesOf('Components|Advertisement', module).addParameters
   backgrounds: { disable: true },
 });
 
-AdManager.defaultSlotsConfig.desktop[HP_MAIN][MPU].count = 7;
+AdManager.defaultSlotsConfig.desktop[HP_MAIN][MPU].count = 6;
 
 indexStories.add(
   'ADS integration',
   withInfo()(() => (
     <>
       <Button type="primary" onClick={() => AdManager.manageAds.refreshAdSlot(document.querySelector('.ad').id)}>
-        refresh 1st desktop MPU AD{' '}
+        refresh 1st desktop MPU AD
       </Button>
       <AdInit
         domain="fr"
@@ -34,22 +34,6 @@ indexStories.add(
       1: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoTablet />
       2: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoTablet />
       3: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoTablet />
-      extra desktop ad - out of homepage config: 4:{' '}
-      <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoTablet />
-      <br />
-      <p>mobile ads:</p>
-      1: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoDesktop isNoTablet />
-      2: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoDesktop isNoTablet />
-      3: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoDesktop isNoTablet />
-      extra tablet ad - out of page slot configs 4:{' '}
-      <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoDesktop isNoTablet />
-      <br />
-      <p>tablet ads:</p>
-      1: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoDesktop />
-      2: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoDesktop />
-      3: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoDesktop />
-      extra tablet ad - out of page slot configs 4:{' '}
-      <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoDesktop />
       <p>reloaded ads: </p>
       1:
       <AdWithReload
@@ -75,6 +59,22 @@ indexStories.add(
         isNoMobile
         isNoTablet
       />
+      extra desktop ad - out of homepage config: 4:
+      <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoTablet />
+      <br />
+      <p>mobile ads:</p>
+      1: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoDesktop isNoTablet />
+      2: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoDesktop isNoTablet />
+      3: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoDesktop isNoTablet />
+      extra tablet ad - out of page slot configs 4:
+      <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoDesktop isNoTablet />
+      <br />
+      <p>tablet ads:</p>
+      1: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoDesktop />
+      2: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoDesktop />
+      3: <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoDesktop />
+      extra tablet ad - out of page slot configs 4:
+      <AdPlacement adType={AdManager.enums.adTypes.MPU} isNoMobile isNoDesktop />
     </>
   ))
 );

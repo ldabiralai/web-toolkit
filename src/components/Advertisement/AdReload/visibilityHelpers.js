@@ -17,7 +17,7 @@ const closestPolyfill = () => {
 
 closestPolyfill();
 
-export const isElement1ParentOfElement2 = (parent, child) => {
+const isElement1ParentOfElement2 = (parent, child) => {
   // eslint-disable-next-line no-nested-ternary
   const selector = parent.id ? `#${parent.id}` : parent.className ? parent.className : parent.tagName;
   const closestRoot = child.closest(selector);

@@ -22,6 +22,8 @@ const withReload = Component =>
       screenPoints: 3,
     };
 
+    static displayName = `withReload(${Component.displayName || Component.name || 'Component'})`;
+
     state = {
       isActive: false,
     };
