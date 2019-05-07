@@ -15,13 +15,13 @@ exports[`<SetsScore /> Renders a SetsScore component 1`] = `
         "sets": Array [
           Object {
             "score": 6,
-            "set": 5,
+            "set": 1,
             "tie": null,
             "won": true,
           },
           Object {
             "score": 6,
-            "set": 4,
+            "set": 2,
             "tie": null,
             "won": true,
           },
@@ -33,13 +33,13 @@ exports[`<SetsScore /> Renders a SetsScore component 1`] = `
           },
           Object {
             "score": 6,
-            "set": 2,
+            "set": 4,
             "tie": null,
             "won": true,
           },
           Object {
             "score": 3,
-            "set": 1,
+            "set": 5,
             "tie": null,
             "won": false,
           },
@@ -58,13 +58,13 @@ exports[`<SetsScore /> Renders a SetsScore component 1`] = `
         "sets": Array [
           Object {
             "score": 3,
-            "set": 5,
+            "set": 1,
             "tie": null,
             "won": false,
           },
           Object {
             "score": 3,
-            "set": 4,
+            "set": 2,
             "tie": null,
             "won": true,
           },
@@ -76,13 +76,13 @@ exports[`<SetsScore /> Renders a SetsScore component 1`] = `
           },
           Object {
             "score": 3,
-            "set": 2,
+            "set": 4,
             "tie": null,
             "won": false,
           },
           Object {
             "score": 6,
-            "set": 1,
+            "set": 5,
             "tie": null,
             "won": true,
           },

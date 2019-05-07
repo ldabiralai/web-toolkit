@@ -52,7 +52,7 @@ const StyledTeamSets = styled.div`
 `;
 
 const Team = ({ teamData }) => {
-  const { playerOneName, playerTwoName, sets, isServing, hasWon } = teamData;
+  const { playerOneName = '', playerTwoName, sets, isServing, hasWon } = teamData;
   return (
     <StyledTeamWrapper>
       <StyledTeamName hasWon={hasWon}>
@@ -118,7 +118,7 @@ const SetsScore = ({ data, baseFontSize }) => (
 const teamDataType = PropTypes.shape({
   hasWon: PropTypes.bool,
   isServing: PropTypes.bool,
-  playerOneName: PropTypes.string.isRequired,
+  playerOneName: PropTypes.string,
   playerTwoName: PropTypes.string,
   sets: PropTypes.arrayOf(
     PropTypes.shape({
