@@ -12,7 +12,9 @@ exports[`Betting renders Betting for double choices 1`] = `
     Pariez !
   </Styled(div)>
   <Styled(div)>
-    <Styled(div)>
+    <Styled(div)
+      key="1"
+    >
       <Styled(div)>
         1
       </Styled(div)>
@@ -20,7 +22,7 @@ exports[`Betting renders Betting for double choices 1`] = `
         href="http://google.fr"
         target="_blank"
       >
-        2.8
+        2.80
       </Styled(a)>
       <Styled(div)
         position="left"
@@ -28,7 +30,9 @@ exports[`Betting renders Betting for double choices 1`] = `
         Nadal
       </Styled(div)>
     </Styled(div)>
-    <Styled(div)>
+    <Styled(div)
+      key="2"
+    >
       <Styled(div)>
         2
       </Styled(div)>
@@ -36,7 +40,7 @@ exports[`Betting renders Betting for double choices 1`] = `
         href="http://bing.fr"
         target="_blank"
       >
-        1.7
+        1.70
       </Styled(a)>
       <Styled(div)
         position="right"
@@ -60,7 +64,9 @@ exports[`Betting renders Betting for triple choices 1`] = `
     Pariez !
   </Styled(div)>
   <Styled(div)>
-    <Styled(div)>
+    <Styled(div)
+      key="1"
+    >
       <Styled(div)>
         1
       </Styled(div)>
@@ -68,7 +74,7 @@ exports[`Betting renders Betting for triple choices 1`] = `
         href="http://google.fr"
         target="_blank"
       >
-        2.8
+        2.80
       </Styled(a)>
       <Styled(div)
         position="left"
@@ -76,7 +82,9 @@ exports[`Betting renders Betting for triple choices 1`] = `
         Nadal
       </Styled(div)>
     </Styled(div)>
-    <Styled(div)>
+    <Styled(div)
+      key="2"
+    >
       <Styled(div)>
         2
       </Styled(div)>
@@ -84,10 +92,12 @@ exports[`Betting renders Betting for triple choices 1`] = `
         href="http://yahoo.fr"
         target="_blank"
       >
-        4.9
+        4.90
       </Styled(a)>
     </Styled(div)>
-    <Styled(div)>
+    <Styled(div)
+      key="3"
+    >
       <Styled(div)>
         3
       </Styled(div)>
@@ -95,7 +105,7 @@ exports[`Betting renders Betting for triple choices 1`] = `
         href="http://bing.fr"
         target="_blank"
       >
-        1.7
+        1.70
       </Styled(a)>
       <Styled(div)
         position="right"
