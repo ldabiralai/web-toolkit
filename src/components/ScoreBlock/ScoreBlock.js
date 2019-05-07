@@ -128,7 +128,7 @@ const ScoreBlock = ({ matchUrl, data, isLive, isWatchable, displayLeftCircle }) 
 const teamDataType = PropTypes.shape({
   hasWon: PropTypes.bool,
   isServing: PropTypes.bool,
-  playerOneName: PropTypes.string.isRequired,
+  playerOneName: PropTypes.string,
   playerTwoName: PropTypes.string,
   sets: PropTypes.arrayOf(
     PropTypes.shape({
