@@ -20,14 +20,13 @@ const StyledCard = styled.div`
   &::before {
     content: '';
     position: absolute;
-    top: -30px;
+    top: -35px;
     left: 0;
     right: 0;
     display: block;
     height: 60px;
-    background-color: ${alto};
+    background-color: ${rgba(alto, 0.04)};
     transform: skew(0, -5deg);
-    opacity: 0.04;
     z-index: 1;
   }
 `;
@@ -35,7 +34,7 @@ const StyledCard = styled.div`
 const StyledBettingName = styled.div`
   background-color: ${props => props.background};
   color: ${props => props.text};
-  padding: 11px;
+  padding: 13px;
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 1px;
@@ -47,7 +46,8 @@ const StyledBettingSentence = styled.div`
   text-transform: uppercase;
   font-weight: 500;
   font-size: 18px;
-  margin-top: 20px;
+  margin-top: 22px;
+  margin-bottom: 4px;
 `;
 
 const StyledBetting = styled.div`
@@ -55,7 +55,7 @@ const StyledBetting = styled.div`
   align-items: flex-start;
   font-family: ${fontFamilies.alphaHeadline};
   line-height: 30px;
-  margin-bottom: 32px;
+  margin-bottom: 35px;
   justify-content: left;
 `;
 
@@ -73,7 +73,7 @@ const StyledChoiceNumber = styled.div`
 const StyledChoiceCote = styled.a`
   text-decoration: inherit;
   color: inherit;
-  padding: 5px 20px 2px 20px;
+  padding: 6px 20px 4px 20px;
   font-size: 24px;
   background-color: ${rgba(coreLightMinus1, 0.2)};
   margin: 0 3px;
@@ -87,7 +87,7 @@ const StyledTeamName = styled.div`
   text-transform: uppercase;
   font-weight: normal;
   ${breakpoints.medium(css`
-    line-height: 40px;
+    line-height: 42px;
     position: absolute;
     top: 30px;
   `)};
@@ -115,7 +115,7 @@ const Betting = ({ sponsor, sentences, choices }) => (
     <StyledBettingSentence>{getRandomSentence(sentences)}</StyledBettingSentence>
     <StyledBetting>
       {choices.map(choice => (
-        <StyledChoiceWrapper>
+        <StyledChoiceWrapper key={choice.number}>
           <StyledChoiceNumber>{choice.number}</StyledChoiceNumber>
           <StyledChoiceCote href={choice.link} target="_blank">
             {choice.cote}
@@ -137,7 +137,7 @@ Betting.propTypes = {
   choices: PropTypes.arrayOf(
     PropTypes.shape({
       number: PropTypes.number.isRequired,
-      cote: PropTypes.number.isRequired,
+      cote: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,
     })
   ).isRequired,
