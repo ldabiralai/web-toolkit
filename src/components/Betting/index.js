@@ -69,12 +69,17 @@ const StyledChoiceNumber = styled.div`
   font-size: 13px;
   color: ${manatee};
 `;
-const StyledChoiceCote = styled.div`
+const StyledChoiceCote = styled.a`
+  text-decoration: inherit;
+  color: inherit;
   padding: 5px 20px;
   font-size: 24px;
   background-color: ${rgba(coreLightMinus1, 0.2)};
   margin: 0 3px;
   border-radius: 3px;
+  &:hover {
+    background-color: ${rgba(coreLightMinus1, 0.4)};
+  }
 `;
 
 const StyledTeamName = styled.div`
@@ -99,7 +104,7 @@ const StyledTeamName = styled.div`
     `)}
 `;
 
-const getRandomSentence = sentences => sentences[Math.floor(Math.random() * sentences.length)];
+export const getRandomSentence = sentences => sentences[Math.floor(Math.random() * sentences.length)];
 
 const Betting = ({ sponsor, sentences, choices }) => (
   <StyledCard>
@@ -111,7 +116,9 @@ const Betting = ({ sponsor, sentences, choices }) => (
       {choices.map(choice => (
         <StyledChoiceWrapper>
           <StyledChoiceNumber>{choice.number}</StyledChoiceNumber>
-          <StyledChoiceCote>{choice.cote}</StyledChoiceCote>
+          <StyledChoiceCote href={choice.link} target="_blank">
+            {choice.cote}
+          </StyledChoiceCote>
           {choice.label && <StyledTeamName position={choice.position}>{choice.label}</StyledTeamName>}
         </StyledChoiceWrapper>
       ))}
@@ -130,6 +137,7 @@ Betting.propTypes = {
     PropTypes.shape({
       number: PropTypes.number.isRequired,
       cote: PropTypes.number.isRequired,
+      link: PropTypes.string.isRequired,
     })
   ).isRequired,
 };
