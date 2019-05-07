@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdPlacement renders ad with random div 1`] = `
+<div
+  data-adplacement-id="adIdnow500"
+  data-class="ad"
+/>
+`;

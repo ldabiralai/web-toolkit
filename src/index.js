@@ -29,6 +29,10 @@ import ScoreBlocks from './components/ScoreBlock';
 import PlayerInfos from './components/PlayerInfos';
 import JwPlayer from './components/JwPlayer';
 import Betting from './components/Betting';
+import ScriptInjector from './components/ScriptInjector';
+import AdInit from './components/Advertisement/AdInit';
+import AdManager from './components/Advertisement/AdManager';
+import AdPlacement from './components/Advertisement/AdPlacement';
 
 import Header from './modules/Header';
 import Footer from './modules/Footer';
@@ -77,4 +81,8 @@ export {
   Labels,
   JwPlayer,
   Betting,
+  ScriptInjector,
+  AdInit,
+  AdManager,
+  AdPlacement,
 };
