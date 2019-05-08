@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled, { css } from 'react-emotion';
 import { rgba } from 'polished';
 import { large } from '../../../breakpoints';
@@ -75,5 +76,26 @@ const LeftMenuItem = ({ item, selectedMenuId, onMenuSelected, isMobileMenu, ...p
     </StyledItemLink>
   </StyledItem>
 );
+
+export const LeftMenuItemPropType = PropTypes.shape({
+  id: PropTypes.number,
+  isBottom: PropTypes.bool,
+  isWatch: PropTypes.bool,
+  item: PropTypes.shape({
+    link: PropTypes.shape({
+      url: PropTypes.string,
+    }),
+    shortName: PropTypes.string,
+    name: PropTypes.string,
+  }),
+  sections: PropTypes.arrayOf(PropTypes.object),
+});
+
+LeftMenuItem.propTypes = {
+  item: LeftMenuItemPropType.isRequired,
+  selectedMenuId: PropTypes.number.isRequired,
+  onMenuSelected: PropTypes.func.isRequired,
+  isMobileMenu: PropTypes.bool.isRequired,
+};
 
 export default LeftMenuItem;

@@ -182,6 +182,7 @@ describe('components/<Player />', () => {
 
   describe('error event handler', () => {
     it(`should call onError on error event`, () => {
+      global.console = { log: jest.fn(), error: jest.fn() };
       testEvent('error', 'onError');
     });
   });

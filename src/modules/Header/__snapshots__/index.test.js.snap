@@ -2,6 +2,7 @@
 
 exports[`Header renders Header 1`] = `
 <Styled(header)
+  cta={null}
   data-test="header"
   homePageUrl=""
   menuItems={null}
@@ -51,6 +52,7 @@ exports[`Header with cta renders Header with cta 1`] = `
 
 exports[`Header with submenu renders Header with BurgerMenu 1`] = `
 <Styled(header)
+  cta={null}
   data-test="header"
   homePageUrl=""
   menuItems={

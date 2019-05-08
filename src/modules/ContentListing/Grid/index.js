@@ -72,11 +72,12 @@ Grid.displayName = 'Grid';
 Grid.defaultProps = {
   title: '',
   subLink: undefined,
+  children: null,
 };
 
 Grid.propTypes = {
   title: PropTypes.string,
-  children: PropTypes.arrayOf(PropTypes.node).isRequired,
+  children: PropTypes.node,
   subLink: PropTypes.shape({
     text: PropTypes.string.isRequired,
     href: PropTypes.string.isRequired,

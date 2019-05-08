@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import styled, { css, injectGlobal } from 'react-emotion';
 import PropTypes from 'prop-types';
 
-import { Link, Logo, BurgerMenu, BurgerIcon, breakpoints, colors, Button } from '../..';
+import Link from '../../elements/Link';
+import Logo from '../../elements/Logo';
+import BurgerMenu from '../BurgerMenu';
+import BurgerIcon from '../../elements/BurgerIcon';
+import * as breakpoints from '../../breakpoints';
+import * as colors from '../../colors';
+import Button from '../../elements/Button';
 
 const StyledButton = styled(Button)`
   margin-left: auto;
@@ -118,6 +124,7 @@ Header.displayName = 'Header';
 Header.defaultProps = {
   menuItems: null,
   homePageUrl: '',
+  cta: null,
 };
 
 Header.propTypes = {
@@ -139,6 +146,10 @@ Header.propTypes = {
     })
   ),
   homePageUrl: PropTypes.string,
+  cta: PropTypes.shape({
+    link: PropTypes.string,
+    label: PropTypes.string,
+  }),
 };
 
 export default Header;

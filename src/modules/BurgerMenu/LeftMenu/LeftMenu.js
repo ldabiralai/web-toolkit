@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
 
-import LeftMenuItem from './LeftMenuItem';
+import LeftMenuItem, { LeftMenuItemPropType } from './LeftMenuItem';
 import Logo from '../../../elements/Logo';
 
 import { large } from '../../../breakpoints';
@@ -84,23 +84,7 @@ LeftMenu.defaultProps = {
 };
 
 LeftMenu.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.number,
-      sections: PropTypes.arrayOf(
-        PropTypes.shape({
-          items: PropTypes.arrayOf(
-            PropTypes.shape({
-              url: PropTypes.string,
-              blank: PropTypes.bool,
-              name: PropTypes.string,
-              icon: PropTypes.string,
-            })
-          ),
-        })
-      ),
-    })
-  ),
+  items: PropTypes.arrayOf(LeftMenuItemPropType),
   selectedMenuId: PropTypes.number.isRequired,
   onMenuSelected: PropTypes.func.isRequired,
   isMobileMenu: PropTypes.bool.isRequired,

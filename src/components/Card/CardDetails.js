@@ -81,7 +81,9 @@ const CardDetails = ({ card, icon, ...props }) => {
     </StyledContent>
   );
 };
-
+CardDetails.defaultProps = {
+  icon: null,
+};
 CardDetails.propTypes = {
   card: PropTypes.shape({
     category: PropTypes.string.isRequired,
@@ -89,7 +91,7 @@ CardDetails.propTypes = {
     description: PropTypes.string,
     timestamp: PropTypes.string,
   }).isRequired,
-  icon: PropTypes.node.isRequired,
+  icon: PropTypes.node,
 };
 
 CardDetails.displayName = 'Cards.Content';

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ScriptInjector } from '../../..';
+import ScriptInjector from '../../ScriptInjector';
 import getDevice from './utilities/getDevice';
 import defineAllSlots from './utilities/defineAllSlots';
 import getAdSlotParams from './utilities/getAdSlotParams';

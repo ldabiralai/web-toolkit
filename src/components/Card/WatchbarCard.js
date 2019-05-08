@@ -175,6 +175,7 @@ WatchbarCard.propTypes = {
     liveLabel: PropTypes.string,
   }).isRequired,
   linkComponent: PropTypes.func,
+  trackingPosition: PropTypes.number.isRequired,
 };
 
 WatchbarCard.displayName = 'Cards.Content';

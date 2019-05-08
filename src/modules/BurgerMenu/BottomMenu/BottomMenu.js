@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
 import SocialMenu from './SocialMenu/SocialMenu';
-import { Link } from '../../..';
+import Link from '../../../elements/Link';
 import { coreNeutral2, coreDarkBase } from '../../../colors';
 import { large, medium } from '../../../breakpoints';
 import { PRIVACY_SETTINGS_ID } from '../constants';

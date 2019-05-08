@@ -2,7 +2,8 @@ import React from 'react';
 import styled, { css } from 'react-emotion';
 import PropTypes from 'prop-types';
 
-import { SocialIcon, Link } from '../../../..';
+import SocialIcon from '../../../../elements/SocialIcon';
+import Link from '../../../../elements/Link';
 import { coreLightMinus1 } from '../../../../colors';
 import { large, medium } from '../../../../breakpoints';
 

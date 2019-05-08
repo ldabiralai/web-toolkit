@@ -146,6 +146,12 @@ export const Row = ({ children, ...props }) => (
     <StyledSubContainer>{children}</StyledSubContainer>
   </Container>
 );
+Row.defaultProps = {
+  children: null,
+};
+Row.propTypes = {
+  children: PropTypes.node,
+};
 
 export const StyledColumn = styled.div`
   box-sizing: border-box;
@@ -209,6 +215,7 @@ export const Column = props => {
 };
 
 Column.defaultProps = {
+  children: null,
   tiny: 'full',
   small: null,
   medium: null,
@@ -222,6 +229,7 @@ Column.defaultProps = {
 };
 
 Column.propTypes = {
+  children: PropTypes.node,
   tiny: PropTypes.oneOf(SIX_COLUMNS),
   small: PropTypes.oneOf(SIX_COLUMNS),
   medium: PropTypes.oneOf(TWELVE_COLUMNS),
