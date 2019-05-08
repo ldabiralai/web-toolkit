@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info';
-import { object, text } from '@storybook/addon-knobs';
+import { object, text, boolean } from '@storybook/addon-knobs';
 import styled from 'react-emotion';
 import { Cards } from '../..';
 
@@ -134,38 +134,13 @@ cardStories
     ))
   )
   .add(
-    'LiveComment - with picture',
-    withInfo({ propTablesExclude: [Wrapper] })(() => (
-      <div style={{ maxWidth: 343 }}>
-        <Cards.LiveComment
-          pictureUrl={text('pictureUrl', 'https://i.eurosport.com/2019/04/21/2570541-53309530-2560-1440.jpg?w=800')}
-          link={text('link', 'https://www.eurosport.no')}
-          title={text('title', 'Re-Play of the Day: The craziest moments of the French Open')}
-        />
-      </div>
-    ))
-  )
-  .add(
-    'LiveComment - with video',
-    withInfo({ propTablesExclude: [Wrapper] })(() => (
-      <div style={{ maxWidth: 343 }}>
-        <Cards.LiveComment
-          pictureUrl={text('pictureUrl', 'https://i.eurosport.com/2019/04/21/2570541-53309530-2560-1440.jpg?w=800')}
-          link={text('link', 'https://www.eurosport.no')}
-          title={text('title', 'Re-Play of the Day: The craziest moments of the French Open')}
-          withPlayButton
-        />
-      </div>
-    ))
-  )
-  .add(
-    'LiveComment - without title',
-    withInfo({ propTablesExclude: [Wrapper] })(() => (
-      <div style={{ maxWidth: 343 }}>
-        <Cards.LiveComment
-          pictureUrl={text('pictureUrl', 'https://i.eurosport.com/2019/04/21/2570541-53309530-2560-1440.jpg?w=800')}
-          link={text('link', 'https://www.eurosport.no')}
-        />
-      </div>
+    'LiveComment',
+    withInfo()(() => (
+      <Cards.LiveComment
+        pictureUrl={text('pictureUrl', 'https://i.eurosport.com/2019/04/21/2570541-53309530-2560-1440.jpg?w=640')}
+        link={text('link', 'https://www.eurosport.no')}
+        title={text('title', 'Re-Play of the Day: The craziest moments of the French Open')}
+        isVideo={boolean('isVideo', false)}
+      />
     ))
   );

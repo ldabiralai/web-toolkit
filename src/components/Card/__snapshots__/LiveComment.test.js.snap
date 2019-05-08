@@ -1,7 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LiveComment card card snapshot 1`] = `
-<span>
-  hello
-</span>
+<Link
+  href="www.google.com"
+  linkComponent={[Function]}
+  target="_blank"
+>
+  <Styled(div)>
+    <Styled(div)>
+      <Styled(img)
+        alt="Federer continues to climb the rankings behind injured Rafael Nadal"
+        src="https://i.eurosport.com/2019/04/21/2570541-53309530-2560-1440.jpg?w=800"
+      />
+    </Styled(div)>
+    <Styled(div)>
+      Federer continues to climb the rankings behind injured Rafael Nadal
+    </Styled(div)>
+  </Styled(div)>
+</Link>
 `;
