@@ -1,6 +1,7 @@
 import React from 'react';
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withKnobsOptions } from '@storybook/addon-knobs';
+import { withInfo } from '@storybook/addon-info';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
 import { withOptions } from '@storybook/addon-options';
 import { ThemeProvider } from 'emotion-theming';
@@ -26,6 +27,8 @@ const ThemeDecorator = storyFn => (
     <StyledWrapper>{storyFn()}</StyledWrapper>
   </ThemeProvider>
 );
+
+addDecorator(withInfo);
 
 // Option defaults:
 addDecorator(

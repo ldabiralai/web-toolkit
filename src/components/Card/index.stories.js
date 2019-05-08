@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
 import { object, text } from '@storybook/addon-knobs';
 import styled from 'react-emotion';
 import { Cards } from '../..';
@@ -56,80 +55,64 @@ const watchbar = {
   endTime: '15h00',
 };
 
+cardStories.addParameters({ info: { propTablesExclude: [Wrapper] } });
+
 const contentCardTypes = ['vod', 'article', 'live'];
 contentCardTypes.forEach(type => {
-  cardStories.add(
-    `ContentCard - ${type}`,
-    withInfo({ propTablesExclude: [Wrapper] })(() => {
-      const card = object('card', data[type]);
-      return (
-        <Wrapper>
-          <Cards.Content card={card} type={type} />
-        </Wrapper>
-      );
-    })
-  );
+  cardStories.add(`ContentCard - ${type}`, () => {
+    const card = object('card', data[type]);
+    return (
+      <Wrapper>
+        <Cards.Content card={card} type={type} />
+      </Wrapper>
+    );
+  });
 });
 
 cardStories
-  .add(
-    'Schedule',
-    withInfo({ propTablesExclude: [Wrapper] })(() => (
-      <Wrapper>
-        <Cards.Schedule card={object('card', schedule)} />
-      </Wrapper>
-    ))
-  )
-  .add(
-    'Vod Compact',
-    withInfo({ propTablesExclude: [Wrapper] })(() => (
-      <Wrapper>
-        <Cards.VodCompact card={object('card', vod)} />
-      </Wrapper>
-    ))
-  )
-  .add(
-    'Watchbar',
-    withInfo({ propTablesExclude: [Wrapper] })(() => (
-      <Wrapper>
-        <Cards.Watchbar
-          card={object('card', watchbar)}
-          trackingPosition={object('trackingPosition', watchbar.trackingPosition)}
-        />
-      </Wrapper>
-    ))
-  )
-  .add(
-    'Card v2 Big',
-    withInfo()(() => (
-      <div style={{ maxWidth: 852 }}>
-        <Cards.CardBig
-          image={text('image', 'https://i.eurosport.com/2019/04/21/2570541-53309530-2560-1440.jpg?w=800')}
-          topic={text('topic', 'Australian Open')}
-          link={text('link', 'https://www.eurosport.no')}
-          title={text('title', 'Re-Play of the Day: The craziest moments')}
-          labelPlayButton={text('labelPlayButton', 'Replay')}
-          description={text('description', 'Roland-garros')}
-        >
-          <Cards.SpanTimeLabel>0:32:03</Cards.SpanTimeLabel>
-        </Cards.CardBig>
-      </div>
-    ))
-  )
-  .add(
-    'Card v2 Small',
-    withInfo({ propTablesExclude: [Wrapper] })(() => (
-      <div style={{ maxWidth: 343 }}>
-        <Cards.CardSmall
-          image={text('image', 'https://i.eurosport.com/2019/04/21/2570541-53309530-2560-1440.jpg?w=800')}
-          topic={text('topic', 'Australian Open')}
-          link={text('link', 'https://www.eurosport.no')}
-          title={text('title', 'Re-Play of the Day: The craziest moments of the French Open')}
-          labelPlayButton={text('labelPlayButton', 'Replay')}
-          description={text('description', 'Day 19 - Serie A')}
-        >
-          <Cards.SpanTimeLabel>0:32:03</Cards.SpanTimeLabel>
-        </Cards.CardSmall>
-      </div>
-    ))
-  );
+  .add('Schedule', () => (
+    <Wrapper>
+      <Cards.Schedule card={object('card', schedule)} />
+    </Wrapper>
+  ))
+  .add('Vod Compact', () => (
+    <Wrapper>
+      <Cards.VodCompact card={object('card', vod)} />
+    </Wrapper>
+  ))
+  .add('Watchbar', () => (
+    <Wrapper>
+      <Cards.Watchbar
+        card={object('card', watchbar)}
+        trackingPosition={object('trackingPosition', watchbar.trackingPosition)}
+      />
+    </Wrapper>
+  ))
+  .add('Card v2 Big', () => (
+    <div style={{ maxWidth: 852 }}>
+      <Cards.CardBig
+        image={text('image', 'https://i.eurosport.com/2019/04/21/2570541-53309530-2560-1440.jpg?w=800')}
+        topic={text('topic', 'Australian Open')}
+        link={text('link', 'https://www.eurosport.no')}
+        title={text('title', 'Re-Play of the Day: The craziest moments')}
+        labelPlayButton={text('labelPlayButton', 'Replay')}
+        description={text('description', 'Roland-garros')}
+      >
+        <Cards.SpanTimeLabel>0:32:03</Cards.SpanTimeLabel>
+      </Cards.CardBig>
+    </div>
+  ))
+  .add('Card v2 Small', () => (
+    <div style={{ maxWidth: 343 }}>
+      <Cards.CardSmall
+        image={text('image', 'https://i.eurosport.com/2019/04/21/2570541-53309530-2560-1440.jpg?w=800')}
+        topic={text('topic', 'Australian Open')}
+        link={text('link', 'https://www.eurosport.no')}
+        title={text('title', 'Re-Play of the Day: The craziest moments of the French Open')}
+        labelPlayButton={text('labelPlayButton', 'Replay')}
+        description={text('description', 'Day 19 - Serie A')}
+      >
+        <Cards.SpanTimeLabel>0:32:03</Cards.SpanTimeLabel>
+      </Cards.CardSmall>
+    </div>
+  ));

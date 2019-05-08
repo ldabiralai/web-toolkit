@@ -1,4 +1,3 @@
-import { withInfo } from '@storybook/addon-info';
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, object } from '@storybook/addon-knobs';
@@ -18,14 +17,11 @@ storiesOf('Modules|Hero', module)
   .addParameters({
     backgrounds: { disable: true },
   })
-  .add(
-    'default',
-    withInfo()(() => (
-      <Hero
-        title={text('Title', data.title)}
-        img={text('img', data.img)}
-        time={text('publication date', data.time)}
-        author={object('author', data.author)}
-      />
-    ))
-  );
+  .add('default', () => (
+    <Hero
+      title={text('Title', data.title)}
+      img={text('img', data.img)}
+      time={text('publication date', data.time)}
+      author={object('author', data.author)}
+    />
+  ));

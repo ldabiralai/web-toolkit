@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, boolean } from '@storybook/addon-knobs';
-import { withInfo } from '@storybook/addon-info';
 import { ScriptInjector } from '../..';
 
 const stories = storiesOf('Components|ScriptInjector', module);
@@ -12,38 +11,48 @@ const innerHTML = `
 
 stories.add(
   'ServerSide',
-  withInfo('injection place prop is not used for server side renderring')(() => (
+  () => (
     <ScriptInjector
       isServer
       src={text('src', 'url.to.custom.script.js')}
       async={boolean('async', true)}
       innerHTML={text('innerHTML', innerHTML)}
     />
-  ))
+  ),
+  {
+    info: 'injectPlace prop is not used for server side renderring',
+  }
 );
 
 const clientSideScriptSrc = 'scriptInjector.client.side';
+const injectPlaceMessage = 'injectPlace prop is used only client - side';
 
 stories
   .add(
     'ClientSide - in body',
-    withInfo('injectPlace param is used only client - side')(() => (
-      <ScriptInjector isServer={false} src={`${clientSideScriptSrc}.in.body`} injectPlace="body" async={false} />
-    ))
+    () => <ScriptInjector isServer={false} src={`${clientSideScriptSrc}.in.body`} injectPlace="body" async={false} />,
+    {
+      info: injectPlaceMessage,
+    }
   )
   .add(
     'ClientSide - async in head',
-    withInfo('injectPlace param is used only client - side')(() => (
-      <ScriptInjector isServer={false} async src={`${clientSideScriptSrc}.in.head`} />
-    ))
+    () => <ScriptInjector isServer={false} async src={`${clientSideScriptSrc}.in.head`} />,
+    {
+      info: injectPlaceMessage,
+    }
   )
   .add(
     'ClientSide - with inner script - in body',
-    withInfo('injectPlace param is used only client - side')(() => (
-      <ScriptInjector isServer={false} innerHTML={`alert('script injected in body')`} injectPlace="body" />
-    ))
+    () => <ScriptInjector isServer={false} innerHTML={`alert('script injected in body')`} injectPlace="body" />,
+    {
+      info: injectPlaceMessage,
+    }
   )
   .add(
     'ClientSide - with inner script - in head',
-    withInfo()(() => <ScriptInjector isServer={false} innerHTML={`alert('script injected in head')`} />)
+    () => <ScriptInjector isServer={false} innerHTML={`alert('script injected in head')`} />,
+    {
+      info: injectPlaceMessage,
+    }
   );

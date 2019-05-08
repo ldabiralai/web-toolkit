@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
 import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
 import { object, boolean, select } from '@storybook/addon-knobs';
 import { ScoreBlocks } from '../..';
 import { pastMatchData, liveMatchData, liveMatchDataSet } from './mockData/mockScoreBlockData';
@@ -15,40 +14,31 @@ const Wrapper = styled.div`
 
 const scoreBlockStories = storiesOf('Components|Score Block', module);
 
-scoreBlockStories.add(
-  'SetsScore',
-  withInfo()(() => (
-    <Wrapper css={{ maxWidth: '1067px' }}>
-      <ScoreBlocks.SetsScore data={object('score data', liveMatchDataSet)} />
-    </Wrapper>
-  ))
-);
+scoreBlockStories.add('SetsScore', () => (
+  <Wrapper css={{ maxWidth: '1067px' }}>
+    <ScoreBlocks.SetsScore data={object('score data', liveMatchDataSet)} />
+  </Wrapper>
+));
 
-scoreBlockStories.add(
-  `ScoreBlock - info`,
-  withInfo()(() => (
-    <Wrapper>
-      <ScoreBlocks.ScoreBlock
-        matchUrl={MATCH_URL}
-        data={object('score data', pastMatchData)}
-        isLive={boolean('isLive', false)}
-        isWatchable={boolean('isWatchable', false)}
-        displayLeftCircle={select('displayLeftCircle', ['won', 'lost', false], false)}
-      />
-    </Wrapper>
-  ))
-);
-scoreBlockStories.add(
-  `ScoreBlock - live`,
-  withInfo()(() => (
-    <Wrapper>
-      <ScoreBlocks.ScoreBlock
-        matchUrl={MATCH_URL}
-        data={object('score data', liveMatchData)}
-        isLive={boolean('isLive', true)}
-        isWatchable={boolean('isWatchable', true)}
-        displayLeftCircle={select('displayLeftCircle', ['won', 'lost', false], false)}
-      />
-    </Wrapper>
-  ))
-);
+scoreBlockStories.add(`ScoreBlock - info`, () => (
+  <Wrapper>
+    <ScoreBlocks.ScoreBlock
+      matchUrl={MATCH_URL}
+      data={object('score data', pastMatchData)}
+      isLive={boolean('isLive', false)}
+      isWatchable={boolean('isWatchable', false)}
+      displayLeftCircle={select('displayLeftCircle', ['won', 'lost', false], false)}
+    />
+  </Wrapper>
+));
+scoreBlockStories.add(`ScoreBlock - live`, () => (
+  <Wrapper>
+    <ScoreBlocks.ScoreBlock
+      matchUrl={MATCH_URL}
+      data={object('score data', liveMatchData)}
+      isLive={boolean('isLive', true)}
+      isWatchable={boolean('isWatchable', true)}
+      displayLeftCircle={select('displayLeftCircle', ['won', 'lost', false], false)}
+    />
+  </Wrapper>
+));

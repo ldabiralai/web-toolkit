@@ -1,11 +1,10 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
 import { object } from '@storybook/addon-knobs';
 import styled from 'react-emotion';
 import { PlayerInfos } from '../..';
 
-const playerinfos = storiesOf('Components|PlayerInfos', module).addDecorator(withInfo);
+const playerinfos = storiesOf('Components|PlayerInfos', module);
 
 const Wrapper = styled.div`
   max-width: 500px;

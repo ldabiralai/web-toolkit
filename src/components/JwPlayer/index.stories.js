@@ -1,7 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, object } from '@storybook/addon-knobs';
-import { withInfo } from '@storybook/addon-info';
 import { JwPlayer } from '../..';
 
 const freewheelAdParams = {
@@ -37,5 +36,5 @@ const getBasePropsWithAds = () => ({
 const stories = storiesOf('Components|JwPlayer', module);
 
 stories
-  .add('default', withInfo()(() => <JwPlayer {...getBaseProps()} />))
-  .add('with ads', withInfo()(() => <JwPlayer {...getBasePropsWithAds()} />));
+  .add('default', () => <JwPlayer {...getBaseProps()} />)
+  .add('with ads', () => <JwPlayer {...getBasePropsWithAds()} />);

@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
 import { object } from '@storybook/addon-knobs';
 import styled from 'react-emotion';
 import { rgba } from 'polished';
@@ -48,23 +47,20 @@ const StyledTitle = styled.div`
   user-select: none;
 `;
 
-indexStories.add(
-  'Carousel',
-  withInfo()(() => (
-    <Carousel>
-      <StyledTitle>
-        <StyledPlayIco />
-        En direct sur Eurosport Player
-      </StyledTitle>
-      <WatchbarCard card={object('card', watchbar)} />
-      <WatchbarCard card={object('card', watchbar)} />
-      <WatchbarCard card={object('card', watchbar)} />
-      <WatchbarCard card={object('card', watchbar)} />
-      <WatchbarCard card={object('card', watchbar)} />
-      <WatchbarCard card={object('card', watchbar)} />
-      <WatchbarCard card={object('card', watchbar)} />
-      <WatchbarCard card={object('card', watchbar)} />
-      <WatchbarCard card={object('card', watchbar)} />
-    </Carousel>
-  ))
-);
+indexStories.add('Carousel', () => (
+  <Carousel>
+    <StyledTitle>
+      <StyledPlayIco />
+      En direct sur Eurosport Player
+    </StyledTitle>
+    <WatchbarCard card={object('card', watchbar)} />
+    <WatchbarCard card={object('card', watchbar)} />
+    <WatchbarCard card={object('card', watchbar)} />
+    <WatchbarCard card={object('card', watchbar)} />
+    <WatchbarCard card={object('card', watchbar)} />
+    <WatchbarCard card={object('card', watchbar)} />
+    <WatchbarCard card={object('card', watchbar)} />
+    <WatchbarCard card={object('card', watchbar)} />
+    <WatchbarCard card={object('card', watchbar)} />
+  </Carousel>
+));

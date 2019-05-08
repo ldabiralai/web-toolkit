@@ -1,18 +1,14 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { number, boolean } from '@storybook/addon-knobs';
-import { withInfo } from '@storybook/addon-info';
 import { PlayIcon } from '../..';
 
 const iconsStories = storiesOf('Elements|PlayIcon', module);
 
-iconsStories.add(
-  'configurable',
-  withInfo()(() => (
-    <PlayIcon
-      height={number('Height', 50)}
-      isLoading={boolean('isLoading', false)}
-      withHoverState={boolean('withHoverState', false)}
-    />
-  ))
-);
+iconsStories.add('configurable', () => (
+  <PlayIcon
+    height={number('Height', 50)}
+    isLoading={boolean('isLoading', false)}
+    withHoverState={boolean('withHoverState', false)}
+  />
+));

@@ -1,6 +1,5 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withInfo } from '@storybook/addon-info';
 import { object, select, text } from '@storybook/addon-knobs';
 import { ContentListing, Cards } from '../..';
 
@@ -27,28 +26,22 @@ const cardWithLongContent = {
 };
 
 contentListingStories
-  .add(
-    'Content card',
-    withInfo()(() => (
-      <ContentListing.Grid
-        title={text('title', 'Articles list')}
-        subLink={object('subLink', { text: 'View Schedule', href: '#' })}
-      >
-        <Cards.Content card={cardWithDescription} type={select('Type', ['vod', 'article', 'live'], 'article')} />
-        <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
-        <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
-        <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
-      </ContentListing.Grid>
-    ))
-  )
-  .add(
-    'Schedule card',
-    withInfo()(() => (
-      <ContentListing.Grid title={text('title', '16:00')}>
-        <Cards.Schedule card={cardWithLongContent} />
-        <Cards.Schedule card={object('card', baseData)} />
-        <Cards.Schedule card={object('card', baseData)} />
-        <Cards.Schedule card={object('card', baseData)} />
-      </ContentListing.Grid>
-    ))
-  );
+  .add('Content card', () => (
+    <ContentListing.Grid
+      title={text('title', 'Articles list')}
+      subLink={object('subLink', { text: 'View Schedule', href: '#' })}
+    >
+      <Cards.Content card={cardWithDescription} type={select('Type', ['vod', 'article', 'live'], 'article')} />
+      <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
+      <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
+      <Cards.Content card={object('card', baseData)} type={select('Type', ['vod', 'article', 'live'], 'article')} />
+    </ContentListing.Grid>
+  ))
+  .add('Schedule card', () => (
+    <ContentListing.Grid title={text('title', '16:00')}>
+      <Cards.Schedule card={cardWithLongContent} />
+      <Cards.Schedule card={object('card', baseData)} />
+      <Cards.Schedule card={object('card', baseData)} />
+      <Cards.Schedule card={object('card', baseData)} />
+    </ContentListing.Grid>
+  ));
