@@ -1,4 +1,4 @@
 /* eslint-disable import/prefer-default-export */
-import withMatchMedia from './withMatchMedia';
+import withMatchMedia, { HideOnMobile } from './withMatchMedia';
 
-export { withMatchMedia };
+export { withMatchMedia, HideOnMobile };

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled, { css, injectGlobal } from 'react-emotion';
 import PropTypes from 'prop-types';
+import { HideOnMobile } from '../../hocs';
 
 import Link from '../../elements/Link';
 import Logo from '../../elements/Logo';
@@ -35,7 +36,7 @@ const StyledWrapper = styled.header`
       ${breakpoints.medium(css`
         padding-left: 32px;
       `)}
-    `}
+    `};
   display: flex;
   align-items: center;
 
@@ -44,12 +45,28 @@ const StyledWrapper = styled.header`
   `)};
 
   ${Logo.css} {
-    margin: 4px 15px 0 0px;
+    margin: 4px 15px 0 0;
 
     ${breakpoints.medium(css`
       margin: 0 25px 0 17px;
     `)}
   }
+`;
+
+const Breadcrumbs = styled(({ className, items }) => (
+  <div className={className}>
+    {items.map((item, i) => {
+      const link = (
+        <Link key={item.name} href={item.url}>
+          {item.name}
+        </Link>
+      );
+
+      return i !== items.length - 1 ? <HideOnMobile>{link}</HideOnMobile> : link;
+    })}
+  </div>
+))`
+  ${breakpoints.medium(css``)};
 `;
 
 class Header extends Component {
@@ -100,15 +117,18 @@ class Header extends Component {
   };
 
   render() {
-    const { homePageUrl, cta } = this.props;
+    const { homePageUrl, cta, breadcrumbs } = this.props;
 
     return (
       <StyledWrapper {...this.props} data-test="header">
         {this.getBurgerMenu()}
         {this.getBurgerIcon()}
         <Link href={homePageUrl} data-test="header-logo">
-          <Logo />
+          <HideOnMobile>
+            <Logo />
+          </HideOnMobile>
         </Link>
+        {breadcrumbs && <Breadcrumbs items={breadcrumbs} />}
         {cta && (
           <StyledButton href={cta.link} data-test="header-cta">
             {cta.label}
@@ -125,6 +145,7 @@ Header.defaultProps = {
   menuItems: null,
   homePageUrl: '',
   cta: null,
+  breadcrumbs: [],
 };
 
 Header.propTypes = {
@@ -150,6 +171,12 @@ Header.propTypes = {
     link: PropTypes.string,
     label: PropTypes.string,
   }),
+  breadcrumbs: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default Header;
