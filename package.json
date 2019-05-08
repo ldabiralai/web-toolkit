@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/EurosportDigital/web-toolkit#readme",
   "devDependencies": {
-    "@applitools/eyes.storybook": "^2.3.13",
+    "@applitools/eyes-storybook": "^2.6.18",
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
